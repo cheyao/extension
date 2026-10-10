@@ -6929,6 +6929,9 @@
   "onboardingSrpInputPlaceholder": {
     "message": "Add a space between each word and make sure no one is watching."
   },
+  "onboardingSwissquoteRecovery": {
+    "message": "Swissquote recovery"
+  },
   "oneKey": {
     "message": "OneKey",
     "description": "Hardware device name"

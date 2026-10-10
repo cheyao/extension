@@ -1,19 +1,7 @@
-import React, { useRef, useEffect, useCallback, useMemo } from 'react';
-import {
-  useRive,
-  Layout,
-  Fit,
-  Alignment,
-  StateMachineInput,
-} from '@rive-app/react-canvas';
+import React, { useEffect, useRef } from 'react';
 import { Box } from '@metamask/design-system-react';
 import classnames from 'clsx';
-import { useTheme } from '../../../hooks/useTheme';
-import { ThemeType } from '../../../../shared/constants/preferences';
-import {
-  useRiveWasmContext,
-  useRiveWasmFile,
-} from '../../../contexts/rive-wasm';
+import { useRiveWasmContext } from '../../../contexts/rive-wasm';
 
 type MetamaskWordMarkAnimationProps = {
   setIsAnimationComplete: (isAnimationComplete: boolean) => void;
@@ -21,234 +9,97 @@ type MetamaskWordMarkAnimationProps = {
   skipTransition?: boolean;
 };
 
-// State machine and input names as constants
-const STATE_MACHINE_NAME = 'WordmarkBuildUp';
-const INPUT_NAMES = {
-  DARK: 'Dark',
-  STILL: 'Still',
-  START: 'Start',
-} as const;
-
-const WORDMARK_RIV = './images/riv_animations/metamask_wordmark.riv';
-const WORDMARK_FALLBACK_SRC = './images/logo/metamask-fox.svg';
-
-const WordmarkFallback = ({
-  isComplete = false,
-  skipTransition = false,
-}: {
-  isComplete?: boolean;
-  skipTransition?: boolean;
-}) => (
-  <Box
-    className={classnames('riv-animation__wordmark-container', {
-      'riv-animation__wordmark-container--complete':
-        isComplete && !skipTransition,
-      'riv-animation__wordmark-container--skip-transition': skipTransition,
-    })}
-    data-testid="metamask-wordmark-fallback"
-  >
-    <img
-      className="riv-animation__canvas"
-      src={WORDMARK_FALLBACK_SRC}
-      alt="MetaMask"
-    />
-  </Box>
-);
+// Matches the end of the CSS intro sequence in index.scss (`sq-intro`).
+const INTRO_DURATION_MS = 1600;
 
 /**
- * Mount useRive only after WASM is ready and the .riv buffer exists.
- * WordmarkFallback covers the loading gap so the container is never empty
- * under createRoot/StrictMode remounts.
+ * Swissquote Wallet intro: the logo tile scales in, the diamond unfolds and
+ * the wordmark slides up. Once done, the welcome page reveals its actions.
+ *
+ * Keeps the name and props of the MetaMask wordmark animation it replaces so
+ * the welcome page wiring (skip on revisit, slide-up on complete) is unchanged.
+ *
  * @param options0
- * @param options0.buffer
- * @param options0.setIsAnimationComplete
- * @param options0.isAnimationComplete
- * @param options0.skipTransition
+ * @param options0.setIsAnimationComplete - Called once the intro has played.
+ * @param options0.isAnimationComplete - Whether the intro has finished.
+ * @param options0.skipTransition - Render the final state without animating.
  */
-const MetamaskWordMarkAnimationInner = ({
-  buffer,
-  setIsAnimationComplete,
-  isAnimationComplete = false,
-  skipTransition = false,
-}: MetamaskWordMarkAnimationProps & { buffer: ArrayBuffer }) => {
-  const theme = useTheme();
-  const { setIsAnimationCompleted } = useRiveWasmContext();
-
-  const animationTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const prevThemeRef = useRef(theme);
-  const inputsRef = useRef<{
-    dark?: StateMachineInput;
-    still?: StateMachineInput;
-    start?: StateMachineInput;
-  }>({});
-  const isInitializedRef = useRef(false);
-
-  const riveBuffer = useMemo(() => buffer.slice(0), [buffer]);
-
-  const { rive, RiveComponent } = useRive({
-    buffer: riveBuffer,
-    stateMachines: STATE_MACHINE_NAME,
-    autoplay: false,
-    layout: new Layout({
-      fit: Fit.Contain,
-      alignment: Alignment.Center,
-    }),
-    onStateChange: (event) => {
-      if (event.data && Array.isArray(event.data)) {
-        if (animationTimeoutRef.current) {
-          clearTimeout(animationTimeoutRef.current);
-        }
-
-        animationTimeoutRef.current = setTimeout(() => {
-          if (!isAnimationComplete) {
-            setIsAnimationComplete(true);
-          }
-        }, 1000);
-      }
-    },
-  });
-
-  const cacheInputs = useCallback(() => {
-    if (!rive) {
-      return false;
-    }
-    const inputs = rive.stateMachineInputs(STATE_MACHINE_NAME);
-    if (!inputs) {
-      return false;
-    }
-    inputsRef.current = {
-      dark: inputs.find((input) => input.name === INPUT_NAMES.DARK),
-      still: inputs.find((input) => input.name === INPUT_NAMES.STILL),
-      start: inputs.find((input) => input.name === INPUT_NAMES.START),
-    };
-    return true;
-  }, [rive]);
-
-  useEffect(() => {
-    const shouldInitialize = rive && !isInitializedRef.current;
-
-    if (shouldInitialize && cacheInputs()) {
-      const { dark, still, start } = inputsRef.current;
-
-      if (dark) {
-        dark.value = theme === ThemeType.dark;
-      }
-
-      prevThemeRef.current = theme;
-
-      if (skipTransition) {
-        still?.fire();
-      } else {
-        start?.fire();
-      }
-
-      rive.play();
-      isInitializedRef.current = true;
-    }
-  }, [rive, skipTransition, theme, cacheInputs]);
-
-  // Mark the session animation complete only on unmount after it started
-  // (timeout was scheduled). Do not mark when `isAnimationComplete` flips on
-  // this same visit — that would set skipTransition before FoxAppear mounts
-  // and fire Wiggle instead of Start.
-  useEffect(() => {
-    return () => {
-      if (animationTimeoutRef.current) {
-        clearTimeout(animationTimeoutRef.current);
-        animationTimeoutRef.current = null;
-        setIsAnimationCompleted('MetamaskWordMarkAnimation', true);
-      }
-    };
-  }, [setIsAnimationCompleted]);
-
-  useEffect(() => {
-    if (!rive || !isInitializedRef.current || prevThemeRef.current === theme) {
-      return;
-    }
-
-    const { dark, still } = inputsRef.current;
-
-    if (dark) {
-      dark.value = theme === ThemeType.dark;
-      still?.fire();
-    }
-
-    prevThemeRef.current = theme;
-  }, [rive, theme]);
-
-  return (
-    <Box
-      className={classnames('riv-animation__wordmark-container', {
-        'riv-animation__wordmark-container--complete':
-          isAnimationComplete && !skipTransition,
-        'riv-animation__wordmark-container--skip-transition': skipTransition,
-      })}
-      data-testid="metamask-wordmark-rive"
-    >
-      <RiveComponent className="riv-animation__canvas" />
-    </Box>
-  );
-};
-
 export default function MetamaskWordMarkAnimation({
   setIsAnimationComplete,
   isAnimationComplete = false,
   skipTransition = false,
 }: MetamaskWordMarkAnimationProps) {
-  const { isWasmReady, error: wasmError } = useRiveWasmContext();
-  const {
-    buffer,
-    error: bufferError,
-    loading: bufferLoading,
-  } = useRiveWasmFile(WORDMARK_RIV);
-
-  const hasFailed = Boolean(wasmError || bufferError);
+  const { setIsAnimationCompleted } = useRiveWasmContext();
+  const hasPlayedRef = useRef(false);
 
   useEffect(() => {
-    if (wasmError) {
-      console.error(
-        '[Rive - MetamaskWordMarkAnimation] Failed to load WASM:',
-        wasmError,
-      );
-      setIsAnimationComplete(true);
+    if (isAnimationComplete) {
+      return undefined;
     }
-    if (bufferError) {
-      console.error(
-        '[Rive - MetamaskWordMarkAnimation] Failed to load buffer:',
-        bufferError,
-      );
+    // Never leave the welcome actions hidden: when skipping, reveal at once.
+    if (skipTransition) {
       setIsAnimationComplete(true);
-    }
-  }, [wasmError, bufferError, setIsAnimationComplete]);
-
-  // Fail open so welcome CTAs are never stuck at opacity: 0 if Rive stalls.
-  useEffect(() => {
-    if (isAnimationComplete || hasFailed) {
       return undefined;
     }
     const timeoutId = setTimeout(() => {
+      hasPlayedRef.current = true;
       setIsAnimationComplete(true);
-    }, 3000);
+    }, INTRO_DURATION_MS);
     return () => clearTimeout(timeoutId);
-  }, [isAnimationComplete, hasFailed, setIsAnimationComplete]);
+  }, [skipTransition, isAnimationComplete, setIsAnimationComplete]);
 
-  // Keep the fox visible until WASM + buffer are ready. Only mount useRive
-  // after both exist so createRoot remounts cannot init against a skipped load.
-  if (hasFailed || !isWasmReady || bufferLoading || !buffer) {
-    return (
-      <WordmarkFallback
-        isComplete={isAnimationComplete || hasFailed}
-        skipTransition={skipTransition}
-      />
-    );
-  }
+  // Once the intro has actually played, skip it when the user comes back to
+  // the welcome page. Gated on hasPlayedRef so StrictMode's simulated unmount
+  // in development does not mark it complete before it has run.
+  useEffect(() => {
+    return () => {
+      if (hasPlayedRef.current) {
+        setIsAnimationCompleted('MetamaskWordMarkAnimation', true);
+      }
+    };
+  }, [setIsAnimationCompleted]);
 
   return (
-    <MetamaskWordMarkAnimationInner
-      buffer={buffer}
-      setIsAnimationComplete={setIsAnimationComplete}
-      isAnimationComplete={isAnimationComplete}
-      skipTransition={skipTransition}
-    />
+    <Box
+      className={classnames(
+        'riv-animation__wordmark-container',
+        'sq-intro',
+        {
+          'riv-animation__wordmark-container--complete':
+            isAnimationComplete && !skipTransition,
+          'riv-animation__wordmark-container--skip-transition': skipTransition,
+          'sq-intro--static': skipTransition,
+        },
+      )}
+      data-testid="swissquote-wordmark"
+    >
+      <svg
+        className="sq-intro__mark"
+        viewBox="0 0 128 128"
+        width="96"
+        height="96"
+        aria-hidden="true"
+      >
+        <rect
+          className="sq-intro__tile"
+          width="128"
+          height="128"
+          rx="28"
+          fill="#EF6C1A"
+        />
+        <path
+          className="sq-intro__diamond"
+          d="M64 26L102 64L64 102L26 64Z"
+          fill="#FFFFFF"
+        />
+        <path
+          className="sq-intro__core"
+          d="M64 48L80 64L64 80L48 64Z"
+          fill="#EF6C1A"
+        />
+      </svg>
+      <span className="sq-intro__name">Swissquote</span>
+      <span className="sq-intro__product">Wallet</span>
+    </Box>
   );
 }

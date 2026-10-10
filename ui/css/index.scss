@@ -34,3 +34,8 @@
 @import 'react-tippy/dist/tippy';
 @import '@metamask/design-tokens/dist/styles';
 
+/*
+  Swissquote theme (must stay after the design tokens so it overrides them)
+*/
+@import './swissquote-theme.scss';
+

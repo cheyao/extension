@@ -1,232 +1,75 @@
-import React, { useEffect, useMemo, useRef } from 'react';
-import {
-  useRive,
-  useRiveFile,
-  Layout,
-  Fit,
-  Alignment,
-} from '@rive-app/react-canvas';
+import React from 'react';
 import { Box } from '@metamask/design-system-react';
-import {
-  useRiveWasmContext,
-  useRiveWasmFile,
-} from '../../../contexts/rive-wasm';
+import classnames from 'clsx';
 
 type FoxAppearAnimationProps = {
   isLoader?: boolean;
   skipTransition?: boolean;
 };
 
-type FoxAppearAnimationInnerProps = FoxAppearAnimationProps & {
-  buffer: ArrayBuffer;
-};
+// Concentric diamonds echoing the Swissquote Wallet mark, largest first.
+const DIAMOND_SIZES = [420, 300, 180];
 
 /**
- * Mount Rive only after .riv bytes exist. Keep Start/play independent of the
- * canvas node — requiring canvas before play skipped the raise-up entirely
- * when the canvas was not queryable on the first effect pass.
+ * Swissquote brand visual shown at the bottom of the welcome and unlock pages
+ * (concentric diamonds rising in), or as a pulsing logo while logging in.
+ *
+ * Keeps the name and props of the MetaMask fox animation it replaces.
  *
  * @param options0
- * @param options0.buffer
- * @param options0.isLoader
- * @param options0.skipTransition
+ * @param options0.isLoader - Render the login loader instead of the backdrop.
+ * @param options0.skipTransition - Render the final state without animating.
  */
-const FoxAppearAnimationInner = ({
-  buffer,
+export default function FoxAppearAnimation({
   isLoader = false,
   skipTransition = false,
-}: FoxAppearAnimationInnerProps) => {
-  const { isWasmReady } = useRiveWasmContext();
-  const containerRef = useRef<HTMLDivElement>(null);
-  // Copy so Rive cannot detach the shared module-cache ArrayBuffer.
-  const riveBuffer = useMemo(() => buffer.slice(0), [buffer]);
-
-  const { riveFile, status } = useRiveFile({
-    buffer: riveBuffer,
-  });
-
-  const { rive, RiveComponent } = useRive({
-    riveFile: riveFile ?? undefined,
-    stateMachines: riveFile ? 'FoxRaiseUp' : undefined,
-    autoplay: false,
-    layout: new Layout({
-      fit: Fit.Contain,
-      alignment: isLoader ? Alignment.Center : Alignment.BottomCenter,
-    }),
-  });
-
-  // Start the raise-up as soon as the runtime is ready. Do not gate on canvas.
-  useEffect(() => {
-    if (!rive || !isWasmReady) {
-      return undefined;
-    }
-
-    let cancelled = false;
-
-    const startAnimation = () => {
-      if (cancelled) {
-        return;
-      }
-
-      const inputs = rive.stateMachineInputs('FoxRaiseUp');
-      if (!inputs) {
-        // Inputs can lag one frame behind `rive` after createRoot remounts.
-        requestAnimationFrame(startAnimation);
-        return;
-      }
-
-      if (skipTransition) {
-        inputs.find((input) => input.name === 'Wiggle')?.fire();
-      } else {
-        inputs.find((input) => input.name === 'Start')?.fire();
-      }
-
-      if (isLoader) {
-        inputs.find((input) => input.name === 'Loader2')?.fire();
-      }
-
-      rive.play();
-    };
-
-    startAnimation();
-
-    return () => {
-      cancelled = true;
-    };
-  }, [rive, isLoader, isWasmReady, skipTransition]);
-
-  // Resize independently so it cannot block or re-order Start/play.
-  useEffect(() => {
-    if (!rive || !containerRef.current) {
-      return undefined;
-    }
-
-    let frameId = 0;
-
-    const syncCanvasSize = () => {
-      const container = containerRef.current;
-      const canvasEl = container?.querySelector('canvas');
-      if (!container || !canvasEl) {
-        return false;
-      }
-      const { clientWidth, clientHeight } = container;
-      if (clientWidth === 0 || clientHeight === 0) {
-        return false;
-      }
-      const dpr = window.devicePixelRatio || 1;
-      const scaledWidth = Math.round(clientWidth * dpr);
-      const scaledHeight = Math.round(clientHeight * dpr);
-      if (canvasEl.width === scaledWidth && canvasEl.height === scaledHeight) {
-        return true;
-      }
-      canvasEl.width = scaledWidth;
-      canvasEl.height = scaledHeight;
-      canvasEl.style.width = `${clientWidth}px`;
-      canvasEl.style.height = `${clientHeight}px`;
-      rive.resizeToCanvas();
-      return true;
-    };
-
-    const ensureSized = () => {
-      if (!syncCanvasSize()) {
-        frameId = requestAnimationFrame(ensureSized);
-      }
-    };
-
-    // Wait a frame so Start/play can begin before the first bitmap clear.
-    frameId = requestAnimationFrame(ensureSized);
-    window.addEventListener('resize', syncCanvasSize);
-
-    return () => {
-      cancelAnimationFrame(frameId);
-      window.removeEventListener('resize', syncCanvasSize);
-    };
-  }, [rive]);
-
-  if (status === 'loading' || status === 'failed') {
+}: FoxAppearAnimationProps) {
+  if (isLoader) {
     return (
-      <Box
-        className={`${isLoader ? 'riv-animation__fox-container--loader' : 'riv-animation__fox-container'}`}
-      >
-        {isLoader && (
-          <img
-            data-testid="loading-indicator"
-            className="riv-animation__spinner"
-            src="./images/spinner.gif"
-            alt=""
-          />
-        )}
-      </Box>
-    );
-  }
-
-  return (
-    <Box
-      ref={containerRef}
-      className={`${isLoader ? 'riv-animation__fox-container--loader' : 'riv-animation__fox-container'}`}
-    >
-      <RiveComponent className="riv-animation__canvas" />
-      {isLoader && (
+      <Box className="riv-animation__fox-container--loader sq-loader">
+        <img
+          className="sq-loader__mark"
+          src="./images/logo/swissquote-logo.svg"
+          width="88"
+          height="88"
+          alt=""
+        />
         <img
           data-testid="loading-indicator"
           className="riv-animation__spinner"
           src="./images/spinner.gif"
           alt=""
         />
-      )}
-    </Box>
-  );
-};
-
-export default function FoxAppearAnimation({
-  isLoader = false,
-  skipTransition = false,
-}: FoxAppearAnimationProps) {
-  const context = useRiveWasmContext();
-  const { isWasmReady, error: wasmError } = context;
-  const {
-    buffer,
-    error: bufferError,
-    loading: bufferLoading,
-  } = useRiveWasmFile('./images/riv_animations/fox_appear.riv');
-
-  useEffect(() => {
-    if (wasmError) {
-      console.error(
-        '[Rive - FoxAppearAnimation] Failed to load WASM:',
-        wasmError,
-      );
-    }
-    if (bufferError) {
-      console.error(
-        '[Rive - FoxAppearAnimation] Failed to load buffer:',
-        bufferError,
-      );
-    }
-  }, [wasmError, bufferError]);
-
-  if (!isWasmReady || bufferLoading || !buffer) {
-    return (
-      <Box
-        className={`${isLoader ? 'riv-animation__fox-container--loader' : 'riv-animation__fox-container'}`}
-      >
-        {isLoader && (
-          <img
-            data-testid="loading-indicator"
-            className="riv-animation__spinner"
-            src="./images/spinner.gif"
-            alt=""
-          />
-        )}
       </Box>
     );
   }
 
   return (
-    <FoxAppearAnimationInner
-      buffer={buffer}
-      isLoader={isLoader}
-      skipTransition={skipTransition}
-    />
+    <Box
+      className={classnames('riv-animation__fox-container', 'sq-backdrop', {
+        'sq-backdrop--static': skipTransition,
+      })}
+      data-testid="swissquote-backdrop"
+    >
+      <svg
+        className="sq-backdrop__art"
+        viewBox="0 0 600 340"
+        preserveAspectRatio="xMidYMax meet"
+        aria-hidden="true"
+      >
+        {DIAMOND_SIZES.map((size, index) => {
+          const half = size / 2;
+          const cx = 300;
+          const cy = 340;
+          return (
+            <path
+              key={size}
+              className={`sq-backdrop__diamond sq-backdrop__diamond--${index}`}
+              d={`M${cx} ${cy - half}L${cx + half} ${cy}L${cx} ${cy + half}L${cx - half} ${cy}Z`}
+            />
+          );
+        })}
+      </svg>
+    </Box>
   );
 }

@@ -38,7 +38,6 @@ import {
   BlockSize,
   TextTransform,
 } from '../../helpers/constants/design-system';
-import Mascot from '../../components/ui/mascot';
 import {
   DEFAULT_ROUTE,
   ONBOARDING_WELCOME_ROUTE,
@@ -502,21 +501,12 @@ class UnlockPageBase extends Component<UnlockPageProps, UnlockPageState> {
   }
 
   renderMascot = () => {
-    if (isFlask()) {
-      return (
-        <img src="./images/logo/metamask-fox.svg" width="115" height="115" />
-      );
-    }
-    if (isBeta()) {
-      return (
-        <img src="./images/logo/metamask-fox.svg" width="115" height="115" />
-      );
-    }
     return (
-      <Mascot
-        animationEventEmitter={this.animationEventEmitter}
-        width="170"
-        height="170"
+      <img
+        src="./images/logo/swissquote-logo.svg"
+        width="115"
+        height="115"
+        alt=""
       />
     );
   };

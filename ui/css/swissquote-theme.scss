@@ -1,0 +1,56 @@
+/*
+  Swissquote Wallet theme
+
+  Overrides the MetaMask design tokens (imported before this file) so the UI
+  uses the Swissquote orange as its accent on neutral white / black surfaces.
+  Selectors mirror the ones in @metamask/design-tokens so these win by order.
+  The light block also matches :root, so every variable set there must be set
+  again in the dark block, otherwise dark mode inherits the light value.
+*/
+/* stylelint-disable color-no-hex */
+:root {
+  --sq-orange-300: #ff8a3d;
+  --sq-orange-400: #ef6c1a;
+  --sq-orange-500: #d95c0e;
+  --sq-orange-600: #b84b08;
+
+  --font-family-accent: 'Inter', 'Helvetica Neue', helvetica, arial, sans-serif;
+  --font-family-hero: 'Inter', 'Helvetica Neue', helvetica, arial, sans-serif;
+
+  // Welcome / unlock page background in light mode.
+  --welcome-bg-light: #fff;
+}
+
+.light,
+:root,
+[data-theme='light'] {
+  --color-primary-default: var(--sq-orange-400);
+  --color-primary-alternative: var(--sq-orange-600);
+  --color-primary-muted: #ef6c1a1a;
+  --color-primary-inverse: #fff;
+  --color-primary-default-hover: var(--sq-orange-500);
+  --color-primary-default-pressed: var(--sq-orange-600);
+  --color-primary-muted-hover: #ef6c1a26;
+  --color-primary-muted-pressed: #ef6c1a33;
+  --color-shadow-primary: #ef6c1a33;
+
+  --color-accent01-normal: var(--sq-orange-400);
+  // Welcome / unlock page background in dark mode (MetaMask uses purple).
+  --color-accent02-dark: #000;
+}
+
+.dark,
+[data-theme='dark'] {
+  --color-primary-default: var(--sq-orange-300);
+  --color-primary-alternative: #ffa769;
+  --color-primary-muted: #ff8a3d26;
+  --color-primary-inverse: #000;
+  --color-primary-default-hover: #ff9c5a;
+  --color-primary-default-pressed: #ffb17c;
+  --color-primary-muted-hover: #ff8a3d33;
+  --color-primary-muted-pressed: #ff8a3d40;
+  --color-shadow-primary: #ff8a3d33;
+
+  --color-accent01-normal: var(--sq-orange-300);
+  --color-accent02-dark: #000;
+}

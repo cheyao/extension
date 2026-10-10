@@ -156,6 +156,15 @@ export default function WelcomeLogin({
                 ? t('onboardingImportWallet')
                 : t('onboardingSrpImport')}
             </Button>
+            {/* Not wired up yet: placeholder for the Swissquote recovery flow. */}
+            <Button
+              data-testid="onboarding-swissquote-recovery"
+              variant={ButtonVariant.Secondary}
+              size={ButtonSize.Lg}
+              className="w-full"
+            >
+              {t('onboardingSwissquoteRecovery')}
+            </Button>
           </Box>
         )}
       </Box>
