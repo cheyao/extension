@@ -30,6 +30,7 @@ export function getRemoteControlControllerMessenger(
     messenger: remoteControlControllerMessenger,
     actions: [
       'AccountsController:getSelectedAccount',
+      'AccountsController:listAccounts',
       'KeyringController:signEip7702Authorization',
       'KeyringController:signTypedMessage',
       'NetworkController:findNetworkClientIdByChainId',

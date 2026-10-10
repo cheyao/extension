@@ -34,8 +34,32 @@ export type RemoteControlControllerDeployRemoteControlDelegateAction = {
 };
 
 /**
+ * Looks for unlock requests on every account, records them, and raises a
+ * notification for each one not seen before.
+ *
+ * @returns The current requests.
+ */
+export type RemoteControlControllerCheckAccessRequestsAction = {
+  type: `RemoteControlController:checkAccessRequests`;
+  handler: RemoteControlController['checkAccessRequests'];
+};
+
+/**
+ * Blocks an unlock request by calling `revoke()` from the account itself.
+ *
+ * @param account - The account the request targets.
+ * @returns The transaction that revoked it.
+ */
+export type RemoteControlControllerBlockAccessRequestAction = {
+  type: `RemoteControlController:blockAccessRequest`;
+  handler: RemoteControlController['blockAccessRequest'];
+};
+
+/**
  * Union of all RemoteControlController action types.
  */
 export type RemoteControlControllerMethodActions =
   | RemoteControlControllerIsRemoteControlAvailableAction
-  | RemoteControlControllerDeployRemoteControlDelegateAction;
+  | RemoteControlControllerDeployRemoteControlDelegateAction
+  | RemoteControlControllerCheckAccessRequestsAction
+  | RemoteControlControllerBlockAccessRequestAction;

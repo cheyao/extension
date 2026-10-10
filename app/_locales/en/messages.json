@@ -9230,6 +9230,10 @@
     "message": "These keys are shown only once and are not stored by the wallet. Write them down now.",
     "description": "Warning that the recovery keys cannot be viewed again."
   },
+  "recoveryKeysNotDelegated": {
+    "message": "Your recovery contract is deployed, but your wallet is not connected to it yet, so these keys cannot recover it. Save the keys anyway.",
+    "description": "Warning shown with the recovery keys when the wallet's EIP-7702 delegation could not be switched to the recovery contract."
+  },
   "recoveryKeysTitle": {
     "message": "Your recovery keys",
     "description": "Title of the recovery keys reveal screen during wallet creation."
@@ -9239,7 +9243,7 @@
     "description": "Label for the hash of the transaction that deployed the recovery contract, so the user can verify it on a block explorer."
   },
   "recoveryKeysUnconfirmed": {
-    "message": "The deployment transaction succeeded, but the contract could not be seen on-chain yet. Check the transaction below on a block explorer, and save these keys anyway.",
+    "message": "The deployment transaction succeeded, but the contract could not be seen on-chain yet, so your wallet was not connected to it and these keys cannot recover it yet. Check the transaction below on a block explorer, and save these keys anyway.",
     "description": "Warning shown with the recovery keys when the deployment was included but its contract code could not be confirmed."
   },
   "recoveryPhraseReminderBackupStart": {
@@ -9281,6 +9285,46 @@
   "remindMeLater": {
     "message": "Remind me later",
     "description": "Secondary action to postpone replacing a legacy passkey."
+  },
+  "remoteControlAccessActive": {
+    "message": "$1 has control of this wallet until $2. If this is not you, block it now.",
+    "description": "Home screen warning while a recovery controller has active access. $1 is the controller address, $2 is when access ends."
+  },
+  "remoteControlAccessBlock": {
+    "message": "Block it",
+    "description": "Button that revokes a pending or active recovery unlock request."
+  },
+  "remoteControlAccessBlockFailed": {
+    "message": "Could not block the request: $1",
+    "description": "Error shown when revoking a recovery unlock request fails. $1 is the reason."
+  },
+  "remoteControlAccessBlocked": {
+    "message": "Blocked. The request and its signatures are no longer valid.",
+    "description": "Shown after a recovery unlock request was revoked."
+  },
+  "remoteControlAccessBlocking": {
+    "message": "Blocking…",
+    "description": "Button label while the revoke transaction is in flight."
+  },
+  "remoteControlAccessNotificationActive": {
+    "message": "Someone used your recovery keys and has control of $1 since $2. Open the wallet to block it.",
+    "description": "Browser notification for an active recovery unlock. $1 is the account, $2 is the unlock time."
+  },
+  "remoteControlAccessNotificationPending": {
+    "message": "Someone used your recovery keys to unlock $1. They get control at $2. Open the wallet to block it.",
+    "description": "Browser notification for a pending recovery unlock. $1 is the account, $2 is the unlock time."
+  },
+  "remoteControlAccessNotificationTitle": {
+    "message": "Wallet unlock requested",
+    "description": "Title of the browser notification for a recovery unlock request."
+  },
+  "remoteControlAccessPending": {
+    "message": "Someone used 2 of your recovery keys to request control of this wallet for $1. They get control in $2 unless you block it.",
+    "description": "Home screen warning during a recovery unlock cooldown. $1 is the controller address, $2 is the time left."
+  },
+  "remoteControlAccessTitle": {
+    "message": "Wallet unlock requested",
+    "description": "Title of the home screen warning about a recovery unlock request."
   },
   "remove": {
     "message": "Remove"

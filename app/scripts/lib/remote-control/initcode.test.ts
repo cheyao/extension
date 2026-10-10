@@ -43,7 +43,7 @@ const CONSTRUCTOR_ARGS_LENGTH = 96;
  * rather than the wallet deploying unreviewed bytecode.
  */
 const EXPECTED_CREATION_CODE_HASH =
-  '0x9b6b39de902f5f56f1f7795ecb7ea663232312a12951fd1a6a6fd07eafc9b647';
+  '0x2adfbfca43e8cbaff22dbd4696839c4e111ecf55bb37fa2e43932e8b0cab5429';
 
 describe('remote-control creation bytecode', () => {
   it('matches the compiled artifact in rcd', () => {

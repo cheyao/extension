@@ -6,20 +6,23 @@ import { MessengerClientInitFunction } from '../types';
  * Initialize the remote control controller.
  *
  * @param request - The request object.
+ * @param request.controllerMessenger - The controller messenger.
+ * @param request.persistedState - The persisted state of the extension.
+ * @param request.extension - The extension browser API, used to watch for
+ * unlock requests in the background and raise notifications.
  * @returns The initialized controller.
  */
 export const RemoteControlControllerInit: MessengerClientInitFunction<
   RemoteControlController,
   RemoteControlControllerMessenger
-> = (request) => {
+> = ({ controllerMessenger, persistedState, extension }) => {
   const messengerClient = new RemoteControlController({
-    messenger: request.controllerMessenger,
+    messenger: controllerMessenger,
+    state: persistedState.RemoteControlController,
+    extension,
   });
 
-  return {
-    messengerClient,
-    // The controller holds no state: recovery keys are returned to the caller
-    // and never persisted.
-    persistedStateKey: null,
-  };
+  // Persisted so that each unlock request is notified once across restarts.
+  // Recovery keys are never part of the state.
+  return { messengerClient };
 };

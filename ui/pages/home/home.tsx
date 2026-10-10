@@ -12,6 +12,7 @@ import { isBeta, isFlask, isMain } from '../../../shared/lib/build-types';
 import { getEnvironmentType } from '../../../shared/lib/environment-type';
 import { SUPPORT_LINK } from '../../../shared/lib/ui-utils';
 import { TermsOfUsePopupContainer } from '../../components/app/terms-of-use-popup';
+import RemoteControlAccessAlert from '../../components/app/remote-control-access-alert';
 import { MetaMetricsConsentContainer } from '../../components/app/metametrics-consent/metametrics-consent-container';
 import { RecoveryPhraseReminderContainer } from '../../components/app/recovery-phrase-reminder';
 import { ImportedTokensNotificationContainer } from '../../components/app/imported-tokens-notification/imported-tokens-notification-container';
@@ -287,6 +288,7 @@ export default function Home() {
         <DeeplinkQrCodeModalContainer />
         <Pna25ModalContainer />
         <ConnectedStatusPopoverContainer />
+        <RemoteControlAccessAlert />
         <div className="home__main-view">
           <AccountOverview
             onSupportLinkClick={onSupportLinkClick}

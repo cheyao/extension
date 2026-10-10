@@ -48,6 +48,7 @@ const DEPLOYMENT = {
   delegateAddress: '0x4444444444444444444444444444444444444444',
   transactionHash: `0x${'dd'.repeat(32)}`,
   isCodeConfirmed: true,
+  isDelegated: true,
   keys: [
     { label: 'A', privateKey: KEY_A, address: `0x${'01'.repeat(20)}` },
     { label: 'B', privateKey: KEY_B, address: `0x${'02'.repeat(20)}` },
@@ -178,6 +179,41 @@ describe('RecoveryKeys', () => {
       expect(
         queryByTestId('recovery-keys-unconfirmed'),
       ).not.toBeInTheDocument();
+    });
+
+    it('does not warn about delegation when the wallet was delegated', async () => {
+      const { getByTestId, queryByTestId } = renderRecoveryKeys();
+
+      await waitFor(() => {
+        expect(getByTestId('recovery-keys-success')).toBeInTheDocument();
+      });
+
+      expect(
+        queryByTestId('recovery-keys-not-delegated'),
+      ).not.toBeInTheDocument();
+    });
+
+    it('shows the keys and why, when the wallet could not be delegated', async () => {
+      mockSubmitRequestToBackground
+        .mockReset()
+        .mockResolvedValueOnce({ isConfigured: true })
+        .mockResolvedValueOnce({
+          ...DEPLOYMENT,
+          isDelegated: false,
+          delegationError:
+            'Pimlico did not accept the sponsored transaction: x',
+        });
+
+      const { getByTestId } = renderRecoveryKeys();
+
+      await waitFor(() => {
+        expect(getByTestId('recovery-keys-success')).toBeInTheDocument();
+      });
+
+      expect(getByTestId('recovery-keys-not-delegated')).toHaveTextContent(
+        'Pimlico did not accept the sponsored transaction: x',
+      );
+      expect(getByTestId('recovery-key-A')).toHaveTextContent(KEY_A);
     });
 
     it('still shows the keys, with a warning, when the code is unconfirmed', async () => {

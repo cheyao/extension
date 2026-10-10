@@ -13,8 +13,9 @@ import {
   defineChain,
   getTypesForEIP712Domain,
   http,
-  zeroAddress,
+  parseAbi,
   type EIP1193Provider,
+  type PublicClient,
 } from 'viem';
 import { toAccount } from 'viem/accounts';
 import {
@@ -84,14 +85,13 @@ export type SponsoredUserOperationMessenger = Messenger<
  */
 export type SponsoredUserOperationCall = {
   /**
-   * Call target. For a contract creation pass {@link zeroAddress} and put the
-   * initcode in `data`: the EVM executes calldata sent to a codeless address
-   * as initcode, so `Simple7702Account.execute` deploys the contract.
+   * Call target. A user operation can only CALL, so to deploy a contract call
+   * a CREATE2 deployer with the initcode as `data`.
    */
   to: Hex;
   /** Native value to forward. Defaults to 0. */
   value?: bigint | undefined;
-  /** Calldata, or initcode when deploying. Defaults to `0x`. */
+  /** Calldata. Defaults to `0x`. */
   data?: Hex | undefined;
 };
 
@@ -104,6 +104,64 @@ export type SponsoredUserOperationResult = {
   /** The ERC-4337 user operation hash, for tracking. */
   userOperationHash: Hex;
 };
+
+/**
+ * The ERC-4337 v0.8 EntryPoint, which every account used here validates
+ * against.
+ */
+const ENTRY_POINT_V08 = '0x4337084D9E255Ff0702461CF8895CE9E3b5Ff108';
+
+const remoteControlProbeAbi = parseAbi([
+  'function entryPoint() view returns (address)',
+  'function accessState() view returns (address, uint64, uint64, uint256)',
+]);
+
+/**
+ * Returns the address an EIP-7702 delegated account points at, or `undefined`
+ * if the account has no delegation.
+ *
+ * @param code - The account's code.
+ * @returns The delegation target.
+ */
+function getDelegationTarget(code: Hex | undefined): Hex | undefined {
+  const lower = code?.toLowerCase();
+  return lower?.startsWith('0xef0100') && lower.length === 48
+    ? (`0x${lower.slice(8)}` as Hex)
+    : undefined;
+}
+
+/**
+ * Whether `account` is delegated to a RemoteControlDelegate, which is a
+ * Simple7702Account-compatible ERC-4337 account that also carries the
+ * wallet's recovery. Such a delegation must be kept: replacing it would
+ * silently remove the wallet's recovery.
+ *
+ * @param client - Client to read through.
+ * @param account - The delegated account.
+ * @returns Whether the delegation is a RemoteControlDelegate.
+ */
+async function isRemoteControlDelegation(
+  client: PublicClient,
+  account: Hex,
+): Promise<boolean> {
+  try {
+    const [entryPoint] = await Promise.all([
+      client.readContract({
+        address: account,
+        abi: remoteControlProbeAbi,
+        functionName: 'entryPoint',
+      }),
+      client.readContract({
+        address: account,
+        abi: remoteControlProbeAbi,
+        functionName: 'accessState',
+      }),
+    ]);
+    return entryPoint.toLowerCase() === ENTRY_POINT_V08.toLowerCase();
+  } catch {
+    return false;
+  }
+}
 
 /**
  * Reduces an error to the most specific human-readable reason it carries.
@@ -220,6 +278,9 @@ function createKeyringOwnerAccount(
  * {@link SponsoredUserOperationCall} for how to deploy a contract.
  * @param args.gasStation - The bundler + paymaster endpoint.
  * @param args.timeoutMs - How long to wait for inclusion.
+ * @param args.implementation - The Simple7702Account-compatible contract to
+ * delegate the account to. When omitted, an existing RemoteControlDelegate
+ * delegation is kept and anything else is upgraded to Simple7702Account.
  * @returns The user operation hash and its including transaction hash.
  */
 export async function publishSponsoredUserOperation({
@@ -231,6 +292,7 @@ export async function publishSponsoredUserOperation({
   call,
   gasStation,
   timeoutMs,
+  implementation: requestedImplementation,
 }: {
   messenger: SponsoredUserOperationMessenger;
   chainId: Hex;
@@ -240,6 +302,7 @@ export async function publishSponsoredUserOperation({
   call: SponsoredUserOperationCall;
   gasStation: GasStation;
   timeoutMs: number;
+  implementation?: Hex | undefined;
 }): Promise<SponsoredUserOperationResult> {
   const chainIdNumber = Number.parseInt(chainId, 16);
 
@@ -266,22 +329,33 @@ export async function publishSponsoredUserOperation({
     transport,
   });
 
+  const currentTarget = getDelegationTarget(
+    await runStep('Could not read the account from the network', () =>
+      client.getCode({ address: from }),
+    ),
+  );
+
+  let implementation = requestedImplementation;
+  if (
+    !implementation &&
+    currentTarget &&
+    (await isRemoteControlDelegation(client as PublicClient, from))
+  ) {
+    implementation = currentTarget;
+  }
+
   const account = await runStep('Could not set up the smart account', () =>
     toSimple7702SmartAccount({
       client,
       owner: createKeyringOwnerAccount(from, messenger),
+      implementation,
     }),
   );
 
-  // Upgrade the account with EIP-7702 unless it already points at the
-  // Simple7702Account implementation (delegated code is 0xef0100 || address).
-  const implementation = account.authorization.address.toLowerCase();
-  const code = (
-    await runStep('Could not read the account from the network', () =>
-      client.getCode({ address: from }),
-    )
-  )?.toLowerCase();
-  const isDelegated = code === `0xef0100${implementation.slice(2)}`;
+  // Delegate the account with EIP-7702 unless it already points at the
+  // implementation (delegated code is 0xef0100 || address).
+  const isDelegated =
+    currentTarget === account.authorization.address.toLowerCase();
 
   let authorization;
   if (!isDelegated) {
@@ -379,8 +453,8 @@ export async function publishSponsoredUserOperation({
   log('Sending sponsored user operation', {
     from,
     to: call.to,
-    isDeployment: call.to === zeroAddress,
     gasStation: gasStation.name,
+    implementation: account.authorization.address,
     upgrading: !isDelegated,
   });
 

@@ -249,6 +249,29 @@ export default function RecoveryKeys() {
         {t('recoveryKeysBody', [deployment?.delegateAddress ?? ''])}
       </Text>
 
+      {deployment?.isCodeConfirmed && !deployment.isDelegated ? (
+        <Box
+          flexDirection={BoxFlexDirection.Column}
+          gap={1}
+          backgroundColor={BoxBackgroundColor.WarningMuted}
+          padding={4}
+          data-testid="recovery-keys-not-delegated"
+        >
+          <Text
+            variant={TextVariant.BodySm}
+            fontWeight={FontWeight.Medium}
+            color={TextColor.WarningDefault}
+          >
+            {t('recoveryKeysNotDelegated')}
+          </Text>
+          {deployment.delegationError ? (
+            <Text variant={TextVariant.BodySm} className="recovery-keys__key">
+              {deployment.delegationError}
+            </Text>
+          ) : null}
+        </Box>
+      ) : null}
+
       {deployment && !deployment.isCodeConfirmed ? (
         <Box
           flexDirection={BoxFlexDirection.Row}

@@ -38,15 +38,16 @@ describe('RemoteControlControllerInit', () => {
     ).toBeInstanceOf(RemoteControlController);
   });
 
-  it('does not persist state, so recovery keys are never stored', () => {
+  it('passes the persisted state and the extension API', () => {
     const requestMock = buildInitRequestMock();
 
     expect(RemoteControlControllerInit(requestMock)).toStrictEqual({
       messengerClient: expect.any(RemoteControlController),
-      persistedStateKey: null,
     });
     expect(remoteControlControllerClassMock).toHaveBeenCalledWith({
       messenger: requestMock.controllerMessenger,
+      state: requestMock.persistedState.RemoteControlController,
+      extension: requestMock.extension,
     });
   });
 });
