@@ -1,4 +1,4 @@
-import React, { useState, useContext, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -19,7 +19,6 @@ import {
   BoxJustifyContent,
   BoxAlignItems,
   TextButton,
-  TextButtonSize,
 } from '@metamask/design-system-react';
 import { useI18nContext } from '../../../hooks/useI18nContext';
 import {
@@ -33,17 +32,12 @@ import {
   MetaMetricsEventCategory,
   MetaMetricsEventName,
 } from '../../../../shared/constants/metametrics';
-import { MetaMetricsContext } from '../../../contexts/metametrics';
 import { useAnalytics } from '../../../hooks/useAnalytics';
-import { getHDEntropyIndex, getFirstTimeFlowType } from '../../../selectors';
+import { getHDEntropyIndex } from '../../../selectors';
 import SRPDetailsModal from '../../../components/app/srp-details-modal';
-import { setSeedPhraseBackedUp } from '../../../store/actions';
-import { TraceName } from '../../../../shared/lib/trace';
 import { useIsFirefox } from '../../../hooks/useIsFirefox';
 import { useOnboardingSearchParams } from '../hooks/useOnboardingSearchParams';
-import { FirstTimeFlowType } from '../../../../shared/constants/onboarding';
 import { getSeedPhraseBackedUp } from '../../../ducks/metamask/metamask';
-import { useDispatch } from '../../../store/hooks';
 import RecoveryPhraseChips from './recovery-phrase-chips';
 
 type RecoveryPhraseProps = {
@@ -55,11 +49,8 @@ export default function RecoveryPhrase({
 }: RecoveryPhraseProps) {
   const navigate = useNavigate();
   const t = useI18nContext();
-  const dispatch = useDispatch();
-  const firstTimeFlowType = useSelector(getFirstTimeFlowType);
   const hasSeedPhraseBackedUp = useSelector(getSeedPhraseBackedUp);
   const { trackEvent, createEventBuilder } = useAnalytics();
-  const { bufferedEndTrace } = useContext(MetaMetricsContext);
   const hdEntropyIndex = useSelector(getHDEntropyIndex);
   const [phraseRevealed, setPhraseRevealed] = useState(false);
   const [showSrpDetailsModal, setShowSrpDetailsModal] = useState(false);
@@ -130,39 +121,6 @@ export default function RecoveryPhrase({
     );
     setShowSrpDetailsModal(true);
   }, [createEventBuilder, trackEvent]);
-
-  const handleRemindLater = useCallback(async () => {
-    await dispatch(setSeedPhraseBackedUp(false));
-
-    trackEvent(
-      createEventBuilder(
-        MetaMetricsEventName.OnboardingWalletSecuritySkipConfirmed,
-      )
-        .addCategory(MetaMetricsEventCategory.Onboarding)
-        .addProperties({
-          // eslint-disable-next-line @typescript-eslint/naming-convention
-          hd_entropy_index: hdEntropyIndex,
-        })
-        .build(),
-    );
-    bufferedEndTrace?.({ name: TraceName.OnboardingNewSrpCreateWallet });
-    bufferedEndTrace?.({ name: TraceName.OnboardingJourneyOverall });
-
-    if (isFirefox || firstTimeFlowType === FirstTimeFlowType.restore) {
-      navigate(ONBOARDING_COMPLETION_ROUTE, { replace: true });
-    } else {
-      navigate(ONBOARDING_METAMETRICS, { replace: true });
-    }
-  }, [
-    bufferedEndTrace,
-    dispatch,
-    firstTimeFlowType,
-    hdEntropyIndex,
-    isFirefox,
-    navigate,
-    createEventBuilder,
-    trackEvent,
-  ]);
 
   const handleBack = useCallback(() => {
     navigate(
@@ -271,16 +229,6 @@ export default function RecoveryPhrase({
         >
           {t('continue')}
         </Button>
-        {!isFromReminder && (
-          <TextButton
-            size={TextButtonSize.BodyMd}
-            onClick={handleRemindLater}
-            className="w-full hover:bg-transparent active:bg-transparent"
-            data-testid="recovery-phrase-remind-later"
-          >
-            {t('secureWalletRemindLaterButton')}
-          </TextButton>
-        )}
       </Box>
     </Box>
   );
