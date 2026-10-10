@@ -4010,8 +4010,26 @@ export function setShowFiatConversionOnTestnetsPreference(value: boolean) {
   return setPreference('showFiatInTestnets', value);
 }
 
-export function setShowTestNetworksPreference(value: boolean) {
-  return setPreference('showTestNetworks', value);
+export function setShowTestNetworksPreference(
+  value: boolean,
+): ThunkAction<Promise<void>, MetaMaskReduxState, unknown, AnyAction> {
+  return async (dispatch, getState) => {
+    await dispatch(setPreference('showTestNetworks', value));
+
+    // Swissquote Wallet: in the "All networks" view (several networks
+    // enabled), re-apply it so test networks join or leave it right away.
+    const enabledNetworkMap = (
+      getState().metamask as {
+        enabledNetworkMap?: Record<string, Record<string, boolean>>;
+      }
+    ).enabledNetworkMap;
+    const enabledCount = Object.values(enabledNetworkMap ?? {})
+      .flatMap((networks) => Object.values(networks))
+      .filter(Boolean).length;
+    if (enabledCount > 1) {
+      await dispatch(setEnabledAllPopularNetworks());
+    }
+  };
 }
 
 export function setPrivacyMode(value: boolean) {

@@ -65,7 +65,11 @@ export function useAutomaticGasFeeTokenSelect() {
         selectedGasFeeToken.toLocaleLowerCase(),
     );
 
+  // Swissquote Wallet: paying the fee with a token goes through MetaMask's
+  // relay, which cannot send on our networks, so never switch to it
+  // automatically; the user gets the normal insufficient-funds warning.
   const shouldSelectForInsufficientNativeBalance =
+    false &&
     isGaslessSupportedAndFinished &&
     isNativeBalanceKnown &&
     hasInsufficientBalance &&

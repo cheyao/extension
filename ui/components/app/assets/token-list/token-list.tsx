@@ -37,6 +37,7 @@ import {
 import { buildEvmCaip19AssetId } from '#shared/lib/multichain/buildEvmCaip19AssetId';
 import { useLowValueTokenPartition } from '#ui/components/app/assets/hooks/useLowValueTokenPartition';
 import { isMusdToken } from '#ui/components/app/musd/constants';
+import { useEnsureSusdToken } from '#ui/hooks/susd/useEnsureSusdToken';
 import { useCoordinatedTrace } from '#ui/hooks/useTraceCoordinator';
 import TokenCell from '../token-cell';
 import { ASSET_CELL_HEIGHT } from '../constants';
@@ -185,6 +186,9 @@ function TokenList({ onTokenClick, safeChains }: TokenListProps) {
   const { isStockToken } = useRWAToken();
 
   const accountGroupIdAssets = useSelector(getAssetsBySelectedAccountGroup);
+
+  // Swissquote Wallet: keep sUSD (Monad testnet) in the token list.
+  useEnsureSusdToken();
 
   // Defer only the hide-zero-balance preference so Settings toggles stay
   // responsive while this list recomputes. Account assets must update

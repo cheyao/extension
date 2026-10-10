@@ -89,7 +89,11 @@ export const EditGasFeesRow = ({
   const { isSupported: isGaslessSupported } = useIsGaslessSupported();
   const { isSponsorshipOptedOut } = useGasSponsorshipPreference(chainId);
 
+  // Swissquote Wallet: MetaMask's relay ("Paid by MetaMask") cannot send on
+  // our networks, so its sponsorship is never offered; gasless goes through a
+  // Swissquote gas station via the Gas selector instead.
   const isSponsorshipEligible =
+    false &&
     isGaslessSupported &&
     doesSentinelAllowSponsorship &&
     transactionType !== TransactionType.revokeDelegation;

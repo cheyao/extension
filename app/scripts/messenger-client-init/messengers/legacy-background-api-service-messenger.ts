@@ -106,6 +106,7 @@ export function getLegacyBackgroundApiServiceMessenger(
       'PreferencesController:removeReferralDeclinedAccount',
       'PreferencesController:setAccountsReferralApproved',
       'PreferencesController:setPasswordForgotten',
+      'PreferencesController:setPreference',
       'PasskeyController:unlockWithPasskey',
       'PasskeyController:changePasswordWithPasskeyVerification',
       'PasskeyController:exportSeedPhraseWithPasskey',

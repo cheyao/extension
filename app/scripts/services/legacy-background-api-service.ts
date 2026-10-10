@@ -37,6 +37,7 @@ import {
   Hex,
   hexToBytes,
   Json,
+  KnownCaipNamespace,
   NonEmptyArray,
   parseCaipAccountId,
   parseCaipChainId,
@@ -302,7 +303,7 @@ import {
   fetchERC1155Balance,
 } from '../../../shared/lib/token-util';
 import { isEqualCaseInsensitive } from '../../../shared/lib/string-utils';
-import { CHAIN_IDS } from '../../../shared/constants/network';
+import { CHAIN_IDS, TEST_CHAINS } from '../../../shared/constants/network';
 import {
   getNetworkConfigurationsByCaipChainId,
   getProviderConfig,
@@ -350,6 +351,7 @@ import {
   PreferencesControllerResetStateAction,
   PreferencesControllerSetAccountsReferralApprovedAction,
   PreferencesControllerSetPasswordForgottenAction,
+  PreferencesControllerSetPreferenceAction,
   PreferencesControllerToggleExternalServicesAction,
 } from '../controllers/preferences-controller-method-action-types';
 import {
@@ -710,6 +712,7 @@ type AllowedActions =
   | PreferencesControllerResetStateAction
   | PreferencesControllerSetAccountsReferralApprovedAction
   | PreferencesControllerSetPasswordForgottenAction
+  | PreferencesControllerSetPreferenceAction
   | PreferencesControllerToggleExternalServicesAction
   | RemoteFeatureFlagControllerGetStateAction
   | SeedlessOnboardingControllerAddNewSecretDataAction
@@ -1473,6 +1476,48 @@ export class LegacyBackgroundApiService {
   }
 
   /**
+   * Swissquote Wallet: when "Show test networks" is on, the "All networks"
+   * view also includes the configured test networks, so their tokens show on
+   * the home page next to mainnet ones. Enables them alongside the popular
+   * networks without the exclusive single-network switch.
+   */
+  #includeTestNetworksInAllNetworks(): void {
+    const { showTestNetworks } = this.#messenger.call(
+      'PreferencesController:getState',
+    ).preferences;
+    if (!showTestNetworks) {
+      return;
+    }
+
+    const { networkConfigurationsByChainId } = this.#messenger.call(
+      'NetworkController:getState',
+    );
+    const testChainIds = TEST_CHAINS.filter(
+      (chainId) =>
+        chainId !== CHAIN_IDS.LOCALHOST &&
+        networkConfigurationsByChainId[chainId],
+    );
+    if (testChainIds.length === 0) {
+      return;
+    }
+
+    const { enabledNetworkMap } = this.#messenger.call(
+      'NetworkEnablementController:getState',
+    );
+    const evmNetworks = enabledNetworkMap[KnownCaipNamespace.Eip155] ?? {};
+    this.#messenger.call(
+      'NetworkEnablementController:restoreEnabledNetworkMap',
+      {
+        ...enabledNetworkMap,
+        [KnownCaipNamespace.Eip155]: {
+          ...evmNetworks,
+          ...Object.fromEntries(testChainIds.map((chainId) => [chainId, true])),
+        },
+      },
+    );
+  }
+
+  /**
    * Enables all popular networks, then refreshes connectivity metadata for
    * the selected and enabled networks.
    */
@@ -1481,6 +1526,7 @@ export class LegacyBackgroundApiService {
       this.#messenger.call(
         'NetworkEnablementController:enableAllPopularNetworks',
       );
+      this.#includeTestNetworksInAllNetworks();
     } catch (err) {
       log.error((err as Error).message);
       throw err;
@@ -1518,8 +1564,19 @@ export class LegacyBackgroundApiService {
     // clear contacts (address book)
     this.#messenger.call('AddressBookController:clear');
 
-    // reset preferences to defaults
+    // reset preferences to defaults, keeping the user's "Show test networks"
+    // choice (Swissquote Wallet: remembered across wallet resets/restores)
+    const { showTestNetworks } = this.#messenger.call(
+      'PreferencesController:getState',
+    ).preferences;
     this.#messenger.call('PreferencesController:resetState');
+    if (showTestNetworks) {
+      this.#messenger.call(
+        'PreferencesController:setPreference',
+        'showTestNetworks',
+        true,
+      );
+    }
 
     if (!restoreOnly) {
       // reset onboarding state

@@ -43,7 +43,6 @@ export function useInsufficientBalanceAlerts({
   const { hasInsufficientBalance, isNativeBalanceKnown, nativeCurrency } =
     useHasInsufficientBalance();
   const isSimulationEnabled = useSelector(getUseTransactionSimulations);
-  const isSponsored = currentConfirmation?.isGasFeeSponsored;
   const {
     isSupported: isGaslessSupported,
     pending: isGaslessSupportedPending,
@@ -84,8 +83,9 @@ export function useInsufficientBalanceAlerts({
     !isSponsorshipOptedOut;
 
   // Transaction is sponsored only if it's marked as sponsored AND gasless is supported
-  const isSponsoredTransaction =
-    (isSponsored && isGaslessSupported) || isSwissquoteGasless;
+  // MetaMask's own relay sponsorship is never used in Swissquote Wallet, so
+  // only a Swissquote gas station covers the network fee.
+  const isSponsoredTransaction = isSwissquoteGasless;
 
   // Simulation is complete if it's disabled, or if enabled and gasFeeTokens is loaded
   const isSimulationComplete = !isSimulationEnabled || Boolean(gasFeeTokens);

@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  TransactionType,
-  type TransactionMeta,
-} from '@metamask/transaction-controller';
+import type { TransactionMeta } from '@metamask/transaction-controller';
 import {
   Box,
   BoxAlignItems,
@@ -14,11 +11,11 @@ import {
 } from '@metamask/design-system-react';
 import classnames from 'clsx';
 import { getSwissquoteGasStation } from '../../../../../../../../shared/constants/swissquote';
+import { MONAD_RESERVE_BALANCE_MON } from '../../../../../../../../shared/lib/monad-reserve-balance';
 import { ConfirmInfoRow } from '../../../../../../../components/app/confirm/info/row';
 import { useI18nContext } from '../../../../../../../hooks/useI18nContext';
 import { useConfirmContext } from '../../../../../context/confirm';
 import { useGasSponsorshipPreference } from '../../../../../hooks/gas/useGasSponsorshipPreference';
-import { useIsGaslessSupported } from '../../../../../hooks/gas/useIsGaslessSupported';
 
 type OptionProps = {
   label: string;
@@ -70,37 +67,32 @@ function GasPaymentOption({
 
 /**
  * Lets the user choose, per network, whether to pay the network fee
- * themselves or send the transaction gasless. Gasless is offered when either
- * - MetaMask's relay sponsors the transaction (e.g. on Monad), as in base
- * MetaMask; or
- * - the network has a Swissquote gas station (see `SWISSQUOTE_GAS_STATIONS`).
+ * themselves or send the transaction gasless. Gasless is only offered on
+ * networks with a Swissquote gas station (see `SWISSQUOTE_GAS_STATIONS`);
+ * everywhere else it shows as unavailable.
  */
 export function GasPaymentSelector() {
   const t = useI18nContext();
   const { currentConfirmation: transactionMeta } =
     useConfirmContext<TransactionMeta>();
-  const { isSponsorshipOptedOut, setSponsorshipOptedOut } =
-    useGasSponsorshipPreference(transactionMeta?.chainId);
-
-  const { isSupported: isGaslessSupported } = useIsGaslessSupported();
+  const {
+    isSponsorshipOptedOut,
+    isBlockedByMonadReserve,
+    setSponsorshipOptedOut,
+  } = useGasSponsorshipPreference(transactionMeta?.chainId);
 
   const hasGasStation = Boolean(
     getSwissquoteGasStation(transactionMeta?.chainId),
   );
-  // Same eligibility rule MetaMask uses for its "Paid by MetaMask" fee row.
-  const isMetaMaskSponsored = Boolean(
-    isGaslessSupported &&
-    transactionMeta?.isGasFeeSponsored &&
-    transactionMeta?.type !== TransactionType.revokeDelegation,
-  );
-  const isGaslessAvailable = hasGasStation || isMetaMaskSponsored;
+  // Monad's 10 MON reserve rule rules out gasless for this transaction.
+  const isGaslessAvailable = hasGasStation && !isBlockedByMonadReserve;
   const isGaslessSelected = isGaslessAvailable && !isSponsorshipOptedOut;
 
   let gaslessHint = t('swissquoteGasGaslessUnavailable');
-  if (hasGasStation) {
+  if (hasGasStation && isBlockedByMonadReserve) {
+    gaslessHint = t('swissquoteGasMonadReserve', [MONAD_RESERVE_BALANCE_MON]);
+  } else if (hasGasStation) {
     gaslessHint = t('swissquoteGasGaslessFree');
-  } else if (isMetaMaskSponsored) {
-    gaslessHint = t('paidByMetaMask');
   }
 
   return (

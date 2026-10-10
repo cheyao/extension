@@ -12006,7 +12006,11 @@
     "message": "Free"
   },
   "swissquoteGasGaslessUnavailable": {
-    "message": "Not on this network"
+    "message": "Unavailable"
+  },
+  "swissquoteGasMonadReserve": {
+    "message": "Keep $1 MON after this",
+    "description": "$1 is the Monad reserve balance, e.g. 10"
   },
   "swissquoteGasPaidByStation": {
     "message": "Paid by gas station"
