@@ -10,7 +10,7 @@ import {
   TextVariant,
 } from '@metamask/design-system-react';
 import classnames from 'clsx';
-import { SWISSQUOTE_GASLESS_ENABLED } from '../../../../../../../../shared/constants/swissquote';
+import { getSwissquoteGasStation } from '../../../../../../../../shared/constants/swissquote';
 import { ConfirmInfoRow } from '../../../../../../../components/app/confirm/info/row';
 import { useI18nContext } from '../../../../../../../hooks/useI18nContext';
 import { useConfirmContext } from '../../../../../context/confirm';
@@ -66,8 +66,9 @@ function GasPaymentOption({
 
 /**
  * Lets the user choose, per network, whether to pay the network fee
- * themselves or send the transaction gasless (sponsored). Gasless shows as
- * "Coming soon" until `SWISSQUOTE_GASLESS_ENABLED` is turned on.
+ * themselves or send the transaction gasless, with the gas paid by the
+ * network's Swissquote gas station. Gasless is only offered on networks that
+ * have one (see `SWISSQUOTE_GAS_STATIONS`).
  */
 export function GasPaymentSelector() {
   const t = useI18nContext();
@@ -77,6 +78,9 @@ export function GasPaymentSelector() {
     useGasSponsorshipPreference(transactionMeta?.chainId);
 
   const isGaslessSelected = !isSponsorshipOptedOut;
+  const hasGasStation = Boolean(
+    getSwissquoteGasStation(transactionMeta?.chainId),
+  );
 
   return (
     <ConfirmInfoRow
@@ -97,10 +101,12 @@ export function GasPaymentSelector() {
         <GasPaymentOption
           label={t('swissquoteGasGasless')}
           hint={
-            SWISSQUOTE_GASLESS_ENABLED ? undefined : t('swissquoteComingSoon')
+            hasGasStation
+              ? t('swissquoteGasGaslessFree')
+              : t('swissquoteGasGaslessUnavailable')
           }
           isSelected={isGaslessSelected}
-          isDisabled={!SWISSQUOTE_GASLESS_ENABLED}
+          isDisabled={!hasGasStation}
           onClick={() => setSponsorshipOptedOut(false)}
           testId="gas-payment-option-gasless"
         />

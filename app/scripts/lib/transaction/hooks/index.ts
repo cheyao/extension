@@ -34,6 +34,10 @@ import { getTransactionById } from '../util';
 import { isSendBundleSupported } from '../sentinel-api';
 import { Delegation7702PublishHook } from './delegation-7702-publish';
 import { EnforceSimulationHook } from './enforce-simulation-hook';
+import {
+  isSwissquoteGaslessTransaction,
+  publishSwissquoteGasless,
+} from '../swissquote-gasless';
 
 export type TransactionControllerHookRequest = {
   getFlatState: () => MessengerClientFlatState;
@@ -129,6 +133,12 @@ function publishHook({
   messenger,
 }: TransactionControllerHookRequest): PublishHook {
   return async (transactionMeta: TransactionMeta, signedTx: string) => {
+    // Swissquote Wallet: the user chose "Gasless" on a network with a
+    // Swissquote gas station, so send it as a sponsored user operation.
+    if (isSwissquoteGaslessTransaction(transactionMeta)) {
+      return await publishSwissquoteGasless({ transactionMeta, messenger });
+    }
+
     const flatState = getFlatState();
     const transactionController = {
       state: messenger.call('TransactionController:getState'),

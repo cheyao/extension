@@ -13,6 +13,7 @@ import { useSelectedGasFeeToken } from '../../components/confirm/info/hooks/useG
 import { updateAndApproveTx } from '../../../../store/actions';
 import { useIsGaslessSupported } from '../gas/useIsGaslessSupported';
 import { useGaslessSupportedSmartTransactions } from '../gas/useGaslessSupportedSmartTransactions';
+import { getSwissquoteGasStation } from '../../../../../shared/constants/swissquote';
 import { useGasSponsorshipPreference } from '../gas/useGasSponsorshipPreference';
 import {
   isHardwareWalletError,
@@ -150,7 +151,18 @@ export function useTransactionConfirm() {
       txToApprove.isExternalSign = false;
     }
 
-    if (isGaslessSupportedSTX) {
+    // Swissquote Wallet: "Gasless" chosen on a network with a Swissquote gas
+    // station. Mark the transaction sponsored and externally signed so the
+    // background publish hook sends it as a user operation paid by the gas
+    // station instead of signing and broadcasting it locally.
+    const isSwissquoteGasless =
+      Boolean(getSwissquoteGasStation(transactionMeta.chainId)) &&
+      !isSponsorshipOptedOut;
+
+    if (isSwissquoteGasless) {
+      txToApprove.isGasFeeSponsored = true;
+      txToApprove.isExternalSign = true;
+    } else if (isGaslessSupportedSTX) {
       handleSmartTransaction(txToApprove);
     } else if (selectedGasFeeToken) {
       handleGasless7702(txToApprove);

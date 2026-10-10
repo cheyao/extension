@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { Hex } from '@metamask/utils';
 import { getPreferences } from '../../../../../shared/lib/selectors/preferences';
-import { SWISSQUOTE_GASLESS_ENABLED } from '../../../../../shared/constants/swissquote';
+import { getSwissquoteGasStation } from '../../../../../shared/constants/swissquote';
 import { setGasSponsorshipOptOut } from '../../../../store/actions';
 import { useDispatch } from '../../../../store/hooks';
 
@@ -22,15 +22,18 @@ export function useGasSponsorshipPreference(chainId: Hex | undefined) {
   const dispatch = useDispatch();
   const { gasSponsorshipOptOutByChainId } = useSelector(getPreferences);
 
-  // Swissquote Wallet: while gasless is unavailable, always pay the network
-  // fee so no transaction is sent to the sponsorship relay.
+  // Swissquote Wallet: gasless is only available on networks with a
+  // Swissquote gas station, and is opt-in there (stored as `false`). Everywhere
+  // else the user pays the network fee, so nothing reaches MetaMask's relay.
+  const hasGasStation = Boolean(getSwissquoteGasStation(chainId));
   const isSponsorshipOptedOut =
-    !SWISSQUOTE_GASLESS_ENABLED ||
-    Boolean(chainId && gasSponsorshipOptOutByChainId?.[chainId]);
+    !hasGasStation ||
+    !chainId ||
+    gasSponsorshipOptOutByChainId?.[chainId] !== false;
 
   const setSponsorshipOptedOut = useCallback(
     (optOut: boolean) => {
-      if (!chainId || !SWISSQUOTE_GASLESS_ENABLED) {
+      if (!chainId || !hasGasStation) {
         return;
       }
 
@@ -41,7 +44,7 @@ export function useGasSponsorshipPreference(chainId: Hex | undefined) {
         }),
       );
     },
-    [chainId, dispatch, gasSponsorshipOptOutByChainId],
+    [chainId, dispatch, gasSponsorshipOptOutByChainId, hasGasStation],
   );
 
   return { isSponsorshipOptedOut, setSponsorshipOptedOut };

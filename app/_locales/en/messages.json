@@ -11932,14 +11932,20 @@
   "swissquoteCodeHash": {
     "message": "SHA-256"
   },
-  "swissquoteComingSoon": {
-    "message": "Coming soon"
-  },
   "swissquoteContinueAnyway": {
     "message": "Continue anyway"
   },
   "swissquoteGasGasless": {
     "message": "Gasless"
+  },
+  "swissquoteGasGaslessFree": {
+    "message": "Free"
+  },
+  "swissquoteGasGaslessUnavailable": {
+    "message": "Not on this network"
+  },
+  "swissquoteGasPaidByStation": {
+    "message": "Paid by gas station"
   },
   "swissquoteGasPayFee": {
     "message": "Pay gas fee"

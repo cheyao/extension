@@ -20,7 +20,10 @@ import {
   TextVariant,
 } from '@metamask/design-system-react';
 import { TEST_CHAINS } from '../../../../../../../../shared/constants/network';
-import { SWISSQUOTE_GASLESS_ENABLED } from '../../../../../../../../shared/constants/swissquote';
+import {
+  METAMASK_RELAY_SPONSORSHIP_ENABLED,
+  getSwissquoteGasStation,
+} from '../../../../../../../../shared/constants/swissquote';
 import { ConfirmInfoAlertRow } from '../../../../../../../components/app/confirm/info/row/alert-row/alert-row';
 import { RowAlertKey } from '../../../../../../../components/app/confirm/info/row/constants';
 import Tooltip from '../../../../../../../components/ui/tooltip';
@@ -92,12 +95,17 @@ export const EditGasFeesRow = ({
   // Swissquote Wallet: no sponsor yet, so MetaMask's "paid by MetaMask" option
   // is hidden; the gas selector above this row offers gasless once available.
   const isSponsorshipEligible =
-    SWISSQUOTE_GASLESS_ENABLED &&
+    METAMASK_RELAY_SPONSORSHIP_ENABLED &&
     isGaslessSupported &&
     doesSentinelAllowSponsorship &&
     transactionType !== TransactionType.revokeDelegation;
 
-  const isGasFeeSponsored = isSponsorshipEligible && !isSponsorshipOptedOut;
+  // Swissquote Wallet: "Gasless" chosen on a network with a gas station.
+  const isSwissquoteGasless =
+    Boolean(getSwissquoteGasStation(chainId)) && !isSponsorshipOptedOut;
+
+  const isGasFeeSponsored =
+    (isSponsorshipEligible && !isSponsorshipOptedOut) || isSwissquoteGasless;
 
   const [isSponsorshipModalOpen, setIsSponsorshipModalOpen] = useState(false);
   const handleOpenSponsorshipModal = useCallback(() => {
@@ -108,7 +116,9 @@ export const EditGasFeesRow = ({
   }, []);
 
   let tooltip = t('estimatedFeeTooltip');
-  if (isGasFeeSponsored) {
+  if (isSwissquoteGasless) {
+    tooltip = t('swissquoteGasPaidByStation');
+  } else if (isGasFeeSponsored) {
     tooltip = t('gasSponsorshipOptOutTooltip');
   } else if (gasFeeToken?.metaMaskFee && gasFeeToken.metaMaskFee !== '0x0') {
     tooltip = t('confirmGasFeeTokenTooltip', [metamaskFeeFiat]);
@@ -162,7 +172,11 @@ export const EditGasFeesRow = ({
                 cursor: isSponsorshipEligible ? 'pointer' : 'default',
               }}
             >
-              {isGasFeeSponsored && <GasFeeSponsoredByMetaMask />}
+              {isGasFeeSponsored && (
+                <GasFeeSponsoredByMetaMask
+                  isSwissquoteGasStation={isSwissquoteGasless}
+                />
+              )}
               {isGasFeeEditable && <EditGasIconButton />}
               {estimationFailed && !isGasFeeSponsored && (
                 <Text color={TextColor.TextDefault}>{t('unavailable')}</Text>
@@ -286,7 +300,11 @@ function FiatValue({
 
 // TODO: Fix in https://github.com/MetaMask/metamask-extension/issues/31860
 // eslint-disable-next-line @typescript-eslint/naming-convention
-function GasFeeSponsoredByMetaMask() {
+function GasFeeSponsoredByMetaMask({
+  isSwissquoteGasStation = false,
+}: {
+  isSwissquoteGasStation?: boolean;
+}) {
   const t = useI18nContext();
 
   return (
@@ -301,7 +319,11 @@ function GasFeeSponsoredByMetaMask() {
         size={IconSize.Sm}
         color={IconColor.SuccessDefault}
       />
-      <Text color={TextColor.SuccessDefault}>{t('paidByMetaMask')}</Text>
+      <Text color={TextColor.SuccessDefault}>
+        {isSwissquoteGasStation
+          ? t('swissquoteGasPaidByStation')
+          : t('paidByMetaMask')}
+      </Text>
     </Box>
   );
 }

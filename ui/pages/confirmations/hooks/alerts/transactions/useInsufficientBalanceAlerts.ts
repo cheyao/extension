@@ -13,6 +13,8 @@ import { Severity } from '../../../../../helpers/constants/design-system';
 import { useI18nContext } from '../../../../../hooks/useI18nContext';
 import { getUseTransactionSimulations } from '../../../../../selectors';
 import { hasTransactionType } from '../../../../../../shared/lib/transactions.utils';
+import { getSwissquoteGasStation } from '../../../../../../shared/constants/swissquote';
+import { useGasSponsorshipPreference } from '../../gas/useGasSponsorshipPreference';
 import { useConfirmContext } from '../../../context/confirm';
 import { useIsGaslessSupported } from '../../gas/useIsGaslessSupported';
 import { useHasInsufficientBalance } from '../../useHasInsufficientBalance';
@@ -72,8 +74,18 @@ export function useInsufficientBalanceAlerts({
   // Check if gasless check has completed (regardless of result)
   const isGaslessCheckComplete = !isGaslessSupportedPending;
 
+  // Swissquote Wallet: with "Gasless" chosen on a network with a Swissquote
+  // gas station, the gas station pays the network fee.
+  const { isSponsorshipOptedOut } = useGasSponsorshipPreference(
+    currentConfirmation?.chainId,
+  );
+  const isSwissquoteGasless =
+    Boolean(getSwissquoteGasStation(currentConfirmation?.chainId)) &&
+    !isSponsorshipOptedOut;
+
   // Transaction is sponsored only if it's marked as sponsored AND gasless is supported
-  const isSponsoredTransaction = isSponsored && isGaslessSupported;
+  const isSponsoredTransaction =
+    (isSponsored && isGaslessSupported) || isSwissquoteGasless;
 
   // Simulation is complete if it's disabled, or if enabled and gasFeeTokens is loaded
   const isSimulationComplete = !isSimulationEnabled || Boolean(gasFeeTokens);

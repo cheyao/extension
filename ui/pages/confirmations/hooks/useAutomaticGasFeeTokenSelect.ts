@@ -2,7 +2,7 @@ import { TransactionMeta } from '@metamask/transaction-controller';
 import { useCallback, useState } from 'react';
 
 import { NATIVE_TOKEN_ADDRESS } from '../../../../shared/constants/transaction';
-import { SWISSQUOTE_GASLESS_ENABLED } from '../../../../shared/constants/swissquote';
+import { METAMASK_RELAY_SPONSORSHIP_ENABLED } from '../../../../shared/constants/swissquote';
 import { useAsyncResult } from '../../../hooks/useAsync';
 import { forceUpdateMetamaskState } from '../../../store/actions';
 import { updateSelectedGasFeeToken } from '../../../store/controller-actions/transaction-controller';
@@ -69,7 +69,7 @@ export function useAutomaticGasFeeTokenSelect() {
   // Swissquote Wallet: paying the fee with a token goes through the gasless
   // relay, so don't switch to it automatically while gasless is unavailable.
   const shouldSelectForInsufficientNativeBalance =
-    SWISSQUOTE_GASLESS_ENABLED &&
+    METAMASK_RELAY_SPONSORSHIP_ENABLED &&
     isGaslessSupportedAndFinished &&
     isNativeBalanceKnown &&
     hasInsufficientBalance &&
