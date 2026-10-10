@@ -95,7 +95,7 @@ import PrivacySettings from './privacy-settings/privacy-settings';
 import CreationSuccessful from './creation-successful/creation-successful';
 import OnboardingWelcome from './welcome/welcome';
 import ImportSRP from './import-srp/import-srp';
-import MetaMetricsComponent from './metametrics/metametrics';
+import MetaMetricsRedirect from './metametrics/metametrics-redirect';
 import OnboardingAppHeader from './onboarding-app-header/onboarding-app-header';
 import { useOnboardingSearchParams } from './hooks/useOnboardingSearchParams';
 import { useOnboardingCompletion } from './hooks/useOnboardingCompletion';
@@ -572,7 +572,7 @@ export default function OnboardingFlow() {
               />
               <Route
                 path={toRelativePath(ONBOARDING_METAMETRICS)}
-                element={<MetaMetricsComponent />}
+                element={<MetaMetricsRedirect />}
               />
               <Route
                 path={toRelativePath(ONBOARDING_DOWNLOAD_APP_ROUTE)}

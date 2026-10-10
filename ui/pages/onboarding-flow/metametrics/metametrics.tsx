@@ -23,27 +23,19 @@ import {
 } from '../../../store/actions';
 import {
   getDataCollectionForMarketing,
-  getFirstTimeFlowType,
-  getFirstTimeFlowTypeRouteAfterMetaMetricsOptIn,
   getConsentDecisionMade,
   getOptedIn,
 } from '../../../selectors';
-import { getCurrentKeyring } from '../../../../shared/lib/selectors/keyring';
 
 import {
   MetaMetricsEventCategory,
   MetaMetricsEventName,
   MetaMetricsUserTrait,
 } from '../../../../shared/constants/metametrics';
-import {
-  ONBOARDING_COMPLETION_ROUTE,
-  ONBOARDING_WELCOME_ROUTE,
-} from '../../../helpers/constants/routes';
 
-import { FirstTimeFlowType } from '../../../../shared/constants/onboarding';
-import { useIsFirefox } from '../../../hooks/useIsFirefox';
 import { useAnalytics } from '../../../hooks/useAnalytics';
 import { useDispatch } from '../../../store/hooks';
+import { useNextRouteAfterMetametricsOptIn } from './use-next-route-after-metametrics-opt-in';
 
 type MetametricsCheckboxOptionProps = Readonly<{
   id: string;
@@ -122,9 +114,6 @@ export default function OnboardingMetametrics() {
   const t = useI18nContext();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const isFirefox = useIsFirefox();
-
-  const firstTimeFlowType = useSelector(getFirstTimeFlowType);
 
   const consentDecisionMade = useSelector(getConsentDecisionMade);
   const isOptedIn = useSelector(getOptedIn);
@@ -153,23 +142,9 @@ export default function OnboardingMetametrics() {
     ? marketingLocal
     : Boolean(dataCollectionForMarketing);
 
-  const currentKeyring = useSelector(getCurrentKeyring);
-
   const { trackEvent, createEventBuilder } = useAnalytics();
 
-  let nextRouteByBrowser = useSelector(
-    getFirstTimeFlowTypeRouteAfterMetaMetricsOptIn,
-  );
-  if (isFirefox && firstTimeFlowType !== FirstTimeFlowType.restore) {
-    if (
-      currentKeyring &&
-      firstTimeFlowType === FirstTimeFlowType.socialCreate
-    ) {
-      nextRouteByBrowser = ONBOARDING_COMPLETION_ROUTE;
-    } else {
-      nextRouteByBrowser = ONBOARDING_WELCOME_ROUTE;
-    }
-  }
+  const nextRouteByBrowser = useNextRouteAfterMetametricsOptIn();
 
   const handleContinue = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();

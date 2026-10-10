@@ -634,17 +634,24 @@ describe('Onboarding Flow', () => {
     });
   });
 
-  it('should render onboarding metametrics screen', () => {
-    const { queryByTestId } = renderWithProvider(
+  it('should skip the onboarding metametrics screen and continue the flow', async () => {
+    const { queryByTestId, findByTestId } = renderWithProvider(
       <OnboardingFlowWithRouteContext />,
-      store,
+      createStore({ firstTimeFlowType: FirstTimeFlowType.create }),
       ONBOARDING_METAMETRICS,
     );
 
-    const onboardingMetametrics = queryByTestId(
-      'parent-selector-onboarding-metrics',
-    );
-    expect(onboardingMetametrics).toBeInTheDocument();
+    // The opt-in page is no longer surfaced during onboarding.
+    expect(
+      queryByTestId('parent-selector-onboarding-metrics'),
+    ).not.toBeInTheDocument();
+
+    // The user is routed straight on to the step the opt-in page continued to.
+    await waitFor(() => {
+      expect(
+        findByTestId('parent-selector-onboarding-complete'),
+      ).resolves.toBeInTheDocument();
+    });
   });
 
   it('should render onboarding experimental screen', () => {
