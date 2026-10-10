@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeType } from '../../../../shared/constants/preferences';
 
-const LOGO_WIDTH = 162;
-const LOGO_HEIGHT = 30;
+const LOGO_WIDTH = 127;
+const LOGO_HEIGHT = 32;
 
 export default function MetaFoxHorizontalLogo({
   theme: themeProps,
@@ -20,7 +20,7 @@ export default function MetaFoxHorizontalLogo({
     <svg
       height={LOGO_HEIGHT}
       width={LOGO_WIDTH}
-      viewBox="0 0 696 344"
+      viewBox="0 88 696 176"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
