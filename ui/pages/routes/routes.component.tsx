@@ -8,7 +8,7 @@ import { useIdleTimer } from 'react-idle-timer';
 import type { ApprovalRequest } from '@metamask/approval-controller';
 import type { Json } from '@metamask/utils';
 import { MainLayout } from '#ui/layouts/main-layout';
-import { usePerpsPreload } from '../../hooks/perps/usePerpsPreload';
+
 import { useAppSelector, useDispatch } from '../../store/hooks';
 import Loading from '../../components/ui/loading-screen';
 import { Modal } from '../../components/app/modals';
@@ -69,16 +69,9 @@ import {
   TOKEN_TRANSFER_DETAILS_ROUTE,
   REVIEW_GATOR_PERMISSIONS_DETAILS_ROUTE,
   REWARDS_ROUTE,
-  PERPS_MARKET_LIST_ROUTE,
   DECRYPT_MESSAGE_REQUEST_PATH,
   ENCRYPTION_PUBLIC_KEY_REQUEST_PATH,
-  PERPS_MARKET_DETAIL_ROUTE,
-  PERPS_ORDER_ENTRY_ROUTE,
-  PERPS_ACTIVITY_ROUTE,
-  PERPS_TRANSACTION_DETAILS_ROUTE,
-  PERPS_WITHDRAW_ROUTE,
   ACTIVITY_ROUTE,
-  PERPS_HOME_PAGE_ROUTE,
   MONEY_HOME_ROUTE,
   MONEY_ACTIVITY_ROUTE,
   MONEY_HOW_IT_WORKS_ROUTE,
@@ -270,18 +263,7 @@ const SmartAccountPage = mmLazy(
   () => import('../multichain-accounts/smart-account-page/index.ts'),
 );
 const ShieldPlan = mmLazy(() => import('../shield/plan/index.ts'));
-const PerpsMarketDetailPage = mmLazy(
-  () => import('../perps/perps-market-detail-page.tsx'),
-);
-const MarketListView = mmLazy(() => import('../perps/market-list/index.tsx'));
-const PerpsActivityPage = mmLazy(
-  () => import('../perps/perps-activity-page.tsx'),
-);
-const PerpsTransactionDetailsPage = mmLazy(
-  () => import('../perps/perps-transaction-details-page.tsx'),
-);
 const ActivityPage = mmLazy(() => import('../activity/activity-page.tsx'));
-const PerpsPage = mmLazy(() => import('../perps/perps-home-page.tsx'));
 const MoneyHomePage = mmLazy(() => import('../money/index.ts'));
 const MoneyActivityPage = mmLazy(
   () => import('../money/money-activity-page.tsx'),
@@ -293,14 +275,7 @@ const MoneyTransactionDetailsPage = mmLazy(
   () => import('../money/money-transaction-details-page.tsx'),
 );
 const MoneyEarnPage = mmLazy(() => import('../money/money-earn-page.tsx'));
-const PerpsWithdrawPage = mmLazy(
-  () => import('../perps/perps-withdraw-page.tsx'),
-);
-const PerpsOrderEntryPage = mmLazy(
-  () => import('../perps/perps-order-entry-page.tsx'),
-);
 const MusdConversionPage = mmLazy(() => import('../musd/index.tsx'));
-const PerpsLayout = mmLazy(() => import('../perps/perps-layout.tsx'));
 const HardwareWalletRepair = mmLazy(
   () => import('../hardware-wallet-repair/index.ts'),
 );
@@ -641,35 +616,6 @@ export const routeConfig = [
             path: REWARDS_ROUTE,
             element: <RewardsPage />,
           },
-          {
-            element: <PerpsLayout />,
-            children: [
-              {
-                path: `${PERPS_MARKET_DETAIL_ROUTE}/:symbol`,
-                element: <PerpsMarketDetailPage />,
-              },
-              {
-                path: `${PERPS_ORDER_ENTRY_ROUTE}/:symbol`,
-                element: <PerpsOrderEntryPage />,
-              },
-              {
-                path: PERPS_ACTIVITY_ROUTE,
-                element: <PerpsActivityPage />,
-              },
-              {
-                path: PERPS_TRANSACTION_DETAILS_ROUTE,
-                element: <PerpsTransactionDetailsPage />,
-              },
-              {
-                path: PERPS_MARKET_LIST_ROUTE,
-                element: <MarketListView />,
-              },
-              {
-                path: PERPS_WITHDRAW_ROUTE,
-                element: <PerpsWithdrawPage />,
-              },
-            ],
-          },
         ],
       },
       {
@@ -686,10 +632,6 @@ export const routeConfig = [
               {
                 path: ACTIVITY_ROUTE,
                 element: <ActivityPage />,
-              },
-              {
-                path: PERPS_HOME_PAGE_ROUTE,
-                element: <PerpsPage />,
               },
               createRouteWithMessenger({
                 path: MONEY_HOME_ROUTE,
@@ -741,7 +683,6 @@ export default function Routes() {
 
   const textDirection = useAppSelector((state) => state.metamask.textDirection);
   const isUnlocked = useAppSelector(getIsUnlocked);
-  usePerpsPreload(isUnlocked && completedOnboarding);
   const currentCurrency = useAppSelector(
     getCurrencyRateControllerCurrentCurrency,
   );
