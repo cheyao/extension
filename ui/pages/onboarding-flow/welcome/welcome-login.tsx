@@ -8,10 +8,10 @@ import {
   ButtonVariant,
 } from '@metamask/design-system-react';
 import { useI18nContext } from '../../../hooks/useI18nContext';
-import { getIsSeedlessOnboardingFeatureEnabled } from '../../../../shared/lib/environment';
 import { ThemeType } from '../../../../shared/constants/preferences';
-import { setTermsOfUseLastAgreed } from '../../../store/actions';
 import { useTheme } from '../../../hooks/useTheme';
+import { getIsSeedlessOnboardingFeatureEnabled } from '../../../../shared/lib/environment';
+import { setTermsOfUseLastAgreed } from '../../../store/actions';
 import { ONBOARDING_WELCOME_ROUTE } from '../../../helpers/constants/routes';
 import { useDispatch } from '../../../store/hooks';
 import LoginOptions from './login-options';
@@ -27,11 +27,11 @@ export default function WelcomeLogin({
   skipTransition?: boolean;
 }) {
   const t = useI18nContext();
+  const theme = useTheme();
   const isSeedlessOnboardingFeatureEnabled =
     getIsSeedlessOnboardingFeatureEnabled();
   const dispatch = useDispatch();
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const theme = useTheme();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const loginParam = searchParams.get('login');
@@ -158,8 +158,11 @@ export default function WelcomeLogin({
             </Button>
             {/* Not wired up yet: placeholder for the Swissquote recovery flow. */}
             <Button
+              data-theme={
+                theme === ThemeType.dark ? ThemeType.light : ThemeType.dark
+              }
               data-testid="onboarding-swissquote-recovery"
-              variant={ButtonVariant.Secondary}
+              variant={ButtonVariant.Primary}
               size={ButtonSize.Lg}
               className="w-full"
             >

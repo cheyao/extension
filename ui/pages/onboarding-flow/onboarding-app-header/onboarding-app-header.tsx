@@ -52,7 +52,8 @@ export default function OnboardingAppHeader({
   const currentLocale = useSelector(getCurrentLocale);
   const localeOptions = locales.map((locale) => {
     return {
-      name: locale.name,
+      // Swissquote Wallet: compact language codes (EN, DE, PT-BR…).
+      name: locale.code.replace('_', '-').toUpperCase(),
       value: locale.code,
     };
   });

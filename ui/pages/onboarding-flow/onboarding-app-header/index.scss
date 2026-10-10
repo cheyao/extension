@@ -68,18 +68,23 @@
   &__dropdown--welcome--banner,
   // SRP_OVERRIDE: dropdown on welcome login page
   &__dropdown--welcome--login {
+    // Swissquote Wallet: discreet orange language code, no filled block.
     .dropdown__select {
       border: 0;
-      background-color: var(--color-primary-default);
-      color: var(--color-primary-inverse);
+      background-color: transparent;
+      color: var(--color-primary-default);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding-inline-end: 24px;
+      width: auto;
 
       &:hover {
-        background-color: var(--color-primary-default-hover);
+        color: var(--color-primary-default-hover);
       }
     }
 
     .dropdown__icon-caret-down {
-      color: var(--color-primary-inverse);
+      color: var(--color-primary-default);
     }
   }
 
