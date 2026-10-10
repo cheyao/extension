@@ -305,28 +305,4 @@ describe('TokenListItem', () => {
       getByText(messages.bridgeMarketClosedModalTitle.message),
     ).toBeInTheDocument();
   });
-
-  it('handles clicking staking opens tab', async () => {
-    const store = configureMockStore()(state);
-    const { queryByTestId } = renderWithProvider(
-      <TokenListItem isStakeable {...props} />,
-      store,
-    );
-
-    const stakeButton = queryByTestId(
-      `staking-entrypoint-${CHAIN_IDS.MAINNET}`,
-    );
-
-    expect(stakeButton).toBeInTheDocument();
-    expect(stakeButton).not.toBeDisabled();
-
-    stakeButton && fireEvent.click(stakeButton);
-    expect(openTabSpy).toHaveBeenCalledTimes(1);
-
-    await waitFor(() =>
-      expect(openTabSpy).toHaveBeenCalledWith({
-        url: expect.stringContaining('/stake?metamaskEntry=ext_stake_button'),
-      }),
-    );
-  });
 });

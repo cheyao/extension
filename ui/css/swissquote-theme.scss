@@ -54,3 +54,92 @@
   --color-accent01-normal: var(--sq-orange-300);
   --color-accent02-dark: #000;
 }
+
+// ---------------------------------------------------------------------------
+// Swissquote accents on the main menus: surfaces stay black, the orange is
+// used sparingly for the active state and a few hairlines.
+// ---------------------------------------------------------------------------
+.dark,
+[data-theme='dark'] {
+  // Warmer, quieter separators instead of MetaMask's cool grey ones.
+  --color-border-muted: #ffffff1a;
+  --color-background-hover: #ff8a3d0f;
+}
+
+// Header: a faint orange hairline fading out towards the edges.
+.multichain-app-header {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--color-primary-default) 50%,
+      transparent
+    );
+    opacity: 0.35;
+    pointer-events: none;
+  }
+}
+
+// Home tabs (Tokens / DeFi / NFTs / Activity): orange underline when active.
+[role='tab'][aria-selected='true'] {
+  border-bottom-color: var(--color-primary-default) !important;
+}
+
+// Bottom navigation: current item in orange with a short indicator bar.
+.bottom-nav-bar [aria-current='page'] {
+  position: relative;
+  color: var(--color-primary-default);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    width: 24px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--color-primary-default);
+    transform: translateX(-50%);
+  }
+
+  .mm-icon,
+  [class*='text-icon'],
+  [class*='text-default'] {
+    color: var(--color-primary-default) !important;
+  }
+}
+
+// Keyboard focus in the brand colour.
+:focus-visible {
+  outline-color: var(--color-primary-default);
+}
+
+// Gains / losses: deeper, calmer green and red that sit better on black than
+// MetaMask's neon lime and pink (price changes, success / error states).
+.dark,
+[data-theme='dark'] {
+  --color-success-default: #4fa20e;
+  --color-success-muted: #4fa20e24;
+  --color-success-default-hover: #5ab216;
+  --color-success-default-pressed: #66c21f;
+  --color-success-muted-hover: #4fa20e30;
+  --color-success-muted-pressed: #4fa20e3d;
+  --color-success-inverse: #fff;
+
+  --color-error-default: #e62219;
+  --color-error-alternative: #ee4a42;
+  --color-error-muted: #e6221924;
+  --color-error-default-hover: #ec3a31;
+  --color-error-default-pressed: #f0524a;
+  --color-error-muted-hover: #e6221930;
+  --color-error-muted-pressed: #e622193d;
+  --color-error-inverse: #fff;
+}

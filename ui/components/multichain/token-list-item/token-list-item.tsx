@@ -70,7 +70,6 @@ import { TokenWithFiatAmount } from '../../app/assets/types';
 import { useDispatch } from '../../../store/hooks';
 import { getAvatarNetworkStyle } from '../../../helpers/utils/accounts';
 import { PercentageChange } from './price/percentage-change/percentage-change';
-import { StakeableLink } from './stakeable-link';
 
 type MarketDataMap = ReturnType<typeof getMarketData>;
 type CurrencyRatesMap = ReturnType<typeof getCurrencyRates>;
@@ -370,9 +369,6 @@ export const TokenListItemComponent = ({
                     ellipsis
                   >
                     {tokenMainTitleToDisplay}
-                    {isStakeable && (
-                      <StakeableLink chainId={chainId} symbol={tokenSymbol} />
-                    )}
                   </Text>
                 </Tooltip>
               ) : (
@@ -382,9 +378,6 @@ export const TokenListItemComponent = ({
                   ellipsis
                 >
                   {tokenMainTitleToDisplay}
-                  {isStakeable && (
-                    <StakeableLink chainId={chainId} symbol={tokenSymbol} />
-                  )}
                 </Text>
               )}
               {accountType && ACCOUNT_TYPE_LABELS[accountType] && (

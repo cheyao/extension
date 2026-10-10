@@ -1,7 +1,6 @@
 import { Box } from '@metamask/design-system-react';
 import React from 'react';
 import { TokenFiatDisplayInfo } from '../../types';
-import { StakeableLink } from '../../../../multichain/token-list-item/stakeable-link';
 import { AssetCellTitle } from '../../asset-list/cells/asset-title';
 import { AssetInactiveBadge } from '../../asset-inactive-badge/asset-inactive-badge';
 import { Tag } from '../../../../component-library';
@@ -30,9 +29,6 @@ export const TokenCellTitle = React.memo(
         {token.tokenRequireActivate && <AssetInactiveBadge />}
         {tokenIsStock && (
           <StockBadge isMarketClosed={!isTokenTradingOpen(token)} />
-        )}
-        {token.isStakeable && (
-          <StakeableLink chainId={token.chainId} symbol={token.symbol} />
         )}
       </Box>
     );

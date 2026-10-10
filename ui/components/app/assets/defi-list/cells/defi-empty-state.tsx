@@ -1,22 +1,10 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import { useI18nContext } from '../../../../../hooks/useI18nContext';
 import { useTheme } from '../../../../../hooks/useTheme';
 import { TabEmptyState } from '../../../../ui/tab-empty-state';
 import { ThemeType } from '../../../../../../shared/constants/preferences';
-import { getPortfolioUrl } from '../../../../../helpers/utils/portfolio';
-import { useAnalytics } from '../../../../../hooks/useAnalytics';
-import {
-  MetaMetricsEventCategory,
-  MetaMetricsEventName,
-} from '../../../../../../shared/constants/metametrics';
-import {
-  getDataCollectionForMarketing,
-  getAnalyticsId,
-  getConsentDecisionMade,
-  getOptedIn,
-  getIsEvmMultichainNetworkSelected,
-} from '../../../../../selectors';
+import { getIsEvmMultichainNetworkSelected } from '../../../../../selectors';
 
 const EMPTY_STATE_CLASSNAME = 'mx-auto mt-5 mb-6 max-w-48';
 
@@ -47,46 +35,12 @@ export const DeFiUnsupportedEmptyStateMessage = () => {
 
 const DeFiDefaultEmptyStateMessage = () => {
   const t = useI18nContext();
-  const { trackEvent, createEventBuilder } = useAnalytics();
 
-  const analyticsId = useSelector(getAnalyticsId);
-  const consentDecisionMade = useSelector(getConsentDecisionMade);
-  const isOptedIn = useSelector(getOptedIn);
-  const isMetaMetricsEnabled = consentDecisionMade && isOptedIn;
-  const isMarketingEnabled = useSelector(getDataCollectionForMarketing);
-
-  const handleExploreDefi = useCallback(() => {
-    const url = getPortfolioUrl(
-      'explore/tokens',
-      'ext_defi_empty_state_button',
-      analyticsId,
-      isMetaMetricsEnabled === true,
-      isMarketingEnabled === true,
-    );
-    global.platform.openTab({ url });
-    trackEvent(
-      createEventBuilder(MetaMetricsEventName.EmptyDeFiTabButtonClicked)
-        .addCategory(MetaMetricsEventCategory.Navigation)
-        .addProperties({
-          location: 'DeFiTab',
-          text: 'Explore DeFi',
-        })
-        .build(),
-    );
-  }, [
-    analyticsId,
-    createEventBuilder,
-    isMarketingEnabled,
-    isMetaMetricsEnabled,
-    trackEvent,
-  ]);
-
+  // Swissquote Wallet: no "Explore DeFi" button (it opened MetaMask Portfolio).
   return (
     <TabEmptyState
       icon={<DeFiEmptyStateIcon />}
       description={t('defiEmptyDescription')}
-      actionButtonText={t('exploreDefi')}
-      onAction={handleExploreDefi}
       data-testid="defi-tab-empty-state"
       className={EMPTY_STATE_CLASSNAME}
     />
