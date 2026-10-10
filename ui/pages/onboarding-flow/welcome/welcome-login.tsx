@@ -12,7 +12,10 @@ import { ThemeType } from '../../../../shared/constants/preferences';
 import { useTheme } from '../../../hooks/useTheme';
 import { getIsSeedlessOnboardingFeatureEnabled } from '../../../../shared/lib/environment';
 import { setTermsOfUseLastAgreed } from '../../../store/actions';
-import { ONBOARDING_WELCOME_ROUTE } from '../../../helpers/constants/routes';
+import {
+  ONBOARDING_WELCOME_ROUTE,
+  ONBOARDING_SWISSQUOTE_RECOVERY_ROUTE,
+} from '../../../helpers/constants/routes';
 import { useDispatch } from '../../../store/hooks';
 import LoginOptions from './login-options';
 import { LOGIN_OPTION, LOGIN_TYPE, LoginOptionType, LoginType } from './types';
@@ -156,7 +159,6 @@ export default function WelcomeLogin({
                 ? t('onboardingImportWallet')
                 : t('onboardingSrpImport')}
             </Button>
-            {/* Not wired up yet: placeholder for the Swissquote recovery flow. */}
             <Button
               data-theme={
                 theme === ThemeType.dark ? ThemeType.light : ThemeType.dark
@@ -165,6 +167,7 @@ export default function WelcomeLogin({
               variant={ButtonVariant.Primary}
               size={ButtonSize.Lg}
               className="w-full"
+              onClick={() => navigate(ONBOARDING_SWISSQUOTE_RECOVERY_ROUTE)}
             >
               {t('onboardingSwissquoteRecovery')}
             </Button>

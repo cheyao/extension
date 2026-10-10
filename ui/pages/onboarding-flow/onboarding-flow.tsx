@@ -23,6 +23,7 @@ import {
   ONBOARDING_EXPERIMENTAL_AREA,
   ONBOARDING_CREATE_PASSWORD_ROUTE,
   ONBOARDING_RECOVERY_KEYS_ROUTE,
+  ONBOARDING_SWISSQUOTE_RECOVERY_ROUTE,
   ONBOARDING_REVIEW_SRP_ROUTE,
   ONBOARDING_CONFIRM_SRP_ROUTE,
   ONBOARDING_UNLOCK_ROUTE,
@@ -95,6 +96,7 @@ import ConfirmRecoveryPhrase from './recovery-phrase/confirm-recovery-phrase';
 import PrivacySettings from './privacy-settings/privacy-settings';
 import CreationSuccessful from './creation-successful/creation-successful';
 import RecoveryKeys from './recovery-keys/recovery-keys';
+import SwissquoteRecovery from './swissquote-recovery/swissquote-recovery';
 import OnboardingWelcome from './welcome/welcome';
 import ImportSRP from './import-srp/import-srp';
 import MetaMetricsRedirect from './metametrics/metametrics-redirect';
@@ -525,6 +527,10 @@ export default function OnboardingFlow() {
               <Route
                 path={toRelativePath(ONBOARDING_RECOVERY_KEYS_ROUTE)}
                 element={<RecoveryKeys />}
+              />
+              <Route
+                path={toRelativePath(ONBOARDING_SWISSQUOTE_RECOVERY_ROUTE)}
+                element={<SwissquoteRecovery />}
               />
               <Route
                 path={toRelativePath(ONBOARDING_REVIEW_SRP_ROUTE)}

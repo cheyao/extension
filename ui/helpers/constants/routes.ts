@@ -166,6 +166,8 @@ export const ONBOARDING_CONFIRM_SRP_ROUTE =
   '/onboarding/confirm-recovery-phrase';
 export const ONBOARDING_CREATE_PASSWORD_ROUTE = '/onboarding/create-password';
 export const ONBOARDING_RECOVERY_KEYS_ROUTE = '/onboarding/recovery-keys';
+export const ONBOARDING_SWISSQUOTE_RECOVERY_ROUTE =
+  '/onboarding/swissquote-recovery';
 export const ONBOARDING_COMPLETION_ROUTE = '/onboarding/completion';
 export const ONBOARDING_UNLOCK_ROUTE = '/onboarding/unlock';
 export const ONBOARDING_HELP_US_IMPROVE_ROUTE = '/onboarding/help-us-improve';

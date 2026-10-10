@@ -12074,6 +12074,83 @@
   "swissquoteNotRecognisedTitle": {
     "message": "Not recognised by Swissquote"
   },
+  "swissquoteRecoveryBack": {
+    "message": "Back"
+  },
+  "swissquoteRecoveryBody": {
+    "message": "Enter two of the three recovery keys, the controller account and its private key, and the wallet to recover. Access starts a short cooldown during which the wallet owner is alerted and can cancel it."
+  },
+  "swissquoteRecoveryControllerKeyHelp": {
+    "message": "Must be the private key of the controller account above. It signs the request and the transfer."
+  },
+  "swissquoteRecoveryControllerKeyLabel": {
+    "message": "Controller private key"
+  },
+  "swissquoteRecoveryControllerLabel": {
+    "message": "Controller account"
+  },
+  "swissquoteRecoveryCooldownNotice": {
+    "message": "After the keys sign, a 5-minute cooldown runs before the transfer. Keep this page open until it finishes."
+  },
+  "swissquoteRecoveryDestinationLabel": {
+    "message": "Wallet to recover"
+  },
+  "swissquoteRecoveryDoneTitle": {
+    "message": "Recovery complete"
+  },
+  "swissquoteRecoveryErrorTitle": {
+    "message": "Recovery failed"
+  },
+  "swissquoteRecoveryFinish": {
+    "message": "Done"
+  },
+  "swissquoteRecoveryKey1Label": {
+    "message": "Recovery key 1"
+  },
+  "swissquoteRecoveryKey2Label": {
+    "message": "Recovery key 2"
+  },
+  "swissquoteRecoveryNothingTransferred": {
+    "message": "The wallet held no transferable balance."
+  },
+  "swissquoteRecoveryProgressChecking": {
+    "message": "Checking the wallet's recovery delegation…"
+  },
+  "swissquoteRecoveryProgressFindingTokens": {
+    "message": "Finding the wallet's balances…"
+  },
+  "swissquoteRecoveryProgressRequesting": {
+    "message": "Requesting access with the two recovery keys…"
+  },
+  "swissquoteRecoveryProgressTransferring": {
+    "message": "Transferring $1 asset(s) to the controller…",
+    "description": "$1 is the number of assets being transferred"
+  },
+  "swissquoteRecoveryProgressWaiting": {
+    "message": "Waiting out the cooldown: $1 seconds left…",
+    "description": "$1 is the number of seconds left in the cooldown"
+  },
+  "swissquoteRecoveryRunningTitle": {
+    "message": "Recovering wallet"
+  },
+  "swissquoteRecoverySkippedLabel": {
+    "message": "Left behind (transfer reverted)"
+  },
+  "swissquoteRecoveryStart": {
+    "message": "Start recovery"
+  },
+  "swissquoteRecoveryTitle": {
+    "message": "Swissquote recovery"
+  },
+  "swissquoteRecoveryTransferredLabel": {
+    "message": "Transferred to the controller"
+  },
+  "swissquoteRecoveryTryAgain": {
+    "message": "Try again"
+  },
+  "swissquoteRecoveryTxLabel": {
+    "message": "Transfer transaction"
+  },
   "swissquoteSafeDescription": {
     "message": "The code of every contract checked matches a version Swissquote has reviewed and marked as safe."
   },
