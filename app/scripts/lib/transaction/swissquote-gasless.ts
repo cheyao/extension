@@ -1,24 +1,11 @@
-import {
-  decodeAuthorizationSignature,
-  type TransactionMeta,
-} from '@metamask/transaction-controller';
+import type { TransactionMeta } from '@metamask/transaction-controller';
 import { createProjectLogger, type Hex } from '@metamask/utils';
-import {
-  createPublicClient,
-  custom,
-  defineChain,
-  getTypesForEIP712Domain,
-  http,
-  type EIP1193Provider,
-} from 'viem';
-import { toAccount } from 'viem/accounts';
-import {
-  createBundlerClient,
-  createPaymasterClient,
-  toSimple7702SmartAccount,
-} from 'viem/account-abstraction';
 import { getSwissquoteGasStation } from '../../../../shared/constants/swissquote';
 import type { TransactionControllerInitMessenger } from '../../wallet-init/messengers/transaction-controller-messenger';
+import {
+  publishSponsoredUserOperation,
+  type SponsoredUserOperationMessenger,
+} from './erc4337-user-operation';
 
 const log = createProjectLogger('swissquote-gasless');
 
@@ -39,14 +26,6 @@ export function isSwissquoteGaslessTransaction(
     getSwissquoteGasStation(transactionMeta.chainId) &&
     transactionMeta.isGasFeeSponsored &&
     transactionMeta.isExternalSign,
-  );
-}
-
-function stringifyBigInts(value: unknown): unknown {
-  return JSON.parse(
-    JSON.stringify(value, (_key, item) =>
-      typeof item === 'bigint' ? `0x${item.toString(16)}` : item,
-    ),
   );
 }
 
@@ -74,8 +53,6 @@ export async function publishSwissquoteGasless({
     throw new Error(`No Swissquote gas station for chain ${chainId}`);
   }
 
-  const from = txParams.from as Hex;
-
   // The user operation does not use the account's transaction nonce, so drop
   // the one the controller assigned; otherwise the local nonce tracker would
   // treat it as used and later transactions would leave a nonce gap.
@@ -88,131 +65,20 @@ export async function publishSwissquoteGasless({
     );
   }
 
-  const { provider } = messenger.call(
-    'NetworkController:getNetworkClientById',
+  const { transactionHash } = await publishSponsoredUserOperation({
+    // The init messenger is a superset of what publishing needs.
+    messenger: messenger as SponsoredUserOperationMessenger,
+    chainId: chainId as Hex,
     networkClientId,
-  );
-  const chain = defineChain({
-    id: Number.parseInt(chainId, 16),
-    name: gasStation.name,
-    nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
-    rpcUrls: { default: { http: [] } },
-  });
-  const client = createPublicClient({
-    chain,
-    transport: custom(provider as unknown as EIP1193Provider),
-  });
-
-  // The user's account, with signing done by the KeyringController.
-  const owner = toAccount({
-    address: from,
-    async signMessage() {
-      throw new Error('Swissquote gasless: message signing is not used');
+    from: txParams.from as Hex,
+    call: {
+      to: txParams.to as Hex,
+      value: BigInt(txParams.value ?? '0x0'),
+      data: (txParams.data as Hex | undefined) ?? '0x',
     },
-    async signTransaction() {
-      throw new Error('Swissquote gasless: transaction signing is not used');
-    },
-    async signTypedData(typedData) {
-      const { domain, types, primaryType, message } = typedData as {
-        domain?: Record<string, unknown>;
-        types: Record<string, unknown>;
-        primaryType: string;
-        message: Record<string, unknown>;
-      };
-      const data = stringifyBigInts({
-        domain: domain ?? {},
-        types: {
-          EIP712Domain: getTypesForEIP712Domain({ domain }),
-          ...types,
-        },
-        primaryType,
-        message,
-      });
-      return (await messenger.call(
-        'KeyringController:signTypedMessage',
-        { from, data: data as Record<string, unknown>[] },
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        'V4' as any,
-      )) as Hex;
-    },
+    gasStation,
+    timeoutMs: USER_OPERATION_RECEIPT_TIMEOUT_MS,
   });
 
-  const account = await toSimple7702SmartAccount({ client, owner });
-
-  // Upgrade the account with EIP-7702 unless it already points at the
-  // Simple7702Account implementation (delegated code is 0xef0100 || address).
-  const implementation = account.authorization.address.toLowerCase();
-  const code = (await client.getCode({ address: from }))?.toLowerCase();
-  const isDelegated = code === `0xef0100${implementation.slice(2)}`;
-
-  let authorization;
-  if (!isDelegated) {
-    const nonce = await client.getTransactionCount({
-      address: from,
-      blockTag: 'pending',
-    });
-    const signature = (await messenger.call(
-      'KeyringController:signEip7702Authorization',
-      {
-        chainId: Number.parseInt(chainId, 16),
-        contractAddress: account.authorization.address,
-        from,
-        nonce,
-      },
-    )) as Hex;
-    const { r, s, yParity } = decodeAuthorizationSignature(signature);
-    authorization = {
-      address: account.authorization.address,
-      chainId: Number.parseInt(chainId, 16),
-      nonce,
-      r,
-      s,
-      yParity: Number.parseInt(yParity, 16),
-    };
-  }
-
-  const bundler = createBundlerClient({
-    account,
-    chain,
-    client,
-    transport: http(gasStation.rpcUrl),
-    paymaster: createPaymasterClient({ transport: http(gasStation.rpcUrl) }),
-  });
-
-  log('Sending gasless user operation', {
-    from,
-    to: txParams.to,
-    gasStation: gasStation.name,
-    upgrading: !isDelegated,
-  });
-
-  const userOperationHash = await bundler.sendUserOperation({
-    authorization,
-    calls: [
-      {
-        to: txParams.to as Hex,
-        value: BigInt(txParams.value ?? '0x0'),
-        data: (txParams.data as Hex | undefined) ?? '0x',
-      },
-    ],
-  });
-
-  const receipt = await bundler.waitForUserOperationReceipt({
-    hash: userOperationHash,
-    timeout: USER_OPERATION_RECEIPT_TIMEOUT_MS,
-  });
-
-  log('Gasless user operation included', {
-    userOperationHash,
-    success: receipt.success,
-    transactionHash: receipt.receipt.transactionHash,
-  });
-
-  if (!receipt.success) {
-    throw new Error(
-      `Gasless transaction reverted (user operation ${userOperationHash})`,
-    );
-  }
-
-  return { transactionHash: receipt.receipt.transactionHash };
+  return { transactionHash };
 }

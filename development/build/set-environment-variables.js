@@ -29,6 +29,12 @@ function setEnvironmentVariables({
     EIP_4337_ENTRYPOINT: isTestBuild
       ? '0x18b06605539dc02ecD3f7AB314e38eB7c1dA5c9b'
       : variables.getMaybe('EIP_4337_ENTRYPOINT'),
+    // Bundler + paymaster endpoint that sponsors the remote-control delegate
+    // deployment during wallet creation. Unset by default, which leaves the
+    // whole feature inert.
+    REMOTE_CONTROL_GAS_STATION_RPC_URL: variables.getMaybe(
+      'REMOTE_CONTROL_GAS_STATION_RPC_URL',
+    ),
     IN_TEST: isTestBuild,
     INFURA_PROJECT_ID: getInfuraProjectId({
       buildType,

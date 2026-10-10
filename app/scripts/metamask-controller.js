@@ -277,6 +277,7 @@ import { PatchStore } from './lib/PatchStore';
 import { sanitizeUIState } from './lib/state-utils';
 import { rejectOriginApprovals } from './lib/approval/utils';
 import { InstitutionalSnapControllerInit } from './messenger-client-init/institutional-snap/institutional-snap-controller-init';
+import { RemoteControlControllerInit } from './messenger-client-init/remote-control/remote-control-controller-init';
 import {
   MultichainAssetsControllerInit,
   MultichainTransactionsControllerInit,
@@ -586,6 +587,7 @@ export default class MetamaskController extends EventEmitter {
       UserOperationController: UserOperationControllerInit,
       ExecutionService: ExecutionServiceInit,
       InstitutionalSnapController: InstitutionalSnapControllerInit,
+      RemoteControlController: RemoteControlControllerInit,
       RateLimitController: RateLimitControllerInit,
       SnapRegistryController: SnapRegistryControllerInit,
       CronjobController: CronjobControllerInit,

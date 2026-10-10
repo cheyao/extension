@@ -33,13 +33,11 @@ import {
 import { getHDEntropyIndex } from '../../../selectors/selectors';
 import {
   PREVIOUS_ROUTE,
-  ONBOARDING_COMPLETION_ROUTE,
-  ONBOARDING_METAMETRICS,
+  ONBOARDING_RECOVERY_KEYS_ROUTE,
   ONBOARDING_REVEAL_SRP_ROUTE,
   MANAGE_WALLET_RECOVERY_ROUTE,
 } from '../../../helpers/constants/routes';
 import { TraceName } from '../../../../shared/lib/trace';
-import { useIsFirefox } from '../../../hooks/useIsFirefox';
 import { useOnboardingSearchParams } from '../hooks/useOnboardingSearchParams';
 import { getSeedPhraseBackedUp } from '../../../ducks/metamask/metamask';
 import { useDispatch } from '../../../store/hooks';
@@ -78,7 +76,6 @@ export default function ConfirmRecoveryPhrase({ secretRecoveryPhrase = '' }) {
 
   const navigate = useNavigate();
   const t = useI18nContext();
-  const isFirefox = useIsFirefox();
   const { isFromReminder, isFromSettingsSecurity, nextRouteQueryString } =
     useOnboardingSearchParams();
   const { trackEvent, createEventBuilder } = useAnalytics();
@@ -106,11 +103,12 @@ export default function ConfirmRecoveryPhrase({ secretRecoveryPhrase = '' }) {
         { replace: true },
       );
     } else if (hasSeedPhraseBackedUp) {
-      // if user has already done the Secure Wallet flow, we can redirect to the next page
+      // If the user has already done the Secure Wallet flow, route through the
+      // recovery-keys step, which redirects onward when there is nothing to do.
       navigate(
-        isFirefox || isFromReminder
-          ? ONBOARDING_COMPLETION_ROUTE
-          : ONBOARDING_METAMETRICS,
+        `${ONBOARDING_RECOVERY_KEYS_ROUTE}${
+          nextRouteQueryString ? `?${nextRouteQueryString}` : ''
+        }`,
         { replace: true },
       );
     }
@@ -119,8 +117,6 @@ export default function ConfirmRecoveryPhrase({ secretRecoveryPhrase = '' }) {
     secretRecoveryPhrase,
     nextRouteQueryString,
     hasSeedPhraseBackedUp,
-    isFromReminder,
-    isFirefox,
   ]);
 
   const resetQuizWords = useCallback(() => {
@@ -164,23 +160,19 @@ export default function ConfirmRecoveryPhrase({ secretRecoveryPhrase = '' }) {
     bufferedEndTrace?.({ name: TraceName.OnboardingNewSrpCreateWallet });
     bufferedEndTrace?.({ name: TraceName.OnboardingJourneyOverall });
 
-    const nextRoute =
-      isFirefox || isFromReminder
-        ? ONBOARDING_COMPLETION_ROUTE
-        : ONBOARDING_METAMETRICS;
-
+    // Route through the recovery-keys step. It deploys the remote-control
+    // delegate and reveals its three recovery keys for freshly created
+    // wallets, and redirects onward immediately for every other case.
     navigate(
-      `${nextRoute}${nextRouteQueryString ? `?${nextRouteQueryString}` : ''}`,
+      `${ONBOARDING_RECOVERY_KEYS_ROUTE}${nextRouteQueryString ? `?${nextRouteQueryString}` : ''}`,
       { replace: true },
     );
   }, [
     dispatch,
     hdEntropyIndex,
-    isFirefox,
     navigate,
     createEventBuilder,
     trackEvent,
-    isFromReminder,
     nextRouteQueryString,
     bufferedEndTrace,
   ]);

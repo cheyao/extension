@@ -1,0 +1,7 @@
+.recovery-keys {
+  &__key {
+    font-family: var(--font-family-monospace, monospace);
+    word-break: break-all;
+    user-select: all;
+  }
+}

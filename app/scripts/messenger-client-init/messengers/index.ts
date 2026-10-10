@@ -42,6 +42,7 @@ import {
   getMultichainAssetsRatesControllerInitMessenger,
 } from './multichain';
 import { getInstitutionalSnapControllerMessenger } from './accounts/institutional-snap-controller-messenger';
+import { getRemoteControlControllerMessenger } from './remote-control-controller-messenger';
 import {
   getAuthenticationControllerInitMessenger,
   getAuthenticationControllerMessenger,
@@ -467,6 +468,10 @@ export const MESSENGER_FACTORIES = {
   },
   GeolocationController: {
     getMessenger: getGeolocationControllerMessenger,
+    getInitMessenger: noop,
+  },
+  RemoteControlController: {
+    getMessenger: getRemoteControlControllerMessenger,
     getInitMessenger: noop,
   },
   InstitutionalSnapController: {

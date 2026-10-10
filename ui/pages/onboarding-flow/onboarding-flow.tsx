@@ -22,6 +22,7 @@ import Unlock from '../unlock-page';
 import {
   ONBOARDING_EXPERIMENTAL_AREA,
   ONBOARDING_CREATE_PASSWORD_ROUTE,
+  ONBOARDING_RECOVERY_KEYS_ROUTE,
   ONBOARDING_REVIEW_SRP_ROUTE,
   ONBOARDING_CONFIRM_SRP_ROUTE,
   ONBOARDING_UNLOCK_ROUTE,
@@ -93,6 +94,7 @@ import ReviewRecoveryPhrase from './recovery-phrase/review-recovery-phrase';
 import ConfirmRecoveryPhrase from './recovery-phrase/confirm-recovery-phrase';
 import PrivacySettings from './privacy-settings/privacy-settings';
 import CreationSuccessful from './creation-successful/creation-successful';
+import RecoveryKeys from './recovery-keys/recovery-keys';
 import OnboardingWelcome from './welcome/welcome';
 import ImportSRP from './import-srp/import-srp';
 import MetaMetricsRedirect from './metametrics/metametrics-redirect';
@@ -519,6 +521,10 @@ export default function OnboardingFlow() {
                     />
                   </RouteMessengerProvider>
                 }
+              />
+              <Route
+                path={toRelativePath(ONBOARDING_RECOVERY_KEYS_ROUTE)}
+                element={<RecoveryKeys />}
               />
               <Route
                 path={toRelativePath(ONBOARDING_REVIEW_SRP_ROUTE)}

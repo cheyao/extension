@@ -9178,6 +9178,70 @@
   "recipientPlaceholderText": {
     "message": "Enter or paste an address or name"
   },
+  "recoveryKeyLabelA": {
+    "message": "Key A",
+    "description": "Label for the first recovery key."
+  },
+  "recoveryKeyLabelB": {
+    "message": "Key B",
+    "description": "Label for the second recovery key."
+  },
+  "recoveryKeyLabelC": {
+    "message": "Key C",
+    "description": "Label for the third recovery key."
+  },
+  "recoveryKeysAcknowledge": {
+    "message": "I have written them down",
+    "description": "Toggle button the user presses to confirm they saved the recovery keys."
+  },
+  "recoveryKeysBody": {
+    "message": "These 3 keys were written into your recovery contract at $1. Any 2 of them can recover this wallet if you ever lose access.",
+    "description": "Body of the recovery keys reveal screen. $1 is the delegate contract address."
+  },
+  "recoveryKeysContinue": {
+    "message": "Continue",
+    "description": "Button to continue onboarding after the recovery keys step."
+  },
+  "recoveryKeysDeployingBody": {
+    "message": "Deploying your recovery contract on Monad. This is sponsored, so no MON is needed.",
+    "description": "Body shown while the remote-control delegate is being deployed."
+  },
+  "recoveryKeysDeployingTitle": {
+    "message": "Setting up account recovery",
+    "description": "Title shown while the remote-control delegate is being deployed during wallet creation."
+  },
+  "recoveryKeysErrorBody": {
+    "message": "Your recovery contract could not be deployed. You can continue creating your wallet, but it will not have recovery keys.",
+    "description": "Body shown when the remote-control deployment fails."
+  },
+  "recoveryKeysErrorReasonLabel": {
+    "message": "Reason",
+    "description": "Label above the technical reason the recovery deployment failed."
+  },
+  "recoveryKeysErrorTitle": {
+    "message": "Recovery setup failed",
+    "description": "Title shown when the remote-control deployment fails."
+  },
+  "recoveryKeysGenericError": {
+    "message": "Recovery setup failed for an unknown reason.",
+    "description": "Fallback error message when the recovery deployment fails without a message."
+  },
+  "recoveryKeysNeverAgain": {
+    "message": "These keys are shown only once and are not stored by the wallet. Write them down now.",
+    "description": "Warning that the recovery keys cannot be viewed again."
+  },
+  "recoveryKeysTitle": {
+    "message": "Your recovery keys",
+    "description": "Title of the recovery keys reveal screen during wallet creation."
+  },
+  "recoveryKeysTxLabel": {
+    "message": "Deployment transaction",
+    "description": "Label for the hash of the transaction that deployed the recovery contract, so the user can verify it on a block explorer."
+  },
+  "recoveryKeysUnconfirmed": {
+    "message": "The deployment transaction succeeded, but the contract could not be seen on-chain yet. Check the transaction below on a block explorer, and save these keys anyway.",
+    "description": "Warning shown with the recovery keys when the deployment was included but its contract code could not be confirmed."
+  },
   "recoveryPhraseReminderBackupStart": {
     "message": "Back up now"
   },
@@ -11920,14 +11984,14 @@
   "swissquoteCheckContract": {
     "message": "Contract"
   },
+  "swissquoteCheckSite": {
+    "message": "Website"
+  },
   "swissquoteCheckingDescription": {
     "message": "Hashing the code of this dApp's contracts and comparing it with Swissquote's database."
   },
   "swissquoteCheckingTitle": {
     "message": "Checking with Swissquote…"
-  },
-  "swissquoteCheckSite": {
-    "message": "Website"
   },
   "swissquoteCodeHash": {
     "message": "SHA-256"

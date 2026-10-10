@@ -121,6 +121,7 @@ import { OnboardingController } from '../controllers/onboarding';
 import { PreferencesController } from '../controllers/preferences-controller';
 import { InstitutionalSnapController } from '../controllers/institutional-snap/InstitutionalSnapController';
 import { NetworkOrderController } from '../controllers/network-order';
+import { RemoteControlController } from '../controllers/remote-control/RemoteControlController';
 import { OAuthService } from '../services/oauth/oauth-service';
 import { SnapsNameProvider } from '../lib/SnapsNameProvider';
 import { AppStateController } from '../controllers/app-state-controller';
@@ -240,6 +241,7 @@ export type MessengerClient =
   | TransactionController
   | TransactionPayController
   | InstitutionalSnapController
+  | RemoteControlController
   | UserOperationController
   | UserStorageController
   | TokenRatesController

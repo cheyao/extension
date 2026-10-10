@@ -8,6 +8,7 @@ import { setSeedPhraseBackedUp } from '../../../store/actions';
 import {
   ONBOARDING_COMPLETION_ROUTE,
   ONBOARDING_METAMETRICS,
+  ONBOARDING_RECOVERY_KEYS_ROUTE,
   MANAGE_WALLET_RECOVERY_ROUTE,
 } from '../../../helpers/constants/routes';
 import * as BrowserRuntimeUtils from '../../../../shared/lib/browser-runtime.utils';
@@ -109,9 +110,12 @@ describe('Confirm Recovery Phrase Component', () => {
     });
     renderWithProvider(<ConfirmRecoveryPhrase {...props} />, store);
 
-    expect(mockUseNavigate).toHaveBeenCalledWith(ONBOARDING_METAMETRICS, {
-      replace: true,
-    });
+    // Routes through the recovery-keys step, which redirects onward when
+    // there is nothing to deploy.
+    expect(mockUseNavigate).toHaveBeenCalledWith(
+      ONBOARDING_RECOVERY_KEYS_ROUTE,
+      { replace: true },
+    );
   });
 
   it('should have 3 recovery phrase inputs', () => {
@@ -162,9 +166,12 @@ describe('Confirm Recovery Phrase Component', () => {
     fireEvent.click(gotItButton);
 
     expect(setSeedPhraseBackedUp).toHaveBeenCalledWith(true);
-    expect(mockUseNavigate).toHaveBeenCalledWith(ONBOARDING_METAMETRICS, {
-      replace: true,
-    });
+    expect(mockUseNavigate).toHaveBeenCalledWith(
+      ONBOARDING_RECOVERY_KEYS_ROUTE,
+      {
+        replace: true,
+      },
+    );
   });
 
   it('should go to Onboarding Completion page as a next step in firefox', async () => {
@@ -186,9 +193,10 @@ describe('Confirm Recovery Phrase Component', () => {
     fireEvent.click(getByText(messages.gotIt.message));
 
     expect(setSeedPhraseBackedUp).toHaveBeenCalledWith(true);
-    expect(mockUseNavigate).toHaveBeenCalledWith(ONBOARDING_COMPLETION_ROUTE, {
-      replace: true,
-    });
+    expect(mockUseNavigate).toHaveBeenCalledWith(
+      ONBOARDING_RECOVERY_KEYS_ROUTE,
+      { replace: true },
+    );
   });
 
   it('onClose should navigate to reveal srp list route', () => {
