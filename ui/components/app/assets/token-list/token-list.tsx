@@ -36,6 +36,7 @@ import {
 } from '#shared/lib/asset-utils';
 import { buildEvmCaip19AssetId } from '#shared/lib/multichain/buildEvmCaip19AssetId';
 import { useLowValueTokenPartition } from '#ui/components/app/assets/hooks/useLowValueTokenPartition';
+import { isMusdToken } from '#ui/components/app/musd/constants';
 import { useCoordinatedTrace } from '#ui/hooks/useTraceCoordinator';
 import TokenCell from '../token-cell';
 import { ASSET_CELL_HEIGHT } from '../constants';
@@ -208,6 +209,10 @@ function TokenList({ onTokenClick, safeChains }: TokenListProps) {
         // Mapping necessary to comply with the type. Fields will be overriden with useTokenDisplayInfo
         return assets.filter((asset) => {
           if (isTronSpecialAsset(asset.assetId)) {
+            return false;
+          }
+          // Swissquote Wallet does not list MetaMask USD (mUSD).
+          if ('address' in asset && isMusdToken(asset.address)) {
             return false;
           }
           if (deferredShouldHideZeroBalanceTokens && asset.balance === '0') {
