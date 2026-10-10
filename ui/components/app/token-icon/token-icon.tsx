@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import { getNativeTokenAddress } from '@metamask/assets-controllers';
-import type { Hex } from '@metamask/utils';
+import type { Hex, CaipChainId } from '@metamask/utils';
 import { CHAIN_ID_TO_NETWORK_IMAGE_URL_MAP } from '../../../../shared/constants/network';
 import {
   AvatarNetwork,
@@ -20,6 +20,10 @@ import {
   isMusdToken,
   MUSD_TOKEN,
 } from '../../../pages/confirmations/constants/musd';
+import {
+  SUSD_CONTRACT_ADDRESS,
+  SUSD_SYMBOL,
+} from '../../../shared/constants/susd';
 
 export type TokenIconSize = 'xs' | 'sm' | 'md' | 'xl';
 
@@ -77,9 +81,14 @@ export function TokenIcon({
   // even though the canonical icon exists at a known URL, so fall back when the
   // matched image is missing or empty. Prefer the package mUSD icon over the
   // deterministic URL, which is not populated for mUSD on every chain.
+  // Show sUSD icon for sUSD tokens
+  const isSusdToken =
+    matchedToken?.symbol?.toLowerCase() === 'susd' ||
+    symbolProp?.toLowerCase() === 'susd';
   const src =
     matchedToken?.image ||
     (isMusdToken(tokenAddress) ? MUSD_TOKEN.image : undefined) ||
+    (isSusdToken ? '/images/icons/susd.svg' : undefined) ||
     getTokenIconUrl(tokenAddress, chainId);
 
   return (

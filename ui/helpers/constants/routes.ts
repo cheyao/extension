@@ -239,6 +239,7 @@ export const ACTIVITY_ROUTE = '/activity';
 export const ROUTES = [
   { path: DEFAULT_ROUTE, label: 'Home', trackInAnalytics: true },
   { path: ACTIVITY_ROUTE, label: 'Activity', trackInAnalytics: true },
+  { path: PERPS_HOME_PAGE_ROUTE, label: 'Perps', trackInAnalytics: true },
   { path: '', label: 'Home', trackInAnalytics: true }, // "" is an alias for the Home route
   {
     path: `${TX_DETAILS_ROUTE}/:caipChainId/:txIdentifier`,
@@ -248,6 +249,37 @@ export const ROUTES = [
   { path: UNLOCK_ROUTE, label: 'Unlock Page', trackInAnalytics: true },
   { path: LOCK_ROUTE, label: 'Lock Page', trackInAnalytics: true },
   { path: REWARDS_ROUTE, label: 'Rewards Page', trackInAnalytics: true },
+  { path: PERPS_ROUTE, label: 'Perps Tab', trackInAnalytics: true },
+  {
+    path: PERPS_MARKET_LIST_ROUTE,
+    label: 'Perps Market List',
+    trackInAnalytics: true,
+  },
+  {
+    path: `${PERPS_MARKET_DETAIL_ROUTE}/:symbol`,
+    label: 'Perps Market Detail',
+    trackInAnalytics: true,
+  },
+  {
+    path: `${PERPS_ORDER_ENTRY_ROUTE}/:symbol`,
+    label: 'Perps Order Entry',
+    trackInAnalytics: true,
+  },
+  {
+    path: PERPS_ACTIVITY_ROUTE,
+    label: 'Perps Activity',
+    trackInAnalytics: true,
+  },
+  {
+    path: PERPS_TRANSACTION_DETAILS_ROUTE,
+    label: 'Perps Transaction Details',
+    trackInAnalytics: true,
+  },
+  {
+    path: PERPS_WITHDRAW_ROUTE,
+    label: 'Perps Withdraw',
+    trackInAnalytics: true,
+  },
   {
     path: ACCOUNT_LIST_PAGE_ROUTE,
     label: 'Account List Page',

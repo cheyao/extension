@@ -22,7 +22,7 @@ describe('getErc20AddressFromAssetId', () => {
 });
 
 describe('getRampsTokenDisplaySymbol', () => {
-  it('canonicalises the uppercase registry symbol of mUSD to the branded casing', () => {
+  it('canonicalises the uppercase registry symbol of sUSD to the branded casing', () => {
     expect(
       getRampsTokenDisplaySymbol({
         assetId: 'eip155:1/erc20:0xaca92e438df0b2401ff60da7e4337b687a2435da',
@@ -33,10 +33,10 @@ describe('getRampsTokenDisplaySymbol', () => {
         iconUrl: 'https://example.com/musd.png',
         tokenSupported: true,
       }),
-    ).toBe('mUSD');
+    ).toBe('sUSD');
   });
 
-  it('canonicalises mUSD regardless of address casing in the asset id', () => {
+  it('canonicalises sUSD regardless of address casing in the asset id', () => {
     expect(
       getRampsTokenDisplaySymbol({
         assetId:
@@ -48,10 +48,10 @@ describe('getRampsTokenDisplaySymbol', () => {
         iconUrl: 'https://example.com/musd.png',
         tokenSupported: true,
       }),
-    ).toBe('mUSD');
+    ).toBe('sUSD');
   });
 
-  it('leaves non-mUSD token symbols unchanged', () => {
+  it('leaves non-sUSD token symbols unchanged', () => {
     expect(
       getRampsTokenDisplaySymbol({
         assetId: 'eip155:1/erc20:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',

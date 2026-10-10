@@ -31,7 +31,7 @@ buildTypes:
       - REJECT_INVALID_SNAPS_PLATFORM_VERSION: true
       - IFRAME_EXECUTION_ENVIRONMENT_URL: https://execution.metamask.io/iframe/11.3.1/index.html
       - ACCOUNT_SNAPS_DIRECTORY_URL: https://snaps.metamask.io/account-management
-      - PERPS_ENABLED: false
+      - PERPS_ENABLED: true
     # Main build uses the default browser manifest
     manifestOverrides: false
     # Build name used in multiple user-readable places
@@ -83,7 +83,7 @@ buildTypes:
       - IFRAME_EXECUTION_ENVIRONMENT_URL: https://execution.metamask.io/iframe/11.3.1/index.html
       - ACCOUNT_SNAPS_DIRECTORY_URL: https://snaps.metamask.io/account-management
       - ENABLE_SETTINGS_PAGE_DEV_OPTIONS: true
-      - PERPS_ENABLED: false
+      - PERPS_ENABLED: true
       - QR_SYNC_ENABLED: true
     isPrerelease: true
     manifestOverrides: app/build-types/experimental/manifest

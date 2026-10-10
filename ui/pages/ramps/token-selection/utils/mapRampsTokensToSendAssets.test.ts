@@ -76,7 +76,7 @@ describe('mapRampsTokensToSendAssets', () => {
     ).toMatchSnapshot();
   });
 
-  it('uses the branded mUSD symbol for the mUSD token', () => {
+  it('uses the branded sUSD symbol for the sUSD token', () => {
     const musdToken = {
       assetId: 'eip155:1/erc20:0xaca92e438df0b2401ff60da7e4337b687a2435da',
       chainId: 'eip155:1',
@@ -92,7 +92,7 @@ describe('mapRampsTokensToSendAssets', () => {
         networkName: 'Ethereum',
         networkImage: 'eth.png',
       }),
-    ).toMatchObject({ symbol: 'mUSD' });
+    ).toMatchObject({ symbol: 'sUSD' });
   });
 
   it('resolves native token images from chain maps when iconUrl is empty', () => {

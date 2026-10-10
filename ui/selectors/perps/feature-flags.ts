@@ -1,4 +1,5 @@
 import { createSelector } from 'reselect';
+import { getIsPerpsIncludedInBuild } from '../../../shared/lib/environment';
 import { isPerpsRemoteConfigSatisfied } from '../../../shared/lib/perps-feature-flags';
 import { getRemoteFeatureFlags } from '../../../shared/lib/selectors/remote-feature-flags';
 
@@ -9,26 +10,18 @@ import { getRemoteFeatureFlags } from '../../../shared/lib/selectors/remote-feat
 const DEFAULT_HIP3_SOURCES: string[] = [];
 
 /**
- * Whether the user should see and use the perps experience.
- *
- * Perps has been removed from this build, so this always returns `false`. It is
- * kept (rather than deleted) so the many `Perps*` components that read it stay
- * importable and simply never render.
- *
- * Note the previous implementation required both `PERPS_ENABLED` and the
- * `perpsEnabledVersion` remote rollout. Neither is consulted now: build config
- * is easy to lose across regenerations of `.metamaskrc`, and manifest
- * `_flags` are only merged in under Jest (`shared/lib/manifestFlags.ts`), so a
- * remote flag could not be relied on to keep this off.
+ * Perps is available in the UI only when **both** are true:
+ * - Compile-time: `getIsPerpsIncludedInBuild()` (`PERPS_ENABLED` at build)
+ * - Remote rollout: `perpsEnabledVersion` satisfies `isPerpsRemoteConfigSatisfied`
  *
  * @param _state - The MetaMask state object
- * @returns Always `false` — the perps experience is removed.
+ * @returns Whether the user should see and use the perps experience.
  */
 export const getIsPerpsExperienceAvailable = createSelector(
   getRemoteFeatureFlags,
-  (): boolean =>
-    // Hard-disabled: the Perps surface has been removed from this build.
-    false,
+  (remoteFeatureFlags) =>
+    getIsPerpsIncludedInBuild() &&
+    isPerpsRemoteConfigSatisfied(remoteFeatureFlags.perpsEnabledVersion),
 );
 
 /**

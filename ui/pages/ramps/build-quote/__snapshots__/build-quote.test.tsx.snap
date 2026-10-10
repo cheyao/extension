@@ -29,7 +29,7 @@ exports[`RampsBuildQuoteScreen matches snapshot after user edits amount before r
       <p
         class="text-default text-s-body-md leading-s-body-md tracking-s-body-md md:text-l-body-md md:leading-l-body-md md:tracking-l-body-md font-medium font-default"
       >
-        Buy mUSD
+        Buy sUSD
       </p>
       <p
         class="text-alternative text-s-body-sm leading-s-body-sm tracking-s-body-sm md:text-l-body-sm md:leading-l-body-sm md:tracking-l-body-sm font-regular font-default"
@@ -727,7 +727,7 @@ exports[`RampsBuildQuoteScreen matches snapshot when falling back without region
       <p
         class="text-default text-s-body-md leading-s-body-md tracking-s-body-md md:text-l-body-md md:leading-l-body-md md:tracking-l-body-md font-medium font-default"
       >
-        Buy mUSD
+        Buy sUSD
       </p>
       <p
         class="text-alternative text-s-body-sm leading-s-body-sm tracking-s-body-sm md:text-l-body-sm md:leading-l-body-sm md:tracking-l-body-sm font-regular font-default"
@@ -859,7 +859,7 @@ exports[`RampsBuildQuoteScreen matches snapshot when quote fetch fails 1`] = `
       <p
         class="text-default text-s-body-md leading-s-body-md tracking-s-body-md md:text-l-body-md md:leading-l-body-md md:tracking-l-body-md font-medium font-default"
       >
-        Buy mUSD
+        Buy sUSD
       </p>
       <p
         class="text-alternative text-s-body-sm leading-s-body-sm tracking-s-body-sm md:text-l-body-sm md:leading-l-body-sm md:tracking-l-body-sm font-regular font-default"
@@ -1015,7 +1015,7 @@ exports[`RampsBuildQuoteScreen matches snapshot when quote fetch fails with a te
       <p
         class="text-default text-s-body-md leading-s-body-md tracking-s-body-md md:text-l-body-md md:leading-l-body-md md:tracking-l-body-md font-medium font-default"
       >
-        Buy mUSD
+        Buy sUSD
       </p>
       <p
         class="text-alternative text-s-body-sm leading-s-body-sm tracking-s-body-sm md:text-l-body-sm md:leading-l-body-sm md:tracking-l-body-sm font-regular font-default"
@@ -1171,7 +1171,7 @@ exports[`RampsBuildQuoteScreen matches snapshot when quote is available 1`] = `
       <p
         class="text-default text-s-body-md leading-s-body-md tracking-s-body-md md:text-l-body-md md:leading-l-body-md md:tracking-l-body-md font-medium font-default"
       >
-        Buy mUSD
+        Buy sUSD
       </p>
       <p
         class="text-alternative text-s-body-sm leading-s-body-sm tracking-s-body-sm md:text-l-body-sm md:leading-l-body-sm md:tracking-l-body-sm font-regular font-default"
@@ -1303,7 +1303,7 @@ exports[`RampsBuildQuoteScreen matches snapshot while quote is loading 1`] = `
       <p
         class="text-default text-s-body-md leading-s-body-md tracking-s-body-md md:text-l-body-md md:leading-l-body-md md:tracking-l-body-md font-medium font-default"
       >
-        Buy mUSD
+        Buy sUSD
       </p>
       <p
         class="text-alternative text-s-body-sm leading-s-body-sm tracking-s-body-sm md:text-l-body-sm md:leading-l-body-sm md:tracking-l-body-sm font-regular font-default"
@@ -1752,7 +1752,7 @@ exports[`RampsBuildQuoteScreen matches snapshot with provider quote error 1`] = 
       <p
         class="text-default text-s-body-md leading-s-body-md tracking-s-body-md md:text-l-body-md md:leading-l-body-md md:tracking-l-body-md font-medium font-default"
       >
-        Buy mUSD
+        Buy sUSD
       </p>
       <p
         class="text-alternative text-s-body-sm leading-s-body-sm tracking-s-body-sm md:text-l-body-sm md:leading-l-body-sm md:tracking-l-body-sm font-regular font-default"
@@ -1908,7 +1908,7 @@ exports[`RampsBuildQuoteScreen matches snapshot with regional default amount 1`]
       <p
         class="text-default text-s-body-md leading-s-body-md tracking-s-body-md md:text-l-body-md md:leading-l-body-md md:tracking-l-body-md font-medium font-default"
       >
-        Buy mUSD
+        Buy sUSD
       </p>
       <p
         class="text-alternative text-s-body-sm leading-s-body-sm tracking-s-body-sm md:text-l-body-sm md:leading-l-body-sm md:tracking-l-body-sm font-regular font-default"

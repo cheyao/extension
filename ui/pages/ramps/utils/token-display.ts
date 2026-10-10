@@ -25,14 +25,13 @@ export function getErc20AddressFromAssetId(
 /**
  * Resolves the user-facing symbol for a ramps catalog token.
  *
- * The ramps catalog reports registry symbols, which for mUSD is the uppercase
- * "MUSD". The branded casing is "mUSD" (the on-chain symbol and the casing
- * used across the product, e.g. locale strings). Canonicalise through the
- * shared helper so UI never leaks the registry casing (TRAM-3972).
+ * The ramps catalog reports registry symbols. The branded casing is used
+ * across the product (e.g. locale strings). Canonicalise through the shared
+ * helper so UI never leaks the registry casing.
  *
  * @param token - The ramps catalog token, if one is selected.
- * @returns The branded symbol for mUSD, the registry symbol for any other
- * token, or an empty string when no token/symbol is available.
+ * @returns The branded symbol for the token, or an empty string when no
+ * token/symbol is available.
  */
 export function getRampsTokenDisplaySymbol(token?: RampsToken | null): string {
   if (!token?.symbol) {
