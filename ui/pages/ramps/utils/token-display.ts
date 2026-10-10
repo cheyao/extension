@@ -1,5 +1,5 @@
 import { type RampsToken } from '@metamask/ramps-controller';
-import { getTokenDisplaySymbol } from '@metamask/money-account-utils';
+import { getTokenDisplaySymbol } from '../../../components/app/musd/constants';
 import { parseCaipAssetType, type CaipAssetType } from '@metamask/utils';
 
 /**

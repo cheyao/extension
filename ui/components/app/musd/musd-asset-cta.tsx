@@ -213,7 +213,7 @@ export const MusdAssetCta = ({
         backgroundColor={BoxBackgroundColor.Transparent}
         className="musd-asset-cta__icon"
       >
-        <img src={MUSD_EDUCATION_COIN_IMAGE} alt="mUSD" />
+        <img src={MUSD_EDUCATION_COIN_IMAGE} alt="sUSD" />
       </Box>
 
       {/* Text Content - Center section */}

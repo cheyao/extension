@@ -6,7 +6,7 @@
  */
 
 import type { Hex } from '@metamask/utils';
-import { MUSD_TOKEN } from '@metamask/money-account-utils';
+import { MUSD_TOKEN as PACKAGE_MUSD_TOKEN } from '@metamask/money-account-utils';
 import { CHAIN_IDS } from '../../../../shared/constants/network';
 
 /**
@@ -35,11 +35,25 @@ export const MUSD_TOKEN_ADDRESS: Hex =
   '0xacA92E438df0B2401fF60dA7E4337B687a2435DA';
 
 /**
- * mUSD token metadata — re-exported from @metamask/money-account-utils,
- * the shared single source of truth for mUSD token metadata across clients
- * (symbol "mUSD", name "MetaMask USD", matching the on-chain token).
+ * Swissquote Wallet: the user-facing deposit currency is "sUSD". Under the
+ * hood it is MetaMask's mUSD token (same address, decimals and transactions),
+ * but mUSD is never shown by name: every display goes through these values.
  */
-export { MUSD_TOKEN };
+export const SUSD_DISPLAY_SYMBOL = 'sUSD';
+export const SUSD_DISPLAY_NAME = 'Swissquote USD';
+export const SUSD_DISPLAY_IMAGE = './images/icons/susd.svg';
+
+/**
+ * mUSD token metadata from @metamask/money-account-utils, with the display
+ * fields (symbol, name, image) branded as sUSD. Address and decimals are the
+ * real mUSD values.
+ */
+export const MUSD_TOKEN = {
+  ...PACKAGE_MUSD_TOKEN,
+  symbol: SUSD_DISPLAY_SYMBOL,
+  name: SUSD_DISPLAY_NAME,
+  image: SUSD_DISPLAY_IMAGE,
+};
 
 /**
  * mUSD token decimals (derived from MUSD_TOKEN for single source of truth)
@@ -197,3 +211,34 @@ export const isMusdBuyableOnChain = (chainId: Hex): boolean => {
     (id) => id.toLowerCase() === chainId.toLowerCase(),
   );
 };
+
+/**
+ * Display symbol for a token: "sUSD" for mUSD, otherwise the given symbol.
+ * Drop-in replacement for `getTokenDisplaySymbol` from
+ * `@metamask/money-account-utils`, which would show "mUSD".
+ *
+ * @param address - Token address.
+ * @param symbol - The token's own symbol.
+ * @returns The symbol to show.
+ */
+export function getTokenDisplaySymbol(
+  address?: string,
+  symbol?: string,
+): string | undefined {
+  return isMusdToken(address) ? SUSD_DISPLAY_SYMBOL : symbol;
+}
+
+/**
+ * Display name for a token: "Swissquote USD" for mUSD, otherwise the given
+ * name.
+ *
+ * @param address - Token address.
+ * @param name - The token's own name.
+ * @returns The name to show.
+ */
+export function getTokenDisplayName(
+  address?: string,
+  name?: string,
+): string | undefined {
+  return isMusdToken(address) ? SUSD_DISPLAY_NAME : name;
+}

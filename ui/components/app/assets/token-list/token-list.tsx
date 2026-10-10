@@ -36,8 +36,11 @@ import {
 } from '#shared/lib/asset-utils';
 import { buildEvmCaip19AssetId } from '#shared/lib/multichain/buildEvmCaip19AssetId';
 import { useLowValueTokenPartition } from '#ui/components/app/assets/hooks/useLowValueTokenPartition';
-import { isMusdToken } from '#ui/components/app/musd/constants';
 import { useEnsureSusdToken } from '#ui/hooks/susd/useEnsureSusdToken';
+import {
+  getTokenDisplaySymbol,
+  isMusdToken,
+} from '#ui/components/app/musd/constants';
 import { useCoordinatedTrace } from '#ui/hooks/useTraceCoordinator';
 import TokenCell from '../token-cell';
 import { ASSET_CELL_HEIGHT } from '../constants';
@@ -215,10 +218,6 @@ function TokenList({ onTokenClick, safeChains }: TokenListProps) {
           if (isTronSpecialAsset(asset.assetId)) {
             return false;
           }
-          // Swissquote Wallet does not list MetaMask USD (mUSD).
-          if ('address' in asset && isMusdToken(asset.address)) {
-            return false;
-          }
           if (deferredShouldHideZeroBalanceTokens && asset.balance === '0') {
             return false;
           }
@@ -242,11 +241,17 @@ function TokenList({ onTokenClick, safeChains }: TokenListProps) {
             (!isEvm && asset.chainId === currentNetwork.chainId),
         );
 
-    return finalAccountAssets.map((asset) => {
+    const tokens = finalAccountAssets.map((asset) => {
       const token: TokenWithFiatAmount = {
         ...asset,
         tokenFiatAmount: asset.fiat?.balance,
         secondary: null,
+        // Swissquote Wallet: mUSD is shown as sUSD.
+        symbol:
+          getTokenDisplaySymbol(
+            'address' in asset ? asset.address : undefined,
+            asset.symbol,
+          ) ?? asset.symbol,
         title: asset.name,
         address: 'address' in asset ? asset.address : (asset.assetId as Hex),
         chainId: asset.chainId as Hex,
@@ -254,6 +259,26 @@ function TokenList({ onTokenClick, safeChains }: TokenListProps) {
       };
 
       return token;
+    });
+
+    // Swissquote Wallet: sUSD (mUSD under the hood) exists on several
+    // networks; show it once, with the balances of every network combined.
+    // The row keeps the position and network of the highest-ranked entry.
+    let susdRow: TokenWithFiatAmount | undefined;
+    return tokens.filter((token) => {
+      if (!isMusdToken(token.address)) {
+        return true;
+      }
+      if (!susdRow) {
+        susdRow = token;
+        return true;
+      }
+      susdRow.balance = String(
+        Number(susdRow.balance ?? 0) + Number(token.balance ?? 0),
+      );
+      susdRow.tokenFiatAmount =
+        (susdRow.tokenFiatAmount ?? 0) + (token.tokenFiatAmount ?? 0);
+      return false;
     });
   }, [
     isEvm,

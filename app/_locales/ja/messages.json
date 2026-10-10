@@ -296,10 +296,10 @@
     "message": "請求に失敗しました"
   },
   "activity_claimMusdBonus_pending_title": {
-    "message": "mUSDボーナスを請求しています"
+    "message": "sUSDボーナスを請求しています"
   },
   "activity_claimMusdBonus_success_title": {
-    "message": "mUSDボーナスを請求しました"
+    "message": "sUSDボーナスを請求しました"
   },
   "activity_claim_failed_description": {
     "message": "請求に失敗しました"
@@ -1995,7 +1995,7 @@
     "message": "DeFiページを開く"
   },
   "basicFunctionalityRequired_openMusdConversionPage": {
-    "message": "mUSDの変換ページを開く"
+    "message": "sUSDの変換ページを開く"
   },
   "basicFunctionalityRequired_openNotificationsPage": {
     "message": "通知ページを開く"
@@ -3437,7 +3437,7 @@
     "message": "マネーページ"
   },
   "deepLink_theMusdEducationPage": {
-    "message": "mUSDの変換に関する学習ページ"
+    "message": "sUSDの変換に関する学習ページ"
   },
   "deepLink_theNFTsPage": {
     "message": "NFTページ"
@@ -5391,15 +5391,15 @@
     "message": "メモ"
   },
   "merklRewardsToastFailed": {
-    "message": "mUSDボーナスの請求に失敗しました",
+    "message": "sUSDボーナスの請求に失敗しました",
     "description": "Toast message shown when a Merkl reward claim transaction fails or is dropped"
   },
   "merklRewardsToastInProgress": {
-    "message": "mUSDのボーナスを処理しています",
+    "message": "sUSDのボーナスを処理しています",
     "description": "Toast message shown when a Merkl reward claim transaction is being processed"
   },
   "merklRewardsToastSuccess": {
-    "message": "mUSDのボーナスを獲得しました！",
+    "message": "sUSDのボーナスを獲得しました！",
     "description": "Toast message shown when a Merkl reward claim transaction is confirmed"
   },
   "message": {
@@ -5569,7 +5569,7 @@
     "message": "アクティビティを読み込めませんでした"
   },
   "moneyActivityMusdBack": {
-    "message": "mUSDの還元"
+    "message": "sUSDの還元"
   },
   "moneyActivityPending": {
     "message": "保留中"
@@ -5615,7 +5615,7 @@
     "message": "$1のAPY"
   },
   "moneyBalanceInfoBody": {
-    "message": "ドルの裏付けのあるmUSD残高は、常に収益化が行われます。この残高は、アカウントの合計残高には算入されません。"
+    "message": "ドルの裏付けのあるsUSD残高は、常に収益化が行われます。この残高は、アカウントの合計残高には算入されません。"
   },
   "moneyBalanceInfoWithdrawals": {
     "message": "出金は、該当するブロックチェーンの標準的なネットワーク確認時間に従って、即座に処理されます。流動性が低い場合は、一時的に遅延が生じる可能性があります。"
@@ -5624,7 +5624,7 @@
     "message": "直近の残高"
   },
   "moneyBalanceMusdLabel": {
-    "message": "mUSD"
+    "message": "sUSD"
   },
   "moneyBalanceRetry": {
     "message": "再試行"
@@ -5640,7 +5640,7 @@
   },
   "moneyBenefitAutoEarnWithApy": {
     "message": "最大$1を自動で獲得",
-    "description": "$1 is the current mUSD APY (e.g. ~4.2% APY)."
+    "description": "$1 is the current sUSD APY (e.g. ~4.2% APY)."
   },
   "moneyBenefitLiquidity": {
     "message": "ロックアップなしで完全な流動性が確保され、いつでも取引や引き出しが可能です"
@@ -5649,7 +5649,7 @@
     "message": "MetaMaskに登録した任意のウォレットに送金"
   },
   "moneyBenefitStablecoin": {
-    "message": "ドルと1対1で裏付けられたステーブルコイン、mUSDで、資金を安全に守れます"
+    "message": "ドルと1対1で裏付けられたステーブルコイン、sUSDで、資金を安全に守れます"
   },
   "moneyBenefits": {
     "message": "特典"
@@ -5667,7 +5667,7 @@
     "message": "仮想通貨を収益化"
   },
   "moneyEarnOnCryptoDescription": {
-    "message": "仮想通貨をmUSDに換えることで、時間の経過とともにお金がどのように増えるかをご覧ください。"
+    "message": "仮想通貨をsUSDに換えることで、時間の経過とともにお金がどのように増えるかをご覧ください。"
   },
   "moneyEarnOnCryptoDescriptionMiddle": {
     "message": "を変換すると、以下の収益が得られます："
@@ -5714,15 +5714,15 @@
     "message": "報酬獲得の仕組み"
   },
   "moneyHowItWorksDescription": {
-    "message": "mUSDを追加しましょう。残高はドルの裏付けがあり、いつでも支払い、取引、送金に利用できます。"
+    "message": "sUSDを追加しましょう。残高はドルの裏付けがあり、いつでも支払い、取引、送金に利用できます。"
   },
   "moneyHowItWorksDescription1": {
     "message": "任意の仮想通貨を交換してMoney Accountに預け入れると、最大$1のAPY (変動制) を自動的に獲得できます。資金はDeFiヴォールトに入金され、Vedaによって管理され、Steakhouse Financialによってリスクモニタリングが行われます。利回りは、ブロックチェーンプロトコルで資金を運用するサードパーティDeFiプラットフォームによって生み出されます。ステーキングや請求は不要で、ロックアップもありません。",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksDescriptionWithApy": {
-    "message": "mUSDを追加して、最大$1を獲得しましょう。残高はドルの裏付けがあり、いつでも支払い、取引、送金に利用できます。",
-    "description": "$1 is the current mUSD APY."
+    "message": "sUSDを追加して、最大$1を獲得しましょう。残高はドルの裏付けがあり、いつでも支払い、取引、送金に利用できます。",
+    "description": "$1 is the current sUSD APY."
   },
   "moneyHowItWorksDisclosuresBody": {
     "message": "Money Accountは、銀行口座、普通預金口座、または保険対象の預金商品ではありません。APYは変動制であり、保証されるものではありません。Money Accountには、スマートコントラクト、プロトコル、流動性その他に関するリスクが伴い、資金の一部または全部が失われる可能性があります。地域ごとの制限の対象となります。規約が適用されます。"
@@ -5732,7 +5732,7 @@
   },
   "moneyHowItWorksFaqApyAnswer": {
     "message": "最大$1のAPYが得られます。この利率は変動制であり、市場の状況に応じて変動します。現在のレートはMoney Account内に常に表示されます。",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqApyQuestion": {
     "message": "MetaMask Money Accountでどの程度の収益を得られますか？"
@@ -5762,8 +5762,8 @@
     "message": "MetaMask Money Accountからいつでも引き出すことができますか？"
   },
   "moneyHowItWorksFaqMoneyAccountAnswer": {
-    "message": "最大$1の変動APY（年換算利回り）が得られるアカウントです。アカウントに入金すると、資金がmUSDで保持され、最大$1のAPYが得られます。mUSDは、MetaMaskのドル連動型ステーブルコインです。資金はいつでも利用または出金でき、ペナルティは一切ありません。",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "message": "最大$1の変動APY（年換算利回り）が得られるアカウントです。アカウントに入金すると、資金がsUSDで保持され、最大$1のAPYが得られます。sUSDは、MetaMaskのドル連動型ステーブルコインです。資金はいつでも利用または出金でき、ペナルティは一切ありません。",
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqMoneyAccountQuestion": {
     "message": "MetaMask Money Accountとは何ですか？"
@@ -5779,7 +5779,7 @@
     "message": "どのトークンをMoney Accountに入金できますか？"
   },
   "moneyHowItWorksFaqYieldAnswer": {
-    "message": "ユーザーが入金すると、その資金はAaveやMorphoなどの確立されたDeFiプロトコルに預け入れられます。これらのプロトコルは実際の経済活動から収益を上げ、これらの収益がAPY（年換算利回り）の形でユーザーに届けられます。\n\nプロトコル内での資金の配分状況は、Steakhouse Financialという第三者サービスプロバイダーによって監視されます。ユーザーの資金を保管するボールトスマートコントラクトのデプロイと維持・管理は、第三者インフラプロバイダーのVedaが担当します。\n\nここで得られる収益は、MetaMaskまたはmUSDの発行者が利息として支払うものではありません。第三者であるDeFiプロトコル内のポジションから生まれるオンチェーン上の収益が配分される仕組みとなっています。"
+    "message": "ユーザーが入金すると、その資金はAaveやMorphoなどの確立されたDeFiプロトコルに預け入れられます。これらのプロトコルは実際の経済活動から収益を上げ、これらの収益がAPY（年換算利回り）の形でユーザーに届けられます。\n\nプロトコル内での資金の配分状況は、Steakhouse Financialという第三者サービスプロバイダーによって監視されます。ユーザーの資金を保管するボールトスマートコントラクトのデプロイと維持・管理は、第三者インフラプロバイダーのVedaが担当します。\n\nここで得られる収益は、MetaMaskまたはsUSDの発行者が利息として支払うものではありません。第三者であるDeFiプロトコル内のポジションから生まれるオンチェーン上の収益が配分される仕組みとなっています。"
   },
   "moneyHowItWorksFaqYieldQuestion": {
     "message": "利益はどこから生まれるのですか？"
@@ -5797,7 +5797,7 @@
     "message": "これまでMoney Accountで発生した総収益額。"
   },
   "moneyMeetMusd": {
-    "message": "mUSDのご紹介"
+    "message": "sUSDのご紹介"
   },
   "moneyMonthlyTooltip": {
     "message": "過去30日間にMoney Accountで発生した総収益額。"
@@ -5809,7 +5809,7 @@
     "message": "その他のオプション"
   },
   "moneyMusd": {
-    "message": "mUSD"
+    "message": "sUSD"
   },
   "moneyOnboardingFundTitle": {
     "message": "Money Accountへの入金",
@@ -5986,58 +5986,58 @@
   },
   "musdAssetConvertBenefitDailyBonus": {
     "message": "デイリーボーナス",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitDollarBacked": {
     "message": "ドルペッグ制",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitNoLockups": {
     "message": "ロックアップなし",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitNoMetaMaskFee": {
     "message": "MetaMaskの手数料なし",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertDescriptionHighlight": {
     "message": "年率$1%のボーナス",
-    "description": "Shown in Figma accent lime (#baf24a) inside the mUSD asset details convert section description. $1 is the APY percentage."
+    "description": "Shown in Figma accent lime (#baf24a) inside the sUSD asset details convert section description. $1 is the APY percentage."
   },
   "musdAssetConvertDescriptionLead": {
-    "message": " USDC、USDT、DAIをmUSDに換金すると、",
-    "description": "Text before the green APY phrase on the mUSD asset details convert section"
+    "message": " USDC、USDT、DAIをsUSDに換金すると、",
+    "description": "Text before the green APY phrase on the sUSD asset details convert section"
   },
   "musdAssetConvertDescriptionTail": {
     "message": "を獲得できます。",
-    "description": "Text after the green APY phrase on the mUSD asset details convert section"
+    "description": "Text after the green APY phrase on the sUSD asset details convert section"
   },
   "musdAssetConvertLearnMore": {
     "message": "詳細。",
-    "description": "Button to open the mUSD support article from the asset details convert section"
+    "description": "Button to open the sUSD support article from the asset details convert section"
   },
   "musdAssetConvertTitle": {
     "message": "ステーブルコインの換金",
-    "description": "Title of the convert section on the mUSD asset details page"
+    "description": "Title of the convert section on the sUSD asset details page"
   },
   "musdAssetPositionBalance": {
     "message": "残高",
-    "description": "Label in the mUSD asset details Your position section"
+    "description": "Label in the sUSD asset details Your position section"
   },
   "musdAssetPositionTitle": {
     "message": "あなたの順位",
-    "description": "Section title on the mUSD asset details page"
+    "description": "Section title on the sUSD asset details page"
   },
   "musdAssetPositionValue": {
     "message": "価値",
-    "description": "Label in the mUSD asset details Your position section (fiat value)"
+    "description": "Label in the sUSD asset details Your position section (fiat value)"
   },
   "musdBonusExplanation": {
-    "message": "お持ちのステーブルコインをmUSDに換えて、\n年換算で最大$1%のボーナスを獲得しましょう。\nこのボーナスは毎日請求できます。$2",
+    "message": "お持ちのステーブルコインをsUSDに換えて、\n年換算で最大$1%のボーナスを獲得しましょう。\nこのボーナスは毎日請求できます。$2",
     "description": "$1 is the bonus APY percentage, $2 is the 'Terms apply' link"
   },
   "musdBoostDescription": {
-    "message": "お持ちのステーブルコインをmUSDに換えて、年換算$1%のボーナスを獲得しましょう。",
+    "message": "お持ちのステーブルコインをsUSDに換えて、年換算$1%のボーナスを獲得しましょう。",
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
   "musdBoostTitle": {
@@ -6045,29 +6045,29 @@
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
   "musdBuyMusd": {
-    "message": "mUSDを購入"
+    "message": "sUSDを購入"
   },
   "musdClaimTitle": {
     "message": "ボーナスを請求する",
-    "description": "Title for the mUSD bonus claim confirmation screen"
+    "description": "Title for the sUSD bonus claim confirmation screen"
   },
   "musdConversionFeeTooltipDescription": {
-    "message": "mUSD換算手数料にはネットワークコストが含まれるほか、プロバイダー手数料も含まれる場合があります。なお、mUSDへの換算時にMetaMaskの手数料は発生しません。",
-    "description": "Body text shown above the fee breakdown in the transaction fee tooltip for mUSD conversion"
+    "message": "sUSD換算手数料にはネットワークコストが含まれるほか、プロバイダー手数料も含まれる場合があります。なお、sUSDへの換算時にMetaMaskの手数料は発生しません。",
+    "description": "Body text shown above the fee breakdown in the transaction fee tooltip for sUSD conversion"
   },
   "musdConversionTitle": {
-    "message": "mUSDへの変換完了",
-    "description": "Title shown in the transaction details modal for mUSD conversion transactions"
+    "message": "sUSDへの変換完了",
+    "description": "Title shown in the transaction details modal for sUSD conversion transactions"
   },
   "musdConversionToastFailed": {
-    "message": "mUSDへの変換に失敗しました"
+    "message": "sUSDへの変換に失敗しました"
   },
   "musdConversionToastInProgress": {
-    "message": "$1 → mUSDに変換中",
+    "message": "$1 → sUSDに変換中",
     "description": "$1 is the source token symbol (e.g., USDC)"
   },
   "musdConversionToastSuccess": {
-    "message": "mUSDへの換算が完了しました"
+    "message": "sUSDへの換算が完了しました"
   },
   "musdConversionToastSuccessDescription": {
     "message": "ボーナスは1日以内に請求できます。"
@@ -6086,11 +6086,11 @@
     "message": "後で"
   },
   "musdGetMusd": {
-    "message": "mUSDを入手"
+    "message": "sUSDを入手"
   },
   "musdSymbol": {
-    "message": "mUSD",
-    "description": "Token ticker for MetaMask USD (displayed next to balance on the mUSD asset details page)"
+    "message": "sUSD",
+    "description": "Token ticker for Swissquote USD (displayed next to balance on the sUSD asset details page)"
   },
   "musdTermsApply": {
     "message": "諸条件が適用されます。"
@@ -8556,7 +8556,7 @@
     "message": "出金が送信されました"
   },
   "perpsWithdrawTooltip": {
-    "message": "MetaMaskがユーザーに代わって希望のトークンをスワップします。mUSDへのスワップ時にMetaMaskの手数料は発生しません。",
+    "message": "MetaMaskがユーザーに代わって希望のトークンをスワップします。sUSDへのスワップ時にMetaMaskの手数料は発生しません。",
     "description": "Tooltip shown on the Transaction fee row of the Perps Withdraw confirmation"
   },
   "perpsWithdrawalEmptyTitle": {

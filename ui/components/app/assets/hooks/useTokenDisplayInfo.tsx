@@ -1,4 +1,9 @@
 import { useSelector } from 'react-redux';
+import {
+  isMusdToken,
+  SUSD_DISPLAY_IMAGE,
+  SUSD_DISPLAY_NAME,
+} from '../../musd/constants';
 import { isEqualCaseInsensitive } from '@metamask/controller-utils';
 import { formatChainIdToCaip } from '@metamask/bridge-controller';
 import { CaipAssetType, isCaipChainId } from '@metamask/utils';
@@ -131,9 +136,12 @@ export const useTokenDisplayInfo = ({
           ?.iconUrl) ||
       token.image;
 
+    // Swissquote Wallet: mUSD is shown as sUSD (Swissquote USD).
+    const isSusd = isMusdToken(token.address);
+
     return {
-      title,
-      tokenImage,
+      title: isSusd ? SUSD_DISPLAY_NAME : title,
+      tokenImage: isSusd ? SUSD_DISPLAY_IMAGE : tokenImage,
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       secondary,

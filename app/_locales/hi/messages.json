@@ -296,10 +296,10 @@
     "message": "क्लेम नहीं हो पाया"
   },
   "activity_claimMusdBonus_pending_title": {
-    "message": "mUSD बोनस क्लेम कर रहे हैं"
+    "message": "sUSD बोनस क्लेम कर रहे हैं"
   },
   "activity_claimMusdBonus_success_title": {
-    "message": "mUSD बोनस क्लेम किया गया"
+    "message": "sUSD बोनस क्लेम किया गया"
   },
   "activity_claim_failed_description": {
     "message": "क्लेम नहीं हो पाया"
@@ -1995,7 +1995,7 @@
     "message": "DeFi पेज खोलें"
   },
   "basicFunctionalityRequired_openMusdConversionPage": {
-    "message": "mUSD कन्वर्शन पेज खोलें"
+    "message": "sUSD कन्वर्शन पेज खोलें"
   },
   "basicFunctionalityRequired_openNotificationsPage": {
     "message": "नोटिफिकेशंस पेज खोलें"
@@ -5387,15 +5387,15 @@
     "message": "ज्ञापन"
   },
   "merklRewardsToastFailed": {
-    "message": "आपका mUSD बोनस क्लेम फेल हो गया",
+    "message": "आपका sUSD बोनस क्लेम फेल हो गया",
     "description": "Toast message shown when a Merkl reward claim transaction fails or is dropped"
   },
   "merklRewardsToastInProgress": {
-    "message": "आपका mUSD बोनस प्रोसेस हो रहा है",
+    "message": "आपका sUSD बोनस प्रोसेस हो रहा है",
     "description": "Toast message shown when a Merkl reward claim transaction is being processed"
   },
   "merklRewardsToastSuccess": {
-    "message": "आपका mUSD बोनस यहाँ है!",
+    "message": "आपका sUSD बोनस यहाँ है!",
     "description": "Toast message shown when a Merkl reward claim transaction is confirmed"
   },
   "message": {
@@ -5565,7 +5565,7 @@
     "message": "आपकी एक्टिविटी लोड नहीं हो सकी"
   },
   "moneyActivityMusdBack": {
-    "message": "mUSD वापस"
+    "message": "sUSD वापस"
   },
   "moneyActivityPending": {
     "message": "अभी पूरा नहीं हुआ"
@@ -5611,7 +5611,7 @@
     "message": "$1 APY"
   },
   "moneyBalanceInfoBody": {
-    "message": "आपका डॉलर-समर्थित mUSD बैलेंस, जिस पर हमेशा कमाई होती रहती है। हम इसे आपके कुल अकाउंट बैलेंस में कैलकुलेट नहीं करते हैं।"
+    "message": "आपका डॉलर-समर्थित sUSD बैलेंस, जिस पर हमेशा कमाई होती रहती है। हम इसे आपके कुल अकाउंट बैलेंस में कैलकुलेट नहीं करते हैं।"
   },
   "moneyBalanceInfoWithdrawals": {
     "message": "विदड्रॉल तुरंत प्रोसेस होते हैं, जो रिलेवेंट ब्लॉकचेन पर स्टैंडर्ड नेटवर्क कन्फर्मेशन टाइम के अधीन होते हैं। अगर लिक्विडिटी टाइट है, तो टेम्पररी डिले हो सकता है।"
@@ -5620,7 +5620,7 @@
     "message": "आखिरी ज्ञात बैलेंस"
   },
   "moneyBalanceMusdLabel": {
-    "message": "mUSD"
+    "message": "sUSD"
   },
   "moneyBalanceRetry": {
     "message": "फिर से प्रयास करें"
@@ -5636,7 +5636,7 @@
   },
   "moneyBenefitAutoEarnWithApy": {
     "message": "$1 तक ऑटो-अर्न करें",
-    "description": "$1 is the current mUSD APY (e.g. ~4.2% APY)."
+    "description": "$1 is the current sUSD APY (e.g. ~4.2% APY)."
   },
   "moneyBenefitLiquidity": {
     "message": "बिना किसी लॉकअप के पूरी लिक्विडिटी पाएं, इसलिए आप कभी भी ट्रेड कर सकते हैं या निकाल सकते हैं"
@@ -5645,7 +5645,7 @@
     "message": "MetaMask पर अपने किसी भी वॉलेट में भेजें"
   },
   "moneyBenefitStablecoin": {
-    "message": "अपना पैसा mUSD में रखें, जो एक 1:1 डॉलर-बैक्ड स्टेबलकॉइन है"
+    "message": "अपना पैसा sUSD में रखें, जो एक 1:1 डॉलर-बैक्ड स्टेबलकॉइन है"
   },
   "moneyBenefits": {
     "message": "फ़ायदे"
@@ -5663,7 +5663,7 @@
     "message": "अपने क्रिप्टो पर कमाएं"
   },
   "moneyEarnOnCryptoDescription": {
-    "message": "देखें कि अपने क्रिप्टो को mUSD में बदलकर आपका पैसा समय के साथ कैसे बढ़ सकता है।"
+    "message": "देखें कि अपने क्रिप्टो को sUSD में बदलकर आपका पैसा समय के साथ कैसे बढ़ सकता है।"
   },
   "moneyEarnOnCryptoDescriptionMiddle": {
     "message": "को एसेट्स में और आप इतना कमा सकते हैं"
@@ -5710,15 +5710,15 @@
     "message": "ये कैसे काम करता है"
   },
   "moneyHowItWorksDescription": {
-    "message": "mUSD जोड़ें और आपका डॉलर-बैक्ड बैलेंस कभी भी खर्च करने, ट्रेड करने या भेजने के लिए तैयार है।"
+    "message": "sUSD जोड़ें और आपका डॉलर-बैक्ड बैलेंस कभी भी खर्च करने, ट्रेड करने या भेजने के लिए तैयार है।"
   },
   "moneyHowItWorksDescription1": {
     "message": "किसी भी क्रिप्टो को अपने Money Account में कन्वर्ट करें और स्वचालित रूप से $1 तक APY (वेरिएबल) कमाएं। फंड्स एक DeFi वॉल्ट में जाते हैं, जिसे Veda द्वारा प्रबंधित किया जाता है और Steakhouse Financial द्वारा जोखिम की निगरानी की जाती है। यह दर थर्ड पार्टी के DeFi प्लेटफॉर्म्स द्वारा उत्पन्न होती है जो फंड्स को ब्लॉकचेन प्रोटोकॉल्स में लगाते हैं। कोई स्टेकिंग नहीं, कोई क्लेम नहीं, कोई लॉक-अप्स नहीं।",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksDescriptionWithApy": {
-    "message": "mUSD जोड़ें और $1 तक कमाएं। आपका बैलेंस डॉलर-बैक्ड है और कभी भी खर्च करने, ट्रेड करने या भेजने के लिए तैयार है।",
-    "description": "$1 is the current mUSD APY."
+    "message": "sUSD जोड़ें और $1 तक कमाएं। आपका बैलेंस डॉलर-बैक्ड है और कभी भी खर्च करने, ट्रेड करने या भेजने के लिए तैयार है।",
+    "description": "$1 is the current sUSD APY."
   },
   "moneyHowItWorksDisclosuresBody": {
     "message": "Money Account कोई बैंक अकाउंट, सेविंग्स अकाउंट या इंश्योर्ड डिपॉज़िट प्रोडक्ट नहीं है। APY वेरिएबल है और इसकी गारंटी नहीं है। Money Account में स्मार्ट कॉन्ट्रैक्ट, प्रोटोकॉल, लिक्विडिटी और दूसरे रिस्क शामिल हैं, और आप अपने कुछ या सभी फंड खो सकते हैं। स्थानीय पाबंदियों के अधीन। शर्तें लागू।"
@@ -5728,7 +5728,7 @@
   },
   "moneyHowItWorksFaqApyAnswer": {
     "message": "$1 APY तक। रेट बदलता रहता है और मार्केट के हालात के साथ बदलता रहता है। अभी का रेट हमेशा Money Account के अंदर दिखता है।",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqApyQuestion": {
     "message": "मैं MetaMask Money Account से कितना कमा सकता हूँ?"
@@ -5758,8 +5758,8 @@
     "message": "क्या मैं MetaMask Money Account से कभी भी पैसे निकाल सकता हूँ?"
   },
   "moneyHowItWorksFaqMoneyAccountAnswer": {
-    "message": "एक ऐसा अकाउंट जो $1 तक का परिवर्तनीय APY कमाता है। आप पैसे डिपॉज़िट करते हैं, जो अकाउंट में mUSD के रूप में रखे जाते हैं, और $1 APY तक कमाते हैं। mUSD MetaMask का डॉलर-बैक्ड स्टेबलकॉइन है। आप बिना किसी पेनल्टी के कभी भी अपने पैसे इस्तेमाल कर सकते हैं या निकाल सकते हैं।",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "message": "एक ऐसा अकाउंट जो $1 तक का परिवर्तनीय APY कमाता है। आप पैसे डिपॉज़िट करते हैं, जो अकाउंट में sUSD के रूप में रखे जाते हैं, और $1 APY तक कमाते हैं। sUSD MetaMask का डॉलर-बैक्ड स्टेबलकॉइन है। आप बिना किसी पेनल्टी के कभी भी अपने पैसे इस्तेमाल कर सकते हैं या निकाल सकते हैं।",
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqMoneyAccountQuestion": {
     "message": "MetaMask Money Account क्या है?"
@@ -5775,7 +5775,7 @@
     "message": "मैं Money Account में कौन से टोकन जमा कर सकता हूँ?"
   },
   "moneyHowItWorksFaqYieldAnswer": {
-    "message": "जब आप फंड जमा करते हैं, तो उन्हें Aave और Morpho जैसे जाने-माने DeFi प्रोटोकॉल में डाल दिया जाता है, जहाँ वे असली आर्थिक गतिविधि से रिटर्न कमाते हैं। ये रिटर्न फिर आपको APY के रूप में दिए जाते हैं।\n\nSteakhouse Financial नाम का एक थर्ड-पार्टी सर्विस प्रोवाइडर मॉनिटर करता है कि प्रोटोकॉल में फंड कैसे बांटे जाते हैं। Veda, एक थर्ड-पार्टी इंफ्रास्ट्रक्चर प्रोवाइडर, आपके फंड रखने वाले वॉल्ट स्मार्ट कॉन्ट्रैक्ट को डिप्लॉय और मेंटेन करता है।\n\nकमाई MetaMask या mUSD जारी करने वाले द्वारा दिया गया ब्याज नहीं है। वे थर्ड-पार्टी DeFi प्रोटोकॉल में पोज़िशन से मिलने वाले ऑनचेन रिटर्न हैं।"
+    "message": "जब आप फंड जमा करते हैं, तो उन्हें Aave और Morpho जैसे जाने-माने DeFi प्रोटोकॉल में डाल दिया जाता है, जहाँ वे असली आर्थिक गतिविधि से रिटर्न कमाते हैं। ये रिटर्न फिर आपको APY के रूप में दिए जाते हैं।\n\nSteakhouse Financial नाम का एक थर्ड-पार्टी सर्विस प्रोवाइडर मॉनिटर करता है कि प्रोटोकॉल में फंड कैसे बांटे जाते हैं। Veda, एक थर्ड-पार्टी इंफ्रास्ट्रक्चर प्रोवाइडर, आपके फंड रखने वाले वॉल्ट स्मार्ट कॉन्ट्रैक्ट को डिप्लॉय और मेंटेन करता है।\n\nकमाई MetaMask या sUSD जारी करने वाले द्वारा दिया गया ब्याज नहीं है। वे थर्ड-पार्टी DeFi प्रोटोकॉल में पोज़िशन से मिलने वाले ऑनचेन रिटर्न हैं।"
   },
   "moneyHowItWorksFaqYieldQuestion": {
     "message": "यील्ड कहाँ से आती है?"
@@ -5793,7 +5793,7 @@
     "message": "समय के साथ आपके Money अकाउंट बैलेंस पर आपने जो कुल कमाई की है।"
   },
   "moneyMeetMusd": {
-    "message": "mUSD से मिलें"
+    "message": "sUSD से मिलें"
   },
   "moneyMonthlyTooltip": {
     "message": "पिछले 30 दिनों में आपके Money अकाउंट बैलेंस पर आपने जो कुल कमाई की है।"
@@ -5805,7 +5805,7 @@
     "message": "ज़्यादा विकल्प"
   },
   "moneyMusd": {
-    "message": "mUSD"
+    "message": "sUSD"
   },
   "moneyOnboardingFundTitle": {
     "message": "अपना Money Account फंड करें",
@@ -5982,58 +5982,58 @@
   },
   "musdAssetConvertBenefitDailyBonus": {
     "message": "दैनिक बोनस",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitDollarBacked": {
     "message": "डॉलर-समर्थित",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitNoLockups": {
     "message": "कोई लॉकअप नहीं",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitNoMetaMaskFee": {
     "message": "कोई MetaMask फीस नहीं",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertDescriptionHighlight": {
     "message": "$1% सालाना बोनस",
-    "description": "Shown in Figma accent lime (#baf24a) inside the mUSD asset details convert section description. $1 is the APY percentage."
+    "description": "Shown in Figma accent lime (#baf24a) inside the sUSD asset details convert section description. $1 is the APY percentage."
   },
   "musdAssetConvertDescriptionLead": {
     "message": "एक ",
-    "description": "Text before the green APY phrase on the mUSD asset details convert section"
+    "description": "Text before the green APY phrase on the sUSD asset details convert section"
   },
   "musdAssetConvertDescriptionTail": {
-    "message": " USDC, USDT और DAI को mUSD में कन्वर्ट करके।",
-    "description": "Text after the green APY phrase on the mUSD asset details convert section"
+    "message": " USDC, USDT और DAI को sUSD में कन्वर्ट करके।",
+    "description": "Text after the green APY phrase on the sUSD asset details convert section"
   },
   "musdAssetConvertLearnMore": {
     "message": "ज़्यादा जानें",
-    "description": "Button to open the mUSD support article from the asset details convert section"
+    "description": "Button to open the sUSD support article from the asset details convert section"
   },
   "musdAssetConvertTitle": {
     "message": "अपने स्टेबलकॉइन कन्वर्ट करें",
-    "description": "Title of the convert section on the mUSD asset details page"
+    "description": "Title of the convert section on the sUSD asset details page"
   },
   "musdAssetPositionBalance": {
     "message": "बैलेंस",
-    "description": "Label in the mUSD asset details Your position section"
+    "description": "Label in the sUSD asset details Your position section"
   },
   "musdAssetPositionTitle": {
     "message": "आपकी पोज़िशन",
-    "description": "Section title on the mUSD asset details page"
+    "description": "Section title on the sUSD asset details page"
   },
   "musdAssetPositionValue": {
     "message": "मूल्य",
-    "description": "Label in the mUSD asset details Your position section (fiat value)"
+    "description": "Label in the sUSD asset details Your position section (fiat value)"
   },
   "musdBonusExplanation": {
-    "message": "अपने स्टेबलकॉइन्स को mUSD में बदलें और $1% तक वार्षिक बोनस कमाएं, जिसे आप रोज़ाना क्लेम कर सकते हैं।$2",
+    "message": "अपने स्टेबलकॉइन्स को sUSD में बदलें और $1% तक वार्षिक बोनस कमाएं, जिसे आप रोज़ाना क्लेम कर सकते हैं।$2",
     "description": "$1 is the bonus APY percentage, $2 is the 'Terms apply' link"
   },
   "musdBoostDescription": {
-    "message": "अपने स्टेबलकॉइन्स को mUSD में बदलें और $1% वार्षिक बोनस प्राप्त करें।",
+    "message": "अपने स्टेबलकॉइन्स को sUSD में बदलें और $1% वार्षिक बोनस प्राप्त करें।",
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
   "musdBoostTitle": {
@@ -6041,29 +6041,29 @@
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
   "musdBuyMusd": {
-    "message": "mUSD खरीदें"
+    "message": "sUSD खरीदें"
   },
   "musdClaimTitle": {
     "message": "बोनस क्लेम करें",
-    "description": "Title for the mUSD bonus claim confirmation screen"
+    "description": "Title for the sUSD bonus claim confirmation screen"
   },
   "musdConversionFeeTooltipDescription": {
-    "message": "mUSD कन्वर्शन शुल्क में नेटवर्क लागत शामिल होती है और इसमें प्रदाता शुल्क भी शामिल हो सकता है। जब आप mUSD में कन्वर्ट करते हैं, तो कोई MetaMask शुल्क लागू नहीं होता।",
-    "description": "Body text shown above the fee breakdown in the transaction fee tooltip for mUSD conversion"
+    "message": "sUSD कन्वर्शन शुल्क में नेटवर्क लागत शामिल होती है और इसमें प्रदाता शुल्क भी शामिल हो सकता है। जब आप sUSD में कन्वर्ट करते हैं, तो कोई MetaMask शुल्क लागू नहीं होता।",
+    "description": "Body text shown above the fee breakdown in the transaction fee tooltip for sUSD conversion"
   },
   "musdConversionTitle": {
-    "message": "mUSD में कन्वर्ट किया गया",
-    "description": "Title shown in the transaction details modal for mUSD conversion transactions"
+    "message": "sUSD में कन्वर्ट किया गया",
+    "description": "Title shown in the transaction details modal for sUSD conversion transactions"
   },
   "musdConversionToastFailed": {
-    "message": "mUSD कन्वर्शन नहीं हो पाया"
+    "message": "sUSD कन्वर्शन नहीं हो पाया"
   },
   "musdConversionToastInProgress": {
-    "message": "$1 → mUSD में कन्वर्ट किया जा रहा है",
+    "message": "$1 → sUSD में कन्वर्ट किया जा रहा है",
     "description": "$1 is the source token symbol (e.g., USDC)"
   },
   "musdConversionToastSuccess": {
-    "message": "mUSD कन्वर्शन सफल रहा"
+    "message": "sUSD कन्वर्शन सफल रहा"
   },
   "musdConversionToastSuccessDescription": {
     "message": "बोनस एक दिन के भीतर क्लेम किया जा सकेगा।"
@@ -6082,11 +6082,11 @@
     "message": "अभी नहीं"
   },
   "musdGetMusd": {
-    "message": "mUSD प्राप्त करें"
+    "message": "sUSD प्राप्त करें"
   },
   "musdSymbol": {
-    "message": "mUSD",
-    "description": "Token ticker for MetaMask USD (displayed next to balance on the mUSD asset details page)"
+    "message": "sUSD",
+    "description": "Token ticker for Swissquote USD (displayed next to balance on the sUSD asset details page)"
   },
   "musdTermsApply": {
     "message": "नियम लागू।"
@@ -8552,7 +8552,7 @@
     "message": "विदड्रॉवल सबमिट किया गया"
   },
   "perpsWithdrawTooltip": {
-    "message": "MetaMask आपके लिए आपके पसंदीदा टोकन में स्वैप करेगा। जब आप mUSD में स्वैप करते हैं तो कोई MetaMask शुल्क लागू नहीं होता है।",
+    "message": "MetaMask आपके लिए आपके पसंदीदा टोकन में स्वैप करेगा। जब आप sUSD में स्वैप करते हैं तो कोई MetaMask शुल्क लागू नहीं होता है।",
     "description": "Tooltip shown on the Transaction fee row of the Perps Withdraw confirmation"
   },
   "perpsWithdrawalEmptyTitle": {

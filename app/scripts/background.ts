@@ -141,6 +141,10 @@ import type {
 import type { InstallLifecycleDependencies } from './lib/lifecycle/install-lifecycle';
 import type { ActiveTabTrackerController } from './lib/active-tab/active-tab-tracker';
 import type { BadgeManagerController } from './lib/badge/badge-manager';
+import { installSusdBranding } from '../../shared/lib/swissquote/susd-branding';
+
+// Swissquote Wallet: show MetaMask's mUSD as sUSD everywhere (see susd-branding).
+installSusdBranding();
 
 // MV3 configures the ExtensionLazyListener in service-worker.ts and sets it on globalThis.stateHooks,
 // but in MV2 we don't need to do that, so we create it here (and we don't add any lazy listeners,

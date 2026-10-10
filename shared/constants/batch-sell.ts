@@ -63,10 +63,10 @@ export const BATCH_SELL_DEST_STABLECOIN_METADATA: Record<
       'https://static.cx.metamask.io/api/v2/tokenIcons/assets/eip155/56/erc20/0x55d398326f99059ff775485246999027b3197955.png',
   },
   'eip155:59144/erc20:0xaca92e438df0b2401ff60da7e4337b687a2435da': {
-    symbol: 'MUSD',
-    name: 'MetaMask USD',
+    // sUSD is mUSD under the hood; shown under the Swissquote name.
+    symbol: 'sUSD',
+    name: 'Swissquote USD',
     decimals: 6,
-    iconUrl:
-      'https://static.cx.metamask.io/api/v2/tokenIcons/assets/eip155/59144/erc20/0xaca92e438df0b2401ff60da7e4337b687a2435da.png',
+    iconUrl: './images/icons/susd.svg',
   },
 };

@@ -1,9 +1,9 @@
 import type { TransactionMeta } from '@metamask/transaction-controller';
+import { MUSD_TOKEN_ADDRESS } from '@metamask/money-account-utils';
 import {
   getTokenDisplaySymbol,
   MUSD_TOKEN,
-  MUSD_TOKEN_ADDRESS,
-} from '@metamask/money-account-utils';
+} from '../../../components/app/musd/constants';
 import type { Hex } from '@metamask/utils';
 import BigNumber from 'bignumber.js';
 import { moneyFormatUsd } from '../../../helpers/money/format';

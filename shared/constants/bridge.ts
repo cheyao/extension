@@ -202,11 +202,11 @@ export const BRIDGE_CHAINID_TO_DEFAULT_FROM_TOKEN: BridgeChainTokenMap = {
 // This is actually for defining a default "toToken" when opening Bridge view
 export const BRIDGE_CHAINID_COMMON_TOKEN_PAIR: BridgeChainTokenMap = {
   [toEvmCaipChainId(CHAIN_IDS.MAINNET)]: {
-    // ETH -> mUSD on mainnet
+    // ETH -> sUSD (mUSD under the hood) on mainnet
     address: '0xaca92e438df0b2401ff60da7e4337b687a2435da',
-    symbol: 'mUSD',
+    symbol: 'sUSD',
     decimals: 6,
-    name: 'MetaMask USD',
+    name: 'Swissquote USD',
     assetId: `${toEvmCaipChainId(CHAIN_IDS.MAINNET)}/erc20:${toChecksumHexAddress('0xaca92e438df0b2401ff60da7e4337b687a2435da')}`,
   },
   [toEvmCaipChainId(CHAIN_IDS.OPTIMISM)]: {
@@ -266,11 +266,11 @@ export const BRIDGE_CHAINID_COMMON_TOKEN_PAIR: BridgeChainTokenMap = {
     assetId: `${toEvmCaipChainId(CHAIN_IDS.ZKSYNC_ERA)}/erc20:${toChecksumHexAddress('0x493257fd37edb34451f62edf8d2a0c418852ba4c')}`,
   },
   [toEvmCaipChainId(CHAIN_IDS.LINEA_MAINNET)]: {
-    // ETH -> mUSD on Linea
+    // ETH -> sUSD (mUSD under the hood) on Linea
     address: '0xaca92e438df0b2401ff60da7e4337b687a2435da',
-    symbol: 'mUSD',
+    symbol: 'sUSD',
     decimals: 6,
-    name: 'MetaMask USD',
+    name: 'Swissquote USD',
     assetId: `${toEvmCaipChainId(CHAIN_IDS.LINEA_MAINNET)}/erc20:${toChecksumHexAddress('0xaca92e438df0b2401ff60da7e4337b687a2435da')}`,
   },
   [toEvmCaipChainId(CHAIN_IDS.SEI)]: {

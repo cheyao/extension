@@ -296,10 +296,10 @@
     "message": "청구 실패"
   },
   "activity_claimMusdBonus_pending_title": {
-    "message": "mUSD 보너스 수령 중"
+    "message": "sUSD 보너스 수령 중"
   },
   "activity_claimMusdBonus_success_title": {
-    "message": "mUSD 보너스 수령 완료"
+    "message": "sUSD 보너스 수령 완료"
   },
   "activity_claim_failed_description": {
     "message": "청구 실패"
@@ -1995,7 +1995,7 @@
     "message": "디파이 페이지 열기"
   },
   "basicFunctionalityRequired_openMusdConversionPage": {
-    "message": "mUSD 전환 페이지 열기"
+    "message": "sUSD 전환 페이지 열기"
   },
   "basicFunctionalityRequired_openNotificationsPage": {
     "message": "알림 페이지 열기"
@@ -5391,15 +5391,15 @@
     "message": "메모"
   },
   "merklRewardsToastFailed": {
-    "message": "mUSD 보너스 수령에 실패했습니다",
+    "message": "sUSD 보너스 수령에 실패했습니다",
     "description": "Toast message shown when a Merkl reward claim transaction fails or is dropped"
   },
   "merklRewardsToastInProgress": {
-    "message": "mUSD 보너스를 처리 중입니다",
+    "message": "sUSD 보너스를 처리 중입니다",
     "description": "Toast message shown when a Merkl reward claim transaction is being processed"
   },
   "merklRewardsToastSuccess": {
-    "message": "mUSD 보너스가 지급되었습니다!",
+    "message": "sUSD 보너스가 지급되었습니다!",
     "description": "Toast message shown when a Merkl reward claim transaction is confirmed"
   },
   "message": {
@@ -5569,7 +5569,7 @@
     "message": "활동 내역을 불러올 수 없습니다"
   },
   "moneyActivityMusdBack": {
-    "message": "mUSD 캐시백"
+    "message": "sUSD 캐시백"
   },
   "moneyActivityPending": {
     "message": "보류 중"
@@ -5615,7 +5615,7 @@
     "message": "$1 APY"
   },
   "moneyBalanceInfoBody": {
-    "message": "항상 수익을 내는 달러 연동 mUSD 잔액입니다. 이 금액은 총계정 잔액을 계산할 때는 포함되지 않습니다."
+    "message": "항상 수익을 내는 달러 연동 sUSD 잔액입니다. 이 금액은 총계정 잔액을 계산할 때는 포함되지 않습니다."
   },
   "moneyBalanceInfoWithdrawals": {
     "message": "출금은 즉시 처리되며, 관련 블록체인의 일반적인 네트워크 확인 시간이 적용됩니다. 유동성이 부족한 경우 일시적으로 지연될 수 있습니다."
@@ -5624,7 +5624,7 @@
     "message": "마지막으로 확인된 잔액"
   },
   "moneyBalanceMusdLabel": {
-    "message": "mUSD"
+    "message": "sUSD"
   },
   "moneyBalanceRetry": {
     "message": "다시 시도"
@@ -5640,7 +5640,7 @@
   },
   "moneyBenefitAutoEarnWithApy": {
     "message": "자동으로 최대 $1의 수익 얻기",
-    "description": "$1 is the current mUSD APY (e.g. ~4.2% APY)."
+    "description": "$1 is the current sUSD APY (e.g. ~4.2% APY)."
   },
   "moneyBenefitLiquidity": {
     "message": "락업 없이 완전한 유동성을 제공하므로 언제든지 거래하거나 출금할 수 있습니다"
@@ -5649,7 +5649,7 @@
     "message": "MetaMask에 연결된 모든 지갑으로 전송할 수 있습니다."
   },
   "moneyBenefitStablecoin": {
-    "message": "1:1 달러 연동 스테이블코인인 mUSD로 자금을 안전하게 보관하세요"
+    "message": "1:1 달러 연동 스테이블코인인 sUSD로 자금을 안전하게 보관하세요"
   },
   "moneyBenefits": {
     "message": "혜택"
@@ -5667,7 +5667,7 @@
     "message": "암호화폐로 수익 얻기"
   },
   "moneyEarnOnCryptoDescription": {
-    "message": "암호화폐를 mUSD로 전환했을 때 자금이 시간에 따라 어떻게 늘어날 수 있는지 확인해 보세요."
+    "message": "암호화폐를 sUSD로 전환했을 때 자금이 시간에 따라 어떻게 늘어날 수 있는지 확인해 보세요."
   },
   "moneyEarnOnCryptoDescriptionMiddle": {
     "message": "자산을 환전하여 얻을 수 있는 최대 수익:"
@@ -5714,15 +5714,15 @@
     "message": "작동 방식"
   },
   "moneyHowItWorksDescription": {
-    "message": "mUSD를 추가하면 언제든지 달러 기반 잔액을 결제 또는 거래에 사용하거나 송금할 수 있습니다."
+    "message": "sUSD를 추가하면 언제든지 달러 기반 잔액을 결제 또는 거래에 사용하거나 송금할 수 있습니다."
   },
   "moneyHowItWorksDescription1": {
     "message": "어떤 암호화폐든 머니 계정 자산으로 전환하면 최대 $1 APY(변동형)의 수익을 자동으로 얻을 수 있습니다. Veda가 관리하고 Steakhouse Financial이 위험을 모니터링하는 DeFi 볼트에 자금이 예치됩니다. 수익은 블록체인 프로토콜에 자금을 운용하는 제3자 DeFi 플랫폼에서 발생합니다. 별도의 스테이킹이나 수익 수령 절차가 없으며 자금이 묶이지도 않습니다.",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksDescriptionWithApy": {
-    "message": "mUSD를 추가하면 최대 $1의 수익이 적립됩니다. 잔액은 달러 연동 방식으로 유지되며 언제든지 결제 또는 거래에 사용하거나 송금할 수 있습니다.",
-    "description": "$1 is the current mUSD APY."
+    "message": "sUSD를 추가하면 최대 $1의 수익이 적립됩니다. 잔액은 달러 연동 방식으로 유지되며 언제든지 결제 또는 거래에 사용하거나 송금할 수 있습니다.",
+    "description": "$1 is the current sUSD APY."
   },
   "moneyHowItWorksDisclosuresBody": {
     "message": "Money Account는 은행 계좌, 저축 계좌 또는 보험이 적용되는 예금 상품이 아닙니다. APY는 변동되며 보장되지 않습니다. Money Account에는 스마트 계약, 프로토콜, 유동성 및 기타 위험이 수반되며, 자금의 일부 또는 전부가 손실될 수 있습니다. 지역별 제한이 적용될 수 있으며, 약관이 적용됩니다."
@@ -5732,7 +5732,7 @@
   },
   "moneyHowItWorksFaqApyAnswer": {
     "message": "최대 $1의 APY를 얻을 수 있습니다. 이 수익률은 변동되며 시장 상황에 따라 달라집니다. 현재 수익률은 언제든지 Money Account에서 확인할 수 있습니다.",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqApyQuestion": {
     "message": "MetaMask Money Account로 얼마나 수익을 얻을 수 있나요?"
@@ -5762,8 +5762,8 @@
     "message": "MetaMask Money Account에서는 언제든지 출금할 수 있나요?"
   },
   "moneyHowItWorksFaqMoneyAccountAnswer": {
-    "message": "최대 $1의 변동 연간수익률(APY)이 적용되는 계정입니다. 입금한 자금은 계정에 mUSD로 보관되며 최대 $1 APY의 수익이 발생합니다. mUSD는 MetaMask의 달러 연동 스테이블코인입니다. 위약금 없이 언제든 자금을 사용하거나 출금할 수 있습니다.",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "message": "최대 $1의 변동 연간수익률(APY)이 적용되는 계정입니다. 입금한 자금은 계정에 sUSD로 보관되며 최대 $1 APY의 수익이 발생합니다. sUSD는 MetaMask의 달러 연동 스테이블코인입니다. 위약금 없이 언제든 자금을 사용하거나 출금할 수 있습니다.",
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqMoneyAccountQuestion": {
     "message": "MetaMask Money Account란 무엇인가요?"
@@ -5779,7 +5779,7 @@
     "message": "Money Account에는 어떤 토큰을 예치할 수 있나요?"
   },
   "moneyHowItWorksFaqYieldAnswer": {
-    "message": "자금을 예치하면 해당 자금은 Aave, Morpho와 같이 검증된 디파이프로토콜에 투입되어 실제 경제 활동에서 발생하는 수익을 창출합니다. 이렇게 발생한 수익은 APY 형태로 사용자에게 제공됩니다. \n\nSteakhouse Financial이라는 제삼자 서비스 제공업체가 프로토콜 내 자금 배분 방식을 모니터링합니다. 제삼자 인프라 제공업체인 Veda는 사용자의 자금을 보관하는 볼트 스마트 계약을 배포하고 유지 관리합니다.\n\n수익은 MetaMask 또는 mUSD 발행자가 지급하는 이자가 아닙니다. 이는 제삼자 디파이 프로토콜의 포지션에서 발생하는 온체인 수익입니다."
+    "message": "자금을 예치하면 해당 자금은 Aave, Morpho와 같이 검증된 디파이프로토콜에 투입되어 실제 경제 활동에서 발생하는 수익을 창출합니다. 이렇게 발생한 수익은 APY 형태로 사용자에게 제공됩니다. \n\nSteakhouse Financial이라는 제삼자 서비스 제공업체가 프로토콜 내 자금 배분 방식을 모니터링합니다. 제삼자 인프라 제공업체인 Veda는 사용자의 자금을 보관하는 볼트 스마트 계약을 배포하고 유지 관리합니다.\n\n수익은 MetaMask 또는 sUSD 발행자가 지급하는 이자가 아닙니다. 이는 제삼자 디파이 프로토콜의 포지션에서 발생하는 온체인 수익입니다."
   },
   "moneyHowItWorksFaqYieldQuestion": {
     "message": "수익은 어디에서 발생하나요?"
@@ -5797,7 +5797,7 @@
     "message": "지금까지 머니 계정 잔액으로 적립한 총수익입니다."
   },
   "moneyMeetMusd": {
-    "message": "mUSD 소개"
+    "message": "sUSD 소개"
   },
   "moneyMonthlyTooltip": {
     "message": "지난 30일 동안 머니 계정 잔액으로 적립한 총수익입니다."
@@ -5809,7 +5809,7 @@
     "message": "옵션 더 보기"
   },
   "moneyMusd": {
-    "message": "mUSD"
+    "message": "sUSD"
   },
   "moneyOnboardingFundTitle": {
     "message": "Money Account에 자금 추가",
@@ -5986,58 +5986,58 @@
   },
   "musdAssetConvertBenefitDailyBonus": {
     "message": "일일 보너스",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitDollarBacked": {
     "message": "달러 연동",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitNoLockups": {
     "message": "예치 기간 없음",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitNoMetaMaskFee": {
     "message": "MetaMask 수수료 없음",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertDescriptionHighlight": {
     "message": "$1% 연환산 보너스",
-    "description": "Shown in Figma accent lime (#baf24a) inside the mUSD asset details convert section description. $1 is the APY percentage."
+    "description": "Shown in Figma accent lime (#baf24a) inside the sUSD asset details convert section description. $1 is the APY percentage."
   },
   "musdAssetConvertDescriptionLead": {
     "message": "USDC, ",
-    "description": "Text before the green APY phrase on the mUSD asset details convert section"
+    "description": "Text before the green APY phrase on the sUSD asset details convert section"
   },
   "musdAssetConvertDescriptionTail": {
     "message": " 연 3% 보너스를 받으세요.",
-    "description": "Text after the green APY phrase on the mUSD asset details convert section"
+    "description": "Text after the green APY phrase on the sUSD asset details convert section"
   },
   "musdAssetConvertLearnMore": {
     "message": "자세히 알아보세요.",
-    "description": "Button to open the mUSD support article from the asset details convert section"
+    "description": "Button to open the sUSD support article from the asset details convert section"
   },
   "musdAssetConvertTitle": {
     "message": "스테이블코인 전환하기",
-    "description": "Title of the convert section on the mUSD asset details page"
+    "description": "Title of the convert section on the sUSD asset details page"
   },
   "musdAssetPositionBalance": {
     "message": "잔액",
-    "description": "Label in the mUSD asset details Your position section"
+    "description": "Label in the sUSD asset details Your position section"
   },
   "musdAssetPositionTitle": {
     "message": "내 포지션",
-    "description": "Section title on the mUSD asset details page"
+    "description": "Section title on the sUSD asset details page"
   },
   "musdAssetPositionValue": {
     "message": "가격",
-    "description": "Label in the mUSD asset details Your position section (fiat value)"
+    "description": "Label in the sUSD asset details Your position section (fiat value)"
   },
   "musdBonusExplanation": {
-    "message": "스테이블코인을 mUSD로 환전하면 최대 $1%의 연 환산 보너스를 벌 수 있고 이를 매일 수령할 수 있습니다. $2",
+    "message": "스테이블코인을 sUSD로 환전하면 최대 $1%의 연 환산 보너스를 벌 수 있고 이를 매일 수령할 수 있습니다. $2",
     "description": "$1 is the bonus APY percentage, $2 is the 'Terms apply' link"
   },
   "musdBoostDescription": {
-    "message": "스테이블코인을 mUSD로 환전하고 $1%의 연 환산 보너스를 받으세요.",
+    "message": "스테이블코인을 sUSD로 환전하고 $1%의 연 환산 보너스를 받으세요.",
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
   "musdBoostTitle": {
@@ -6045,29 +6045,29 @@
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
   "musdBuyMusd": {
-    "message": "mUSD 구매"
+    "message": "sUSD 구매"
   },
   "musdClaimTitle": {
     "message": "보너스 수령",
-    "description": "Title for the mUSD bonus claim confirmation screen"
+    "description": "Title for the sUSD bonus claim confirmation screen"
   },
   "musdConversionFeeTooltipDescription": {
-    "message": "mUSD 환전 수수료에는 네트워크 비용이 포함되며 제공업체 수수료가 포함될 수 있습니다. mUSD로 환전할 때 MetaMask 수수료는 적용되지 않습니다.",
-    "description": "Body text shown above the fee breakdown in the transaction fee tooltip for mUSD conversion"
+    "message": "sUSD 환전 수수료에는 네트워크 비용이 포함되며 제공업체 수수료가 포함될 수 있습니다. sUSD로 환전할 때 MetaMask 수수료는 적용되지 않습니다.",
+    "description": "Body text shown above the fee breakdown in the transaction fee tooltip for sUSD conversion"
   },
   "musdConversionTitle": {
-    "message": "mUSD로 전환 완료",
-    "description": "Title shown in the transaction details modal for mUSD conversion transactions"
+    "message": "sUSD로 전환 완료",
+    "description": "Title shown in the transaction details modal for sUSD conversion transactions"
   },
   "musdConversionToastFailed": {
-    "message": "mUSD 전환 실패"
+    "message": "sUSD 전환 실패"
   },
   "musdConversionToastInProgress": {
-    "message": "$1 → mUSD 전환 중",
+    "message": "$1 → sUSD 전환 중",
     "description": "$1 is the source token symbol (e.g., USDC)"
   },
   "musdConversionToastSuccess": {
-    "message": "mUSD 환전 성공"
+    "message": "sUSD 환전 성공"
   },
   "musdConversionToastSuccessDescription": {
     "message": "보너스는 하루 이내에 청구할 수 있습니다."
@@ -6086,11 +6086,11 @@
     "message": "나중에"
   },
   "musdGetMusd": {
-    "message": "mUSD 받기"
+    "message": "sUSD 받기"
   },
   "musdSymbol": {
-    "message": "mUSD",
-    "description": "Token ticker for MetaMask USD (displayed next to balance on the mUSD asset details page)"
+    "message": "sUSD",
+    "description": "Token ticker for Swissquote USD (displayed next to balance on the sUSD asset details page)"
   },
   "musdTermsApply": {
     "message": "약관이 적용됩니다."
@@ -8560,7 +8560,7 @@
     "message": "출금 제출 완료"
   },
   "perpsWithdrawTooltip": {
-    "message": "MetaMask가 원하는 토큰으로 스왑해 드립니다. mUSD로 스왑할 때 MetaMask 수수료는 적용되지 않습니다.",
+    "message": "MetaMask가 원하는 토큰으로 스왑해 드립니다. sUSD로 스왑할 때 MetaMask 수수료는 적용되지 않습니다.",
     "description": "Tooltip shown on the Transaction fee row of the Perps Withdraw confirmation"
   },
   "perpsWithdrawalEmptyTitle": {

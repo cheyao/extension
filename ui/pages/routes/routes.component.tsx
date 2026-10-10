@@ -85,6 +85,7 @@ import {
   BATCH_SELL_ROOT_ROUTE,
   SYNC_ACCOUNTS_ROUTE,
 } from '../../helpers/constants/routes';
+import { MUSD_CONVERSION_ROUTE } from '../musd/constants/routes';
 import { getIsQrSyncEnabled } from '../../../shared/lib/environment';
 import { getProviderConfig } from '../../../shared/lib/selectors/networks';
 import {
@@ -283,6 +284,7 @@ const PerpsOrderEntryPage = mmLazy(
   () => import('../perps/perps-order-entry-page.tsx'),
 );
 const PerpsLayout = mmLazy(() => import('../perps/perps-layout.tsx'));
+const MusdConversionPage = mmLazy(() => import('../musd/index.tsx'));
 const HardwareWalletRepair = mmLazy(
   () => import('../hardware-wallet-repair/index.ts'),
 );
@@ -610,6 +612,10 @@ export const routeConfig = [
           {
             path: RAMPS_COMPLETE_BUY_ROUTE,
             element: <RampsCompleteBuy />,
+          },
+          {
+            path: `${MUSD_CONVERSION_ROUTE}/*`,
+            element: <MusdConversionPage />,
           },
           {
             path: SHIELD_PLAN_ROUTE,

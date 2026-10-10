@@ -296,10 +296,10 @@
     "message": "Ошибка получения"
   },
   "activity_claimMusdBonus_pending_title": {
-    "message": "Получение бонуса mUSD"
+    "message": "Получение бонуса sUSD"
   },
   "activity_claimMusdBonus_success_title": {
-    "message": "Бонус mUSD получен"
+    "message": "Бонус sUSD получен"
   },
   "activity_claim_failed_description": {
     "message": "Ошибка получения"
@@ -1995,7 +1995,7 @@
     "message": "Открыть страницу DeFi"
   },
   "basicFunctionalityRequired_openMusdConversionPage": {
-    "message": "Открыть страницу «Конвертация mUSD»"
+    "message": "Открыть страницу «Конвертация sUSD»"
   },
   "basicFunctionalityRequired_openNotificationsPage": {
     "message": "Открыть страницу «Уведомления»"
@@ -5387,15 +5387,15 @@
     "message": "заметка"
   },
   "merklRewardsToastFailed": {
-    "message": "Не удалось получить ваш бонус mUSD",
+    "message": "Не удалось получить ваш бонус sUSD",
     "description": "Toast message shown when a Merkl reward claim transaction fails or is dropped"
   },
   "merklRewardsToastInProgress": {
-    "message": "Ваш бонус mUSD bonus обрабатывается",
+    "message": "Ваш бонус sUSD bonus обрабатывается",
     "description": "Toast message shown when a Merkl reward claim transaction is being processed"
   },
   "merklRewardsToastSuccess": {
-    "message": "Ваш бонус в mUSDуже поступил!",
+    "message": "Ваш бонус в sUSDуже поступил!",
     "description": "Toast message shown when a Merkl reward claim transaction is confirmed"
   },
   "message": {
@@ -5565,7 +5565,7 @@
     "message": "Не удалось загрузить данные о ваших действиях"
   },
   "moneyActivityMusdBack": {
-    "message": "Кэшбэк в mUSD"
+    "message": "Кэшбэк в sUSD"
   },
   "moneyActivityPending": {
     "message": "Ожидающий"
@@ -5611,7 +5611,7 @@
     "message": "$1 годовых"
   },
   "moneyBalanceInfoBody": {
-    "message": "Ваш баланс mUSD, обеспеченный долларом США и постоянно приносящий доход. Он не учитывается в общем балансе вашего счета."
+    "message": "Ваш баланс sUSD, обеспеченный долларом США и постоянно приносящий доход. Он не учитывается в общем балансе вашего счета."
   },
   "moneyBalanceInfoWithdrawals": {
     "message": "Вывод средств обрабатывается немедленно, в зависимости от стандартного времени подтверждения сети в соответствующем блокчейне. В случае нехватки ликвидности возможны временные задержки."
@@ -5620,7 +5620,7 @@
     "message": "Последний известный баланс"
   },
   "moneyBalanceMusdLabel": {
-    "message": "mUSD"
+    "message": "sUSD"
   },
   "moneyBalanceRetry": {
     "message": "Повтор"
@@ -5636,7 +5636,7 @@
   },
   "moneyBenefitAutoEarnWithApy": {
     "message": "Автоматически зарабатывайте до $1",
-    "description": "$1 is the current mUSD APY (e.g. ~4.2% APY)."
+    "description": "$1 is the current sUSD APY (e.g. ~4.2% APY)."
   },
   "moneyBenefitLiquidity": {
     "message": "Получите полную ликвидность без блокировок, чтобы вы могли торговать или выводить средства в любое время"
@@ -5645,7 +5645,7 @@
     "message": "Отправляйте на любые ваши кошельки в MetaMask"
   },
   "moneyBenefitStablecoin": {
-    "message": "Храните свои деньги в безопасности в mUSD, стейблкоине, обеспеченном долларом 1:1"
+    "message": "Храните свои деньги в безопасности в sUSD, стейблкоине, обеспеченном долларом 1:1"
   },
   "moneyBenefits": {
     "message": "Бонусы"
@@ -5663,7 +5663,7 @@
     "message": "Зарабатывайте на своей криптовалюте"
   },
   "moneyEarnOnCryptoDescription": {
-    "message": "Посмотрите, как сумма ваших средств может вырасти со временем, если конвертировать вашу криптовалюту в mUSD."
+    "message": "Посмотрите, как сумма ваших средств может вырасти со временем, если конвертировать вашу криптовалюту в sUSD."
   },
   "moneyEarnOnCryptoDescriptionMiddle": {
     "message": "в активы на сумму, и вы сможете заработать до"
@@ -5710,15 +5710,15 @@
     "message": "Как это работает"
   },
   "moneyHowItWorksDescription": {
-    "message": "Внесите mUSD, и ваш баланс, обеспеченный долларами, будет готов к тратам, торговле или отправке в любое время."
+    "message": "Внесите sUSD, и ваш баланс, обеспеченный долларами, будет готов к тратам, торговле или отправке в любое время."
   },
   "moneyHowItWorksDescription1": {
     "message": "Конвертируйте любую криптовалюту на свой счет Money Account и автоматически получайте доход до $1 APY (ставка переменная). Средства поступают в DeFi-хранилище под управлением Veda, а мониторинг рисков осуществляет Steakhouse Financial. Доходность обеспечивают сторонние DeFi-платформы, размещающие средства в блокчейн-протоколах. Без стейкинга, ручного получения вознаграждений и блокировки средств.",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksDescriptionWithApy": {
-    "message": "Внесите mUSD и зарабатывайте до $1. Ваш баланс обеспечен долларами и готов к тратам, торговле или отправке в любое время.",
-    "description": "$1 is the current mUSD APY."
+    "message": "Внесите sUSD и зарабатывайте до $1. Ваш баланс обеспечен долларами и готов к тратам, торговле или отправке в любое время.",
+    "description": "$1 is the current sUSD APY."
   },
   "moneyHowItWorksDisclosuresBody": {
     "message": "Money Account не является банковским счетом, сберегательным счетом или застрахованным депозитным продуктом. Годовая процентная ставка (APY) является переменной величиной и не гарантируется. Использование Money Account сопряжено с рисками смарт-контрактов, протоколов, ликвидности и другими рисками, и вы можете потерять часть или все свои средства. Действуют региональные ограничения. Применяются Условия использования."
@@ -5728,7 +5728,7 @@
   },
   "moneyHowItWorksFaqApyAnswer": {
     "message": "До $1 годовых. Ставка является переменной и колеблется в зависимости от рыночных условий. Текущая ставка всегда видна внутри счета Money Account.",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqApyQuestion": {
     "message": "Сколько я могу заработать с MetaMask Money Account?"
@@ -5758,8 +5758,8 @@
     "message": "Могу ли я вывести средства с MetaMask Money Account в любое время?"
   },
   "moneyHowItWorksFaqMoneyAccountAnswer": {
-    "message": "Счет с переменной доходностью до $1 APY. Вы вносите средства, которые хранятся на счете в виде mUSD, и получаете доход до $1 APY. mUSD — это стейблкоин MetaMask, обеспеченный долларом США. Вы можете использовать или вывести свои средства в любое время без штрафов.",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "message": "Счет с переменной доходностью до $1 APY. Вы вносите средства, которые хранятся на счете в виде sUSD, и получаете доход до $1 APY. sUSD — это стейблкоин MetaMask, обеспеченный долларом США. Вы можете использовать или вывести свои средства в любое время без штрафов.",
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqMoneyAccountQuestion": {
     "message": "Что такое счет MetaMask Money Account?"
@@ -5775,7 +5775,7 @@
     "message": "Какие токены я могу внести на Money Account?"
   },
   "moneyHowItWorksFaqYieldAnswer": {
-    "message": "Когда вы вносите средства, они направляются в проверенные протоколы DeFi, такие как Aave и Morpho, где они приносят доход от реальной экономической деятельности. Этот доход затем предоставляется вам в виде годовой процентной ставки (APY).\n\nСторонний поставщик услуг Steakhouse Financial контролирует распределение средств в протоколах. Veda, сторонний поставщик инфраструктуры, развертывает и поддерживает смарт-контракты хранилища, в которых находятся ваши средства.\n\nДоход не является процентами, выплачиваемыми MetaMask или эмитентом mUSD. Это ончейн-доход, генерируемый позициями в сторонних протоколах DeFi."
+    "message": "Когда вы вносите средства, они направляются в проверенные протоколы DeFi, такие как Aave и Morpho, где они приносят доход от реальной экономической деятельности. Этот доход затем предоставляется вам в виде годовой процентной ставки (APY).\n\nСторонний поставщик услуг Steakhouse Financial контролирует распределение средств в протоколах. Veda, сторонний поставщик инфраструктуры, развертывает и поддерживает смарт-контракты хранилища, в которых находятся ваши средства.\n\nДоход не является процентами, выплачиваемыми MetaMask или эмитентом sUSD. Это ончейн-доход, генерируемый позициями в сторонних протоколах DeFi."
   },
   "moneyHowItWorksFaqYieldQuestion": {
     "message": "Откуда берется доходность?"
@@ -5793,7 +5793,7 @@
     "message": "Общая сумма, заработанная на балансе вашего счета Money Account за всё время."
   },
   "moneyMeetMusd": {
-    "message": "Познакомьтесь с mUSD"
+    "message": "Познакомьтесь с sUSD"
   },
   "moneyMonthlyTooltip": {
     "message": "Общая сумма, заработанная на балансе вашего счета Money Account за последние 30 дней."
@@ -5805,7 +5805,7 @@
     "message": "Больше вариантов"
   },
   "moneyMusd": {
-    "message": "mUSD"
+    "message": "sUSD"
   },
   "moneyOnboardingFundTitle": {
     "message": "Пополните ваш Money Account",
@@ -5982,58 +5982,58 @@
   },
   "musdAssetConvertBenefitDailyBonus": {
     "message": "Ежедневный бонус",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitDollarBacked": {
     "message": "Обеспечено долларом",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitNoLockups": {
     "message": "Без блокировки",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitNoMetaMaskFee": {
     "message": "Без комиссии MetaMask",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertDescriptionHighlight": {
     "message": "Бонус в размере $1% годовых",
-    "description": "Shown in Figma accent lime (#baf24a) inside the mUSD asset details convert section description. $1 is the APY percentage."
+    "description": "Shown in Figma accent lime (#baf24a) inside the sUSD asset details convert section description. $1 is the APY percentage."
   },
   "musdAssetConvertDescriptionLead": {
     "message": "Получайте ",
-    "description": "Text before the green APY phrase on the mUSD asset details convert section"
+    "description": "Text before the green APY phrase on the sUSD asset details convert section"
   },
   "musdAssetConvertDescriptionTail": {
-    "message": " за конвертацию USDC, USDT и DAI в mUSD.",
-    "description": "Text after the green APY phrase on the mUSD asset details convert section"
+    "message": " за конвертацию USDC, USDT и DAI в sUSD.",
+    "description": "Text after the green APY phrase on the sUSD asset details convert section"
   },
   "musdAssetConvertLearnMore": {
     "message": "Узнайте подробнее.",
-    "description": "Button to open the mUSD support article from the asset details convert section"
+    "description": "Button to open the sUSD support article from the asset details convert section"
   },
   "musdAssetConvertTitle": {
     "message": "Конвертируйте свои стейблкоины",
-    "description": "Title of the convert section on the mUSD asset details page"
+    "description": "Title of the convert section on the sUSD asset details page"
   },
   "musdAssetPositionBalance": {
     "message": "Баланс",
-    "description": "Label in the mUSD asset details Your position section"
+    "description": "Label in the sUSD asset details Your position section"
   },
   "musdAssetPositionTitle": {
     "message": "Ваша позиция",
-    "description": "Section title on the mUSD asset details page"
+    "description": "Section title on the sUSD asset details page"
   },
   "musdAssetPositionValue": {
     "message": "Значение",
-    "description": "Label in the mUSD asset details Your position section (fiat value)"
+    "description": "Label in the sUSD asset details Your position section (fiat value)"
   },
   "musdBonusExplanation": {
-    "message": "Конвертируйте стейблкоины в mUSD и зарабатывайте\nбонус до $1% годовых, который можно\nполучать ежедневно. $2",
+    "message": "Конвертируйте стейблкоины в sUSD и зарабатывайте\nбонус до $1% годовых, который можно\nполучать ежедневно. $2",
     "description": "$1 is the bonus APY percentage, $2 is the 'Terms apply' link"
   },
   "musdBoostDescription": {
-    "message": "Конвертируйте свои стейблкоины в mUSD и получите годовой бонус $1%.",
+    "message": "Конвертируйте свои стейблкоины в sUSD и получите годовой бонус $1%.",
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
   "musdBoostTitle": {
@@ -6041,29 +6041,29 @@
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
   "musdBuyMusd": {
-    "message": "Купить mUSD"
+    "message": "Купить sUSD"
   },
   "musdClaimTitle": {
     "message": "Получить бонус",
-    "description": "Title for the mUSD bonus claim confirmation screen"
+    "description": "Title for the sUSD bonus claim confirmation screen"
   },
   "musdConversionFeeTooltipDescription": {
-    "message": "В стоимость конвертации mUSD входят расходы сети, а также могут входить комиссии поставщика. При обмене на mUSD комиссия MetaMask не взимается.",
-    "description": "Body text shown above the fee breakdown in the transaction fee tooltip for mUSD conversion"
+    "message": "В стоимость конвертации sUSD входят расходы сети, а также могут входить комиссии поставщика. При обмене на sUSD комиссия MetaMask не взимается.",
+    "description": "Body text shown above the fee breakdown in the transaction fee tooltip for sUSD conversion"
   },
   "musdConversionTitle": {
-    "message": "Конвертировано в mUSD",
-    "description": "Title shown in the transaction details modal for mUSD conversion transactions"
+    "message": "Конвертировано в sUSD",
+    "description": "Title shown in the transaction details modal for sUSD conversion transactions"
   },
   "musdConversionToastFailed": {
-    "message": "Конвертация mUSD не удалась."
+    "message": "Конвертация sUSD не удалась."
   },
   "musdConversionToastInProgress": {
-    "message": "Выполняется конвертация $1 → mUSD",
+    "message": "Выполняется конвертация $1 → sUSD",
     "description": "$1 is the source token symbol (e.g., USDC)"
   },
   "musdConversionToastSuccess": {
-    "message": "Конвертация в mUSD прошла успешно"
+    "message": "Конвертация в sUSD прошла успешно"
   },
   "musdConversionToastSuccessDescription": {
     "message": "Бонус можно будет получить в течение дня."
@@ -6082,11 +6082,11 @@
     "message": "Не сейчас"
   },
   "musdGetMusd": {
-    "message": "Получить mUSD"
+    "message": "Получить sUSD"
   },
   "musdSymbol": {
-    "message": "mUSD",
-    "description": "Token ticker for MetaMask USD (displayed next to balance on the mUSD asset details page)"
+    "message": "sUSD",
+    "description": "Token ticker for Swissquote USD (displayed next to balance on the sUSD asset details page)"
   },
   "musdTermsApply": {
     "message": "Применяются условия."
@@ -8552,7 +8552,7 @@
     "message": "Выводимые средства отправлены"
   },
   "perpsWithdrawTooltip": {
-    "message": "MetaMask автоматически обменяет ваш токен на желаемый. При обмене на mUSD комиссия MetaMask не взимается.",
+    "message": "MetaMask автоматически обменяет ваш токен на желаемый. При обмене на sUSD комиссия MetaMask не взимается.",
     "description": "Tooltip shown on the Transaction fee row of the Perps Withdraw confirmation"
   },
   "perpsWithdrawalEmptyTitle": {

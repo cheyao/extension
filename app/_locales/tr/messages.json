@@ -296,10 +296,10 @@
     "message": "Alınamadı"
   },
   "activity_claimMusdBonus_pending_title": {
-    "message": "mUSD bonusu alınıyor"
+    "message": "sUSD bonusu alınıyor"
   },
   "activity_claimMusdBonus_success_title": {
-    "message": "mUSD bonusu alındı"
+    "message": "sUSD bonusu alındı"
   },
   "activity_claim_failed_description": {
     "message": "Alınamadı"
@@ -1995,7 +1995,7 @@
     "message": "DeFi sayfasını açın"
   },
   "basicFunctionalityRequired_openMusdConversionPage": {
-    "message": "mUSD Dönüştürme sayfasını açın"
+    "message": "sUSD Dönüştürme sayfasını açın"
   },
   "basicFunctionalityRequired_openNotificationsPage": {
     "message": "Bildirimler sayfasını açın"
@@ -3437,7 +3437,7 @@
     "message": "Para sayfası"
   },
   "deepLink_theMusdEducationPage": {
-    "message": "mUSD dönüştürme eğitim sayfası"
+    "message": "sUSD dönüştürme eğitim sayfası"
   },
   "deepLink_theNFTsPage": {
     "message": "NFT'ler sayfası"
@@ -5391,15 +5391,15 @@
     "message": "memo"
   },
   "merklRewardsToastFailed": {
-    "message": "mUSD bonus talebiniz başarısız oldu",
+    "message": "sUSD bonus talebiniz başarısız oldu",
     "description": "Toast message shown when a Merkl reward claim transaction fails or is dropped"
   },
   "merklRewardsToastInProgress": {
-    "message": "mUSD bonusunuz işleniyor",
+    "message": "sUSD bonusunuz işleniyor",
     "description": "Toast message shown when a Merkl reward claim transaction is being processed"
   },
   "merklRewardsToastSuccess": {
-    "message": "mUSD bonusunuz hazır!",
+    "message": "sUSD bonusunuz hazır!",
     "description": "Toast message shown when a Merkl reward claim transaction is confirmed"
   },
   "message": {
@@ -5569,7 +5569,7 @@
     "message": "İşlem geçmişiniz yüklenemedi"
   },
   "moneyActivityMusdBack": {
-    "message": "mUSD iadesi"
+    "message": "sUSD iadesi"
   },
   "moneyActivityPending": {
     "message": "Bekliyor"
@@ -5615,7 +5615,7 @@
     "message": "$1 APY"
   },
   "moneyBalanceInfoBody": {
-    "message": "Her zaman kazandıran, dolara endeksli mUSD bakiyeniz. Bunu toplam hesap bakiyenize dahil etmeyiz."
+    "message": "Her zaman kazandıran, dolara endeksli sUSD bakiyeniz. Bunu toplam hesap bakiyenize dahil etmeyiz."
   },
   "moneyBalanceInfoWithdrawals": {
     "message": "Para çekme işlemleri, ilgili blokzinciri üzerindeki standart ağ onay sürelerine tabi olmak kaydıyla anında gerçekleşir. Likiditenin sıkışık olduğu durumlarda geçici gecikmeler yaşanabilir."
@@ -5624,7 +5624,7 @@
     "message": "Bilinen son bakiye"
   },
   "moneyBalanceMusdLabel": {
-    "message": "mUSD"
+    "message": "sUSD"
   },
   "moneyBalanceRetry": {
     "message": "Tekrar Dene"
@@ -5640,7 +5640,7 @@
   },
   "moneyBenefitAutoEarnWithApy": {
     "message": "Otomatik olarak $1 orana kadar kazanın",
-    "description": "$1 is the current mUSD APY (e.g. ~4.2% APY)."
+    "description": "$1 is the current sUSD APY (e.g. ~4.2% APY)."
   },
   "moneyBenefitLiquidity": {
     "message": "Kilitleme olmadan tam likidite alarak dilediğiniz zaman işlem yapabilir veya para çekebilirsiniz"
@@ -5649,7 +5649,7 @@
     "message": "MetaMask’teki herhangi bir cüzdanınıza gönderin"
   },
   "moneyBenefitStablecoin": {
-    "message": "Paranız 1:1 dolar destekli bir stabil kripto para olan mUSD'de güvende tutun"
+    "message": "Paranız 1:1 dolar destekli bir stabil kripto para olan sUSD'de güvende tutun"
   },
   "moneyBenefits": {
     "message": "Faydalar"
@@ -5667,7 +5667,7 @@
     "message": "Kriptonuzdan kazanç sağlayın"
   },
   "moneyEarnOnCryptoDescription": {
-    "message": "Kriptonuzu mUSD'ye dönüştürerek paranızın zaman içinde nasıl artabileceğini görün."
+    "message": "Kriptonuzu sUSD'ye dönüştürerek paranızın zaman içinde nasıl artabileceğini görün."
   },
   "moneyEarnOnCryptoDescriptionMiddle": {
     "message": "değerinde varlık ve kazanabileceğiniz maksimum tutar"
@@ -5714,15 +5714,15 @@
     "message": "Nasıl çalışır?"
   },
   "moneyHowItWorksDescription": {
-    "message": "mUSD ekleyin; dolara endeksli bakiyeniz her zaman harcamaya, işlem yapmaya veya gönderime hazırdır."
+    "message": "sUSD ekleyin; dolara endeksli bakiyeniz her zaman harcamaya, işlem yapmaya veya gönderime hazırdır."
   },
   "moneyHowItWorksDescription1": {
     "message": "Herhangi bir kripto varlığı Money account hesabınıza dönüştürün ve otomatik olarak $1 orana varan APY (değişken) kazanın. Fonlar; Veda tarafından yönetilen, risk izlemesi ise Steakhouse Financial tarafından yapılan bir DeFi kasasına aktarılır. Bu oran, fonları blokzinciri protokollerinde kullanan üçüncü taraf DeFi platformları tarafından üretilir. Stake yok, talep yok, kilitleme yok.",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksDescriptionWithApy": {
-    "message": "mUSD ekleyin ve en fazla $1 kazanın. Bakiyeniz dolara endekslidir ve her zaman harcamaya, işlem yapmaya veya gönderime hazırdır.",
-    "description": "$1 is the current mUSD APY."
+    "message": "sUSD ekleyin ve en fazla $1 kazanın. Bakiyeniz dolara endekslidir ve her zaman harcamaya, işlem yapmaya veya gönderime hazırdır.",
+    "description": "$1 is the current sUSD APY."
   },
   "moneyHowItWorksDisclosuresBody": {
     "message": "Money account bir banka hesabı, tasarruf hesabı ya da sigortalı bir vadeli mevduat hesabı değildir. APY değişkendir ve garantili değildir. Money account; akıllı sözleşme, protokol, likidite ve diğer riskleri taşır ve fonlarınızın bir kısmını veya tamamını kaybedebilirsiniz. Bölgesel kısıtlamalara tabidir. Şartlar uygulanır."
@@ -5732,7 +5732,7 @@
   },
   "moneyHowItWorksFaqApyAnswer": {
     "message": "$1 APY'ye varan kazanç sağlar. Oran değişkendir ve piyasa koşulları ile dalgalanır. Geçerli oran her zaman Money account hesabının içinde görülebilir.",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqApyQuestion": {
     "message": "MetaMask Money account ile ne kadar kazanabilirsiniz?"
@@ -5762,8 +5762,8 @@
     "message": "MetaMask Money account hesabından istediğim zaman para çekebilir miyim?"
   },
   "moneyHowItWorksFaqMoneyAccountAnswer": {
-    "message": "$1 orana kadar değişken APY kazandıran bir hesap. Yatırdığınız fonlar hesapta mUSD olarak tutulur ve $1 orana kadar APY kazandırır. mUSD, MetaMask'in dolara endeksli stabil kripto parasıdır. Fonlarınızı dilediğiniz zaman, hiçbir ceza ödemeden kullanabilir veya çekebilirsiniz.",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "message": "$1 orana kadar değişken APY kazandıran bir hesap. Yatırdığınız fonlar hesapta sUSD olarak tutulur ve $1 orana kadar APY kazandırır. sUSD, MetaMask'in dolara endeksli stabil kripto parasıdır. Fonlarınızı dilediğiniz zaman, hiçbir ceza ödemeden kullanabilir veya çekebilirsiniz.",
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqMoneyAccountQuestion": {
     "message": "MetaMask Money account nedir?"
@@ -5779,7 +5779,7 @@
     "message": "Money account hesabına hangi tokenları yatırabilirim?"
   },
   "moneyHowItWorksFaqYieldAnswer": {
-    "message": "Fon yatırdığınızda varlıklarınız, gerçek ekonomik faaliyetlerden getiri elde eden Aave ve Morpho gibi köklü DeFi protokollerine aktarılır. Bu getiriler daha sonra size APY olarak yansıtılır. \n\nSteakhouse Financial adlı üçüncü taraf bir hizmet sağlayıcı, fonların protokollerde nasıl dağıtıldığını izler. Üçüncü taraf bir altyapı sağlayıcısı olan Veda ise fonlarınızı tutan kasa akıllı sözleşmelerini devreye alır ve bunların işletimini üstlenir.\n\nKazançlar, MetaMask veya mUSD ihraççısı tarafından ödenen bir faiz değildir. Üçüncü taraf DeFi protokollerindeki pozisyonlardan elde edilen zincir üstü getirilerdir."
+    "message": "Fon yatırdığınızda varlıklarınız, gerçek ekonomik faaliyetlerden getiri elde eden Aave ve Morpho gibi köklü DeFi protokollerine aktarılır. Bu getiriler daha sonra size APY olarak yansıtılır. \n\nSteakhouse Financial adlı üçüncü taraf bir hizmet sağlayıcı, fonların protokollerde nasıl dağıtıldığını izler. Üçüncü taraf bir altyapı sağlayıcısı olan Veda ise fonlarınızı tutan kasa akıllı sözleşmelerini devreye alır ve bunların işletimini üstlenir.\n\nKazançlar, MetaMask veya sUSD ihraççısı tarafından ödenen bir faiz değildir. Üçüncü taraf DeFi protokollerindeki pozisyonlardan elde edilen zincir üstü getirilerdir."
   },
   "moneyHowItWorksFaqYieldQuestion": {
     "message": "Getiri nereden gelir?"
@@ -5797,7 +5797,7 @@
     "message": "Money account bakiyenizde zaman içinde kazandığınız toplam."
   },
   "moneyMeetMusd": {
-    "message": "mUSD ile tanış"
+    "message": "sUSD ile tanış"
   },
   "moneyMonthlyTooltip": {
     "message": "Money account bakiyenizde son 30 gün içinde kazandığınız toplam."
@@ -5809,7 +5809,7 @@
     "message": "Daha fazla seçenek"
   },
   "moneyMusd": {
-    "message": "mUSD"
+    "message": "sUSD"
   },
   "moneyOnboardingFundTitle": {
     "message": "Money account hesabınıza fon ekleyin",
@@ -5986,58 +5986,58 @@
   },
   "musdAssetConvertBenefitDailyBonus": {
     "message": "Günlük bonus",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitDollarBacked": {
     "message": "Dolar destekli",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitNoLockups": {
     "message": "Kilitleme yok",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitNoMetaMaskFee": {
     "message": "MetaMask ücreti yok",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertDescriptionHighlight": {
     "message": "%$1 yıllıklandırılmış bonus",
-    "description": "Shown in Figma accent lime (#baf24a) inside the mUSD asset details convert section description. $1 is the APY percentage."
+    "description": "Shown in Figma accent lime (#baf24a) inside the sUSD asset details convert section description. $1 is the APY percentage."
   },
   "musdAssetConvertDescriptionLead": {
-    "message": "USDC, USDT ve DAI'yi mUSD'ye dönüştürerek ",
-    "description": "Text before the green APY phrase on the mUSD asset details convert section"
+    "message": "USDC, USDT ve DAI'yi sUSD'ye dönüştürerek ",
+    "description": "Text before the green APY phrase on the sUSD asset details convert section"
   },
   "musdAssetConvertDescriptionTail": {
     "message": " alın.",
-    "description": "Text after the green APY phrase on the mUSD asset details convert section"
+    "description": "Text after the green APY phrase on the sUSD asset details convert section"
   },
   "musdAssetConvertLearnMore": {
     "message": "Daha fazla bilgi edin",
-    "description": "Button to open the mUSD support article from the asset details convert section"
+    "description": "Button to open the sUSD support article from the asset details convert section"
   },
   "musdAssetConvertTitle": {
     "message": "Stabil kripto paralarınızı dönüştürün",
-    "description": "Title of the convert section on the mUSD asset details page"
+    "description": "Title of the convert section on the sUSD asset details page"
   },
   "musdAssetPositionBalance": {
     "message": "Bakiye",
-    "description": "Label in the mUSD asset details Your position section"
+    "description": "Label in the sUSD asset details Your position section"
   },
   "musdAssetPositionTitle": {
     "message": "Pozisyonunuz",
-    "description": "Section title on the mUSD asset details page"
+    "description": "Section title on the sUSD asset details page"
   },
   "musdAssetPositionValue": {
     "message": "Değer",
-    "description": "Label in the mUSD asset details Your position section (fiat value)"
+    "description": "Label in the sUSD asset details Your position section (fiat value)"
   },
   "musdBonusExplanation": {
-    "message": "Stabil kripto paralarınızı mUSD'ye dönüştürün\nve günlük olarak alabileceğiniz %$1 orana kadar\nyıllıklandırılmış bonus kazanın. $2",
+    "message": "Stabil kripto paralarınızı sUSD'ye dönüştürün\nve günlük olarak alabileceğiniz %$1 orana kadar\nyıllıklandırılmış bonus kazanın. $2",
     "description": "$1 is the bonus APY percentage, $2 is the 'Terms apply' link"
   },
   "musdBoostDescription": {
-    "message": "Stabil kripto paralarınızı mUSD'ye dönüştürün ve %$1 yıllıklandırılmış bonus alın.",
+    "message": "Stabil kripto paralarınızı sUSD'ye dönüştürün ve %$1 yıllıklandırılmış bonus alın.",
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
   "musdBoostTitle": {
@@ -6045,29 +6045,29 @@
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
   "musdBuyMusd": {
-    "message": "mUSD al"
+    "message": "sUSD al"
   },
   "musdClaimTitle": {
     "message": "Bonusu al",
-    "description": "Title for the mUSD bonus claim confirmation screen"
+    "description": "Title for the sUSD bonus claim confirmation screen"
   },
   "musdConversionFeeTooltipDescription": {
-    "message": "mUSD dönüştürme işlemine ağ maliyetleri dahildir ve sağlayıcı ücretleri dahil olabilir. mUSD dönüştürürken MetaMask ücreti uygulanmaz.",
-    "description": "Body text shown above the fee breakdown in the transaction fee tooltip for mUSD conversion"
+    "message": "sUSD dönüştürme işlemine ağ maliyetleri dahildir ve sağlayıcı ücretleri dahil olabilir. sUSD dönüştürürken MetaMask ücreti uygulanmaz.",
+    "description": "Body text shown above the fee breakdown in the transaction fee tooltip for sUSD conversion"
   },
   "musdConversionTitle": {
-    "message": "mUSD'ye dönüştürüldü",
-    "description": "Title shown in the transaction details modal for mUSD conversion transactions"
+    "message": "sUSD'ye dönüştürüldü",
+    "description": "Title shown in the transaction details modal for sUSD conversion transactions"
   },
   "musdConversionToastFailed": {
-    "message": "mUSD dönüştürme işlemi başarısız oldu"
+    "message": "sUSD dönüştürme işlemi başarısız oldu"
   },
   "musdConversionToastInProgress": {
-    "message": "$1 → mUSD dönüştürme işlemi yapılıyor",
+    "message": "$1 → sUSD dönüştürme işlemi yapılıyor",
     "description": "$1 is the source token symbol (e.g., USDC)"
   },
   "musdConversionToastSuccess": {
-    "message": "mUSD dönüştürme işlemi başarılı"
+    "message": "sUSD dönüştürme işlemi başarılı"
   },
   "musdConversionToastSuccessDescription": {
     "message": "Bonus bir gün içinde alınabilir olacaktır."
@@ -6086,11 +6086,11 @@
     "message": "Şimdi değil"
   },
   "musdGetMusd": {
-    "message": "mUSD kazan"
+    "message": "sUSD kazan"
   },
   "musdSymbol": {
-    "message": "mUSD",
-    "description": "Token ticker for MetaMask USD (displayed next to balance on the mUSD asset details page)"
+    "message": "sUSD",
+    "description": "Token ticker for Swissquote USD (displayed next to balance on the sUSD asset details page)"
   },
   "musdTermsApply": {
     "message": "Şartlar uygulanır."
@@ -8566,7 +8566,7 @@
     "message": "Çekim gönderildi"
   },
   "perpsWithdrawTooltip": {
-    "message": "MetaMask, sizin için istediğiniz tokena takas gerçekleştirecek. mUSD'ye takas gerçekleştirirken MetaMask ücreti uygulanmaz.",
+    "message": "MetaMask, sizin için istediğiniz tokena takas gerçekleştirecek. sUSD'ye takas gerçekleştirirken MetaMask ücreti uygulanmaz.",
     "description": "Tooltip shown on the Transaction fee row of the Perps Withdraw confirmation"
   },
   "perpsWithdrawalEmptyTitle": {

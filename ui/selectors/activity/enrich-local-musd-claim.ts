@@ -102,7 +102,7 @@ export function buildMusdClaimActivityToken({
 
   return {
     direction: 'in',
-    symbol: 'mUSD',
+    symbol: 'sUSD',
     decimals: MUSD_DECIMALS,
     ...(assetId ? { assetId } : {}),
     ...(knownMetadata ?? {}),

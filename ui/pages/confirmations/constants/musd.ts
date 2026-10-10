@@ -9,17 +9,19 @@
 import { CHAIN_IDS } from '../../../../shared/constants/network';
 
 export {
-  MUSD_TOKEN,
   MUSD_DECIMALS,
   MUSD_TOKEN_ADDRESS,
   MUSD_TOKEN_ADDRESS_BY_CHAIN,
   MUSD_TOKEN_ASSET_ID_BY_CHAIN,
   MUSD_CURRENCY,
   MUSD_MONEY_ACCOUNT_CHAIN_IDS,
-  getTokenDisplaySymbol,
   isMusdToken,
   isMusdTokenOnChain,
   isMusdOnMoneyAccountChain,
 } from '@metamask/money-account-utils';
+export {
+  MUSD_TOKEN,
+  getTokenDisplaySymbol,
+} from '../../../components/app/musd/constants';
 
 export const MUSD_CONVERSION_DEFAULT_CHAIN_ID = CHAIN_IDS.MAINNET;

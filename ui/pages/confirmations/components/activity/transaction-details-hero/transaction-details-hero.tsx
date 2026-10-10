@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { TransactionType } from '@metamask/transaction-controller';
-import { MUSD_DECIMALS, MUSD_TOKEN } from '@metamask/money-account-utils';
+import { MUSD_DECIMALS } from '@metamask/money-account-utils';
+import { MUSD_TOKEN } from '../../../../../components/app/musd/constants';
 import { BigNumber } from 'bignumber.js';
 import { Text, Box } from '../../../../../components/component-library';
 import {

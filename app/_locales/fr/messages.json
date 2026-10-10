@@ -296,10 +296,10 @@
     "message": "Échec de réclamation"
   },
   "activity_claimMusdBonus_pending_title": {
-    "message": "Réclamer le bonus en mUSD"
+    "message": "Réclamer le bonus en sUSD"
   },
   "activity_claimMusdBonus_success_title": {
-    "message": "Bonus en mUSD réclamé"
+    "message": "Bonus en sUSD réclamé"
   },
   "activity_claim_failed_description": {
     "message": "La réclamation a échoué"
@@ -1995,7 +1995,7 @@
     "message": "Ouvrez la page « DeFi »"
   },
   "basicFunctionalityRequired_openMusdConversionPage": {
-    "message": "Ouvrez la page « Conversion en mUSD »"
+    "message": "Ouvrez la page « Conversion en sUSD »"
   },
   "basicFunctionalityRequired_openNotificationsPage": {
     "message": "Ouvrez la page « Notifications »"
@@ -5387,15 +5387,15 @@
     "message": "mémo"
   },
   "merklRewardsToastFailed": {
-    "message": "Échec de la réclamation de votre bonus mUSD",
+    "message": "Échec de la réclamation de votre bonus sUSD",
     "description": "Toast message shown when a Merkl reward claim transaction fails or is dropped"
   },
   "merklRewardsToastInProgress": {
-    "message": "Votre bonus mUSD est en cours de traitement",
+    "message": "Votre bonus sUSD est en cours de traitement",
     "description": "Toast message shown when a Merkl reward claim transaction is being processed"
   },
   "merklRewardsToastSuccess": {
-    "message": "Votre bonus mUSD est arrivé !",
+    "message": "Votre bonus sUSD est arrivé !",
     "description": "Toast message shown when a Merkl reward claim transaction is confirmed"
   },
   "message": {
@@ -5565,7 +5565,7 @@
     "message": "Impossible de charger votre activité"
   },
   "moneyActivityMusdBack": {
-    "message": "Cashback en mUSD"
+    "message": "Cashback en sUSD"
   },
   "moneyActivityPending": {
     "message": "En attente"
@@ -5611,7 +5611,7 @@
     "message": "Rendement annuel de $1"
   },
   "moneyBalanceInfoBody": {
-    "message": "Votre solde en mUSD adossé au dollar qui génère continuellement des revenus. Ce solde n'est pas pris en compte lors du calcul du solde total de votre compte."
+    "message": "Votre solde en sUSD adossé au dollar qui génère continuellement des revenus. Ce solde n'est pas pris en compte lors du calcul du solde total de votre compte."
   },
   "moneyBalanceInfoWithdrawals": {
     "message": "Les retraits sont traités immédiatement, sous réserve des délais de confirmation standard du réseau sur la blockchain concernée. En cas de manque de liquidité, des retards peuvent survenir."
@@ -5620,7 +5620,7 @@
     "message": "Dernier solde connu"
   },
   "moneyBalanceMusdLabel": {
-    "message": "mUSD"
+    "message": "sUSD"
   },
   "moneyBalanceRetry": {
     "message": "Réessayer"
@@ -5636,7 +5636,7 @@
   },
   "moneyBenefitAutoEarnWithApy": {
     "message": "Gagnez automatiquement jusqu’à $1",
-    "description": "$1 is the current mUSD APY (e.g. ~4.2% APY)."
+    "description": "$1 is the current sUSD APY (e.g. ~4.2% APY)."
   },
   "moneyBenefitLiquidity": {
     "message": "Profitez d’une liquidité totale sans période de blocage, vous pourrez ainsi trader ou retirer des fonds à tout moment"
@@ -5645,7 +5645,7 @@
     "message": "Effectuez des transferts vers n’importe lequel de vos portefeuilles MetaMask"
   },
   "moneyBenefitStablecoin": {
-    "message": "Sécurisez vos fonds en achetant des mUSD, un stablecoin adossé au dollar à un ratio de 1:1"
+    "message": "Sécurisez vos fonds en achetant des sUSD, un stablecoin adossé au dollar à un ratio de 1:1"
   },
   "moneyBenefits": {
     "message": "Avantages"
@@ -5663,7 +5663,7 @@
     "message": "Gagnez de l’argent grâce à vos crypto-monnaies"
   },
   "moneyEarnOnCryptoDescription": {
-    "message": "Découvrez comment votre argent peut fructifier au fil du temps en convertissant vos crypto-monnaies en mUSD."
+    "message": "Découvrez comment votre argent peut fructifier au fil du temps en convertissant vos crypto-monnaies en sUSD."
   },
   "moneyEarnOnCryptoDescriptionMiddle": {
     "message": "en actifs et vous pourriez gagner jusqu’à"
@@ -5710,15 +5710,15 @@
     "message": "Comment ça marche "
   },
   "moneyHowItWorksDescription": {
-    "message": "Ajoutez des mUSD et vous pourrez utiliser à tout moment votre solde adossé au dollar pour effectuer des achats, des transferts ou des opérations de bourse."
+    "message": "Ajoutez des sUSD et vous pourrez utiliser à tout moment votre solde adossé au dollar pour effectuer des achats, des transferts ou des opérations de bourse."
   },
   "moneyHowItWorksDescription1": {
     "message": "Convertissez n’importe quelle cryptomonnaie sur votre Money Account et gagnez automatiquement jusqu’à $1 de RMP (variable). Les fonds sont placés dans un coffre-fort DeFi, géré par Veda et dont le suivi des risques est assuré par Steakhouse Financial. Le taux est généré par des plateformes DeFi tierces qui déploient les fonds dans des protocoles blockchain. Pas de staking, pas de réclamation, pas de blocage de fonds.",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksDescriptionWithApy": {
-    "message": "Ajoutez des mUSD et gagnez jusqu'à $1. Votre solde est adossé au dollar et vous pouvez l’utiliser à tout moment pour effectuer des achats, des transferts ou des opérations de Bourse.",
-    "description": "$1 is the current mUSD APY."
+    "message": "Ajoutez des sUSD et gagnez jusqu'à $1. Votre solde est adossé au dollar et vous pouvez l’utiliser à tout moment pour effectuer des achats, des transferts ou des opérations de Bourse.",
+    "description": "$1 is the current sUSD APY."
   },
   "moneyHowItWorksDisclosuresBody": {
     "message": "Le Money Account n’est ni un compte bancaire, ni un compte d’épargne, ni un produit de dépôt assuré. Le taux de rendement annuel est variable et n’est pas garanti. Le Money Account comporte des risques liés aux contrats intelligents, au protocole, à la liquidité et à d’autres facteurs, et vous pouvez perdre une partie ou la totalité de vos fonds. Sous réserve de restrictions régionales. Des conditions s’appliquent."
@@ -5728,7 +5728,7 @@
   },
   "moneyHowItWorksFaqApyAnswer": {
     "message": "Jusqu’à $1 % de RMP. Ce taux est variable et évolue en fonction des conditions du marché. Le taux actuel est affiché sur votre compte Money.",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqApyQuestion": {
     "message": "Combien puis-je gagner avec un MetaMask Money Account ?"
@@ -5758,8 +5758,8 @@
     "message": "Puis-je effectuer un retrait depuis mon MetaMask Money Account à tout moment ?"
   },
   "moneyHowItWorksFaqMoneyAccountAnswer": {
-    "message": "Un compte offrant un RMP variable pouvant atteindre les $1. Vous déposez des fonds, qui sont conservés sur le compte sous forme de mUSD, et bénéficiez d’un RMP pouvant atteindre les $1. Le mUSD est le stablecoin adossé au dollar de MetaMask. Vous pouvez utiliser ou retirer vos fonds à tout moment sans pénalité.",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "message": "Un compte offrant un RMP variable pouvant atteindre les $1. Vous déposez des fonds, qui sont conservés sur le compte sous forme de sUSD, et bénéficiez d’un RMP pouvant atteindre les $1. Le sUSD est le stablecoin adossé au dollar de MetaMask. Vous pouvez utiliser ou retirer vos fonds à tout moment sans pénalité.",
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqMoneyAccountQuestion": {
     "message": "Qu’est-ce qu’un MetaMask Money Account ?"
@@ -5775,7 +5775,7 @@
     "message": "Quels jetons puis-je déposer sur mon Money Account ?"
   },
   "moneyHowItWorksFaqYieldAnswer": {
-    "message": "Lorsque vous déposez des fonds, ceux-ci sont placés dans des protocoles DeFi reconnus, tels qu’Aave et Morpho, où ils génèrent des rendements issus d’une activité économique réelle. Ces rendements vous sont ensuite versés sous forme de taux de rendement annuel.\n\nUn prestataire de services tiers, Steakhouse Financial, supervise la manière dont les fonds sont alloués au sein des protocoles. Veda, un fournisseur d’infrastructure tiers, déploie et gère les contrats intelligents du coffre-fort qui détiennent vos fonds.\n\nLes gains ne constituent pas des intérêts versés par MetaMask ou par l’émetteur de mUSD. Il s’agit des rendements générés par la chaîne de blocs grâce à des placements dans des protocoles DeFi tiers."
+    "message": "Lorsque vous déposez des fonds, ceux-ci sont placés dans des protocoles DeFi reconnus, tels qu’Aave et Morpho, où ils génèrent des rendements issus d’une activité économique réelle. Ces rendements vous sont ensuite versés sous forme de taux de rendement annuel.\n\nUn prestataire de services tiers, Steakhouse Financial, supervise la manière dont les fonds sont alloués au sein des protocoles. Veda, un fournisseur d’infrastructure tiers, déploie et gère les contrats intelligents du coffre-fort qui détiennent vos fonds.\n\nLes gains ne constituent pas des intérêts versés par MetaMask ou par l’émetteur de sUSD. Il s’agit des rendements générés par la chaîne de blocs grâce à des placements dans des protocoles DeFi tiers."
   },
   "moneyHowItWorksFaqYieldQuestion": {
     "message": "D’où provient le rendement ?"
@@ -5793,7 +5793,7 @@
     "message": "Le montant total que vous avez gagné sur votre solde Money Account au fil du temps."
   },
   "moneyMeetMusd": {
-    "message": "Découvrir les mUSD"
+    "message": "Découvrir les sUSD"
   },
   "moneyMonthlyTooltip": {
     "message": "Le montant total que vous avez gagné sur votre solde Money Account au cours des 30 derniers jours."
@@ -5805,7 +5805,7 @@
     "message": "Autres options"
   },
   "moneyMusd": {
-    "message": "mUSD"
+    "message": "sUSD"
   },
   "moneyOnboardingFundTitle": {
     "message": "Approvisionnez votre Money Account",
@@ -5982,58 +5982,58 @@
   },
   "musdAssetConvertBenefitDailyBonus": {
     "message": "Bonus quotidien",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitDollarBacked": {
     "message": "Adossé au dollar",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitNoLockups": {
     "message": "Pas de blocage de fonds",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitNoMetaMaskFee": {
     "message": "Pas de frais MetaMask",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertDescriptionHighlight": {
     "message": "Bonus annualisé de $1 %",
-    "description": "Shown in Figma accent lime (#baf24a) inside the mUSD asset details convert section description. $1 is the APY percentage."
+    "description": "Shown in Figma accent lime (#baf24a) inside the sUSD asset details convert section description. $1 is the APY percentage."
   },
   "musdAssetConvertDescriptionLead": {
     "message": "Obtenez un ",
-    "description": "Text before the green APY phrase on the mUSD asset details convert section"
+    "description": "Text before the green APY phrase on the sUSD asset details convert section"
   },
   "musdAssetConvertDescriptionTail": {
-    "message": " en convertissant vos USDC, USDT et DAI en mUSD.",
-    "description": "Text after the green APY phrase on the mUSD asset details convert section"
+    "message": " en convertissant vos USDC, USDT et DAI en sUSD.",
+    "description": "Text after the green APY phrase on the sUSD asset details convert section"
   },
   "musdAssetConvertLearnMore": {
     "message": "En savoir plus.",
-    "description": "Button to open the mUSD support article from the asset details convert section"
+    "description": "Button to open the sUSD support article from the asset details convert section"
   },
   "musdAssetConvertTitle": {
     "message": "Convertissez vos stablecoins",
-    "description": "Title of the convert section on the mUSD asset details page"
+    "description": "Title of the convert section on the sUSD asset details page"
   },
   "musdAssetPositionBalance": {
     "message": "Solde",
-    "description": "Label in the mUSD asset details Your position section"
+    "description": "Label in the sUSD asset details Your position section"
   },
   "musdAssetPositionTitle": {
     "message": "Votre position",
-    "description": "Section title on the mUSD asset details page"
+    "description": "Section title on the sUSD asset details page"
   },
   "musdAssetPositionValue": {
     "message": "Valeur",
-    "description": "Label in the mUSD asset details Your position section (fiat value)"
+    "description": "Label in the sUSD asset details Your position section (fiat value)"
   },
   "musdBonusExplanation": {
-    "message": "Convertissez vos stablecoins en mUSD et gagnez\njusqu’à $1 % de bonus annualisé que vous pouvez\nréclamer quotidiennement. $2",
+    "message": "Convertissez vos stablecoins en sUSD et gagnez\njusqu’à $1 % de bonus annualisé que vous pouvez\nréclamer quotidiennement. $2",
     "description": "$1 is the bonus APY percentage, $2 is the 'Terms apply' link"
   },
   "musdBoostDescription": {
-    "message": "Convertissez vos stablecoins en mUSD et obtenez un bonus annualisé de $1 %.",
+    "message": "Convertissez vos stablecoins en sUSD et obtenez un bonus annualisé de $1 %.",
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
   "musdBoostTitle": {
@@ -6041,29 +6041,29 @@
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
   "musdBuyMusd": {
-    "message": "Acheter des mUSD"
+    "message": "Acheter des sUSD"
   },
   "musdClaimTitle": {
     "message": "Réclamer le bonus",
-    "description": "Title for the mUSD bonus claim confirmation screen"
+    "description": "Title for the sUSD bonus claim confirmation screen"
   },
   "musdConversionFeeTooltipDescription": {
-    "message": "Les frais de conversion en mUSD comprennent les coûts de réseau et peuvent inclure des frais de fournisseur. Aucuns frais MetaMask ne s’appliquent lorsque vous effectuez un échange contre des mUSD.",
-    "description": "Body text shown above the fee breakdown in the transaction fee tooltip for mUSD conversion"
+    "message": "Les frais de conversion en sUSD comprennent les coûts de réseau et peuvent inclure des frais de fournisseur. Aucuns frais MetaMask ne s’appliquent lorsque vous effectuez un échange contre des sUSD.",
+    "description": "Body text shown above the fee breakdown in the transaction fee tooltip for sUSD conversion"
   },
   "musdConversionTitle": {
-    "message": "Converti en mUSD",
-    "description": "Title shown in the transaction details modal for mUSD conversion transactions"
+    "message": "Converti en sUSD",
+    "description": "Title shown in the transaction details modal for sUSD conversion transactions"
   },
   "musdConversionToastFailed": {
-    "message": "Échec de la conversion en mUSD"
+    "message": "Échec de la conversion en sUSD"
   },
   "musdConversionToastInProgress": {
-    "message": "Conversion de $1 → mUSD",
+    "message": "Conversion de $1 → sUSD",
     "description": "$1 is the source token symbol (e.g., USDC)"
   },
   "musdConversionToastSuccess": {
-    "message": "Conversion en mUSD effectuée avec succès"
+    "message": "Conversion en sUSD effectuée avec succès"
   },
   "musdConversionToastSuccessDescription": {
     "message": "Le bonus pourra être réclamé dans un délai d’un jour."
@@ -6082,11 +6082,11 @@
     "message": "Pas maintenant"
   },
   "musdGetMusd": {
-    "message": "Obtenir des mUSD"
+    "message": "Obtenir des sUSD"
   },
   "musdSymbol": {
-    "message": "mUSD",
-    "description": "Token ticker for MetaMask USD (displayed next to balance on the mUSD asset details page)"
+    "message": "sUSD",
+    "description": "Token ticker for Swissquote USD (displayed next to balance on the sUSD asset details page)"
   },
   "musdTermsApply": {
     "message": "Des conditions s’appliquent."
@@ -8552,7 +8552,7 @@
     "message": "Demande de retrait envoyée avec succès"
   },
   "perpsWithdrawTooltip": {
-    "message": "MetaMask échangera vos jetons pour vous. Aucuns frais MetaMask ne s’appliquent lorsque vous effectuez un échange contre des mUSD.",
+    "message": "MetaMask échangera vos jetons pour vous. Aucuns frais MetaMask ne s’appliquent lorsque vous effectuez un échange contre des sUSD.",
     "description": "Tooltip shown on the Transaction fee row of the Perps Withdraw confirmation"
   },
   "perpsWithdrawalEmptyTitle": {

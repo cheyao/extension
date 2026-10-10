@@ -296,10 +296,10 @@
     "message": "Nhận thưởng thất bại"
   },
   "activity_claimMusdBonus_pending_title": {
-    "message": "Đang nhận thưởng mUSD"
+    "message": "Đang nhận thưởng sUSD"
   },
   "activity_claimMusdBonus_success_title": {
-    "message": "Đã nhận thưởng mUSD"
+    "message": "Đã nhận thưởng sUSD"
   },
   "activity_claim_failed_description": {
     "message": "Nhận thưởng thất bại"
@@ -1995,7 +1995,7 @@
     "message": "Mở trang DeFi"
   },
   "basicFunctionalityRequired_openMusdConversionPage": {
-    "message": "Mở trang Chuyển đổi mUSD"
+    "message": "Mở trang Chuyển đổi sUSD"
   },
   "basicFunctionalityRequired_openNotificationsPage": {
     "message": "Mở trang Thông báo"
@@ -5391,15 +5391,15 @@
     "message": "bản ghi nhớ"
   },
   "merklRewardsToastFailed": {
-    "message": "Yêu cầu nhận thưởng mUSD của bạn đã thất bại",
+    "message": "Yêu cầu nhận thưởng sUSD của bạn đã thất bại",
     "description": "Toast message shown when a Merkl reward claim transaction fails or is dropped"
   },
   "merklRewardsToastInProgress": {
-    "message": "Khoản thưởng mUSD của bạn đang được xử lý",
+    "message": "Khoản thưởng sUSD của bạn đang được xử lý",
     "description": "Toast message shown when a Merkl reward claim transaction is being processed"
   },
   "merklRewardsToastSuccess": {
-    "message": "Khoản thưởng mUSD của bạn đã có!",
+    "message": "Khoản thưởng sUSD của bạn đã có!",
     "description": "Toast message shown when a Merkl reward claim transaction is confirmed"
   },
   "message": {
@@ -5569,7 +5569,7 @@
     "message": "Không thể tải hoạt động của bạn"
   },
   "moneyActivityMusdBack": {
-    "message": "Hoàn tiền bằng mUSD"
+    "message": "Hoàn tiền bằng sUSD"
   },
   "moneyActivityPending": {
     "message": "Chờ xử lý"
@@ -5615,7 +5615,7 @@
     "message": "APY $1"
   },
   "moneyBalanceInfoBody": {
-    "message": "Số dư mUSD được bảo chứng bằng đô-la của bạn luôn tự động sinh lời. Chúng tôi không tính số dư này vào tổng số dư tài khoản của bạn."
+    "message": "Số dư sUSD được bảo chứng bằng đô-la của bạn luôn tự động sinh lời. Chúng tôi không tính số dư này vào tổng số dư tài khoản của bạn."
   },
   "moneyBalanceInfoWithdrawals": {
     "message": "Yêu cầu rút tiền được xử lý ngay lập tức, tùy thuộc vào thời gian xác nhận mạng tiêu chuẩn trên chuỗi khối tương ứng. Nếu thanh khoản thấp, có thể xảy ra chậm trễ tạm thời."
@@ -5624,7 +5624,7 @@
     "message": "Số dư gần nhất được ghi nhận"
   },
   "moneyBalanceMusdLabel": {
-    "message": "mUSD"
+    "message": "sUSD"
   },
   "moneyBalanceRetry": {
     "message": "Thử lại"
@@ -5640,7 +5640,7 @@
   },
   "moneyBenefitAutoEarnWithApy": {
     "message": "Tự động sinh lời lên đến $1",
-    "description": "$1 is the current mUSD APY (e.g. ~4.2% APY)."
+    "description": "$1 is the current sUSD APY (e.g. ~4.2% APY)."
   },
   "moneyBenefitLiquidity": {
     "message": "Có khả năng thanh khoản cao, không bị khóa vốn, cho phép giao dịch hoặc rút tiền bất cứ lúc nào"
@@ -5649,7 +5649,7 @@
     "message": "Gửi đến bất kỳ ví nào của bạn trên MetaMask"
   },
   "moneyBenefitStablecoin": {
-    "message": "Giữ tiền của bạn an toàn dưới dạng mUSD, một đồng ổn định được bảo chứng 1:1 theo USD"
+    "message": "Giữ tiền của bạn an toàn dưới dạng sUSD, một đồng ổn định được bảo chứng 1:1 theo USD"
   },
   "moneyBenefits": {
     "message": "Quyền lợi"
@@ -5667,7 +5667,7 @@
     "message": "Kiếm lợi nhuận từ tiền mã hóa của bạn"
   },
   "moneyEarnOnCryptoDescription": {
-    "message": "Xem tiền của bạn có thể tăng trưởng theo thời gian như thế nào bằng cách chuyển đổi tiền mã hóa sang mUSD."
+    "message": "Xem tiền của bạn có thể tăng trưởng theo thời gian như thế nào bằng cách chuyển đổi tiền mã hóa sang sUSD."
   },
   "moneyEarnOnCryptoDescriptionMiddle": {
     "message": "tài sản của bạn và bạn có thể nhận được lên đến"
@@ -5714,15 +5714,15 @@
     "message": "Cách hoạt động"
   },
   "moneyHowItWorksDescription": {
-    "message": "Nạp mUSD và số dư được bảo chứng bằng đô-la của bạn sẽ sẵn sàng để chi tiêu, giao dịch hoặc gửi bất cứ lúc nào."
+    "message": "Nạp sUSD và số dư được bảo chứng bằng đô-la của bạn sẽ sẵn sàng để chi tiêu, giao dịch hoặc gửi bất cứ lúc nào."
   },
   "moneyHowItWorksDescription1": {
     "message": "Chuyển đổi bất kỳ loại tiền mã hóa nào vào Money Account của bạn và tự động sinh lời với lãi suất APY lên đến $1 (có thể thay đổi). Tiền sẽ được đưa vào một kho DeFi do Veda quản lý và được giám sát rủi ro bởi Steakhouse Financial. Mức lãi suất được tạo ra từ các nền tảng DeFi bên thứ ba triển khai vốn vào các giao thức chuỗi khối. Không cần ký gửi, không cần nhận, không bị khóa tài sản.",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksDescriptionWithApy": {
-    "message": "Nạp mUSD và sinh lời lên đến $1. Số dư của bạn được bảo chứng theo đô-la, sẵn sàng để chi tiêu, giao dịch hoặc gửi bất cứ lúc nào.",
-    "description": "$1 is the current mUSD APY."
+    "message": "Nạp sUSD và sinh lời lên đến $1. Số dư của bạn được bảo chứng theo đô-la, sẵn sàng để chi tiêu, giao dịch hoặc gửi bất cứ lúc nào.",
+    "description": "$1 is the current sUSD APY."
   },
   "moneyHowItWorksDisclosuresBody": {
     "message": "Money Account không phải là tài khoản ngân hàng, tài khoản tiết kiệm hoặc sản phẩm tiền gửi được bảo hiểm. Lãi suất APY có thể thay đổi và không được đảm bảo. Money Account có các rủi ro liên quan đến hợp đồng thông minh, giao thức, thanh khoản và các rủi ro khác, vì vậy bạn có thể mất một phần hoặc toàn bộ số tiền của mình. Việc sử dụng còn tùy thuộc vào các hạn chế theo khu vực. Có áp dụng các điều khoản và điều kiện."
@@ -5732,7 +5732,7 @@
   },
   "moneyHowItWorksFaqApyAnswer": {
     "message": "Lãi suất APY lên đến $1. Lãi suất này có thể thay đổi và biến động theo điều kiện thị trường. Lãi suất hiện tại luôn được hiển thị trong Money Account.",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqApyQuestion": {
     "message": "Tôi có thể sinh lời bao nhiêu với MetaMask Money Account?"
@@ -5762,8 +5762,8 @@
     "message": "Tôi có thể rút tiền khỏi MetaMask Money Account bất cứ lúc nào không?"
   },
   "moneyHowItWorksFaqMoneyAccountAnswer": {
-    "message": "Đây là tài khoản có thể sinh lời với lãi suất APY lên đến $1 (có thể thay đổi). Bạn nạp tiền vào tài khoản, số tiền của bạn sẽ được giữ dưới dạng mUSD và có thể nhận lãi suất APY lên đến $1. mUSD là đồng ổn định được bảo chứng bằng đô-la của MetaMask. Bạn có thể sử dụng hoặc rút tiền bất cứ lúc nào mà không bị phạt.",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "message": "Đây là tài khoản có thể sinh lời với lãi suất APY lên đến $1 (có thể thay đổi). Bạn nạp tiền vào tài khoản, số tiền của bạn sẽ được giữ dưới dạng sUSD và có thể nhận lãi suất APY lên đến $1. sUSD là đồng ổn định được bảo chứng bằng đô-la của MetaMask. Bạn có thể sử dụng hoặc rút tiền bất cứ lúc nào mà không bị phạt.",
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqMoneyAccountQuestion": {
     "message": "MetaMask Money Account là gì?"
@@ -5779,7 +5779,7 @@
     "message": "Tôi có thể nạp những token nào vào Money Account?"
   },
   "moneyHowItWorksFaqYieldAnswer": {
-    "message": "Khi bạn nạp tiền, số tiền của bạn sẽ được phân bổ vào các giao thức DeFi uy tín như Aave và Morpho, nơi tạo lợi nhuận từ các hoạt động kinh tế thực. Sau đó, các khoản lợi nhuận này sẽ được chuyển đến bạn dưới dạng APY.\n\nMột nhà cung cấp dịch vụ bên thứ ba là Steakhouse Financial sẽ giám sát việc phân bổ tiền trong các giao thức. Veda, một nhà cung cấp hạ tầng bên thứ ba, sẽ triển khai và duy trì các hợp đồng thông minh của kho lưu giữ tiền của bạn.\n\nKhoản lợi nhuận này không phải là lãi suất do MetaMask hoặc đơn vị phát hành mUSD chi trả. Đây là lợi nhuận trên chuỗi được tạo ra từ các vị thế trong các giao thức DeFi của bên thứ ba."
+    "message": "Khi bạn nạp tiền, số tiền của bạn sẽ được phân bổ vào các giao thức DeFi uy tín như Aave và Morpho, nơi tạo lợi nhuận từ các hoạt động kinh tế thực. Sau đó, các khoản lợi nhuận này sẽ được chuyển đến bạn dưới dạng APY.\n\nMột nhà cung cấp dịch vụ bên thứ ba là Steakhouse Financial sẽ giám sát việc phân bổ tiền trong các giao thức. Veda, một nhà cung cấp hạ tầng bên thứ ba, sẽ triển khai và duy trì các hợp đồng thông minh của kho lưu giữ tiền của bạn.\n\nKhoản lợi nhuận này không phải là lãi suất do MetaMask hoặc đơn vị phát hành sUSD chi trả. Đây là lợi nhuận trên chuỗi được tạo ra từ các vị thế trong các giao thức DeFi của bên thứ ba."
   },
   "moneyHowItWorksFaqYieldQuestion": {
     "message": "Lợi suất đến từ đâu?"
@@ -5797,7 +5797,7 @@
     "message": "Tổng lợi nhuận bạn đã nhận được từ số dư Money Account theo thời gian."
   },
   "moneyMeetMusd": {
-    "message": "Tìm hiểu về mUSD"
+    "message": "Tìm hiểu về sUSD"
   },
   "moneyMonthlyTooltip": {
     "message": "Tổng lợi nhuận bạn đã nhận được từ số dư Money Account trong 30 ngày qua."
@@ -5809,7 +5809,7 @@
     "message": "Thêm tùy chọn"
   },
   "moneyMusd": {
-    "message": "mUSD"
+    "message": "sUSD"
   },
   "moneyOnboardingFundTitle": {
     "message": "Nạp tiền vào Money Account của bạn",
@@ -5986,58 +5986,58 @@
   },
   "musdAssetConvertBenefitDailyBonus": {
     "message": "Thưởng hằng ngày",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitDollarBacked": {
     "message": "Được đảm bảo bằng đồng đô la Mỹ",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitNoLockups": {
     "message": "Không bị khóa vốn",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitNoMetaMaskFee": {
     "message": "Không có phí MetaMask",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertDescriptionHighlight": {
     "message": "$1% thưởng theo năm",
-    "description": "Shown in Figma accent lime (#baf24a) inside the mUSD asset details convert section description. $1 is the APY percentage."
+    "description": "Shown in Figma accent lime (#baf24a) inside the sUSD asset details convert section description. $1 is the APY percentage."
   },
   "musdAssetConvertDescriptionLead": {
     "message": "Nhận ",
-    "description": "Text before the green APY phrase on the mUSD asset details convert section"
+    "description": "Text before the green APY phrase on the sUSD asset details convert section"
   },
   "musdAssetConvertDescriptionTail": {
-    "message": " bằng cách chuyển đổi USDC, USDT và DAI sang mUSD.",
-    "description": "Text after the green APY phrase on the mUSD asset details convert section"
+    "message": " bằng cách chuyển đổi USDC, USDT và DAI sang sUSD.",
+    "description": "Text after the green APY phrase on the sUSD asset details convert section"
   },
   "musdAssetConvertLearnMore": {
     "message": "Tìm hiểu thêm",
-    "description": "Button to open the mUSD support article from the asset details convert section"
+    "description": "Button to open the sUSD support article from the asset details convert section"
   },
   "musdAssetConvertTitle": {
     "message": "Chuyển đổi đồng ổn định của bạn",
-    "description": "Title of the convert section on the mUSD asset details page"
+    "description": "Title of the convert section on the sUSD asset details page"
   },
   "musdAssetPositionBalance": {
     "message": "Số dư",
-    "description": "Label in the mUSD asset details Your position section"
+    "description": "Label in the sUSD asset details Your position section"
   },
   "musdAssetPositionTitle": {
     "message": "Vị thế của bạn",
-    "description": "Section title on the mUSD asset details page"
+    "description": "Section title on the sUSD asset details page"
   },
   "musdAssetPositionValue": {
     "message": "Giá trị",
-    "description": "Label in the mUSD asset details Your position section (fiat value)"
+    "description": "Label in the sUSD asset details Your position section (fiat value)"
   },
   "musdBonusExplanation": {
-    "message": "Chuyển đổi đồng ổn định của bạn sang mUSD và nhận thưởng quy đổi theo năm lên đến $1% mà bạn có thể nhận hằng ngày. $2",
+    "message": "Chuyển đổi đồng ổn định của bạn sang sUSD và nhận thưởng quy đổi theo năm lên đến $1% mà bạn có thể nhận hằng ngày. $2",
     "description": "$1 is the bonus APY percentage, $2 is the 'Terms apply' link"
   },
   "musdBoostDescription": {
-    "message": "Chuyển đổi đồng ổn định của bạn sang mUSD và nhận thưởng quy đổi theo năm $1%.",
+    "message": "Chuyển đổi đồng ổn định của bạn sang sUSD và nhận thưởng quy đổi theo năm $1%.",
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
   "musdBoostTitle": {
@@ -6045,29 +6045,29 @@
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
   "musdBuyMusd": {
-    "message": "Mua mUSD"
+    "message": "Mua sUSD"
   },
   "musdClaimTitle": {
     "message": "Nhận thưởng",
-    "description": "Title for the mUSD bonus claim confirmation screen"
+    "description": "Title for the sUSD bonus claim confirmation screen"
   },
   "musdConversionFeeTooltipDescription": {
-    "message": "Phí chuyển đổi mUSD bao gồm phí mạng và có thể bao gồm phí từ nhà cung cấp. Không áp dụng phí MetaMask khi bạn chuyển đổi sang mUSD.",
-    "description": "Body text shown above the fee breakdown in the transaction fee tooltip for mUSD conversion"
+    "message": "Phí chuyển đổi sUSD bao gồm phí mạng và có thể bao gồm phí từ nhà cung cấp. Không áp dụng phí MetaMask khi bạn chuyển đổi sang sUSD.",
+    "description": "Body text shown above the fee breakdown in the transaction fee tooltip for sUSD conversion"
   },
   "musdConversionTitle": {
-    "message": "Đã chuyển đổi sang mUSD",
-    "description": "Title shown in the transaction details modal for mUSD conversion transactions"
+    "message": "Đã chuyển đổi sang sUSD",
+    "description": "Title shown in the transaction details modal for sUSD conversion transactions"
   },
   "musdConversionToastFailed": {
-    "message": "Chuyển đổi mUSD thất bại"
+    "message": "Chuyển đổi sUSD thất bại"
   },
   "musdConversionToastInProgress": {
-    "message": "Đang chuyển đổi $1 → mUSD",
+    "message": "Đang chuyển đổi $1 → sUSD",
     "description": "$1 is the source token symbol (e.g., USDC)"
   },
   "musdConversionToastSuccess": {
-    "message": "Chuyển đổi mUSD thành công"
+    "message": "Chuyển đổi sUSD thành công"
   },
   "musdConversionToastSuccessDescription": {
     "message": "Bạn sẽ có thể nhận thưởng trong vòng một ngày."
@@ -6086,11 +6086,11 @@
     "message": "Không phải bây giờ"
   },
   "musdGetMusd": {
-    "message": "Nhận mUSD"
+    "message": "Nhận sUSD"
   },
   "musdSymbol": {
-    "message": "mUSD",
-    "description": "Token ticker for MetaMask USD (displayed next to balance on the mUSD asset details page)"
+    "message": "sUSD",
+    "description": "Token ticker for Swissquote USD (displayed next to balance on the sUSD asset details page)"
   },
   "musdTermsApply": {
     "message": "Áp dụng điều khoản."
@@ -8566,7 +8566,7 @@
     "message": "Yêu cầu rút tiền đã được gửi"
   },
   "perpsWithdrawTooltip": {
-    "message": "MetaMask sẽ hoán đổi sang token mà bạn mong muốn. Không áp dụng phí MetaMask khi bạn hoán đổi sang mUSD.",
+    "message": "MetaMask sẽ hoán đổi sang token mà bạn mong muốn. Không áp dụng phí MetaMask khi bạn hoán đổi sang sUSD.",
     "description": "Tooltip shown on the Transaction fee row of the Perps Withdraw confirmation"
   },
   "perpsWithdrawalEmptyTitle": {

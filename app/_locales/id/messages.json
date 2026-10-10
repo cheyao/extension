@@ -296,10 +296,10 @@
     "message": "Klaim gagal"
   },
   "activity_claimMusdBonus_pending_title": {
-    "message": "Mengklaim bonus mUSD"
+    "message": "Mengklaim bonus sUSD"
   },
   "activity_claimMusdBonus_success_title": {
-    "message": "Bonus mUSD yang diklaim"
+    "message": "Bonus sUSD yang diklaim"
   },
   "activity_claim_failed_description": {
     "message": "Klaim gagal"
@@ -1995,7 +1995,7 @@
     "message": "Buka halaman DeFi"
   },
   "basicFunctionalityRequired_openMusdConversionPage": {
-    "message": "Buka halaman Konversi mUSD"
+    "message": "Buka halaman Konversi sUSD"
   },
   "basicFunctionalityRequired_openNotificationsPage": {
     "message": "Buka halaman Notifikasi"
@@ -5391,15 +5391,15 @@
     "message": "memo"
   },
   "merklRewardsToastFailed": {
-    "message": "Gagal mengklaim bonus mUSD",
+    "message": "Gagal mengklaim bonus sUSD",
     "description": "Toast message shown when a Merkl reward claim transaction fails or is dropped"
   },
   "merklRewardsToastInProgress": {
-    "message": "Bonus mUSD sedang diproses",
+    "message": "Bonus sUSD sedang diproses",
     "description": "Toast message shown when a Merkl reward claim transaction is being processed"
   },
   "merklRewardsToastSuccess": {
-    "message": "Bonus mUSD telah tiba!",
+    "message": "Bonus sUSD telah tiba!",
     "description": "Toast message shown when a Merkl reward claim transaction is confirmed"
   },
   "message": {
@@ -5569,7 +5569,7 @@
     "message": "Tidak dapat memuat aktivitas Anda"
   },
   "moneyActivityMusdBack": {
-    "message": "pengembalian mUSD"
+    "message": "pengembalian sUSD"
   },
   "moneyActivityPending": {
     "message": "Menunggu"
@@ -5615,7 +5615,7 @@
     "message": "$1 APY"
   },
   "moneyBalanceInfoBody": {
-    "message": "Saldo mUSD yang didukung dolar yang terus menghasilkan keuntungan. Kami tidak menghitung saldo ini ke dalam total saldo akun Anda."
+    "message": "Saldo sUSD yang didukung dolar yang terus menghasilkan keuntungan. Kami tidak menghitung saldo ini ke dalam total saldo akun Anda."
   },
   "moneyBalanceInfoWithdrawals": {
     "message": "Penarikan diproses segera, bergantung pada waktu konfirmasi jaringan standar di blockchain terkait. Jika likuiditas terbatas, mungkin terjadi penundaan sementara."
@@ -5624,7 +5624,7 @@
     "message": "Saldo terakhir yang diketahui"
   },
   "moneyBalanceMusdLabel": {
-    "message": "mUSD"
+    "message": "sUSD"
   },
   "moneyBalanceRetry": {
     "message": "Coba lagi"
@@ -5640,7 +5640,7 @@
   },
   "moneyBenefitAutoEarnWithApy": {
     "message": "Hasil otomatis hingga $1",
-    "description": "$1 is the current mUSD APY (e.g. ~4.2% APY)."
+    "description": "$1 is the current sUSD APY (e.g. ~4.2% APY)."
   },
   "moneyBenefitLiquidity": {
     "message": "Dapatkan likuiditas penuh tanpa penguncian, sehingga Anda dapat melakukan perdagangan atau penarikan setiap saat"
@@ -5649,7 +5649,7 @@
     "message": "Kirim ke dompet Anda di MetaMask"
   },
   "moneyBenefitStablecoin": {
-    "message": "Amankan uang Anda di mUSD, stablecoin yang didukung dolar dengan rasio 1:1"
+    "message": "Amankan uang Anda di sUSD, stablecoin yang didukung dolar dengan rasio 1:1"
   },
   "moneyBenefits": {
     "message": "Manfaat"
@@ -5667,7 +5667,7 @@
     "message": "Raih pendapatan dari kripto"
   },
   "moneyEarnOnCryptoDescription": {
-    "message": "Lihat bagaimana uang Anda dapat bertambah nilainya dari waktu ke waktu dengan mengonversikan kripto menjadi mUSD."
+    "message": "Lihat bagaimana uang Anda dapat bertambah nilainya dari waktu ke waktu dengan mengonversikan kripto menjadi sUSD."
   },
   "moneyEarnOnCryptoDescriptionMiddle": {
     "message": "dalam aset dan Anda bisa mendapatkan keuntungan hingga"
@@ -5714,15 +5714,15 @@
     "message": "Cara kerjanya"
   },
   "moneyHowItWorksDescription": {
-    "message": "Tambahkan mUSD dan saldo yang didukung dolar siap untuk digunakan, diperdagangkan, atau dikirim setiap saat."
+    "message": "Tambahkan sUSD dan saldo yang didukung dolar siap untuk digunakan, diperdagangkan, atau dikirim setiap saat."
   },
   "moneyHowItWorksDescription1": {
     "message": "Konversikan aset kripto apa pun ke dalam Money account dan dapatkan keuntungan hingga $1 APY (variabel) secara otomatis. Dana ditempatkan dalam vault DeFi yang dikelola oleh Veda, dengan pemantauan risiko oleh Steakhouse Financial. Nilai ini dihasilkan oleh platform DeFi pihak ketiga yang menyalurkan dana ke dalam protokol blockchain. Tanpa stake, tanpa klaim, tanpa penguncian.",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksDescriptionWithApy": {
-    "message": "Tambahkan mUSD dan dapatkan hingga $1. Saldo Anda didukung dolar dan siap untuk digunakan, diperdagangkan, atau dikirim setiap saat.",
-    "description": "$1 is the current mUSD APY."
+    "message": "Tambahkan sUSD dan dapatkan hingga $1. Saldo Anda didukung dolar dan siap untuk digunakan, diperdagangkan, atau dikirim setiap saat.",
+    "description": "$1 is the current sUSD APY."
   },
   "moneyHowItWorksDisclosuresBody": {
     "message": "Money Account bukanlah rekening bank, rekening tabungan, atau produk deposito yang diasuransikan. APY bersifat variabel dan tidak dijamin. Money Account melibatkan kontrak cerdas, protokol, likuiditas, dan risiko lainnya, dan Anda berpotensi kehilangan sebagian atau seluruh dana. Tunduk pada pembatasan regional. Syarat dan ketentuan berlaku."
@@ -5732,7 +5732,7 @@
   },
   "moneyHowItWorksFaqApyAnswer": {
     "message": "Hingga $1 APY. Nilainya bersifat variabel dan berfluktuasi sesuai kondisi pasar. Nilai saat ini selalu ditampilkan di dalam Money account.",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqApyQuestion": {
     "message": "Berapa penghasilan yang bisa saya peroleh dengan Money Account MetaMask?"
@@ -5762,8 +5762,8 @@
     "message": "Bisakah saya menarik dana dari Money Account MetaMask setiap saat?"
   },
   "moneyHowItWorksFaqMoneyAccountAnswer": {
-    "message": "Akun yang menghasilkan APY variabel hingga $1. Anda mendepositkan dana, yang disimpan dalam akun sebagai mUSD, dan memperoleh APY hingga $1. mUSD merupakan stablecoin berbasis dolar milik MetaMask. Anda dapat menggunakan atau menarik dana Anda setiap saat tanpa dikenakan penalti.",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "message": "Akun yang menghasilkan APY variabel hingga $1. Anda mendepositkan dana, yang disimpan dalam akun sebagai sUSD, dan memperoleh APY hingga $1. sUSD merupakan stablecoin berbasis dolar milik MetaMask. Anda dapat menggunakan atau menarik dana Anda setiap saat tanpa dikenakan penalti.",
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqMoneyAccountQuestion": {
     "message": "Apa itu Money Account MetaMask?"
@@ -5779,7 +5779,7 @@
     "message": "Token apa saja yang bisa saya depositkan ke Money Account?"
   },
   "moneyHowItWorksFaqYieldAnswer": {
-    "message": "Saat Anda mendepositkan dana, maka dana tersebut ditempatkan dalam protokol DeFi yang sudah mapan, seperti Aave dan Morpho, di mana dana tersebut menghasilkan keuntungan dari aktivitas ekonomi riil. Keuntungan ini kemudian diberikan kepada Anda dalam bentuk APY.\n\nPenyedia layanan pihak ketiga bernama Steakhouse Financial memantau bagaimana dana dialokasikan dalam protokol tersebut. Veda, penyedia infrastruktur pihak ketiga, menyebarkan dan memelihara brankas kontrak cerdas yang menyimpan dana Anda.\n\nKeuntungan tersebut bukanlah bunga yang dibayarkan oleh MetaMask atau oleh penerbit mUSD. Itu merupakan keuntungan on-chain yang dihasilkan oleh posisi dalam protokol DeFi pihak ketiga."
+    "message": "Saat Anda mendepositkan dana, maka dana tersebut ditempatkan dalam protokol DeFi yang sudah mapan, seperti Aave dan Morpho, di mana dana tersebut menghasilkan keuntungan dari aktivitas ekonomi riil. Keuntungan ini kemudian diberikan kepada Anda dalam bentuk APY.\n\nPenyedia layanan pihak ketiga bernama Steakhouse Financial memantau bagaimana dana dialokasikan dalam protokol tersebut. Veda, penyedia infrastruktur pihak ketiga, menyebarkan dan memelihara brankas kontrak cerdas yang menyimpan dana Anda.\n\nKeuntungan tersebut bukanlah bunga yang dibayarkan oleh MetaMask atau oleh penerbit sUSD. Itu merupakan keuntungan on-chain yang dihasilkan oleh posisi dalam protokol DeFi pihak ketiga."
   },
   "moneyHowItWorksFaqYieldQuestion": {
     "message": "Dari mana hasil tersebut berasal?"
@@ -5797,7 +5797,7 @@
     "message": "Jumlah total yang Anda peroleh dari saldo Money account selama ini."
   },
   "moneyMeetMusd": {
-    "message": "Jumpai mUSD"
+    "message": "Jumpai sUSD"
   },
   "moneyMonthlyTooltip": {
     "message": "Jumlah total yang Anda peroleh dari saldo Money account dalam 30 hari terakhir."
@@ -5809,7 +5809,7 @@
     "message": "Opsi lain"
   },
   "moneyMusd": {
-    "message": "mUSD"
+    "message": "sUSD"
   },
   "moneyOnboardingFundTitle": {
     "message": "Danai Money Account",
@@ -5986,58 +5986,58 @@
   },
   "musdAssetConvertBenefitDailyBonus": {
     "message": "Bonus harian",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitDollarBacked": {
     "message": "Didukung oleh dolar",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitNoLockups": {
     "message": "Tidak ada penguncian",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitNoMetaMaskFee": {
     "message": "Tidak ada biaya MetaMask",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertDescriptionHighlight": {
     "message": "Bonus tahunan $1%",
-    "description": "Shown in Figma accent lime (#baf24a) inside the mUSD asset details convert section description. $1 is the APY percentage."
+    "description": "Shown in Figma accent lime (#baf24a) inside the sUSD asset details convert section description. $1 is the APY percentage."
   },
   "musdAssetConvertDescriptionLead": {
     "message": "Dapatkan ",
-    "description": "Text before the green APY phrase on the mUSD asset details convert section"
+    "description": "Text before the green APY phrase on the sUSD asset details convert section"
   },
   "musdAssetConvertDescriptionTail": {
-    "message": " dengan mengonversi USDC, USDT, dan DAI ke mUSD.",
-    "description": "Text after the green APY phrase on the mUSD asset details convert section"
+    "message": " dengan mengonversi USDC, USDT, dan DAI ke sUSD.",
+    "description": "Text after the green APY phrase on the sUSD asset details convert section"
   },
   "musdAssetConvertLearnMore": {
     "message": "Selengkapnya",
-    "description": "Button to open the mUSD support article from the asset details convert section"
+    "description": "Button to open the sUSD support article from the asset details convert section"
   },
   "musdAssetConvertTitle": {
     "message": "Konversikan stablecoin Anda",
-    "description": "Title of the convert section on the mUSD asset details page"
+    "description": "Title of the convert section on the sUSD asset details page"
   },
   "musdAssetPositionBalance": {
     "message": "Saldo",
-    "description": "Label in the mUSD asset details Your position section"
+    "description": "Label in the sUSD asset details Your position section"
   },
   "musdAssetPositionTitle": {
     "message": "Posisi Anda",
-    "description": "Section title on the mUSD asset details page"
+    "description": "Section title on the sUSD asset details page"
   },
   "musdAssetPositionValue": {
     "message": "Nilai",
-    "description": "Label in the mUSD asset details Your position section (fiat value)"
+    "description": "Label in the sUSD asset details Your position section (fiat value)"
   },
   "musdBonusExplanation": {
-    "message": "Konversikan stablecoin Anda ke mUSD dan dapatkan\nbonus tahunan hingga $1% yang dapat Anda\nklaim setiap hari. $2",
+    "message": "Konversikan stablecoin Anda ke sUSD dan dapatkan\nbonus tahunan hingga $1% yang dapat Anda\nklaim setiap hari. $2",
     "description": "$1 is the bonus APY percentage, $2 is the 'Terms apply' link"
   },
   "musdBoostDescription": {
-    "message": "Konversikan stablecoin Anda ke mUSD dan dapatkan bonus tahunan sebesar $1%.",
+    "message": "Konversikan stablecoin Anda ke sUSD dan dapatkan bonus tahunan sebesar $1%.",
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
   "musdBoostTitle": {
@@ -6045,29 +6045,29 @@
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
   "musdBuyMusd": {
-    "message": "Beli mUSD"
+    "message": "Beli sUSD"
   },
   "musdClaimTitle": {
     "message": "Klaim bonus",
-    "description": "Title for the mUSD bonus claim confirmation screen"
+    "description": "Title for the sUSD bonus claim confirmation screen"
   },
   "musdConversionFeeTooltipDescription": {
-    "message": "Biaya konversi mUSD mencakup biaya jaringan dan mungkin termasuk biaya penyedia. MetaMask tidak mengenakan biaya saat Anda mengonversi ke mUSD.",
-    "description": "Body text shown above the fee breakdown in the transaction fee tooltip for mUSD conversion"
+    "message": "Biaya konversi sUSD mencakup biaya jaringan dan mungkin termasuk biaya penyedia. MetaMask tidak mengenakan biaya saat Anda mengonversi ke sUSD.",
+    "description": "Body text shown above the fee breakdown in the transaction fee tooltip for sUSD conversion"
   },
   "musdConversionTitle": {
-    "message": "Dikonversi ke mUSD",
-    "description": "Title shown in the transaction details modal for mUSD conversion transactions"
+    "message": "Dikonversi ke sUSD",
+    "description": "Title shown in the transaction details modal for sUSD conversion transactions"
   },
   "musdConversionToastFailed": {
-    "message": "Konversi mUSD gagal"
+    "message": "Konversi sUSD gagal"
   },
   "musdConversionToastInProgress": {
-    "message": "Mengonversi $1 → mUSD",
+    "message": "Mengonversi $1 → sUSD",
     "description": "$1 is the source token symbol (e.g., USDC)"
   },
   "musdConversionToastSuccess": {
-    "message": "Konversi mUSD berhasil"
+    "message": "Konversi sUSD berhasil"
   },
   "musdConversionToastSuccessDescription": {
     "message": "Bonus dapat diklaim dalam waktu satu hari."
@@ -6086,11 +6086,11 @@
     "message": "Tidak sekarang"
   },
   "musdGetMusd": {
-    "message": "Dapatkan mUSD"
+    "message": "Dapatkan sUSD"
   },
   "musdSymbol": {
-    "message": "mUSD",
-    "description": "Token ticker for MetaMask USD (displayed next to balance on the mUSD asset details page)"
+    "message": "sUSD",
+    "description": "Token ticker for Swissquote USD (displayed next to balance on the sUSD asset details page)"
   },
   "musdTermsApply": {
     "message": "Syarat berlaku."
@@ -8560,7 +8560,7 @@
     "message": "Penarikan dikirim"
   },
   "perpsWithdrawTooltip": {
-    "message": "MetaMask akan menukar token Anda ke token yang diinginkan. MetaMask tidak mengenakan biaya saat Anda menukar ke mUSD.",
+    "message": "MetaMask akan menukar token Anda ke token yang diinginkan. MetaMask tidak mengenakan biaya saat Anda menukar ke sUSD.",
     "description": "Tooltip shown on the Transaction fee row of the Perps Withdraw confirmation"
   },
   "perpsWithdrawalEmptyTitle": {

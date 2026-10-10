@@ -1,4 +1,5 @@
 import { getNativeTokenAddress } from '@metamask/assets-controllers';
+import { rebrandMusdText } from '../../../../shared/lib/swissquote/susd-branding';
 import { formatChainIdToCaip } from '@metamask/bridge-controller';
 import {
   Box,
@@ -174,7 +175,15 @@ const AssetPage = ({
     endTrace({ name: TraceName.AssetDetails });
   }, []);
 
-  const { chainId, type, symbol, name, image } = asset;
+  const { chainId, type, image: rawImage } = asset;
+  // Swissquote Wallet: mUSD is shown as sUSD (Swissquote USD).
+  const symbol = rebrandMusdText(asset.symbol);
+  const name = rebrandMusdText(asset.name);
+  const image =
+    (asset as { address?: string }).address &&
+    isMusdToken((asset as { address?: string }).address)
+      ? './images/icons/susd.svg'
+      : rawImage;
   const tokenAddress =
     asset.type === AssetType.token ? asset.address : undefined;
   const aggregators =

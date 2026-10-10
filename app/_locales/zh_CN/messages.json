@@ -296,10 +296,10 @@
     "message": "领取失败"
   },
   "activity_claimMusdBonus_pending_title": {
-    "message": "正在领取 mUSD 奖励"
+    "message": "正在领取 sUSD 奖励"
   },
   "activity_claimMusdBonus_success_title": {
-    "message": "已领取 mUSD 奖励"
+    "message": "已领取 sUSD 奖励"
   },
   "activity_claim_failed_description": {
     "message": "领取失败"
@@ -1995,7 +1995,7 @@
     "message": "打开去中心化金融页面"
   },
   "basicFunctionalityRequired_openMusdConversionPage": {
-    "message": "打开 mUSD 兑换页面"
+    "message": "打开 sUSD 兑换页面"
   },
   "basicFunctionalityRequired_openNotificationsPage": {
     "message": "打开通知页面"
@@ -5387,15 +5387,15 @@
     "message": "备忘录"
   },
   "merklRewardsToastFailed": {
-    "message": "您的 mUSD 奖励领取失败",
+    "message": "您的 sUSD 奖励领取失败",
     "description": "Toast message shown when a Merkl reward claim transaction fails or is dropped"
   },
   "merklRewardsToastInProgress": {
-    "message": "您的 mUSD 奖励正在处理中",
+    "message": "您的 sUSD 奖励正在处理中",
     "description": "Toast message shown when a Merkl reward claim transaction is being processed"
   },
   "merklRewardsToastSuccess": {
-    "message": "您的 mUSD 奖励已到账！",
+    "message": "您的 sUSD 奖励已到账！",
     "description": "Toast message shown when a Merkl reward claim transaction is confirmed"
   },
   "message": {
@@ -5565,7 +5565,7 @@
     "message": "无法加载您的活动记录"
   },
   "moneyActivityMusdBack": {
-    "message": "mUSD 返现"
+    "message": "sUSD 返现"
   },
   "moneyActivityPending": {
     "message": "待定"
@@ -5611,7 +5611,7 @@
     "message": "$1 年化收益率"
   },
   "moneyBalanceInfoBody": {
-    "message": "您的由美元支持的 mUSD 余额，始终在赚取收益。我们不会将其计入您的总账户余额。"
+    "message": "您的由美元支持的 sUSD 余额，始终在赚取收益。我们不会将其计入您的总账户余额。"
   },
   "moneyBalanceInfoWithdrawals": {
     "message": "提现立即处理，但需遵守相关区块链的标准网络确认时间。如果流动性紧张，可能会有临时延迟。"
@@ -5620,7 +5620,7 @@
     "message": "最后已知余额"
   },
   "moneyBalanceMusdLabel": {
-    "message": "mUSD"
+    "message": "sUSD"
   },
   "moneyBalanceRetry": {
     "message": "重试"
@@ -5636,7 +5636,7 @@
   },
   "moneyBenefitAutoEarnWithApy": {
     "message": "自动赚取高达 $1",
-    "description": "$1 is the current mUSD APY (e.g. ~4.2% APY)."
+    "description": "$1 is the current sUSD APY (e.g. ~4.2% APY)."
   },
   "moneyBenefitLiquidity": {
     "message": "享受完全流动性，无锁仓期限制，可随时交易或提现"
@@ -5645,7 +5645,7 @@
     "message": "转入您 MetaMask 中的任意钱包"
   },
   "moneyBenefitStablecoin": {
-    "message": "将您的资金安全存放于 mUSD（一种 1:1 锚定美元的稳定币）"
+    "message": "将您的资金安全存放于 sUSD（一种 1:1 锚定美元的稳定币）"
   },
   "moneyBenefits": {
     "message": "福利"
@@ -5663,7 +5663,7 @@
     "message": "用您的加密货币赚取收益"
   },
   "moneyEarnOnCryptoDescription": {
-    "message": "了解将您的加密货币转换为 mUSD 后，资金如何随时间增值。"
+    "message": "了解将您的加密货币转换为 sUSD 后，资金如何随时间增值。"
   },
   "moneyEarnOnCryptoDescriptionMiddle": {
     "message": "在资产方面，最高可赚取"
@@ -5710,15 +5710,15 @@
     "message": "如何运行"
   },
   "moneyHowItWorksDescription": {
-    "message": "添加 mUSD，您的美元挂钩余额即可随时用于消费、交易或转账。"
+    "message": "添加 sUSD，您的美元挂钩余额即可随时用于消费、交易或转账。"
   },
   "moneyHowItWorksDescription1": {
     "message": "将任意加密货币兑换到您的 Money Account，即可自动赚取最高 $1 的年化收益率（浮动）。资金会进入一个去中心化金融金库，由 Veda 管理，并由 Steakhouse Financial 进行风险监控。该利率由第三方去中心化金融平台产生，这些平台会将资金部署到区块链协议中。无需质押、无需领取、无锁定期。",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksDescriptionWithApy": {
-    "message": "添加 mUSD，赚取最高 $1 年化收益率。您的余额与美元挂钩，可随时消费、交易或转账。",
-    "description": "$1 is the current mUSD APY."
+    "message": "添加 sUSD，赚取最高 $1 年化收益率。您的余额与美元挂钩，可随时消费、交易或转账。",
+    "description": "$1 is the current sUSD APY."
   },
   "moneyHowItWorksDisclosuresBody": {
     "message": "Money Account 并非银行账户、储蓄账户或受保存款产品。年化收益率为浮动值，不作保证。Money Account 涉及智能合约、协议、流动性及其他风险，您可能损失部分或全部资金。受地区限制约束。条款适用。"
@@ -5728,7 +5728,7 @@
   },
   "moneyHowItWorksFaqApyAnswer": {
     "message": "最高可享 $1 年化收益率。该利率为浮动利率，随市场情况波动。当前利率始终可在 Money Account 内查看。",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqApyQuestion": {
     "message": "使用 MetaMask Money Account 能赚取多少收益？"
@@ -5758,8 +5758,8 @@
     "message": "我可以随时从 MetaMask Money Account 提款吗？"
   },
   "moneyHowItWorksFaqMoneyAccountAnswer": {
-    "message": "这是一个可赚取最高 $1 浮动年化收益率的账户。您存入资金，资金会以 mUSD 形式保存在账户中，并赚取最高 $1 的年化收益率。mUSD 是 MetaMask 的美元支持稳定币。您可以随时使用或提取资金，且无罚金。",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "message": "这是一个可赚取最高 $1 浮动年化收益率的账户。您存入资金，资金会以 sUSD 形式保存在账户中，并赚取最高 $1 的年化收益率。sUSD 是 MetaMask 的美元支持稳定币。您可以随时使用或提取资金，且无罚金。",
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqMoneyAccountQuestion": {
     "message": "什么是 MetaMask Money Account？"
@@ -5775,7 +5775,7 @@
     "message": "我可以将哪些代币存入 Money Account？"
   },
   "moneyHowItWorksFaqYieldAnswer": {
-    "message": "当您存入资金时，这些资金会被配置到成熟的去中心化金融协议（例如 Aave 和 Morpho）中，它们通过真实经济活动产生收益。这些收益随后以年化收益率的形式返还给您。\n\n第三方服务提供商 Steakhouse Financial 负责监控资金在协议中的分配情况。第三方基础设施提供商 Veda 负责部署和维护存放您资金的金库智能合约。\n\n收益并非由 MetaMask 或 mUSD 发行方支付的利息，而是通过在第三方去中心化金融协议中持仓所产生的链上收益。"
+    "message": "当您存入资金时，这些资金会被配置到成熟的去中心化金融协议（例如 Aave 和 Morpho）中，它们通过真实经济活动产生收益。这些收益随后以年化收益率的形式返还给您。\n\n第三方服务提供商 Steakhouse Financial 负责监控资金在协议中的分配情况。第三方基础设施提供商 Veda 负责部署和维护存放您资金的金库智能合约。\n\n收益并非由 MetaMask 或 sUSD 发行方支付的利息，而是通过在第三方去中心化金融协议中持仓所产生的链上收益。"
   },
   "moneyHowItWorksFaqYieldQuestion": {
     "message": "收益从何而来？"
@@ -5793,7 +5793,7 @@
     "message": "您通过 Money Account 余额累计赚取的总收益。"
   },
   "moneyMeetMusd": {
-    "message": "了解 mUSD"
+    "message": "了解 sUSD"
   },
   "moneyMonthlyTooltip": {
     "message": "过去 30 天内您通过 Money Account 余额赚取的总收益。"
@@ -5805,7 +5805,7 @@
     "message": "更多选项"
   },
   "moneyMusd": {
-    "message": "mUSD"
+    "message": "sUSD"
   },
   "moneyOnboardingFundTitle": {
     "message": "为您的 Money Account 充值",
@@ -5982,58 +5982,58 @@
   },
   "musdAssetConvertBenefitDailyBonus": {
     "message": "每日奖励",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitDollarBacked": {
     "message": "美元挂钩",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitNoLockups": {
     "message": "无锁仓限制",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitNoMetaMaskFee": {
     "message": "无 MetaMask 手续费",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertDescriptionHighlight": {
     "message": "$1% 年化奖励",
-    "description": "Shown in Figma accent lime (#baf24a) inside the mUSD asset details convert section description. $1 is the APY percentage."
+    "description": "Shown in Figma accent lime (#baf24a) inside the sUSD asset details convert section description. $1 is the APY percentage."
   },
   "musdAssetConvertDescriptionLead": {
     "message": "获得 ",
-    "description": "Text before the green APY phrase on the mUSD asset details convert section"
+    "description": "Text before the green APY phrase on the sUSD asset details convert section"
   },
   "musdAssetConvertDescriptionTail": {
-    "message": " 通过将 USDC、USDT 和 DAI 兑换为 mUSD。",
-    "description": "Text after the green APY phrase on the mUSD asset details convert section"
+    "message": " 通过将 USDC、USDT 和 DAI 兑换为 sUSD。",
+    "description": "Text after the green APY phrase on the sUSD asset details convert section"
   },
   "musdAssetConvertLearnMore": {
     "message": "了解更多。",
-    "description": "Button to open the mUSD support article from the asset details convert section"
+    "description": "Button to open the sUSD support article from the asset details convert section"
   },
   "musdAssetConvertTitle": {
     "message": "兑换您的稳定币",
-    "description": "Title of the convert section on the mUSD asset details page"
+    "description": "Title of the convert section on the sUSD asset details page"
   },
   "musdAssetPositionBalance": {
     "message": "余额",
-    "description": "Label in the mUSD asset details Your position section"
+    "description": "Label in the sUSD asset details Your position section"
   },
   "musdAssetPositionTitle": {
     "message": "您的排名",
-    "description": "Section title on the mUSD asset details page"
+    "description": "Section title on the sUSD asset details page"
   },
   "musdAssetPositionValue": {
     "message": "值",
-    "description": "Label in the mUSD asset details Your position section (fiat value)"
+    "description": "Label in the sUSD asset details Your position section (fiat value)"
   },
   "musdBonusExplanation": {
-    "message": "将您的稳定币兑换为 mUSD，即可赚取高达 $1% 的年化奖励，该奖励每日可领取。$2",
+    "message": "将您的稳定币兑换为 sUSD，即可赚取高达 $1% 的年化奖励，该奖励每日可领取。$2",
     "description": "$1 is the bonus APY percentage, $2 is the 'Terms apply' link"
   },
   "musdBoostDescription": {
-    "message": "将您的稳定币兑换为 mUSD，即可获得 $1% 的年化奖励。",
+    "message": "将您的稳定币兑换为 sUSD，即可获得 $1% 的年化奖励。",
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
   "musdBoostTitle": {
@@ -6041,29 +6041,29 @@
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
   "musdBuyMusd": {
-    "message": "购买 mUSD"
+    "message": "购买 sUSD"
   },
   "musdClaimTitle": {
     "message": "领取奖励",
-    "description": "Title for the mUSD bonus claim confirmation screen"
+    "description": "Title for the sUSD bonus claim confirmation screen"
   },
   "musdConversionFeeTooltipDescription": {
-    "message": "mUSD 兑换费用包含网络费用，并可能包含提供商费用。兑换为 mUSD 时，MetaMask 不收取任何费用。",
-    "description": "Body text shown above the fee breakdown in the transaction fee tooltip for mUSD conversion"
+    "message": "sUSD 兑换费用包含网络费用，并可能包含提供商费用。兑换为 sUSD 时，MetaMask 不收取任何费用。",
+    "description": "Body text shown above the fee breakdown in the transaction fee tooltip for sUSD conversion"
   },
   "musdConversionTitle": {
-    "message": "已兑换为 mUSD",
-    "description": "Title shown in the transaction details modal for mUSD conversion transactions"
+    "message": "已兑换为 sUSD",
+    "description": "Title shown in the transaction details modal for sUSD conversion transactions"
   },
   "musdConversionToastFailed": {
-    "message": "mUSD 兑换失败"
+    "message": "sUSD 兑换失败"
   },
   "musdConversionToastInProgress": {
-    "message": "正在将 $1 兑换为 mUSD",
+    "message": "正在将 $1 兑换为 sUSD",
     "description": "$1 is the source token symbol (e.g., USDC)"
   },
   "musdConversionToastSuccess": {
-    "message": "mUSD 兑换成功"
+    "message": "sUSD 兑换成功"
   },
   "musdConversionToastSuccessDescription": {
     "message": "奖励将在一天内可领取。"
@@ -6082,11 +6082,11 @@
     "message": "暂时不"
   },
   "musdGetMusd": {
-    "message": "获取 mUSD"
+    "message": "获取 sUSD"
   },
   "musdSymbol": {
-    "message": "mUSD",
-    "description": "Token ticker for MetaMask USD (displayed next to balance on the mUSD asset details page)"
+    "message": "sUSD",
+    "description": "Token ticker for Swissquote USD (displayed next to balance on the sUSD asset details page)"
   },
   "musdTermsApply": {
     "message": "具体条款适用。"
@@ -8558,7 +8558,7 @@
     "message": "提现已提交"
   },
   "perpsWithdrawTooltip": {
-    "message": "MetaMask 将为您兑换为您想要的代币。兑换至 mUSD 时，MetaMask 不收取任何费用。",
+    "message": "MetaMask 将为您兑换为您想要的代币。兑换至 sUSD 时，MetaMask 不收取任何费用。",
     "description": "Tooltip shown on the Transaction fee row of the Perps Withdraw confirmation"
   },
   "perpsWithdrawalEmptyTitle": {

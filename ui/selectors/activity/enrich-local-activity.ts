@@ -1,8 +1,8 @@
 import {
   MUSD_DECIMALS,
-  MUSD_TOKEN,
   MUSD_TOKEN_ASSET_ID_BY_CHAIN,
 } from '@metamask/money-account-utils';
+import { MUSD_TOKEN } from '../../components/app/musd/constants';
 import { TransactionType } from '@metamask/transaction-controller';
 import type {
   ActivityListItem,

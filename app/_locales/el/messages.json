@@ -296,10 +296,10 @@
     "message": "Η διεκδίκηση απέτυχε"
   },
   "activity_claimMusdBonus_pending_title": {
-    "message": "Διεκδίκηση μπόνους mUSD"
+    "message": "Διεκδίκηση μπόνους sUSD"
   },
   "activity_claimMusdBonus_success_title": {
-    "message": "Η διεκδίκηση του μπόνους mUSD ολοκληρώθηκε"
+    "message": "Η διεκδίκηση του μπόνους sUSD ολοκληρώθηκε"
   },
   "activity_claim_failed_description": {
     "message": "Η διεκδίκηση απέτυχε"
@@ -1995,7 +1995,7 @@
     "message": "Ανοίξτε τη σελίδα DeFi"
   },
   "basicFunctionalityRequired_openMusdConversionPage": {
-    "message": "Ανοίξτε τη σελίδα Μετατροπή σε mUSD"
+    "message": "Ανοίξτε τη σελίδα Μετατροπή σε sUSD"
   },
   "basicFunctionalityRequired_openNotificationsPage": {
     "message": "Ανοίξτε τη σελίδα Ειδοποιήσεις"
@@ -5387,15 +5387,15 @@
     "message": "σημείωση"
   },
   "merklRewardsToastFailed": {
-    "message": "Το αίτημα εξαργύρωσης του μπόνους σας σε mUSD απέτυχε",
+    "message": "Το αίτημα εξαργύρωσης του μπόνους σας σε sUSD απέτυχε",
     "description": "Toast message shown when a Merkl reward claim transaction fails or is dropped"
   },
   "merklRewardsToastInProgress": {
-    "message": "Γίνεται επεξεργασία του μπόνους σας σε mUSD",
+    "message": "Γίνεται επεξεργασία του μπόνους σας σε sUSD",
     "description": "Toast message shown when a Merkl reward claim transaction is being processed"
   },
   "merklRewardsToastSuccess": {
-    "message": "Το μπόνους σας σε mUSD είναι εδώ!",
+    "message": "Το μπόνους σας σε sUSD είναι εδώ!",
     "description": "Toast message shown when a Merkl reward claim transaction is confirmed"
   },
   "message": {
@@ -5565,7 +5565,7 @@
     "message": "Δεν ήταν δυνατή η φόρτωση της δραστηριότητάς σας"
   },
   "moneyActivityMusdBack": {
-    "message": "Επιστροφή σε mUSD"
+    "message": "Επιστροφή σε sUSD"
   },
   "moneyActivityPending": {
     "message": "Εκκρεμεί"
@@ -5611,7 +5611,7 @@
     "message": "$1 APY"
   },
   "moneyBalanceInfoBody": {
-    "message": "Το υπόλοιπό σας σε mUSD, με υποστήριξη από το δολάριο, και αποφέρει πάντα κέρδη. Το ποσό αυτό δεν περιλαμβάνεται στο συνολικό υπόλοιπο του λογαριασμού σας."
+    "message": "Το υπόλοιπό σας σε sUSD, με υποστήριξη από το δολάριο, και αποφέρει πάντα κέρδη. Το ποσό αυτό δεν περιλαμβάνεται στο συνολικό υπόλοιπο του λογαριασμού σας."
   },
   "moneyBalanceInfoWithdrawals": {
     "message": "Οι αναλήψεις διεκπεραιώνονται άμεσα, με την επιφύλαξη των τυπικών χρόνων επιβεβαίωσης του δικτύου στο αντίστοιχο blockchain. Αν η ρευστότητα είναι περιορισμένη, ενδέχεται να υπάρξουν προσωρινές καθυστερήσεις."
@@ -5620,7 +5620,7 @@
     "message": "Υπόλοιπο κατά την τελευταία ενημέρωση"
   },
   "moneyBalanceMusdLabel": {
-    "message": "mUSD"
+    "message": "sUSD"
   },
   "moneyBalanceRetry": {
     "message": "Επανάληψη"
@@ -5636,7 +5636,7 @@
   },
   "moneyBenefitAutoEarnWithApy": {
     "message": "Κερδίστε έως $1 αυτόματα",
-    "description": "$1 is the current mUSD APY (e.g. ~4.2% APY)."
+    "description": "$1 is the current sUSD APY (e.g. ~4.2% APY)."
   },
   "moneyBenefitLiquidity": {
     "message": "Πλήρης ρευστότητα χωρίς δεσμεύσεις, ώστε να μπορείτε να κάνετε συναλλαγές ή ανάληψη οποιαδήποτε στιγμή"
@@ -5645,7 +5645,7 @@
     "message": "Στείλτε σε οποιοδήποτε από τα πορτοφόλια σας στο MetaMask"
   },
   "moneyBenefitStablecoin": {
-    "message": "Κρατήστε τα χρήματά σας ασφαλή σε mUSD, ένα stablecoin με αναλογία 1:1 σε δολάρια"
+    "message": "Κρατήστε τα χρήματά σας ασφαλή σε sUSD, ένα stablecoin με αναλογία 1:1 σε δολάρια"
   },
   "moneyBenefits": {
     "message": "Ανταμοιβές"
@@ -5663,7 +5663,7 @@
     "message": "Κερδίστε από τα κρυπτονομίσματά σας"
   },
   "moneyEarnOnCryptoDescription": {
-    "message": "Δείτε πώς τα χρήματά σας μπορούν να αυξηθούν με τον χρόνο, μετατρέποντας τα κρυπτονομίσματά σας σε mUSD."
+    "message": "Δείτε πώς τα χρήματά σας μπορούν να αυξηθούν με τον χρόνο, μετατρέποντας τα κρυπτονομίσματά σας σε sUSD."
   },
   "moneyEarnOnCryptoDescriptionMiddle": {
     "message": "σε περιουσιακά στοιχεία και θα μπορούσατε να κερδίσετε έως και"
@@ -5710,15 +5710,15 @@
     "message": "Πώς λειτουργεί"
   },
   "moneyHowItWorksDescription": {
-    "message": "Προσθέστε mUSD και το υπόλοιπό σας σε δολάρια είναι έτοιμο για αγορές, συναλλαγές ή μεταφορές ανά πάσα στιγμή."
+    "message": "Προσθέστε sUSD και το υπόλοιπό σας σε δολάρια είναι έτοιμο για αγορές, συναλλαγές ή μεταφορές ανά πάσα στιγμή."
   },
   "moneyHowItWorksDescription1": {
     "message": "Μετατρέψτε οποιοδήποτε κρυπτονόμισμα στον Money account σας και κερδίστε αυτόματα έως και $1 APY (μεταβλητό). Τα κεφάλαια τοποθετούνται σε ένα DeFi vault που διαχειρίζεται η Veda, με παρακολούθηση κινδύνων από τη Steakhouse Financial. Η απόδοση προκύπτει από πλατφόρμες DeFi τρίτων που χρησιμοποιούν τα κεφάλαια σε πρωτόκολλα blockchain. Χωρίς δέσμευση κρυπτονομισμάτων, χωρίς διεκδίκηση αποδόσεων, χωρίς κλείδωμα κεφαλαίων.",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksDescriptionWithApy": {
-    "message": "Προσθέστε mUSD και κερδίστε έως και $1. Το υπόλοιπό σας σε δολάρια είναι έτοιμο για αγορές, συναλλαγές ή μεταφορές ανά πάσα στιγμή.",
-    "description": "$1 is the current mUSD APY."
+    "message": "Προσθέστε sUSD και κερδίστε έως και $1. Το υπόλοιπό σας σε δολάρια είναι έτοιμο για αγορές, συναλλαγές ή μεταφορές ανά πάσα στιγμή.",
+    "description": "$1 is the current sUSD APY."
   },
   "moneyHowItWorksDisclosuresBody": {
     "message": "Ο Money Account δεν αποτελεί τραπεζικό λογαριασμό, λογαριασμό αποταμίευσης ή ασφαλισμένο καταθετικό προϊόν. Η ετήσια απόδοση (APY) είναι μεταβλητή και δεν είναι εγγυημένη. Ο Money Account περιλαμβάνει κινδύνους από έξυπνα συμβόλαια, πρωτόκολλα, ρευστότητα και άλλους παράγοντες, και ενδέχεται να χάσετε μέρος ή το σύνολο των κεφαλαίων σας. Υπόκειται σε τοπικούς περιορισμούς. Ισχύουν όροι."
@@ -5728,7 +5728,7 @@
   },
   "moneyHowItWorksFaqApyAnswer": {
     "message": "Έως και $1 APY. Το επιτόκιο είναι μεταβλητό και μεταβάλλεται ανάλογα με τις συνθήκες της αγοράς. Το τρέχον επιτόκιο εμφανίζεται πάντα στον Money account σας.",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqApyQuestion": {
     "message": "Πόσα μπορώ να κερδίσω με έναν Money Account στο MetaMask;"
@@ -5758,8 +5758,8 @@
     "message": "Μπορώ να κάνω ανάληψη από τον Money Account στο MetaMask οποιαδήποτε στιγμή;"
   },
   "moneyHowItWorksFaqMoneyAccountAnswer": {
-    "message": "Λογαριασμός με μεταβλητό APY έως και $1. Καταθέτετε κεφάλαια, τα οποία διατηρούνται στον λογαριασμό ως mUSD και αποφέρουν έως και $1 APY. Το mUSD είναι το stablecoin του MetaMask με υποστήριξη σε δολάρια. Μπορείτε να χρησιμοποιήσετε ή να κάνετε ανάληψη των κεφαλαίων σας οποιαδήποτε στιγμή, χωρίς ποινές.",
-    "description": "$1 is the current mUSD APY, including the percent sign."
+    "message": "Λογαριασμός με μεταβλητό APY έως και $1. Καταθέτετε κεφάλαια, τα οποία διατηρούνται στον λογαριασμό ως sUSD και αποφέρουν έως και $1 APY. Το sUSD είναι το stablecoin του MetaMask με υποστήριξη σε δολάρια. Μπορείτε να χρησιμοποιήσετε ή να κάνετε ανάληψη των κεφαλαίων σας οποιαδήποτε στιγμή, χωρίς ποινές.",
+    "description": "$1 is the current sUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqMoneyAccountQuestion": {
     "message": "Τι είναι ένας Money Account στο MetaMask;"
@@ -5775,7 +5775,7 @@
     "message": "Ποια tokens μπορώ να καταθέσω στον Money Account;"
   },
   "moneyHowItWorksFaqYieldAnswer": {
-    "message": "Όταν καταθέτετε κεφάλαια, αυτά τοποθετούνται σε καθιερωμένα πρωτόκολλα με αποκεντρωμένη χρηματοδότηση (DeFi), όπως το Aave και το Morpho, όπου αποφέρουν αποδόσεις από πραγματική οικονομική δραστηριότητα. Οι αποδόσεις αυτές καταβάλλονται σε εσάς με τη μορφή της ετήσιας απόδοσης (APY).\n\nΈνας τρίτος πάροχος υπηρεσιών, η Steakhouse Financial, παρακολουθεί τον τρόπο με τον οποίο κατανέμονται τα κεφάλαια στα πρωτόκολλα. Η Veda, ένας τρίτος πάροχος υποδομών, αναπτύσσει και διατηρεί τα έξυπνα συμβόλαια στο θησαυροφυλάκιο (vault) όπου φυλάσσονται τα κεφάλαιά σας.\n\nΟι αποδόσεις δεν αποτελούν τόκο που καταβάλλεται από τo MetaMask ή από τον εκδότη των mUSD. Πρόκειται για αποδόσεις στο blockchain που παράγονται από θέσεις σε τρίτα πρωτόκολλα με αποκεντρωμένη χρηματοδότηση (DeFi)."
+    "message": "Όταν καταθέτετε κεφάλαια, αυτά τοποθετούνται σε καθιερωμένα πρωτόκολλα με αποκεντρωμένη χρηματοδότηση (DeFi), όπως το Aave και το Morpho, όπου αποφέρουν αποδόσεις από πραγματική οικονομική δραστηριότητα. Οι αποδόσεις αυτές καταβάλλονται σε εσάς με τη μορφή της ετήσιας απόδοσης (APY).\n\nΈνας τρίτος πάροχος υπηρεσιών, η Steakhouse Financial, παρακολουθεί τον τρόπο με τον οποίο κατανέμονται τα κεφάλαια στα πρωτόκολλα. Η Veda, ένας τρίτος πάροχος υποδομών, αναπτύσσει και διατηρεί τα έξυπνα συμβόλαια στο θησαυροφυλάκιο (vault) όπου φυλάσσονται τα κεφάλαιά σας.\n\nΟι αποδόσεις δεν αποτελούν τόκο που καταβάλλεται από τo MetaMask ή από τον εκδότη των sUSD. Πρόκειται για αποδόσεις στο blockchain που παράγονται από θέσεις σε τρίτα πρωτόκολλα με αποκεντρωμένη χρηματοδότηση (DeFi)."
   },
   "moneyHowItWorksFaqYieldQuestion": {
     "message": "Από πού προέρχεται η απόδοση;"
@@ -5793,7 +5793,7 @@
     "message": "Τα συνολικά κέρδη σας από το υπόλοιπο του λογαριασμού Money μέχρι σήμερα."
   },
   "moneyMeetMusd": {
-    "message": "Μάθετε για τα mUSD"
+    "message": "Μάθετε για τα sUSD"
   },
   "moneyMonthlyTooltip": {
     "message": "Τα συνολικά κέρδη σας από το υπόλοιπο του λογαριασμού Money τις τελευταίες 30 ημέρες."
@@ -5805,7 +5805,7 @@
     "message": "Περισσότερες επιλογές"
   },
   "moneyMusd": {
-    "message": "mUSD"
+    "message": "sUSD"
   },
   "moneyOnboardingFundTitle": {
     "message": "Χρηματοδοτήστε τον Money Account σας",
@@ -5982,58 +5982,58 @@
   },
   "musdAssetConvertBenefitDailyBonus": {
     "message": "Καθημερινό μπόνους",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitDollarBacked": {
     "message": "Με στήριξη από το δολάριο",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitNoLockups": {
     "message": "Χωρίς δεσμεύσεις",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertBenefitNoMetaMaskFee": {
     "message": "Χωρίς χρεώσεις από το MetaMask",
-    "description": "Benefit tag on the mUSD asset details convert section"
+    "description": "Benefit tag on the sUSD asset details convert section"
   },
   "musdAssetConvertDescriptionHighlight": {
     "message": "$1% ετήσιο μπόνους",
-    "description": "Shown in Figma accent lime (#baf24a) inside the mUSD asset details convert section description. $1 is the APY percentage."
+    "description": "Shown in Figma accent lime (#baf24a) inside the sUSD asset details convert section description. $1 is the APY percentage."
   },
   "musdAssetConvertDescriptionLead": {
     "message": "Αποκτήστε ",
-    "description": "Text before the green APY phrase on the mUSD asset details convert section"
+    "description": "Text before the green APY phrase on the sUSD asset details convert section"
   },
   "musdAssetConvertDescriptionTail": {
-    "message": " μετατρέποντας USDC, USDT και DAI σε mUSD.",
-    "description": "Text after the green APY phrase on the mUSD asset details convert section"
+    "message": " μετατρέποντας USDC, USDT και DAI σε sUSD.",
+    "description": "Text after the green APY phrase on the sUSD asset details convert section"
   },
   "musdAssetConvertLearnMore": {
     "message": "Μάθε περισσότερα",
-    "description": "Button to open the mUSD support article from the asset details convert section"
+    "description": "Button to open the sUSD support article from the asset details convert section"
   },
   "musdAssetConvertTitle": {
     "message": "Μετατρέψτε τα stablecoins σας",
-    "description": "Title of the convert section on the mUSD asset details page"
+    "description": "Title of the convert section on the sUSD asset details page"
   },
   "musdAssetPositionBalance": {
     "message": "Υπόλοιπο",
-    "description": "Label in the mUSD asset details Your position section"
+    "description": "Label in the sUSD asset details Your position section"
   },
   "musdAssetPositionTitle": {
     "message": "Η θέση σας",
-    "description": "Section title on the mUSD asset details page"
+    "description": "Section title on the sUSD asset details page"
   },
   "musdAssetPositionValue": {
     "message": "Αξία",
-    "description": "Label in the mUSD asset details Your position section (fiat value)"
+    "description": "Label in the sUSD asset details Your position section (fiat value)"
   },
   "musdBonusExplanation": {
-    "message": "Μετατρέψτε τα stablecoins σας σε mUSD και κερδίστε \nέως και $1% μπόνους ετησίως, το οποίο μπορείτε \nνα εξαργυρώσετε καθημερινά. $2",
+    "message": "Μετατρέψτε τα stablecoins σας σε sUSD και κερδίστε \nέως και $1% μπόνους ετησίως, το οποίο μπορείτε \nνα εξαργυρώσετε καθημερινά. $2",
     "description": "$1 is the bonus APY percentage, $2 is the 'Terms apply' link"
   },
   "musdBoostDescription": {
-    "message": "Μετατρέψτε τα stablecoins σας σε mUSD και λάβετε $1% μπόνους ετησίως.",
+    "message": "Μετατρέψτε τα stablecoins σας σε sUSD και λάβετε $1% μπόνους ετησίως.",
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
   "musdBoostTitle": {
@@ -6041,29 +6041,29 @@
     "description": "$1 is the bonus percentage (e.g., 3)"
   },
   "musdBuyMusd": {
-    "message": "Αγοράστε mUSD"
+    "message": "Αγοράστε sUSD"
   },
   "musdClaimTitle": {
     "message": "Εξαργύρωση μπόνους",
-    "description": "Title for the mUSD bonus claim confirmation screen"
+    "description": "Title for the sUSD bonus claim confirmation screen"
   },
   "musdConversionFeeTooltipDescription": {
-    "message": "Τα τέλη μετατροπής σε mUSD περιλαμβάνουν τα έξοδα δικτύου και ενδέχεται να περιλαμβάνουν τα τέλη παρόχου. Δεν υπάρχει χρέωση στο MetaMask όταν μετατρέπετε σε mUSD.",
-    "description": "Body text shown above the fee breakdown in the transaction fee tooltip for mUSD conversion"
+    "message": "Τα τέλη μετατροπής σε sUSD περιλαμβάνουν τα έξοδα δικτύου και ενδέχεται να περιλαμβάνουν τα τέλη παρόχου. Δεν υπάρχει χρέωση στο MetaMask όταν μετατρέπετε σε sUSD.",
+    "description": "Body text shown above the fee breakdown in the transaction fee tooltip for sUSD conversion"
   },
   "musdConversionTitle": {
-    "message": "Έγινε μετατροπή σε mUSD",
-    "description": "Title shown in the transaction details modal for mUSD conversion transactions"
+    "message": "Έγινε μετατροπή σε sUSD",
+    "description": "Title shown in the transaction details modal for sUSD conversion transactions"
   },
   "musdConversionToastFailed": {
-    "message": "Η μετατροπή σε mUSD απέτυχε"
+    "message": "Η μετατροπή σε sUSD απέτυχε"
   },
   "musdConversionToastInProgress": {
-    "message": "Μετατροπή $1 → mUSD",
+    "message": "Μετατροπή $1 → sUSD",
     "description": "$1 is the source token symbol (e.g., USDC)"
   },
   "musdConversionToastSuccess": {
-    "message": "Η μετατροπή σε mUSD ολοκληρώθηκε με επιτυχία"
+    "message": "Η μετατροπή σε sUSD ολοκληρώθηκε με επιτυχία"
   },
   "musdConversionToastSuccessDescription": {
     "message": "Το μπόνους θα είναι διαθέσιμο για εξαργύρωση μέσα σε μία ημέρα."
@@ -6082,11 +6082,11 @@
     "message": "Όχι τώρα"
   },
   "musdGetMusd": {
-    "message": "Αποκτήστε mUSD"
+    "message": "Αποκτήστε sUSD"
   },
   "musdSymbol": {
-    "message": "mUSD",
-    "description": "Token ticker for MetaMask USD (displayed next to balance on the mUSD asset details page)"
+    "message": "sUSD",
+    "description": "Token ticker for Swissquote USD (displayed next to balance on the sUSD asset details page)"
   },
   "musdTermsApply": {
     "message": "Ισχύουν όροι."
@@ -8552,7 +8552,7 @@
     "message": "Το αίτημα ανάληψης υποβλήθηκε"
   },
   "perpsWithdrawTooltip": {
-    "message": "Το MetaMask θα κάνει ανταλλαγή στο token που θέλετε. Δεν υπάρχει χρέωση στο MetaMask όταν κάνετε ανταλλαγή σε mUSD.",
+    "message": "Το MetaMask θα κάνει ανταλλαγή στο token που θέλετε. Δεν υπάρχει χρέωση στο MetaMask όταν κάνετε ανταλλαγή σε sUSD.",
     "description": "Tooltip shown on the Transaction fee row of the Perps Withdraw confirmation"
   },
   "perpsWithdrawalEmptyTitle": {

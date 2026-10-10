@@ -1,4 +1,5 @@
 import log from 'loglevel';
+import { installSusdBranding } from '../shared/lib/swissquote/susd-branding';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import browser from 'webextension-polyfill';
@@ -62,6 +63,9 @@ import {
   markPerpsLifecycleWarm,
 } from './helpers/perps/entry-trace';
 import { createUIMessenger } from './messengers/ui-messenger';
+
+// Swissquote Wallet: show MetaMask's mUSD as sUSD everywhere (see susd-branding).
+installSusdBranding();
 
 export { CriticalStartupErrorHandler } from './helpers/utils/critical-startup-error-handler';
 export {

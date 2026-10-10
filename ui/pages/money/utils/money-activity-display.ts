@@ -3,8 +3,8 @@ import {
   isMusdOnMoneyAccountChain,
   isMusdToken,
   MUSD_DECIMALS,
-  MUSD_TOKEN,
 } from '@metamask/money-account-utils';
+import { MUSD_TOKEN } from '../../../components/app/musd/constants';
 import type { IconName as IconNameType } from '@metamask/design-system-react';
 import { IconName } from '@metamask/design-system-react';
 import BigNumber from 'bignumber.js';
@@ -25,7 +25,7 @@ import {
   type MoneyActivityStatus,
 } from './classify-money-activity';
 
-export const MUSD_DISPLAY_SYMBOL = 'mUSD';
+export const MUSD_DISPLAY_SYMBOL = 'sUSD';
 
 export type MoneyActivityTranslate = (key: string, args?: string[]) => string;
 

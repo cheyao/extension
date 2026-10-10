@@ -81,8 +81,8 @@ export const useCustomAmount = ({
     if (!shouldShowOutputAmountTag) {
       return null;
     }
-    // For mUSD conversion, the output symbol is always mUSD
-    return 'mUSD';
+    // The conversion output is mUSD under the hood, shown as sUSD.
+    return 'sUSD';
   }, [shouldShowOutputAmountTag]);
 
   return {
