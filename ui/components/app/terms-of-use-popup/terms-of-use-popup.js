@@ -121,14 +121,12 @@ export default function TermsOfUsePopup({ onClose, onAccept }) {
               PLEASE READ THE AGREEMENT CAREFULLY.
             </Text>
             <Text variant={TextVariant.bodySm} marginBottom={4}>
-              ConsenSys Software Inc. (“ConsenSys,” “we,” “us,” or “our”) is the
-              leading blockchain software development company. With a focus on
-              utilizing decentralized technologies, such as Ethereum, our
-              software is powering a revolution in commerce and finance and
-              helping to optimize business processes. ConsenSys hosts a top
-              level domain website, www.consensys.io, that serves information
-              regarding ConsenSys and our Offerings, as defined below, as well
-              as sub-domains for our products or services (the top level domain
+              Swissquote (“Swissquote,” “we,” “us,” or “our”) provides online
+              banking and trading services, including the Swissquote Wallet
+              self-custodial crypto wallet. Swissquote hosts a top level domain
+              website, www.swissquote.com, that serves information regarding
+              Swissquote and our Offerings, as defined below, as well as
+              sub-domains for our products or services (the top level domain
               with the sub-domains collectively referred to as the “Site”),
               which include text, images, audio, code and other materials or
               third party information.&nbsp;
@@ -146,11 +144,11 @@ export default function TermsOfUsePopup({ onClose, onAccept }) {
               otherwise accessing the Offerings (the date on which any of the
               events listed above occur being the “Effective Date”), you (1)
               accept and agree to these Terms and any additional terms, rules
-              and conditions of participation issued by ConsenSys from time to
+              and conditions of participation issued by Swissquote from time to
               time and (2) consent to the collection, use, disclosure and other
               handling of information as described in our{' '}
               <ButtonLink
-                href="https://consensys.io/privacy-policy/"
+                href="https://www.swissquote.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 color={TextColor.primaryDefault}
@@ -194,15 +192,15 @@ export default function TermsOfUsePopup({ onClose, onAccept }) {
               use of the Offerings.
             </Text>
             <Text variant={TextVariant.bodySm} marginBottom={4}>
-              1.2 Offerings and Access. ConsenSys offers a number of products
-              and services, each an “Offering”, under the ConsenSys brand or
-              brands owned by us. These include Codefi, Quorum, Infura, MetaMask
-              and others. Offerings are generally accessed through the Site or
-              through a third party provider of which we approved, such as the
-              Google Play or Apple App Store, unless otherwise agreed in
-              writing. Some Offerings may require you to create an account,
-              enter a valid form of payment, and select a paid plan (a “Paid
-              Plan”), or initiate an Order.&nbsp;
+              1.2 Offerings and Access. Swissquote offers a number of products
+              and services, each an “Offering”, under the Swissquote brand or
+              brands owned by us. These include Swissquote Wallet and others.
+              Offerings are generally accessed through the Site or through a
+              third party provider of which we approved, such as the Google Play
+              or Apple App Store, unless otherwise agreed in writing. Some
+              Offerings may require you to create an account, enter a valid form
+              of payment, and select a paid plan (a “Paid Plan”), or initiate an
+              Order.&nbsp;
             </Text>
             <Text variant={TextVariant.bodySm} marginBottom={4}>
               1.3 Third-Party Content. In certain Offerings, Third-Party Content
@@ -302,11 +300,12 @@ export default function TermsOfUsePopup({ onClose, onAccept }) {
               and subcontractors performing work on your behalf.
             </Text>
             <Text variant={TextVariant.bodySm} marginBottom={4}>
-              3.5 Applicability to MetaMask Offerings. For the avoidance of
-              doubt, the terms of this Section 3 are applicable to all
-              Offerings, including MetaMask and any accounts you create through
-              MetaMask with Third Party Offerings, such as decentralized
-              applications, or blockchain-based accounts themselves.
+              3.5 Applicability to Swissquote Wallet Offerings. For the
+              avoidance of doubt, the terms of this Section 3 are applicable to
+              all Offerings, including Swissquote Wallet and any accounts you
+              create through Swissquote Wallet with Third Party Offerings, such
+              as decentralized applications, or blockchain-based accounts
+              themselves.
             </Text>
             <Text variant={TextVariant.bodyLgMedium} marginBottom={4}>
               4. Fees and Payment.
@@ -587,7 +586,7 @@ export default function TermsOfUsePopup({ onClose, onAccept }) {
             </Text>
             <Text variant={TextVariant.bodySm} marginBottom={4}>
               (a) Subject to the limitations in this Section 8, you will defend
-              ConsenSys, its affiliates, and their respective employees,
+              Swissquote, its affiliates, and their respective employees,
               officers, and directors against any third-party claim alleging
               that any of Your Content infringes or misappropriates that third
               party’s intellectual property rights, and will pay the amount of
@@ -661,7 +660,7 @@ export default function TermsOfUsePopup({ onClose, onAccept }) {
               RESULT IN LOSSES IF YOUR PARTICIPATION VIOLATES CERTAIN PROTOCOL
               RULES, THAT&nbsp; BLOCKCHAIN-BASED TRANSACTIONS ARE IRREVERSIBLE,
               THAT YOUR PRIVATE KEY AND BACKUP SEED PHRASE MUST BE KEPT SECRET
-              AT ALL TIMES, THAT CONSENSYS WILL NOT STORE A BACKUP OF, NOR WILL
+              AT ALL TIMES, THAT SWISSQUOTE WILL NOT STORE A BACKUP OF, NOR WILL
               BE ABLE TO DISCOVER OR RECOVER, YOUR PRIVATE KEY OR BACKUP SEED
               PHRASE, AND THAT YOU ARE SOLELY RESPONSIBLE FOR ANY APPROVALS OR
               PERMISSIONS YOU PROVIDE BY CRYPTOGRAPHICALLY SIGNING BLOCKCHAIN
@@ -673,28 +672,28 @@ export default function TermsOfUsePopup({ onClose, onAccept }) {
               RISKS, AND CYBERSECURITY RISKS.&nbsp; YOU UNDERSTAND THAT THE COST
               AND SPEED OF A BLOCKCHAIN-BASED SYSTEM IS VARIABLE, THAT COST MAY
               INCREASE DRAMATICALLY AT ANY TIME, AND THAT COST AND SPEED IS NOT
-              WITHIN THE CAPABILITY OF CONSENSYS TO CONTROL.&nbsp; YOU
+              WITHIN THE CAPABILITY OF SWISSQUOTE TO CONTROL.&nbsp; YOU
               UNDERSTAND THAT PROTOCOL UPGRADES MAY INADVERTENTLY CONTAIN BUGS
               OR SECURITY VULNERABILITIES THAT MAY RESULT IN LOSS OF
               FUNCTIONALITY AND ULTIMATELY FUNDS.
             </Text>
             <Text variant={TextVariant.bodySm} marginBottom={4}>
-              YOU UNDERSTAND AND ACCEPT THAT CONSENSYS DOES NOT CONTROL ANY
-              BLOCKCHAIN PROTOCOL, NOR DOES CONSENSYS CONTROL ANY SMART CONTRACT
-              THAT IS NOT OTHERWISE OFFERED BY CONSENSYS AS PART OF THE
-              OFFERINGS.&nbsp; YOU UNDERSTAND AND ACCEPT THAT CONSENSYS DOES NOT
-              CONTROL AND IS NOT RESPONSIBLE FOR THE TRANSITION OF ANY
+              YOU UNDERSTAND AND ACCEPT THAT SWISSQUOTE DOES NOT CONTROL ANY
+              BLOCKCHAIN PROTOCOL, NOR DOES SWISSQUOTE CONTROL ANY SMART
+              CONTRACT THAT IS NOT OTHERWISE OFFERED BY SWISSQUOTE AS PART OF
+              THE OFFERINGS.&nbsp; YOU UNDERSTAND AND ACCEPT THAT SWISSQUOTE
+              DOES NOT CONTROL AND IS NOT RESPONSIBLE FOR THE TRANSITION OF ANY
               BLOCKCHAIN PROTOCOL FROM PROOF OF WORK TO PROOF OF STAKE
-              CONSENSUS.&nbsp; YOU AGREE THAT YOU ALONE, AND NOT CONSENSYS, IS
+              CONSENSUS.&nbsp; YOU AGREE THAT YOU ALONE, AND NOT SWISSQUOTE, IS
               RESPONSIBLE FOR ANY TRANSACTIONS THAT YOU ENGAGE IN WITH REGARD TO
               SUPPORTING ANY BLOCKCHAIN PROTOCOL WHETHER THROUGH TRANSACTION
               VALIDATION OR OTHERWISE, OR ANY TRANSACTIONS THAT YOU ENGAGE IN
               WITHANY THIRD-PARTY-DEVELOPED SMART CONTRACT OR TOKEN, INCLUDING
               TOKENS THAT WERE CREATED BY A THIRD PARTY FOR THE PURPOSE OF
               FRAUDULENTLY MISREPRESENTING AFFILIATION WITH ANY BLOCKCHAIN
-              PROJECT.&nbsp; YOU AGREE THAT CONSENSYS IS NOT RESPONSIBLE FOR THE
-              REGULATORY STATUS OR TREATMENT OF ANY DIGITAL ASSETS THAT YOU MAY
-              ACCESS OR TRANSACT WITH USING CONSENSYS OFFERINGS.&nbsp; YOU
+              PROJECT.&nbsp; YOU AGREE THAT SWISSQUOTE IS NOT RESPONSIBLE FOR
+              THE REGULATORY STATUS OR TREATMENT OF ANY DIGITAL ASSETS THAT YOU
+              MAY ACCESS OR TRANSACT WITH USING SWISSQUOTE OFFERINGS.&nbsp; YOU
               EXPRESSLY ASSUME FULL RESPONSIBILITY FOR ALL OF THE RISKS OF
               ACCESSING AND USING THE OFFERINGS TO INTERACT WITH BLOCKCHAIN
               PROTOCOLS.&nbsp;
@@ -849,13 +848,13 @@ export default function TermsOfUsePopup({ onClose, onAccept }) {
               11.3 30-Day Right to Opt Out. You have the right to opt-out and
               not be bound by the arbitration and class action waiver provisions
               set forth above by sending written notice of your decision to
-              opt-out to the email address notices@consensys.net with subject
-              line LEGAL OPT OUT. The notice must be sent within 30 days of your
-              first use of the Offerings, otherwise you shall be bound to
-              arbitrate disputes and will be deemed to have agreed to waive any
-              right to pursue a class action in accordance with the terms of
-              those paragraphs. If you opt-out of these provisions, we will also
-              not be bound by them.
+              opt-out to the email address Swissquote via www.swissquote.com
+              with subject line LEGAL OPT OUT. The notice must be sent within 30
+              days of your first use of the Offerings, otherwise you shall be
+              bound to arbitrate disputes and will be deemed to have agreed to
+              waive any right to pursue a class action in accordance with the
+              terms of those paragraphs. If you opt-out of these provisions, we
+              will also not be bound by them.
             </Text>
             <Text variant={TextVariant.bodyLgMedium} marginBottom={4}>
               12. Miscellaneous.
@@ -879,7 +878,7 @@ export default function TermsOfUsePopup({ onClose, onAccept }) {
               12.2 DAOs. As a blockchain native company, we may interact with
               and provide certain Offerings to DAOs. Due to the unique nature of
               DAOs, to the extent the DAO votes in favor of and/or accepts such
-              Offerings from ConsenSys, the DAO has acknowledged and agreed to
+              Offerings from Swissquote, the DAO has acknowledged and agreed to
               these Terms in their entirety.
             </Text>
             <Text variant={TextVariant.bodySm} marginBottom={4}>
@@ -967,7 +966,7 @@ export default function TermsOfUsePopup({ onClose, onAccept }) {
             </Text>
             <Text variant={TextVariant.bodySm} marginBottom={4}>
               (b) To Us. To give us notice under this Agreement, you must
-              contact us by email at notices@consensys.net.&nbsp;
+              contact us by email at Swissquote via www.swissquote.com.&nbsp;
             </Text>
             <Text variant={TextVariant.bodySm} marginBottom={4}>
               12.9 No Third-Party Beneficiaries. Except as otherwise set forth
@@ -1033,7 +1032,7 @@ export default function TermsOfUsePopup({ onClose, onAccept }) {
               You can reach us at:
             </Text>
             <Text variant={TextVariant.bodySm} marginBottom={4}>
-              Email: notices@consensys.net
+              Contact: via www.swissquote.com
             </Text>
             <Text variant={TextVariant.bodySm} marginBottom={4}>
               Subject Line: Copyright Notification Mail
@@ -1042,10 +1041,10 @@ export default function TermsOfUsePopup({ onClose, onAccept }) {
               Attention: Copyright ℅
             </Text>
             <Text variant={TextVariant.bodySm} marginBottom={4}>
-              ConsenSys Software Inc.&nbsp;
+              Swissquote&nbsp;
             </Text>
             <Text variant={TextVariant.bodySm} marginBottom={4}>
-              49 Bogart Street Suite 22 Brooklyn, NY 11206
+              See www.swissquote.com for our postal address
             </Text>
             <Text variant={TextVariant.bodyLgMedium} marginBottom={4}>
               13. Definitions.
@@ -1137,20 +1136,20 @@ export default function TermsOfUsePopup({ onClose, onAccept }) {
             </Text>
             <Text variant={TextVariant.bodySm} marginBottom={4}>
               “Our Marks” means any trademarks, service marks, service or trade
-              names, logos, and other designations of ConsenSys Software Inc.
-              and their affiliates or licensors that we may make available to
-              you in connection with this Agreement.
+              names, logos, and other designations of Swissquote and their
+              affiliates or licensors that we may make available to you in
+              connection with this Agreement.
             </Text>
             <Text variant={TextVariant.bodySm} marginBottom={4}>
               “Order” means an order for Offerings executed through an order
-              form directly with ConsenSys, or through a cloud vendor, such as
+              form directly with Swissquote, or through a cloud vendor, such as
               Amazon Web Services, Microsoft Azure, or Google Cloud.
             </Text>
             <Text variant={TextVariant.bodySm} marginBottom={4}>
               “Offerings” means each of the products and services, including but
-              not limited to Codefi, Infura, MetaMask, Quorum and any other
-              features, tools, materials, or services offered from time to time,
-              by us or our affiliates.&nbsp;
+              not limited to Swissquote Wallet and any other features, tools,
+              materials, or services offered from time to time, by us or our
+              affiliates.&nbsp;
             </Text>
             <Text variant={TextVariant.bodySm} marginBottom={4}>
               “Policies” means the Acceptable Use Policy, Privacy Policy, any
@@ -1162,13 +1161,13 @@ export default function TermsOfUsePopup({ onClose, onAccept }) {
             <Text variant={TextVariant.bodySm} marginBottom={4}>
               “Privacy Policy” means the privacy policy located at{' '}
               <ButtonLink
-                href="https://consensys.io/privacy-policy"
+                href="https://www.swissquote.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 color={TextColor.primaryDefault}
                 variant={TextVariant.bodySm}
               >
-                https://consensys.io/privacy-policy
+                https://www.swissquote.com
               </ButtonLink>{' '}
               (and any successor or related locations designated by us), as it
               may be updated by us from time to time.
