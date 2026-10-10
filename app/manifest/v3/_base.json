@@ -9,7 +9,7 @@
       "128": "images/icon-128.png",
       "512": "images/icon-512.png"
     },
-    "default_title": "SWallet",
+    "default_title": "Swissquote Wallet",
     "default_popup": "popup-init.html"
   },
   "author": "https://metamask.io",
@@ -93,7 +93,7 @@
   "sandbox": {
     "pages": ["snaps/index.html"]
   },
-  "short_name": "__MSG_appName__",
+  "short_name": "__MSG_appNameShort__",
   "web_accessible_resources": [
     {
       "resources": ["cashtag-widget.html"],

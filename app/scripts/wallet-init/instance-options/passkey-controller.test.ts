@@ -27,11 +27,11 @@ describe('getPasskeyControllerInstanceOptions', () => {
       }),
     ).toStrictEqual({
       rpId: undefined,
-      rpName: 'MetaMask',
+      rpName: 'Swissquote Wallet',
       expectedRPID: 'chrome-extension://mock-id',
       expectedOrigin: 'chrome-extension://mock-id',
-      userName: 'MetaMask Wallet',
-      userDisplayName: 'MetaMask Wallet',
+      userName: 'Swissquote Wallet',
+      userDisplayName: 'Swissquote Wallet',
       getIsOnboardingCompleted: expect.any(Function),
     });
   });
@@ -46,11 +46,11 @@ describe('getPasskeyControllerInstanceOptions', () => {
       }),
     ).toStrictEqual({
       rpId: undefined,
-      rpName: 'MetaMask',
+      rpName: 'Swissquote Wallet',
       expectedRPID: '',
       expectedOrigin: '',
-      userName: 'MetaMask Wallet',
-      userDisplayName: 'MetaMask Wallet',
+      userName: 'Swissquote Wallet',
+      userDisplayName: 'Swissquote Wallet',
       getIsOnboardingCompleted: expect.any(Function),
     });
   });
@@ -65,11 +65,11 @@ describe('getPasskeyControllerInstanceOptions', () => {
       }),
     ).toStrictEqual({
       rpId: undefined,
-      rpName: 'MetaMask',
+      rpName: 'Swissquote Wallet',
       expectedRPID: '',
       expectedOrigin: '',
-      userName: 'MetaMask Wallet',
-      userDisplayName: 'MetaMask Wallet',
+      userName: 'Swissquote Wallet',
+      userDisplayName: 'Swissquote Wallet',
       getIsOnboardingCompleted: expect.any(Function),
     });
   });

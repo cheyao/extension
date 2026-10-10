@@ -1,6 +1,6 @@
 {
   "CSS_loadingTakingTooLongActionText": {
-    "message": "Relaunch MetaMask if the problem persists.",
+    "message": "Relaunch Swissquote Wallet if the problem persists.",
     "description": "Second line of the message that is shown when the initial loading of the MetaMask UI takes a very long time."
   },
   "CSS_loadingTakingTooLongMessageText": {
@@ -52,7 +52,7 @@
     "message": "About"
   },
   "aboutMetaMask": {
-    "message": "About MetaMask"
+    "message": "About Swissquote Wallet"
   },
   "accept": {
     "message": "Accept"
@@ -68,7 +68,7 @@
     "message": "Contact support"
   },
   "accessRestrictedDescriptionLine1": {
-    "message": "This wallet address has been flagged during compliance screening. As a result, some MetaMask services are unavailable."
+    "message": "This wallet address has been flagged during compliance screening. As a result, some Swissquote Wallet services are unavailable."
   },
   "accessRestrictedDescriptionLine2": {
     "message": "If you believe this is an error, contact support to request a review."
@@ -1752,16 +1752,20 @@
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "Swissquote Wallet",
     "description": "The name of the application"
   },
   "appNameBeta": {
-    "message": "MetaMask Beta",
+    "message": "Swissquote Wallet Beta",
     "description": "The name of the application (Beta)"
   },
   "appNameFlask": {
-    "message": "MetaMask Flask",
+    "message": "Swissquote Wallet Flask",
     "description": "The name of the application (Flask)"
+  },
+  "appNameShort": {
+    "message": "SQ Wallet",
+    "description": "A shortened version of the name of the application, used where space is limited"
   },
   "apply": {
     "message": "Apply"
@@ -1848,7 +1852,7 @@
     "message": "Autodetect tokens in your wallet, display NFTs, and get batched account balance updates"
   },
   "asterdexReferralSubtitle": {
-    "message": "Get 4% back on trades with a MetaMask referral code.",
+    "message": "Get 4% back on trades with a Swissquote Wallet referral code.",
     "description": "The subtitle of the AsterDEX referral confirmation screen"
   },
   "attemptToCancelSwapForFree": {
@@ -1925,7 +1929,7 @@
     "description": "$1 is backupAndSyncBasicFunctionalityNameMention in bold."
   },
   "backupAndSyncEnableDescription": {
-    "message": "Backup and sync lets us store encrypted data for your custom settings and features. This keeps your MetaMask experience the same across devices and restores settings and features if you ever need to reinstall MetaMask. This doesn’t back up your Secret Recovery Phrase. $1.",
+    "message": "Backup and sync lets us store encrypted data for your custom settings and features. This keeps your Swissquote Wallet experience the same across devices and restores settings and features if you ever need to reinstall Swissquote Wallet. This doesn’t back up your Secret Recovery Phrase. $1.",
     "description": "$1 is link to the backup and sync privacy policy."
   },
   "backupAndSyncEnableDescriptionUpdatePreferences": {
@@ -1975,7 +1979,7 @@
     "message": "Basic"
   },
   "basicConfigurationDescription": {
-    "message": "MetaMask offers basic features like token details and gas settings through internet services. When you use internet services, your IP address is shared, in this case with MetaMask. This is just like when you visit any website. MetaMask uses this data temporarily and never sells your data. You can use a VPN or turn off these services, but it may affect your MetaMask experience. To learn more read our $1.",
+    "message": "Swissquote Wallet offers basic features like token details and gas settings through internet services. When you use internet services, your IP address is shared, in this case with Swissquote Wallet. This is just like when you visit any website. Swissquote Wallet uses this data temporarily and never sells your data. You can use a VPN or turn off these services, but it may affect your Swissquote Wallet experience. To learn more read our $1.",
     "description": "$1 is to be replaced by the message for privacyMsg, and will link to https://consensys.io/privacy-policy"
   },
   "basicConfigurationDescriptionV2": {
@@ -1989,13 +1993,13 @@
     "message": "I understand and want to continue"
   },
   "basicConfigurationModalDisclaimerOffPart1": {
-    "message": "This means you won't fully optimize your time on MetaMask. Basic features (like token details, optimal gas settings, and others) won't be available to you."
+    "message": "This means you won't fully optimize your time on Swissquote Wallet. Basic features (like token details, optimal gas settings, and others) won't be available to you."
   },
   "basicConfigurationModalDisclaimerOffPart2": {
     "message": "Turning this off also disables some features within privacy, backup and sync, and notifications."
   },
   "basicConfigurationModalDisclaimerOn": {
-    "message": "To optimize your time on MetaMask, you’ll need to turn on this feature. Basic functions (like token details, optimal gas settings, and others) are important to the web3 experience."
+    "message": "To optimize your time on Swissquote Wallet, you’ll need to turn on this feature. Basic functions (like token details, optimal gas settings, and others) are important to the web3 experience."
   },
   "basicConfigurationModalHeadingOff": {
     "message": "Turn off basic functionality"
@@ -2010,7 +2014,7 @@
     "message": "blog post"
   },
   "basicFunctionalityMigrationSocialModalBody1": {
-    "message": "Because you sign in with Google, Apple or Telegram, your email (or Telegram handle) is now saved to your MetaMask profile with your wallet addresses. This keeps your account working consistently across MetaMask features. Basic Functionality stays on for social login accounts. Your keys are still only yours."
+    "message": "Because you sign in with Google, Apple or Telegram, your email (or Telegram handle) is now saved to your Swissquote Wallet profile with your wallet addresses. This keeps your account working consistently across Swissquote Wallet features. Basic Functionality stays on for social login accounts. Your keys are still only yours."
   },
   "basicFunctionalityMigrationSocialModalBody2": {
     "message": "Read more in our $1 and $2.",
@@ -2129,13 +2133,13 @@
     "message": "Best quote"
   },
   "bestQuoteTooltip": {
-    "message": "The best quote we found from providers, including provider fees and a 0.25% MetaMask fee. The minimum you'll receive if price changes is $1."
+    "message": "The best quote we found from providers, including provider fees and a 0.25% Swissquote Wallet fee. The minimum you'll receive if price changes is $1."
   },
   "beta": {
     "message": "Beta"
   },
   "betaMetamaskVersion": {
-    "message": "MetaMask Beta Version"
+    "message": "Swissquote Wallet Beta Version"
   },
   "betaTerms": {
     "message": "Beta Terms of Use"
@@ -2282,7 +2286,7 @@
     "message": "Bridge fee"
   },
   "bridgeFeeDisclaimer": {
-    "message": "Includes $1% MetaMask fee"
+    "message": "Includes $1% Swissquote Wallet fee"
   },
   "bridgeFromTo": {
     "message": "Bridge $1 $2 to $3",
@@ -2343,7 +2347,7 @@
     "description": "Tooltip title when there's an error fetching estimated points"
   },
   "bridgePoints_error_content": {
-    "message": "Don't worry, you're still earning points. They'll show up in your account soon, or you can check in the Rewards tab on MetaMask Mobile.",
+    "message": "Don't worry, you're still earning points. They'll show up in your account soon, or you can check in the Rewards tab on Swissquote Wallet Mobile.",
     "description": "Error message when points estimation fails"
   },
   "bridgePoints_tooltip": {
@@ -2351,7 +2355,7 @@
     "description": "Tooltip title for points"
   },
   "bridgePoints_tooltip_content_1": {
-    "message": "Points are how you earn MetaMask Rewards for completing transactions, like when you swap, bridge, or trade perps.",
+    "message": "Points are how you earn Swissquote Wallet Rewards for completing transactions, like when you swap, bridge, or trade perps.",
     "description": "First part of tooltip content explaining rewards points"
   },
   "bridgePoints_tooltip_content_2": {
@@ -2374,7 +2378,7 @@
     "message": "Because of your trade size and available liquidity, you'll get about $1 less than the market price. This is already factored into your quote."
   },
   "bridgePriceImpactNormalDescription": {
-    "message": "This is how your trade changes the market price of a token. It depends on the trade size, availale liquidity, and provider fees. MetaMask doesn't control price impact."
+    "message": "This is how your trade changes the market price of a token. It depends on the trade size, availale liquidity, and provider fees. Swissquote Wallet doesn't control price impact."
   },
   "bridgePriceImpactTooltipTitle": {
     "message": "Price impact"
@@ -2731,7 +2735,7 @@
     "message": "Are you sure?"
   },
   "changePasswordWarningDescription": {
-    "message": "Changing your password here will lock MetaMask on other devices you’re using. You’ll need to log in again with your new password."
+    "message": "Changing your password here will lock Swissquote Wallet on other devices you’re using. You’ll need to log in again with your new password."
   },
   "checkNetworkConnectivity": {
     "message": "Check network connectivity."
@@ -2741,7 +2745,7 @@
     "description": "$1 is a link to update the network."
   },
   "chromeRequiredForHardwareWallets": {
-    "message": "You need to use MetaMask on Google Chrome in order to connect to your Hardware Wallet."
+    "message": "You need to use Swissquote Wallet on Google Chrome in order to connect to your Hardware Wallet."
   },
   "circulatingSupply": {
     "message": "Circulating supply"
@@ -2805,10 +2809,10 @@
     "message": "Concentrated supply distribution"
   },
   "configureSnapPopupDescription": {
-    "message": "You're now leaving MetaMask to configure this snap."
+    "message": "You're now leaving Swissquote Wallet to configure this snap."
   },
   "configureSnapPopupInstallDescription": {
-    "message": "You're now leaving MetaMask to install this snap."
+    "message": "You're now leaving Swissquote Wallet to install this snap."
   },
   "configureSnapPopupInstallTitle": {
     "message": "Install snap"
@@ -2893,7 +2897,7 @@
     "message": "Includes $1 fee"
   },
   "confirmGasFeeTokenModalNativeToggleMetaMask": {
-    "message": "MetaMask is supplementing the balance to complete this transaction."
+    "message": "Swissquote Wallet is supplementing the balance to complete this transaction."
   },
   "confirmGasFeeTokenModalNativeToggleWallet": {
     "message": "Pay for network fee using the balance in your wallet."
@@ -2911,7 +2915,7 @@
     "message": "You're paying this network fee with $1"
   },
   "confirmGasFeeTokenTooltip": {
-    "message": "This is paid to the network to process your transaction. It includes a $1 MetaMask fee for non-ETH tokens or pre-funded ETH."
+    "message": "This is paid to the network to process your transaction. It includes a $1 Swissquote Wallet fee for non-ETH tokens or pre-funded ETH."
   },
   "confirmInfoAccountNow": {
     "message": "Now"
@@ -3060,7 +3064,7 @@
     "description": "$1 is the snap for which a connection is being requested."
   },
   "connectWithMetaMask": {
-    "message": "Connect with MetaMask"
+    "message": "Connect with Swissquote Wallet"
   },
   "connectedAccountsDescriptionPlural": {
     "message": "You have $1 accounts connected to this site.",
@@ -3070,7 +3074,7 @@
     "message": "You have 1 account connected to this site."
   },
   "connectedAccountsEmptyDescription": {
-    "message": "MetaMask is not connected to this site. To connect to a web3 site, find and click the connect button."
+    "message": "Swissquote Wallet is not connected to this site. To connect to a web3 site, find and click the connect button."
   },
   "connectedSites": {
     "message": "Connected sites"
@@ -3087,7 +3091,7 @@
     "description": "$1 is the account name"
   },
   "connectedSnapAndNoAccountDescription": {
-    "message": "MetaMask is connected to this site, but no accounts are connected yet"
+    "message": "Swissquote Wallet is connected to this site, but no accounts are connected yet"
   },
   "connectedSnaps": {
     "message": "Connected Snaps"
@@ -3117,7 +3121,7 @@
     "message": "Connecting to Sepolia test network"
   },
   "connectionDescription": {
-    "message": "Connect this website with MetaMask"
+    "message": "Connect this website with Swissquote Wallet"
   },
   "connectionFailed": {
     "message": "Connection failed"
@@ -3182,7 +3186,7 @@
     "message": "Convert again"
   },
   "convertTokenToNFTDescription": {
-    "message": "We've detected that this asset is an NFT. MetaMask now has full native support for NFTs. Would you like to remove it from your token list and add it as an NFT?"
+    "message": "We've detected that this asset is an NFT. Swissquote Wallet now has full native support for NFTs. Would you like to remove it from your token list and add it as an NFT?"
   },
   "convertTokenToNFTExistDescription": {
     "message": "We’ve detected that this asset has been added as an NFT. Would you like to remove it from your token list?"
@@ -3223,26 +3227,26 @@
     "description": "Name of a button in loading state, used on multichain account related pages for the account creation process."
   },
   "createPassword": {
-    "message": "MetaMask password"
+    "message": "Swissquote Wallet password"
   },
   "createPasswordCreate": {
     "message": "Create password"
   },
   "createPasswordDetails": {
-    "message": "Unlocks MetaMask on this device only."
+    "message": "Unlocks Swissquote Wallet on this device only."
   },
   "createPasswordDetailsSocial": {
     "message": "Losing this password means losing wallet access on all devices, $1",
     "description": "$1 is the text 'MetaMask can't reset it.'"
   },
   "createPasswordDetailsSocialReset": {
-    "message": "MetaMask can't reset it."
+    "message": "Swissquote Wallet can't reset it."
   },
   "createPasswordMarketing": {
     "message": "Get product updates, tips, and news including by email. We may use your interactions to improve what we share."
   },
   "createSnapAccountDescription": {
-    "message": "$1 wants to add a new account to MetaMask."
+    "message": "$1 wants to add a new account to Swissquote Wallet."
   },
   "createSnapAccountTitle": {
     "message": "Create account"
@@ -3261,16 +3265,16 @@
     "message": "Recover accounts"
   },
   "criticalErrorReinstallMetamask": {
-    "message": "Reinstall MetaMask"
+    "message": "Reinstall Swissquote Wallet"
   },
   "criticalErrorResetMetaMaskState": {
-    "message": "Reset MetaMask State"
+    "message": "Reset Swissquote Wallet State"
   },
   "criticalErrorStateCorruptionRecoverMessage": {
     "message": "Recovering accounts will delete your current settings and preferences."
   },
   "criticalErrorStateCorruptionResetMessage": {
-    "message": "Resetting MetaMask state will delete your current accounts, settings and preferences."
+    "message": "Resetting Swissquote Wallet state will delete your current accounts, settings and preferences."
   },
   "criticalErrorStillHavingIssues": {
     "message": "Still having issues?"
@@ -3358,10 +3362,10 @@
     "message": "Site suggested"
   },
   "dappSwapAdvantage": {
-    "message": "Save and earn with MetaMask Swaps"
+    "message": "Save and earn with Swissquote Wallet Swaps"
   },
   "dappSwapAdvantageSaveOnly": {
-    "message": "Save with MetaMask Swaps"
+    "message": "Save with Swissquote Wallet Swaps"
   },
   "dappSwapBenefits": {
     "message": "Network fees refunded on failed swaps"
@@ -3432,19 +3436,19 @@
     "message": "Decrypt request"
   },
   "deepLinkQrBatchSellDescription": {
-    "message": "Batch sell is available on MetaMask mobile. Scan this code with your mobile device to use it."
+    "message": "Batch sell is available on Swissquote Wallet mobile. Scan this code with your mobile device to use it."
   },
   "deepLinkQrBatchSellTitle": {
     "message": "Open batch sell on mobile"
   },
   "deepLinkQrPredictDescription": {
-    "message": "To access MetaMask Prediction Markets, scan the QR code with your mobile device."
+    "message": "To access Swissquote Wallet Prediction Markets, scan the QR code with your mobile device."
   },
   "deepLinkQrPredictTitle": {
     "message": "Open Prediction Markets on mobile"
   },
   "deepLinkQrTrendingDescription": {
-    "message": "Explore is available on MetaMask mobile. Scan this code with your mobile device to use it."
+    "message": "Explore is available on Swissquote Wallet mobile. Scan this code with your mobile device to use it."
   },
   "deepLinkQrTrendingTitle": {
     "message": "Open Explore on mobile"
@@ -3473,14 +3477,14 @@
     "description": "$1 is a link with the text found in `deepLink_Error404_CTA_LinkText`"
   },
   "deepLink_Error404_CTA_LinkText": {
-    "message": "Update to the latest version of MetaMask",
+    "message": "Update to the latest version of Swissquote Wallet",
     "description": "Part of `deepLink_Error404_CTA`. The text links to https://support.metamask.io/configure/wallet/how-to-update-the-version-of-metamask/"
   },
   "deepLink_ErrorMissingUrl": {
     "message": "No url to navigate to was provided."
   },
   "deepLink_ErrorOtherDescription": {
-    "message": "This is a bug and should be reported to MetaMask."
+    "message": "This is a bug and should be reported to Swissquote Wallet."
   },
   "deepLink_ErrorOtherTitle": {
     "message": "An error occurred while processing the deep link"
@@ -3489,10 +3493,10 @@
     "message": "Go to the home page"
   },
   "deepLink_RedirectingToMetaMask": {
-    "message": "Redirecting to MetaMask"
+    "message": "Redirecting to Swissquote Wallet"
   },
   "deepLink_ThirdPartyDescription": {
-    "message": "You were sent here by a third party, not MetaMask. $1",
+    "message": "You were sent here by a third party, not Swissquote Wallet. $1",
     "description": "$1 is the message 'deepLink_ContinueDescription'"
   },
   "deepLink_theAssetPage": {
@@ -3505,7 +3509,7 @@
     "message": "the buy page"
   },
   "deepLink_theCardOnboardingPage": {
-    "message": "the MetaMask Card onboarding page"
+    "message": "the Swissquote Wallet Card onboarding page"
   },
   "deepLink_theHomePage": {
     "message": "the home page"
@@ -3538,7 +3542,7 @@
     "message": "the privacy settings page"
   },
   "deepLink_theRewardsPage": {
-    "message": "the MetaMask Rewards page"
+    "message": "the Swissquote Wallet Rewards page"
   },
   "deepLink_theSellPage": {
     "message": "the sell page"
@@ -3565,7 +3569,7 @@
     "message": "Default RPC URL"
   },
   "defaultSettingsSubTitle": {
-    "message": "MetaMask uses default settings to best balance safety and ease of use. Change these settings to further increase your privacy."
+    "message": "Swissquote Wallet uses default settings to best balance safety and ease of use. Change these settings to further increase your privacy."
   },
   "defaultSettingsTitle": {
     "message": "Default privacy settings"
@@ -3580,7 +3584,7 @@
     "message": "Defi Icon"
   },
   "defiReferralCheckboxLabel": {
-    "message": "Allow MetaMask to add a referral code. This is permanent. The site offers discounts per their terms. MetaMask earns a fee.",
+    "message": "Allow Swissquote Wallet to add a referral code. This is permanent. The site offers discounts per their terms. Swissquote Wallet earns a fee.",
     "description": "The text for the checkbox label in the DeFi referral confirmation screen"
   },
   "defiReferralTerms": {
@@ -3588,7 +3592,7 @@
     "description": "The text for the partner terms link in the DeFi referral confirmation screen"
   },
   "defiReferralTitle": {
-    "message": "MetaMask x $1",
+    "message": "Swissquote Wallet x $1",
     "description": "The title of the DeFi referral confirmation screen. $1 is the name of the partner"
   },
   "defiTabErrorContent": {
@@ -3656,7 +3660,7 @@
     "message": "Got it"
   },
   "deprecatedNetworkDescription": {
-    "message": "The network you're trying to connect to is no longer supported by MetaMask. $1"
+    "message": "The network you're trying to connect to is no longer supported by Swissquote Wallet. $1"
   },
   "description": {
     "message": "Description"
@@ -3783,13 +3787,13 @@
     "message": "Download"
   },
   "downloadAppDescription": {
-    "message": "Bring MetaMask with you everywhere you go. Turn on Face ID so you always have access, even if you forget your password."
+    "message": "Bring Swissquote Wallet with you everywhere you go. Turn on Face ID so you always have access, even if you forget your password."
   },
   "downloadAppTitle": {
     "message": "Scan QR code and download the app"
   },
   "downloadMetaMaskMobileDescription": {
-    "message": "Face ID on our app lets you in even if you forget your password. Take MetaMask everywhere you go!"
+    "message": "Face ID on our app lets you in even if you forget your password. Take Swissquote Wallet everywhere you go!"
   },
   "downloadMetaMaskMobileQrNote": {
     "message": "Scan this QR code to get started."
@@ -3950,13 +3954,13 @@
     "description": "$1 is the return value of eth_chainId from an RPC endpoint"
   },
   "ensDomainsSettingDescriptionIntroduction": {
-    "message": "MetaMask lets you see ENS domains right in your browser's address bar. Here's how it works:"
+    "message": "Swissquote Wallet lets you see ENS domains right in your browser's address bar. Here's how it works:"
   },
   "ensDomainsSettingDescriptionOutroduction": {
     "message": "Keep in mind that using this feature exposes your IP address to IPFS third-party services."
   },
   "ensDomainsSettingDescriptionPart1": {
-    "message": "MetaMask checks with Ethereum's ENS contract to find the code connected to the ENS name."
+    "message": "Swissquote Wallet checks with Ethereum's ENS contract to find the code connected to the ENS name."
   },
   "ensDomainsSettingDescriptionPart2": {
     "message": "If the code links to IPFS, you can see the content associated with it (usually a website)."
@@ -4007,13 +4011,13 @@
     "message": "Enter password to continue"
   },
   "enterYourPasswordSocialLoginFlow": {
-    "message": "Enter MetaMask password"
+    "message": "Enter Swissquote Wallet password"
   },
   "enter_verification_code": {
     "message": "Enter verification code"
   },
   "enter_verification_code_desc": {
-    "message": "For security, enter the code shown in the MetaMask app on your device."
+    "message": "For security, enter the code shown in the Swissquote Wallet app on your device."
   },
   "enter_verification_code_error": {
     "message": "Incorrect code. Please try again."
@@ -4051,7 +4055,7 @@
     "message": "No personal information or other device information will be collected."
   },
   "errorLegalTextSecondInfo": {
-    "message": "Your browser, operating system, and MetaMask versions."
+    "message": "Your browser, operating system, and Swissquote Wallet versions."
   },
   "errorLegalTextSummary": {
     "message": "We will receive a single error report, containing:"
@@ -4093,7 +4097,7 @@
     "description": "In sentry feedback form, The message displayed after a successful feedback submission."
   },
   "errorPageTitle": {
-    "message": "MetaMask encountered an error",
+    "message": "Swissquote Wallet encountered an error",
     "description": "Title of generic error page"
   },
   "errorPageTryAgain": {
@@ -4233,11 +4237,11 @@
     "description": "This explains the risks of using MetaMask Flask"
   },
   "flaskWelcomeWarning3": {
-    "message": "All Flask APIs are experimental. They may be changed or removed without notice, or they might stay on Flask indefinitely without ever being migrated to stable MetaMask. Use them at your own risk.",
+    "message": "All Flask APIs are experimental. They may be changed or removed without notice, or they might stay on Flask indefinitely without ever being migrated to stable Swissquote Wallet. Use them at your own risk.",
     "description": "This message warns developers about unstable Flask APIs"
   },
   "flaskWelcomeWarning4": {
-    "message": "Make sure to disable your regular MetaMask extension when using Flask.",
+    "message": "Make sure to disable your regular Swissquote Wallet extension when using Flask.",
     "description": "This message calls to pay attention about multiple versions of MetaMask running on the same site (Flask + Prod)"
   },
   "flaskWelcomeWarningAcceptButton": {
@@ -4273,7 +4277,7 @@
     "message": "We can’t recover your password for you."
   },
   "forgotPasswordModalDescription2": {
-    "message": "Add your wallet back to MetaMask by entering the Secret Recovery Phrase associated with it."
+    "message": "Add your wallet back to Swissquote Wallet by entering the Secret Recovery Phrase associated with it."
   },
   "forgotPasswordModalTitle": {
     "message": "Forgot your password?"
@@ -4323,7 +4327,7 @@
     "message": "Gas limit must be at least 12000"
   },
   "gasLimitEditingUnavailable": {
-    "message": "Editing the gas limit is unavailable until MetaMask provides an estimate."
+    "message": "Editing the gas limit is unavailable until Swissquote Wallet provides an estimate."
   },
   "gasPrice": {
     "message": "Gas price"
@@ -4338,7 +4342,7 @@
     "message": "Network fee"
   },
   "gasSponsorshipOptOutTooltip": {
-    "message": "MetaMask covers the network fee for this transaction. This includes a one-time smart account activation."
+    "message": "Swissquote Wallet covers the network fee for this transaction. This includes a one-time smart account activation."
   },
   "gasSponsorshipReserveBalanceWarning": {
     "message": "This network requires keeping at least $1 $2 in your account after the transaction. Smart accounts cannot go below this reserve.",
@@ -4434,7 +4438,7 @@
     "description": "Label for the max allowance of a permission"
   },
   "gatorPermissionsMetaMaskFacilitator": {
-    "message": "MetaMask x402 facilitator"
+    "message": "Swissquote Wallet x402 facilitator"
   },
   "gatorPermissionsPermit2ApproveRevocation": {
     "message": "Permit2 approve(token, spender, 0, 0)",
@@ -4517,7 +4521,7 @@
     "description": "Subtitle text for the balance empty state component explaining the purpose of adding funds"
   },
   "gmxReferralSubtitle": {
-    "message": "Save up to 5% on trades with a MetaMask referral code.",
+    "message": "Save up to 5% on trades with a Swissquote Wallet referral code.",
     "description": "The subtitle of the GMX referral confirmation screen"
   },
   "goToSite": {
@@ -4699,7 +4703,7 @@
     "message": "Reconnect from the beginning"
   },
   "hardwareWalletRepairPermissionsTitle": {
-    "message": "Allow MetaMask permissions to:"
+    "message": "Allow Swissquote Wallet permissions to:"
   },
   "hardwareWalletRepairStepOneDescription": {
     "message": "Make sure the USB cable is firmly connected to both your device and computer. Try a different USB port or cable."
@@ -4811,7 +4815,7 @@
     "description": "$1 is a message from 'holdToRevealContent4' and $2 is a text link with the message from 'holdToRevealContent5'"
   },
   "holdToRevealContent4": {
-    "message": "MetaMask Support will not request this,",
+    "message": "Swissquote Wallet Support will not request this,",
     "description": "Part of 'holdToRevealContent3'"
   },
   "holdToRevealContent5": {
@@ -4855,7 +4859,7 @@
     "message": "Honey pot"
   },
   "hyperliquidDepositPromptDescription": {
-    "message": "Deposit any token. We'll swap it and send it to your Hyperliquid account automatically—no MetaMask fee.",
+    "message": "Deposit any token. We'll swap it and send it to your Hyperliquid account automatically—no Swissquote Wallet fee.",
     "description": "The description of the Hyperliquid deposit prompt screen shown after enabling trading on Hyperliquid"
   },
   "hyperliquidDepositPromptNoThanks": {
@@ -4863,23 +4867,23 @@
     "description": "The label of the dismiss button in the Hyperliquid deposit prompt screen"
   },
   "hyperliquidDepositPromptTitle": {
-    "message": "Fund Hyperliquid with MetaMask",
+    "message": "Fund Hyperliquid with Swissquote Wallet",
     "description": "The title of the Hyperliquid deposit prompt screen shown after enabling trading on Hyperliquid"
   },
   "hyperliquidDepositToastSuccessDescription": {
-    "message": "Funds are ready to trade on Hyperliquid and MetaMask Perps.",
+    "message": "Funds are ready to trade on Hyperliquid and Swissquote Wallet Perps.",
     "description": "Description shown in the success toast after a perps deposit initiated from the Hyperliquid deposit prompt"
   },
   "hyperliquidReferralCheckboxLabel": {
-    "message": "Apply a MetaMask referral code to all future trades per Hyperliquid's $1. MetaMask earns a fee.",
+    "message": "Apply a Swissquote Wallet referral code to all future trades per Hyperliquid's $1. Swissquote Wallet earns a fee.",
     "description": "The checkbox label in the redesigned Hyperliquid referral confirmation screen. $1 is the terms link"
   },
   "hyperliquidReferralSubtitle": {
-    "message": "Save up to 4% on trades with a MetaMask referral code.",
+    "message": "Save up to 4% on trades with a Swissquote Wallet referral code.",
     "description": "The subtitle of the Hyperliquid referral confirmation screen"
   },
   "hyperliquidReferralSubtitle2": {
-    "message": "Save 4% on trades with a MetaMask referral code.",
+    "message": "Save 4% on trades with a Swissquote Wallet referral code.",
     "description": "The subtitle of the redesigned Hyperliquid referral confirmation screen"
   },
   "hyperliquidReferralTitle": {
@@ -4918,13 +4922,13 @@
     "message": "This is not a valid private key. You must enter a hexadecimal string of length 64."
   },
   "importAccountJsonLoading1": {
-    "message": "Expect this JSON import to take a few minutes and freeze MetaMask."
+    "message": "Expect this JSON import to take a few minutes and freeze Swissquote Wallet."
   },
   "importAccountJsonLoading2": {
     "message": "We apologize, and we will make it faster in the future."
   },
   "importAccountMsg": {
-    "message": "Imported accounts won’t be associated with your MetaMask Secret Recovery Phrase. Learn more about imported accounts"
+    "message": "Imported accounts won’t be associated with your Swissquote Wallet Secret Recovery Phrase. Learn more about imported accounts"
   },
   "importAccountWithSocialMsg": {
     "message": "Imported private keys are backed up to your account and sync automatically when you sign in with the same Google or Apple login."
@@ -4975,7 +4979,7 @@
     "message": "Incorrect"
   },
   "infuraBlockedNotification": {
-    "message": "MetaMask is unable to connect to the blockchain host. Review possible reasons $1.",
+    "message": "Swissquote Wallet is unable to connect to the blockchain host. Review possible reasons $1.",
     "description": "$1 is a clickable link with with text defined by the 'here' key"
   },
   "insights": {
@@ -4992,7 +4996,7 @@
     "message": "Install origin"
   },
   "installRequest": {
-    "message": "Add to MetaMask"
+    "message": "Add to Swissquote Wallet"
   },
   "installedOn": {
     "message": "Installed on $1",
@@ -5182,10 +5186,10 @@
     "message": "scams and security risks."
   },
   "leaveMetaMask": {
-    "message": "Leave MetaMask?"
+    "message": "Leave Swissquote Wallet?"
   },
   "leaveMetaMaskDesc": {
-    "message": "You're about to visit a site outside of MetaMask. Double-check the URL before continuing."
+    "message": "You're about to visit a site outside of Swissquote Wallet. Double-check the URL before continuing."
   },
   "ledger": {
     "message": "Ledger",
@@ -5313,7 +5317,7 @@
     "message": "Link"
   },
   "linkCentralizedExchanges": {
-    "message": "Link your Coinbase or Binance accounts to transfer crypto to MetaMask for free."
+    "message": "Link your Coinbase or Binance accounts to transfer crypto to Swissquote Wallet for free."
   },
   "loading": {
     "message": "Loading..."
@@ -5334,7 +5338,7 @@
     "message": "Lock"
   },
   "lockMetaMaskLoadingMessage": {
-    "message": "Locking MetaMask..."
+    "message": "Locking Swissquote Wallet..."
   },
   "loginErrorConnectButton": {
     "message": "Try again"
@@ -5353,13 +5357,13 @@
     "description": "$1 is the key 'loginErrorGenericSupport'"
   },
   "loginErrorGenericSupport": {
-    "message": "MetaMask support"
+    "message": "Swissquote Wallet support"
   },
   "loginErrorGenericTitle": {
     "message": "Something went wrong"
   },
   "loginErrorResetWalletDescription": {
-    "message": "An issue occurred while unlocking. Re-login with $1 and your MetaMask password.",
+    "message": "An issue occurred while unlocking. Re-login with $1 and your Swissquote Wallet password.",
     "description": "$1 is the social login method"
   },
   "loginErrorSessionExpiredButton": {
@@ -5411,7 +5415,7 @@
     "message": "Make smart contracts easier to read"
   },
   "makeSmartContractsEasierDescription": {
-    "message": "MetaMask uses 4byte.directory and Sourcify to translate this information."
+    "message": "Swissquote Wallet uses 4byte.directory and Sourcify to translate this information."
   },
   "manage": {
     "message": "Manage"
@@ -5503,7 +5507,7 @@
     "message": "Message"
   },
   "metaMaskConnectStatusParagraphOne": {
-    "message": "You now have more control over your account connections in MetaMask."
+    "message": "You now have more control over your account connections in Swissquote Wallet."
   },
   "metaMaskConnectStatusParagraphThree": {
     "message": "Click it to manage your connected accounts."
@@ -5519,19 +5523,19 @@
     "description": "$1 is the snap name and $2 is the snap NPM id."
   },
   "metamaskFee": {
-    "message": "MetaMask fee"
+    "message": "Swissquote Wallet fee"
   },
   "metamaskNotificationsAreOff": {
     "message": "Turn on notifications"
   },
   "metamaskSwap": {
-    "message": "MetaMask Swap"
+    "message": "Swissquote Wallet Swap"
   },
   "metamaskSwapsOfflineDescription": {
-    "message": "MetaMask Swaps is undergoing maintenance. Please check back later."
+    "message": "Swissquote Wallet Swaps is undergoing maintenance. Please check back later."
   },
   "metamaskVersion": {
-    "message": "MetaMask Version"
+    "message": "Swissquote Wallet Version"
   },
   "methodData": {
     "message": "Method"
@@ -5578,7 +5582,7 @@
     "message": "According to our records the submitted RPC URL value does not match a known provider for this chain ID."
   },
   "mmFee": {
-    "message": "$1% MetaMask fee"
+    "message": "$1% Swissquote Wallet fee"
   },
   "money": {
     "message": "Money"
@@ -5743,7 +5747,7 @@
     "message": "Get full liquidity with no lockups, so you can trade or withdraw anytime"
   },
   "moneyBenefitSend": {
-    "message": "Send to any of your wallets across MetaMask"
+    "message": "Send to any of your wallets across Swissquote Wallet"
   },
   "moneyBenefitStablecoin": {
     "message": "Keep your money secure in mUSD, a 1:1 dollar-backed stablecoin"
@@ -5832,38 +5836,38 @@
     "description": "$1 is the current mUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqApyQuestion": {
-    "message": "How much can I earn with a MetaMask Money account?"
+    "message": "How much can I earn with a Swissquote Wallet Money account?"
   },
   "moneyHowItWorksFaqCountriesAnswer": {
     "message": "Most places! We currently aren't available in the UK and countries on the USA sanctions list."
   },
   "moneyHowItWorksFaqCountriesQuestion": {
-    "message": "Which countries is MetaMask Money account available in?"
+    "message": "Which countries is Swissquote Wallet Money account available in?"
   },
   "moneyHowItWorksFaqFeesAnswer": {
     "message": "There's no fee to open a Money account and no fee to deposit stablecoins. You will get charged fees when depositing non-stablecoin tokens."
   },
   "moneyHowItWorksFaqFeesQuestion": {
-    "message": "What are MetaMask Money account fees?"
+    "message": "What are Swissquote Wallet Money account fees?"
   },
   "moneyHowItWorksFaqIdentityAnswer": {
-    "message": "No, opening a Money account doesn't require identity verification. However, certain features, including Card and Ramps, do require verification. Checks are carried out by third-party providers that operate regulated services, not by MetaMask. If needed, you will be guided through the process inside the app during sign-up."
+    "message": "No, opening a Money account doesn't require identity verification. However, certain features, including Card and Ramps, do require verification. Checks are carried out by third-party providers that operate regulated services, not by Swissquote Wallet. If needed, you will be guided through the process inside the app during sign-up."
   },
   "moneyHowItWorksFaqIdentityQuestion": {
-    "message": "Do I need to complete identity verification to use MetaMask Money account?"
+    "message": "Do I need to complete identity verification to use Swissquote Wallet Money account?"
   },
   "moneyHowItWorksFaqLockedAnswer": {
-    "message": "Yes. You can send or withdraw your full balance at any time with no notice periods, no penalties, and no withdrawal fees from MetaMask. If liquidity is tight, there may be temporary delays."
+    "message": "Yes. You can send or withdraw your full balance at any time with no notice periods, no penalties, and no withdrawal fees from Swissquote Wallet. If liquidity is tight, there may be temporary delays."
   },
   "moneyHowItWorksFaqLockedQuestion": {
-    "message": "Can I withdraw from the MetaMask Money account anytime?"
+    "message": "Can I withdraw from the Swissquote Wallet Money account anytime?"
   },
   "moneyHowItWorksFaqMoneyAccountAnswer": {
-    "message": "An account that earns up to $1 variable APY. You deposit funds, which are held in the account as mUSD, and earn up to $1 APY. mUSD is MetaMask's dollar-backed stablecoin. You can use or withdraw your funds anytime with no penalties.",
+    "message": "An account that earns up to $1 variable APY. You deposit funds, which are held in the account as mUSD, and earn up to $1 APY. mUSD is Swissquote Wallet's dollar-backed stablecoin. You can use or withdraw your funds anytime with no penalties.",
     "description": "$1 is the current mUSD APY, including the percent sign."
   },
   "moneyHowItWorksFaqMoneyAccountQuestion": {
-    "message": "What is a MetaMask Money account?"
+    "message": "What is a Swissquote Wallet Money account?"
   },
   "moneyHowItWorksFaqTitle": {
     "message": "FAQs"
@@ -5876,7 +5880,7 @@
     "message": "What tokens can I deposit into the Money account?"
   },
   "moneyHowItWorksFaqYieldAnswer": {
-    "message": "When you deposit funds, they're put in established DeFi protocols, like Aave and Morpho, where they earn returns from real economic activity. These returns are then delivered to you in the form of APY.\n\nA third-party service provider called Steakhouse Financial monitors how funds are allocated in the protocols. Veda, a third-party infrastructure provider, deploys and maintains the vault smart contracts that hold your funds.\n\nEarnings are not interest paid by MetaMask or by the issuer of mUSD. They are the onchain returns generated by positions in third-party DeFi protocols."
+    "message": "When you deposit funds, they're put in established DeFi protocols, like Aave and Morpho, where they earn returns from real economic activity. These returns are then delivered to you in the form of APY.\n\nA third-party service provider called Steakhouse Financial monitors how funds are allocated in the protocols. Veda, a third-party infrastructure provider, deploys and maintains the vault smart contracts that hold your funds.\n\nEarnings are not interest paid by Swissquote Wallet or by the issuer of mUSD. They are the onchain returns generated by positions in third-party DeFi protocols."
   },
   "moneyHowItWorksFaqYieldQuestion": {
     "message": "Where does the yield come from?"
@@ -6030,7 +6034,7 @@
     "description": "Button text to learn more about multichain accounts"
   },
   "multichainAccountIntroSameAddressDescription": {
-    "message": "We’ve grouped your accounts, so keep using MetaMask the same as before. Your funds are safe and unchanged.",
+    "message": "We’ve grouped your accounts, so keep using Swissquote Wallet the same as before. Your funds are safe and unchanged.",
     "description": "Description explaining that accounts have been merged"
   },
   "multichainAccountIntroSameAddressTitle": {
@@ -6046,7 +6050,7 @@
     "description": "Button text to view accounts from the intro modal"
   },
   "multichainAccountIntroWhatDescription": {
-    "message": "A multichain account is an account with addresses on several networks, supported by MetaMask. So now you can use Ethereum, Solana, and more without switching accounts.",
+    "message": "A multichain account is an account with addresses on several networks, supported by Swissquote Wallet. So now you can use Ethereum, Solana, and more without switching accounts.",
     "description": "Description explaining what multichain accounts are"
   },
   "multichainAccountIntroWhatTitle": {
@@ -6062,7 +6066,7 @@
     "description": "Title for the multichain accounts introduction modal."
   },
   "multichainAddEthereumChainConfirmationDescription": {
-    "message": "You're adding this network to MetaMask and giving this site permission to use it."
+    "message": "You're adding this network to Swissquote Wallet and giving this site permission to use it."
   },
   "multichainAddressViewAll": {
     "message": "View all"
@@ -6072,7 +6076,7 @@
     "description": "The parameter is the name of the requesting origin"
   },
   "multichainQuoteCardRateExplanation": {
-    "message": "The best rate we found from providers, including provider fees and a $1% MetaMask fee."
+    "message": "The best rate we found from providers, including provider fees and a $1% Swissquote Wallet fee."
   },
   "multichainQuoteCardRateLabel": {
     "message": "Rate"
@@ -6094,7 +6098,7 @@
     "description": "Benefit tag on the mUSD asset details convert section"
   },
   "musdAssetConvertBenefitNoMetaMaskFee": {
-    "message": "No MetaMask fee",
+    "message": "No Swissquote Wallet fee",
     "description": "Benefit tag on the mUSD asset details convert section"
   },
   "musdAssetConvertDescriptionHighlight": {
@@ -6149,7 +6153,7 @@
     "description": "Title for the mUSD bonus claim confirmation screen"
   },
   "musdConversionFeeTooltipDescription": {
-    "message": "mUSD conversion fees include network costs and may include provider fees. No MetaMask fee applies when you convert to mUSD.",
+    "message": "mUSD conversion fees include network costs and may include provider fees. No Swissquote Wallet fee applies when you convert to mUSD.",
     "description": "Body text shown above the fee breakdown in the transaction fee tooltip for mUSD conversion"
   },
   "musdConversionTitle": {
@@ -6260,7 +6264,7 @@
     "message": "Lens Protocol"
   },
   "nameProvider_token": {
-    "message": "MetaMask"
+    "message": "Swissquote Wallet"
   },
   "nameResolutionFailedError": {
     "message": "No address resolution found for this name."
@@ -6303,7 +6307,7 @@
     "message": "Share your feedback"
   },
   "needHelpLinkText": {
-    "message": "MetaMask support"
+    "message": "Swissquote Wallet support"
   },
   "needHelpSubmitTicket": {
     "message": "Submit a ticket"
@@ -6440,7 +6444,7 @@
     "description": "$1 is used for newNFTDetectedInImportNFTsMessageStrongText"
   },
   "newNFTDetectedInNFTsTabMessage": {
-    "message": "Let MetaMask automatically detect and display NFTs in your wallet."
+    "message": "Let Swissquote Wallet automatically detect and display NFTs in your wallet."
   },
   "newNFTsAutodetected": {
     "message": "NFT autodetection"
@@ -6542,7 +6546,7 @@
     "message": "Snaps, and most hardware wallets, will not work with your current browser version."
   },
   "noMMFeeSwapping": {
-    "message": "No MetaMask fee"
+    "message": "No Swissquote Wallet fee"
   },
   "noNetworkFee": {
     "message": "No network fee"
@@ -6752,7 +6756,7 @@
     "message": "In-app"
   },
   "notificationsSettingsMarketingConsent": {
-    "message": "By turning this on, you agree to receive product news and marketing updates from MetaMask."
+    "message": "By turning this on, you agree to receive product news and marketing updates from Swissquote Wallet."
   },
   "notificationsSettingsMarketingDescription": {
     "message": "Product updates, feature announcements, and new releases"
@@ -6877,7 +6881,7 @@
     "message": "I have an existing wallet"
   },
   "onboardingLoginFooter": {
-    "message": "By continuing, I agree to MetaMask’s $1 and $2"
+    "message": "By continuing, I agree to Swissquote Wallet’s $1 and $2"
   },
   "onboardingLoginFooterPrivacyNotice": {
     "message": "Privacy notice"
@@ -6904,7 +6908,7 @@
     "message": "We’d like to request these permissions. You can opt out or delete your usage data at any time."
   },
   "onboardingMetametricsTitle": {
-    "message": "Help improve MetaMask"
+    "message": "Help improve Swissquote Wallet"
   },
   "onboardingSignInWith": {
     "message": "Sign in with $1",
@@ -7003,7 +7007,7 @@
     "message": "others"
   },
   "outdatedBrowserNotification": {
-    "message": "Your browser is out of date. If you don't update your browser, you won't be able to get security patches and new features from MetaMask."
+    "message": "Your browser is out of date. If you don't update your browser, you won't be able to get security patches and new features from Swissquote Wallet."
   },
   "overrideContentSecurityPolicyHeader": {
     "message": "Override Content-Security-Policy header"
@@ -7012,7 +7016,7 @@
     "message": "Padlock"
   },
   "paidByMetaMask": {
-    "message": "Paid by MetaMask"
+    "message": "Paid by Swissquote Wallet"
   },
   "paidWith": {
     "message": "Paid with"
@@ -7021,7 +7025,7 @@
     "message": "Participate in MetaMetrics"
   },
   "participateInMetaMetricsDescription": {
-    "message": "Participate in MetaMetrics to help us make MetaMask better"
+    "message": "Participate in MetaMetrics to help us make Swissquote Wallet better"
   },
   "passkeyAuthMethodBiometrics": {
     "message": "Biometrics",
@@ -7036,7 +7040,7 @@
     "description": "Microsoft Windows Hello brand name, used as $1 substitution on Windows for all passkey copy."
   },
   "passkeyDescription": {
-    "message": "Use $1 to unlock MetaMask instead of entering your password. This creates a passkey on this device only.",
+    "message": "Use $1 to unlock Swissquote Wallet instead of entering your password. This creates a passkey on this device only.",
     "description": "Description of the passkey unlock feature on the setup / settings screens. $1 is the OS-specific auth-method noun (Touch ID on macOS, Windows Hello on Windows, Biometrics elsewhere)."
   },
   "passkeyErrorAlreadyEnrolled": {
@@ -7064,7 +7068,7 @@
     "description": "Shown when biometrics unlock fails because no passkey is enrolled. $1 is the OS-specific auth-method noun (Biometrics / Touch ID / Windows Hello)."
   },
   "passkeyErrorNotSupported": {
-    "message": "MetaMask can't use passkeys saved here. Try again and save it to a password manager.",
+    "message": "Swissquote Wallet can't use passkeys saved here. Try again and save it to a password manager.",
     "description": "Shown when passkey setup fails because the authenticator does not return the required PRF extension result."
   },
   "passkeyErrorRegistrationFailed": {
@@ -7190,16 +7194,16 @@
     "message": "Your password was changed"
   },
   "passwordChangedRecentlyDescription": {
-    "message": "Enter your new password to stay logged into MetaMask."
+    "message": "Enter your new password to stay logged into Swissquote Wallet."
   },
   "passwordNotLongEnough": {
     "message": "Must be at least 8 characters"
   },
   "passwordTermsWarning": {
-    "message": "If I lose this password, MetaMask can’t reset it."
+    "message": "If I lose this password, Swissquote Wallet can’t reset it."
   },
   "passwordTermsWarningSocial": {
-    "message": "If I forget this password, I’ll lose access to my wallet permanently. MetaMask can’t reset it for me."
+    "message": "If I forget this password, I’ll lose access to my wallet permanently. Swissquote Wallet can’t reset it for me."
   },
   "passwordToggleHide": {
     "message": "Hide password"
@@ -7329,11 +7333,11 @@
     "description": "The description for the `wallet_snap_*` permission. $1 is the name of the Snap."
   },
   "permission_assets": {
-    "message": "Display account assets in MetaMask.",
+    "message": "Display account assets in Swissquote Wallet.",
     "description": "The description for the `endowment:assets` permission."
   },
   "permission_assetsDescription": {
-    "message": "Allow $1 to provide asset information to the MetaMask client. The assets can be onchain or offchain.",
+    "message": "Allow $1 to provide asset information to the Swissquote Wallet client. The assets can be onchain or offchain.",
     "description": "An extended description for the `endowment:assets` permission. $1 is the name of the Snap."
   },
   "permission_cronjob": {
@@ -7345,11 +7349,11 @@
     "description": "An extended description for the `snap_cronjob` permission. $1 is the snap name."
   },
   "permission_dialog": {
-    "message": "Display dialog windows in MetaMask.",
+    "message": "Display dialog windows in Swissquote Wallet.",
     "description": "The description for the `snap_dialog` permission"
   },
   "permission_dialogDescription": {
-    "message": "Allow $1 to display MetaMask popups with custom text, input field, and buttons to approve or reject an action.\nCan be used to create e.g. alerts, confirmations, and opt-in flows for a snap.",
+    "message": "Allow $1 to display Swissquote Wallet popups with custom text, input field, and buttons to approve or reject an action.\nCan be used to create e.g. alerts, confirmations, and opt-in flows for a snap.",
     "description": "An extended description for the `snap_dialog` permission. $1 is the snap name."
   },
   "permission_ethereumAccounts": {
@@ -7361,7 +7365,7 @@
     "description": "The description for the `endowment:ethereum-provider` permission"
   },
   "permission_ethereumProviderDescription": {
-    "message": "Allow $1 to communicate with MetaMask directly, in order for it to read data from the blockchain and suggest messages and transactions.",
+    "message": "Allow $1 to communicate with Swissquote Wallet directly, in order for it to read data from the blockchain and suggest messages and transactions.",
     "description": "An extended description for the `endowment:ethereum-provider` permission. $1 is the snap name."
   },
   "permission_getEntropy": {
@@ -7369,7 +7373,7 @@
     "description": "The description for the `snap_getEntropy` permission. $1 is the snap name."
   },
   "permission_getEntropyDescription": {
-    "message": "Allow $1 to derive arbitrary keys unique to $1, without exposing them. These keys are separate from your MetaMask account(s) and not related to your private keys or Secret Recovery Phrase. Other snaps cannot access this information.",
+    "message": "Allow $1 to derive arbitrary keys unique to $1, without exposing them. These keys are separate from your Swissquote Wallet account(s) and not related to your private keys or Secret Recovery Phrase. Other snaps cannot access this information.",
     "description": "An extended description for the `snap_getEntropy` permission. $1 is the snap name."
   },
   "permission_getLocale": {
@@ -7377,7 +7381,7 @@
     "description": "The description for the `snap_getLocale` permission"
   },
   "permission_getLocaleDescription": {
-    "message": "Let $1 access your preferred language from your MetaMask settings. This can be used to localize and display $1's content using your language.",
+    "message": "Let $1 access your preferred language from your Swissquote Wallet settings. This can be used to localize and display $1's content using your language.",
     "description": "An extended description for the `snap_getLocale` permission. $1 is the snap name."
   },
   "permission_getPreferences": {
@@ -7385,7 +7389,7 @@
     "description": "The description for the `snap_getPreferences` permission"
   },
   "permission_getPreferencesDescription": {
-    "message": "Let $1 access information like your preferred language and fiat currency in your MetaMask settings. This helps $1 display content tailored to your preferences. ",
+    "message": "Let $1 access information like your preferred language and fiat currency in your Swissquote Wallet settings. This helps $1 display content tailored to your preferences. ",
     "description": "An extended description for the `snap_getPreferences` permission. $1 is the snap name."
   },
   "permission_homePage": {
@@ -7393,7 +7397,7 @@
     "description": "The description for the `endowment:page-home` permission"
   },
   "permission_homePageDescription": {
-    "message": "Let $1 display a custom home screen in MetaMask. This can be used for user interfaces, configuration, and dashboards.",
+    "message": "Let $1 display a custom home screen in Swissquote Wallet. This can be used for user interfaces, configuration, and dashboards.",
     "description": "An extended description for the `endowment:page-home` permission. $1 is the snap name."
   },
   "permission_keyring": {
@@ -7445,7 +7449,7 @@
     "description": "The description for the `endowment:multichain-provider` permission"
   },
   "permission_multichainProviderDescription": {
-    "message": "Allow $1 to communicate with MetaMask directly, in order for it to read data from the blockchain and suggest messages and transactions.",
+    "message": "Allow $1 to communicate with Swissquote Wallet directly, in order for it to read data from the blockchain and suggest messages and transactions.",
     "description": "An extended description for the `endowment:multichain-provider` permission. $1 is the snap name."
   },
   "permission_nameLookup": {
@@ -7453,7 +7457,7 @@
     "description": "The description for the `endowment:name-lookup` permission."
   },
   "permission_nameLookupDescription": {
-    "message": "Allow the snap to fetch and display address and domain lookups in different parts of the MetaMask UI.",
+    "message": "Allow the snap to fetch and display address and domain lookups in different parts of the Swissquote Wallet UI.",
     "description": "An extended description for the `endowment:name-lookup` permission."
   },
   "permission_notifications": {
@@ -7461,7 +7465,7 @@
     "description": "The description for the `snap_notify` permission"
   },
   "permission_notificationsDescription": {
-    "message": "Allow $1 to display notifications within MetaMask. A short notification text can be triggered by a snap for actionable or time-sensitive information.",
+    "message": "Allow $1 to display notifications within Swissquote Wallet. A short notification text can be triggered by a snap for actionable or time-sensitive information.",
     "description": "An extended description for the `snap_notify` permission. $1 is the snap name."
   },
   "permission_protocol": {
@@ -7469,7 +7473,7 @@
     "description": "The description for the `endowment:protocol` permission."
   },
   "permission_protocolDescription": {
-    "message": "Allow $1 to provide MetaMask with protocol data such as gas estimates or token information.",
+    "message": "Allow $1 to provide Swissquote Wallet with protocol data such as gas estimates or token information.",
     "description": "An extended description for the `endowment:protocol` permission. $1 is the name of the Snap."
   },
   "permission_rpc": {
@@ -7505,7 +7509,7 @@
     "description": "The description for the `endowment:transaction-insight` permission"
   },
   "permission_transactionInsightDescription": {
-    "message": "Allow $1 to decode transactions and show insights within the MetaMask UI. This can be used for anti-phishing and security solutions.",
+    "message": "Allow $1 to decode transactions and show insights within the Swissquote Wallet UI. This can be used for anti-phishing and security solutions.",
     "description": "An extended description for the `endowment:transaction-insight` permission. $1 is the snap name."
   },
   "permission_transactionInsightOrigin": {
@@ -7751,7 +7755,7 @@
     "message": "Contact support"
   },
   "perpsCrossMarginNotSupportedDescription": {
-    "message": "MetaMask Perps only support trading with isolated margin. You need to first close your cross margin position before you can trade on MetaMask."
+    "message": "Swissquote Wallet Perps only support trading with isolated margin. You need to first close your cross margin position before you can trade on Swissquote Wallet."
   },
   "perpsCrossMarginNotSupportedTitle": {
     "message": "Cross margin not supported"
@@ -7850,7 +7854,7 @@
     "description": "Label for the Hyperliquid protocol fee rate in the Perps order summary fees tooltip"
   },
   "perpsFeesTooltipMetamaskFee": {
-    "message": "MetaMask fee",
+    "message": "Swissquote Wallet fee",
     "description": "Label for the MetaMask fee rate in the Perps order summary fees tooltip"
   },
   "perpsFeesTooltipProviderFee": {
@@ -8572,7 +8576,7 @@
     "message": "Watch out for liquidation"
   },
   "perpsTutorialWhatArePerpsDescription": {
-    "message": "MetaMask now supports perpetual futures — aka perps — letting you trade on a token's price movement without buying it."
+    "message": "Swissquote Wallet now supports perpetual futures — aka perps — letting you trade on a token's price movement without buying it."
   },
   "perpsTutorialWhatArePerpsSubtitle": {
     "message": "Here's how it works."
@@ -8663,7 +8667,7 @@
     "message": "Withdrawal submitted"
   },
   "perpsWithdrawTooltip": {
-    "message": "MetaMask will swap to your desired token for you. No MetaMask fee applies when you swap to mUSD.",
+    "message": "Swissquote Wallet will swap to your desired token for you. No Swissquote Wallet fee applies when you swap to mUSD.",
     "description": "Tooltip shown on the Transaction fee row of the Perps Withdraw confirmation"
   },
   "perpsWithdrawalEmptyTitle": {
@@ -8688,7 +8692,7 @@
     "description": "Pin label used in multichain account menu"
   },
   "pinMetaMask": {
-    "message": "Pin the MetaMask extension"
+    "message": "Pin the Swissquote Wallet extension"
   },
   "pinMetaMaskDescription": {
     "message": "Click on $1 and then $2 to pin it."
@@ -8706,7 +8710,7 @@
     "message": "blog post."
   },
   "pna25ModalBody1": {
-    "message": "To better serve you, we’re updating our analytics so publicly available data like wallet addresses and related on-chain activity can be associated with actions you take in MetaMask. This helps us improve MetaMask's performance, security, and features in order to make a better, safer wallet."
+    "message": "To better serve you, we’re updating our analytics so publicly available data like wallet addresses and related on-chain activity can be associated with actions you take in Swissquote Wallet. This helps us improve Swissquote Wallet's performance, security, and features in order to make a better, safer wallet."
   },
   "pna25ModalBody2": {
     "message": "We take privacy seriously.  We do not use this information for advertising or sell your data to third parties.  You can opt out anytime in Settings."
@@ -8825,7 +8829,7 @@
     "description": "Title when camera access is persistently blocked for QR scanning."
   },
   "qrCameraAccessNeededBody": {
-    "message": "MetaMask needs camera access to scan the QR code on your device.",
+    "message": "Swissquote Wallet needs camera access to scan the QR code on your device.",
     "description": "Body when the user dismissed the camera permission prompt but it can be requested again."
   },
   "qrCameraAccessNeededTitle": {
@@ -8840,7 +8844,7 @@
     "description": "$1 is the number of seconds remaining before the QR code expires"
   },
   "qrErrorMismatchedTransactionBody": {
-    "message": "This QR code is for a different transaction. Cancel and try again, making sure to scan the QR code shown in MetaMask with your hardware wallet first.",
+    "message": "This QR code is for a different transaction. Cancel and try again, making sure to scan the QR code shown in Swissquote Wallet with your hardware wallet first.",
     "description": "Body text when a signature QR belongs to a previous transaction."
   },
   "qrErrorMismatchedTransactionTitle": {
@@ -8848,7 +8852,7 @@
     "description": "Title shown when a signature QR belongs to a different transaction."
   },
   "qrErrorNonUrPairingBody": {
-    "message": "Go back to your hardware wallet and find the option to share or export your accounts, choose MetaMask, then scan the QR code.",
+    "message": "Go back to your hardware wallet and find the option to share or export your accounts, choose Swissquote Wallet, then scan the QR code.",
     "description": "Body text for the non-UR QR code error during pairing."
   },
   "qrErrorNonUrPairingTitle": {
@@ -8872,7 +8876,7 @@
     "description": "Title shown when the UR decoder encounters an error (universal for pairing and signing)."
   },
   "qrErrorWrongUrTypePairingBody": {
-    "message": "Go back to your hardware wallet, choose MetaMask as the wallet type, then generate and scan a new QR code.",
+    "message": "Go back to your hardware wallet, choose Swissquote Wallet as the wallet type, then generate and scan a new QR code.",
     "description": "Body text for the wrong UR type error during pairing."
   },
   "qrErrorWrongUrTypePairingTitle": {
@@ -9230,17 +9234,17 @@
     "description": "Make sure you have the Secret Recovery Phrase or private key for this account before removing."
   },
   "removeAccountModalBannerTitle": {
-    "message": "This account will be removed from MetaMask.",
+    "message": "This account will be removed from Swissquote Wallet.",
     "description": "Title of a banner alert used on account remove modal."
   },
   "removeAll": {
     "message": "Remove all"
   },
   "removeKeyringSnap": {
-    "message": "Removing this Snap removes these accounts from MetaMask:"
+    "message": "Removing this Snap removes these accounts from Swissquote Wallet:"
   },
   "removeKeyringSnapToolTip": {
-    "message": "The snap controls the accounts, and by removing it, the accounts will be removed from MetaMask, too, but they will remain in the blockchain."
+    "message": "The snap controls the accounts, and by removing it, the accounts will be removed from Swissquote Wallet, too, but they will remain in the blockchain."
   },
   "removeNFT": {
     "message": "Remove NFT"
@@ -9255,7 +9259,7 @@
     "message": "Remove Snap"
   },
   "removeSnapAccountDescription": {
-    "message": "If you proceed, this account will no longer be available in MetaMask."
+    "message": "If you proceed, this account will no longer be available in Swissquote Wallet."
   },
   "removeSnapAccountTitle": {
     "message": "Remove account"
@@ -9322,7 +9326,7 @@
     "message": "We can’t recover your Secret Recovery Phrase. You can reset the wallet to create a new one and import your accounts using private keys."
   },
   "resetWalletDescriptionTwo": {
-    "message": "Resetting will $1 delete all wallet data in MetaMask on this device. $2",
+    "message": "Resetting will $1 delete all wallet data in Swissquote Wallet on this device. $2",
     "description": "$1 is the bolded text 'permanently' and $2 is the bolded text 'It will not impact the assets within your wallet.'"
   },
   "resetWalletTitle": {
@@ -9333,7 +9337,7 @@
     "description": "$1 is the protocol name."
   },
   "restartMetamask": {
-    "message": "Restart MetaMask"
+    "message": "Restart Swissquote Wallet"
   },
   "restore": {
     "message": "Restore"
@@ -9388,7 +9392,7 @@
     "message": "Text"
   },
   "revealSeedWordsWarning": {
-    "message": "Make sure nobody is looking at your screen. MetaMask Support will never ask for this."
+    "message": "Make sure nobody is looking at your screen. Swissquote Wallet Support will never ask for this."
   },
   "revealSensitiveContent": {
     "message": "Reveal sensitive content"
@@ -9451,7 +9455,7 @@
     "message": "Checking region..."
   },
   "rewardsOnboardingDescription": {
-    "message": "Win prizes, claim perks, and discover more ways to earn—just by using MetaMask."
+    "message": "Win prizes, claim perks, and discover more ways to earn—just by using Swissquote Wallet."
   },
   "rewardsOnboardingIntroGeoCheckFailedDescription": {
     "message": "We cannot determine if your country allows opting into the rewards program. Please check your connection and try again."
@@ -9528,7 +9532,7 @@
     "description": "Alt text for the rewards points icon"
   },
   "rewardsQRCodeDescription": {
-    "message": "To access MetaMask Rewards, scan the QR code with your mobile device."
+    "message": "To access Swissquote Wallet Rewards, scan the QR code with your mobile device."
   },
   "rewardsQRCodeTitle": {
     "message": "Continue on mobile"
@@ -9674,7 +9678,7 @@
     "message": "Scan QR code"
   },
   "scan_qr_code_desc": {
-    "message": "Scan this with the MetaMask app on the device you want to add."
+    "message": "Scan this with the Swissquote Wallet app on the device you want to add."
   },
   "scrollDown": {
     "message": "Scroll down"
@@ -9774,7 +9778,7 @@
     "message": "Enabled"
   },
   "securitySocialLoginEnabledDescription": {
-    "message": "Use your $1 login and MetaMask password to recover your account and Secret Recovery Phrases.",
+    "message": "Use your $1 login and Swissquote Wallet password to recover your account and Secret Recovery Phrases.",
     "description": "The $1 is the text 'Google' or 'Apple' or 'Telegram'"
   },
   "securitySocialLoginLabel": {
@@ -10073,7 +10077,7 @@
     "message": "Verified"
   },
   "securityTrustVerifiedTokenDescription": {
-    "message": "$1 is actively traded and is widely recognized. Verification is not an endorsement by MetaMask."
+    "message": "$1 is actively traded and is widely recognized. Verification is not an endorsement by Swissquote Wallet."
   },
   "securityTrustVerifiedTokenTitle": {
     "message": "Verified token"
@@ -10114,7 +10118,7 @@
     "message": "Select an account"
   },
   "selectAnAccountAlreadyConnected": {
-    "message": "This account has already been connected to MetaMask"
+    "message": "This account has already been connected to Swissquote Wallet"
   },
   "selectEnableDisplayMediaPrivacyPreference": {
     "message": "Turn on Display NFT Media"
@@ -10338,7 +10342,7 @@
     "message": "Need help finding it?"
   },
   "shieldClaimImpactedTxHashNotEligible": {
-    "message": "This transaction is not done within MetaMask, hence it is not eligible for claims"
+    "message": "This transaction is not done within Swissquote Wallet, hence it is not eligible for claims"
   },
   "shieldClaimImpactedWalletAddress": {
     "message": "Impacted wallet address"
@@ -10446,28 +10450,28 @@
     "message": "Confirm plan"
   },
   "shieldCoverageAlertCovered": {
-    "message": "You're protected up to $2 with MetaMask Transaction Shield. $1."
+    "message": "You're protected up to $2 with Swissquote Wallet Transaction Shield. $1."
   },
   "shieldCoverageAlertHighRiskTransaction": {
-    "message": "This is a high risk transaction, so it isn't protected by MetaMask Transaction Shield. $1."
+    "message": "This is a high risk transaction, so it isn't protected by Swissquote Wallet Transaction Shield. $1."
   },
   "shieldCoverageAlertMessageChainNotSupported": {
-    "message": "This chain is not supported, so it isn't protected by MetaMask Transaction Shield. $1"
+    "message": "This chain is not supported, so it isn't protected by Swissquote Wallet Transaction Shield. $1"
   },
   "shieldCoverageAlertMessageLearnHowCoverageWorks": {
     "message": "See what's covered"
   },
   "shieldCoverageAlertMessagePaused": {
-    "message": "There was an issue with your MetaMask Transaction Shield plan payment. Please update your payment method to resume coverage."
+    "message": "There was an issue with your Swissquote Wallet Transaction Shield plan payment. Please update your payment method to resume coverage."
   },
   "shieldCoverageAlertMessagePausedAcknowledgeButton": {
     "message": "Update payment method"
   },
   "shieldCoverageAlertMessagePotentialRisks": {
-    "message": "This transaction has potential risks, so it isn't protected by MetaMask Transaction Shield. $1"
+    "message": "This transaction has potential risks, so it isn't protected by Swissquote Wallet Transaction Shield. $1"
   },
   "shieldCoverageAlertMessageSignatureNotSupported": {
-    "message": "This signature isn't supported, so it isn't protected by MetaMask Transaction Shield. $1"
+    "message": "This signature isn't supported, so it isn't protected by Swissquote Wallet Transaction Shield. $1"
   },
   "shieldCoverageAlertMessageTitle": {
     "message": "This transaction isn't covered"
@@ -10488,10 +10492,10 @@
     "message": "This token shows strong signs of malicious behavior. Continuing may result in loss of funds. $1."
   },
   "shieldCoverageAlertMessageTxTypeNotSupported": {
-    "message": "This transaction type is not supported, so it isn't protected by MetaMask Transaction Shield. $1"
+    "message": "This transaction type is not supported, so it isn't protected by Swissquote Wallet Transaction Shield. $1"
   },
   "shieldCoverageAlertMessageUnknown": {
-    "message": "This request can't be verified, so it isn't protected by MetaMask Transaction Shield. $1."
+    "message": "This request can't be verified, so it isn't protected by Swissquote Wallet Transaction Shield. $1."
   },
   "shieldCoverageEnding": {
     "message": "Shield coverage ends soon"
@@ -10679,7 +10683,7 @@
     "description": "The $1 is the number of days and the $2 is the price of the plan"
   },
   "shieldTxDetails1Title": {
-    "message": "MetaMask Transaction Shield"
+    "message": "Swissquote Wallet Transaction Shield"
   },
   "shieldTxDetails2Description": {
     "message": "$1, next billing on $2",
@@ -10890,10 +10894,10 @@
     "message": "Show web widget on X"
   },
   "showTickerWidgetDescription": {
-    "message": "Displays a MetaMask widget with token details when you’re browsing X.com."
+    "message": "Displays a Swissquote Wallet widget with token details when you’re browsing X.com."
   },
   "sidePanelMigrationToast": {
-    "message": "MetaMask now opens in the side panel by default. $1 any time from the menu.",
+    "message": "Swissquote Wallet now opens in the side panel by default. $1 any time from the menu.",
     "description": "Shown when the extension opens in the side panel after migration. $1 is an inline link to switch back to the popup view."
   },
   "sign": {
@@ -11022,7 +11026,7 @@
     "message": "Skip link confirmation screens"
   },
   "skipLinkConfirmationScreensDescription": {
-    "message": "When you open a link from MetaMask, we show a confirmation screen to protect you from accidentally viewing sensitive info like your accounts, balances, or transaction history. Turn this on to skip that screen for links originating from MetaMask."
+    "message": "When you open a link from Swissquote Wallet, we show a confirmation screen to protect you from accidentally viewing sensitive info like your accounts, balances, or transaction history. Turn this on to skip that screen for links originating from Swissquote Wallet."
   },
   "slippage": {
     "message": "Slippage"
@@ -11046,7 +11050,7 @@
     "message": "Smart account requests from dapps"
   },
   "smartAccountRequestsFromDappsDescriptionV2": {
-    "message": "Let dapps request smart account features for standard accounts. MetaMask will only upgrade to our audited smart account."
+    "message": "Let dapps request smart account features for standard accounts. Swissquote Wallet will only upgrade to our audited smart account."
   },
   "smartAccountUpgradeBannerDescription": {
     "message": "Same address. Smarter features."
@@ -11108,7 +11112,7 @@
     "message": "Account removed"
   },
   "snapAccountRemovedDescription": {
-    "message": "This account will no longer be available to use in MetaMask."
+    "message": "This account will no longer be available to use in Swissquote Wallet."
   },
   "snapConnectTo": {
     "message": "Connect to $1",
@@ -11330,7 +11334,7 @@
     "message": "This Secret Recovery Phrase has already been imported."
   },
   "srpDetailsDescription": {
-    "message": "A Secret Recovery Phrase, also called a seed phrase or mnemonic, is a set of words that lets you access and control your crypto wallet. To move your wallet to MetaMask, you need this phrase."
+    "message": "A Secret Recovery Phrase, also called a seed phrase or mnemonic, is a set of words that lets you access and control your crypto wallet. To move your wallet to Swissquote Wallet, you need this phrase."
   },
   "srpDetailsOwnsAccessListItemOne": {
     "message": "Take all your money"
@@ -11406,7 +11410,7 @@
     "message": "To reveal your Secret Recovery Phrase, you need to correctly answer two questions"
   },
   "srpSecurityQuizQuestionOneQuestion": {
-    "message": "If you lose your Secret Recovery Phrase, MetaMask..."
+    "message": "If you lose your Secret Recovery Phrase, Swissquote Wallet..."
   },
   "srpSecurityQuizQuestionOneRightAnswer": {
     "message": "Can’t help you"
@@ -11490,7 +11494,7 @@
     "message": "Are you sure you want to proceed?"
   },
   "stateCorruptionCopyAndRestoreBeforeReset": {
-    "message": "You can try to copy and restore your state file manually before you decide to reset MetaMask by following $1.",
+    "message": "You can try to copy and restore your state file manually before you decide to reset Swissquote Wallet by following $1.",
     "description": "$1 represents the `stateCorruptionTheseInstructions` localization key"
   },
   "stateCorruptionResettingDatabase": {
@@ -11510,13 +11514,13 @@
     "message": "Error in retrieving state logs, please try again later."
   },
   "stateLogFileName": {
-    "message": "MetaMask state logs"
+    "message": "Swissquote Wallet state logs"
   },
   "stateLogs": {
     "message": "State logs"
   },
   "stateLogsModalDescription": {
-    "message": "State logs can help us debug issues you might encounter. Only send it to MetaMask for support, because state logs contain your public account address and transactions."
+    "message": "State logs can help us debug issues you might encounter. Only send it to Swissquote Wallet for support, because state logs contain your public account address and transactions."
   },
   "status": {
     "message": "Status"
@@ -11532,7 +11536,7 @@
     "message": "Back up Secret Recovery Phrase"
   },
   "storageErrorDescriptionDefault": {
-    "message": "Back up your Secret Recovery Phrase and reinstall MetaMask if the problem continues."
+    "message": "Back up your Secret Recovery Phrase and reinstall Swissquote Wallet if the problem continues."
   },
   "storageErrorDescriptionNoSpace": {
     "message": "Your device is out of storage. Free up space now or unsaved wallet changes may be lost."
@@ -11686,7 +11690,7 @@
     "message": "Edit limit"
   },
   "swapEnableDescription": {
-    "message": "This is required and gives MetaMask permission to swap your $1.",
+    "message": "This is required and gives Swissquote Wallet permission to swap your $1.",
     "description": "Gives the user info about the required approval transaction for swaps. $1 will be the symbol of a token being approved for swaps."
   },
   "swapEnableTokenForSwapping": {
@@ -11724,7 +11728,7 @@
     "description": "Tells a user that they need to confirm on their hardware wallet a swap of 2 tokens. $1 is a source token and $2 is a destination token"
   },
   "swapGasFeesExplanation": {
-    "message": "MetaMask doesn't make money from network fees. These fees are estimates and can change based on how busy the network is and how complex a transaction is. Learn more $1.",
+    "message": "Swissquote Wallet doesn't make money from network fees. These fees are estimates and can change based on how busy the network is and how complex a transaction is. Learn more $1.",
     "description": "$1 is a link (text in link can be found at 'swapGasFeesSummaryLinkText')"
   },
   "swapGasFeesExplanationLinkText": {
@@ -11738,13 +11742,13 @@
     "message": "Network fees on the previous screen are split between these two transactions."
   },
   "swapGasFeesSponsored": {
-    "message": "Paid by MetaMask"
+    "message": "Paid by Swissquote Wallet"
   },
   "swapGasFeesSponsoredExplanation": {
-    "message": "This network fee is paid by MetaMask, so you can transact without $1 in your account."
+    "message": "This network fee is paid by Swissquote Wallet, so you can transact without $1 in your account."
   },
   "swapIncludesMMFee": {
-    "message": "Includes a $1% MetaMask fee.",
+    "message": "Includes a $1% Swissquote Wallet fee.",
     "description": "Provides information about the fee that MetaMask takes for swaps. $1 is a decimal number."
   },
   "swapLearnMore": {
@@ -11757,10 +11761,10 @@
     "message": "Max slippage"
   },
   "swapMetaMaskFee": {
-    "message": "MetaMask fee"
+    "message": "Swissquote Wallet fee"
   },
   "swapMetaMaskFeeDescription": {
-    "message": "The fee of $1% is automatically factored into this quote. You pay it in exchange for a license to use MetaMask's liquidity provider information aggregation software.",
+    "message": "The fee of $1% is automatically factored into this quote. You pay it in exchange for a license to use Swissquote Wallet's liquidity provider information aggregation software.",
     "description": "Provides information about the fee that MetaMask takes for swaps. $1 is a decimal number."
   },
   "swapNQuotesWithDot": {
@@ -11920,7 +11924,7 @@
     "message": "Switch back to popup"
   },
   "switchEthereumChainConfirmationDescription": {
-    "message": "This will switch the selected network within MetaMask to a previously added network:"
+    "message": "This will switch the selected network within Swissquote Wallet to a previously added network:"
   },
   "switchEthereumChainConfirmationTitle": {
     "message": "Allow this site to switch the network?"
@@ -11929,7 +11933,7 @@
     "message": "Switch network"
   },
   "switchToMetaMaskDefaultRpc": {
-    "message": "Switch to MetaMask default RPC",
+    "message": "Switch to Swissquote Wallet default RPC",
     "description": "Button text to switch the default RPC endpoint to MetaMask default RPC"
   },
   "switchToPopup": {
@@ -11975,7 +11979,7 @@
     "message": "Agree"
   },
   "termsOfUseAgreeText": {
-    "message": "I agree to the Terms of Use, which apply to my use of MetaMask and all of its features."
+    "message": "I agree to the Terms of Use, which apply to my use of Swissquote Wallet and all of its features."
   },
   "termsOfUseFooterText": {
     "message": "Please scroll to read all sections"
@@ -11993,7 +11997,7 @@
     "message": "Third-party APIs"
   },
   "thirdPartyApisDescription": {
-    "message": "Choose how you share your IP address or Ethereum address with third-party APIs. Changes will impact your MetaMask experience."
+    "message": "Choose how you share your IP address or Ethereum address with third-party APIs. Changes will impact your Swissquote Wallet experience."
   },
   "thirdPartySoftware": {
     "message": "Third-party software notice",
@@ -12249,7 +12253,7 @@
     "message": "This error could be intermittent, so try restarting the extension."
   },
   "troubleStartingTitle": {
-    "message": "MetaMask had trouble starting."
+    "message": "Swissquote Wallet had trouble starting."
   },
   "trustSignalPhishingWarning": {
     "message": "This site shows signs of phishing or wallet-draining activity. It may request transactions designed to steal your funds."
@@ -12411,7 +12415,7 @@
     "message": "Network RPCs Updated"
   },
   "updatedToMetaMaskDefault": {
-    "message": "Updated to MetaMask default",
+    "message": "Updated to Swissquote Wallet default",
     "description": "Toast message confirming that the default RPC endpoint has been updated to MetaMask default"
   },
   "uploadDropFile": {
@@ -12457,7 +12461,7 @@
     "message": "Network details check"
   },
   "useSafeChainsListValidationDescriptionV2": {
-    "message": "Reduces your chances of connecting to a malicious or incorrect network. MetaMask uses $1 to show accurate and standardized network details."
+    "message": "Reduces your chances of connecting to a malicious or incorrect network. Swissquote Wallet uses $1 to show accurate and standardized network details."
   },
   "useSafeChainsListValidationWebsite": {
     "message": "chainid.network",
@@ -12476,7 +12480,7 @@
     "message": "Value"
   },
   "variationalReferralSubtitle": {
-    "message": "Get +15% Omni points and Silver tier for 90 days with a MetaMask referral code.",
+    "message": "Get +15% Omni points and Silver tier for 90 days with a Swissquote Wallet referral code.",
     "description": "The subtitle of the Variational referral confirmation screen"
   },
   "version": {
@@ -12532,7 +12536,7 @@
     "message": "Confirm"
   },
   "visitSupportDataConsentModalDescription": {
-    "message": "Do you want to share your MetaMask Identifier and app version with our Support Center? This can help us better solve your problem, but is optional."
+    "message": "Do you want to share your Swissquote Wallet Identifier and app version with our Support Center? This can help us better solve your problem, but is optional."
   },
   "visitSupportDataConsentModalReject": {
     "message": "Don’t share"

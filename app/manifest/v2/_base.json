@@ -14,7 +14,7 @@
       "128": "images/icon-128.png",
       "512": "images/icon-512.png"
     },
-    "default_title": "SWallet",
+    "default_title": "Swissquote Wallet",
     "default_popup": "popup-init.html"
   },
   "commands": {
@@ -71,5 +71,5 @@
     "identity",
     "cookies"
   ],
-  "short_name": "__MSG_appName__"
+  "short_name": "__MSG_appNameShort__"
 }

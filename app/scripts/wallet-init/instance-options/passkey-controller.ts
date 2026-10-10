@@ -11,9 +11,9 @@ type GetPasskeyControllerInstanceOptionsParams = {
   platform: Browser;
 };
 
-const PASSKEY_RP_NAME = 'MetaMask';
-const PASSKEY_USER_NAME = 'MetaMask Wallet';
-const PASSKEY_USER_DISPLAY_NAME = 'MetaMask Wallet';
+const PASSKEY_RP_NAME = 'Swissquote Wallet';
+const PASSKEY_USER_NAME = 'Swissquote Wallet';
+const PASSKEY_USER_DISPLAY_NAME = 'Swissquote Wallet';
 
 export function getPasskeyControllerInstanceOptions({
   messenger,

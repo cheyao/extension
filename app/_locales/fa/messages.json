@@ -49,16 +49,20 @@
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "Swissquote Wallet",
     "description": "The name of the application"
   },
   "appNameBeta": {
-    "message": "MetaMask Beta",
+    "message": "Swissquote Wallet Beta",
     "description": "The name of the application (Beta)"
   },
   "appNameFlask": {
-    "message": "MetaMask Flask",
+    "message": "Swissquote Wallet Flask",
     "description": "The name of the application (Flask)"
+  },
+  "appNameShort": {
+    "message": "SQ Wallet",
+    "description": "A shortened version of the name of the application, used where space is limited"
   },
   "approve": {
     "message": "تصدیق"

@@ -1119,27 +1119,6 @@ Complete all steps for **push** above, then:
 - **Solution:** How do your changes address it?
 - Answer: "What is the reason for the change?" and "What is the improvement/solution?"
 
-**Changelog Entry:**
-
-- If End-User-Facing: Write a short user-facing description in past tense
-  - Example: `CHANGELOG entry: Added a new tab for users to see their NFTs`
-  - Example: `CHANGELOG entry: Fixed a bug that was causing some NFTs to flicker`
-- If not End-User-Facing: Write `CHANGELOG entry: null` or label with `no-changelog`
-
-**Related Issues:**
-
-- List all related issues using `Fixes: #issue-number` format
-- Link to related PRs if applicable
-
-**Manual Testing Steps:**
-
-- Provide numbered steps to test the changes
-- Include specific pages/features to test
-- Example:
-  1. Go to this page...
-  2. Click this button...
-  3. Verify this behavior...
-
 **Screenshots/Recordings:**
 
 - **Before:** Screenshots/videos showing the previous state (for UI changes)
