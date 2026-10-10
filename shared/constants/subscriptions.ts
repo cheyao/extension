@@ -15,15 +15,23 @@ export const PausedSubscriptionStatuses: string[] = [
 
 export const SUBSCRIPTION_DEFAULT_TRIAL_PERIOD_DAYS = 14;
 
-export const SUBSCRIPTION_DEFAULT_PAYMENT_TOKEN = 'mUSD';
+/**
+ * The token new Shield subscriptions charge by default.
+ *
+ * Deliberately not mUSD: the mUSD/Money surface is being removed from this
+ * build, so Shield must not depend on it. Existing subscriptions that already
+ * saved mUSD keep working — see {@link SUPPORTED_PAYMENT_TOKEN_IMAGES}.
+ */
+export const SUBSCRIPTION_DEFAULT_PAYMENT_TOKEN = CURRENCY_SYMBOLS.USDC;
 
 export const SUPPORTED_PAYMENT_TOKEN_IMAGES: Record<string, string> = {
   [CURRENCY_SYMBOLS.USDC]:
     'https://static.cx.metamask.io/api/v1/tokenIcons/1/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png',
   [CURRENCY_SYMBOLS.USDT]:
     'https://static.cx.metamask.io/api/v1/tokenIcons/1/0xdac17f958d2ee523a2206206994597c13d831ec7.png',
-  [SUBSCRIPTION_DEFAULT_PAYMENT_TOKEN]:
-    'https://static.cx.metamask.io/api/v1/tokenIcons/1/0xaca92e438df0b2401ff60da7e4337b687a2435da.png',
+  // mUSD is no longer the default, but keep its icon so subscriptions that
+  // already saved mUSD as their payment token still render correctly.
+  mUSD: 'https://static.cx.metamask.io/api/v1/tokenIcons/1/0xaca92e438df0b2401ff60da7e4337b687a2435da.png',
 };
 
 /**

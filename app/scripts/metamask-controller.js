@@ -4786,19 +4786,9 @@ export default class MetamaskController extends EventEmitter {
           perpsToggleTestnet: this.messengerClientApi.perpsToggleTestnet,
           isConnectionAlive: () => !outStream.mmFinished,
           isPreloadAllowed: () => {
-            const { remoteFeatureFlags } = this.controllerMessenger.call(
-              'RemoteFeatureFlagController:getState',
-            );
-            const flags = getRemoteFeatureFlags({
-              metamask: { remoteFeatureFlags },
-            });
-            return (
-              this.keyringController.state.isUnlocked &&
-              this.onboardingController.state.completedOnboarding &&
-              this.preferencesController.state.useExternalServices &&
-              getIsPerpsIncludedInBuild() &&
-              isPerpsRemoteConfigSatisfied(flags.perpsEnabledVersion)
-            );
+            // Hard-disabled: the Perps surface has been removed from this build,
+            // so the perps websocket must never preload.
+            return false;
           },
           subscribeAggregatedOrderBook: (params) =>
             aggregatedOrderBookConnection.subscribe(params),

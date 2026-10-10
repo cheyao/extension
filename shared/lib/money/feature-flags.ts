@@ -67,11 +67,9 @@ export const MONEY_ENABLE_ACTIVITY_DETAILS_FLAG_NAME =
 export function isMoneyAccountEnabled(
   remoteFeatureFlags: Record<string, unknown> | undefined,
 ): boolean {
-  return (
-    validatedVersionGatedFeatureFlag(
-      remoteFeatureFlags?.[MONEY_ENABLE_MONEY_ACCOUNT_FLAG_NAME],
-    ) ?? false
-  );
+  // Hard-disabled: the Money Account surface has been removed from this build.
+  // Kept as a function so callers and their tests keep compiling.
+  return false;
 }
 
 /**

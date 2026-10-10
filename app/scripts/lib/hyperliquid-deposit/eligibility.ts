@@ -12,8 +12,6 @@ import {
 } from '@metamask/utils';
 import log from 'loglevel';
 import { TEST_CHAINS } from '../../../../shared/constants/network';
-import { getIsPerpsIncludedInBuild } from '../../../../shared/lib/environment';
-import { isPerpsRemoteConfigSatisfied } from '../../../../shared/lib/perps-feature-flags';
 import { getBooleanFeatureFlag } from '../../../../shared/lib/remote-feature-flag-utils';
 import {
   HYPERLIQUID_DEPOSIT_USDC_CAIP_ID,
@@ -216,13 +214,10 @@ export function hasAvailableMetaMaskPayBalance({
 function isPerpsExperienceAvailable(
   remoteFeatureFlagController?: RemoteFeatureFlagControllerLike,
 ): boolean {
-  return (
-    getIsPerpsIncludedInBuild() &&
-    isPerpsRemoteConfigSatisfied(
-      remoteFeatureFlagController?.state?.remoteFeatureFlags
-        ?.perpsEnabledVersion,
-    )
-  );
+  // Hard-disabled: the Perps surface has been removed from this build, so the
+  // Hyperliquid deposit prompt must never be shown. Kept as a function so the
+  // surrounding eligibility logic stays intact.
+  return false;
 }
 
 function isHyperliquidDepositPromptEnabled(

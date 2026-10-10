@@ -47,15 +47,15 @@ const selectMusdRemoteFeatureFlags = createSelector(
 /**
  * Select whether the mUSD conversion flow is enabled
  * This is the master toggle for the entire feature
- * Supports version-gated and progressive rollout flag formats
+ *
+ * Hard-disabled: the mUSD/Money surface has been removed from this build, so
+ * the master toggle no longer reads remote config. Remote flags are not a
+ * reliable kill switch here because manifest `_flags` are only merged in under
+ * Jest (see `shared/lib/manifestFlags.ts`), so runtime values would win.
  */
 export const selectIsMusdConversionFlowEnabled = createSelector(
   selectMusdRemoteFeatureFlags,
-  (flags): boolean =>
-    getBooleanFeatureFlag(
-      flags.earnMusdConversionFlowEnabled,
-      DEFAULT_MUSD_BOOLEAN_FLAG,
-    ),
+  (): boolean => false,
 );
 
 /**

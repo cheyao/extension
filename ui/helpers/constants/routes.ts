@@ -1,7 +1,5 @@
 import { memoize } from 'lodash';
 
-import { MUSD_ROUTE_DEFINITIONS } from '../../pages/musd/constants/routes';
-
 type AppRoute = {
   path: string;
   label: string;
@@ -238,22 +236,6 @@ export const ACTIVITY_ROUTE = '/activity';
 export const ROUTES = [
   { path: DEFAULT_ROUTE, label: 'Home', trackInAnalytics: true },
   { path: ACTIVITY_ROUTE, label: 'Activity', trackInAnalytics: true },
-  { path: MONEY_HOME_ROUTE, label: 'Money', trackInAnalytics: true },
-  {
-    path: MONEY_HOW_IT_WORKS_ROUTE,
-    label: 'Money How It Works',
-    trackInAnalytics: true,
-  },
-  {
-    path: MONEY_TRANSACTION_DETAILS_ROUTE,
-    label: 'Money Transaction Details',
-    trackInAnalytics: true,
-  },
-  {
-    path: MONEY_EARN_ROUTE,
-    label: 'Money Earn On Crypto',
-    trackInAnalytics: true,
-  },
   { path: '', label: 'Home', trackInAnalytics: true }, // "" is an alias for the Home route
   {
     path: `${TX_DETAILS_ROUTE}/:caipChainId/:txIdentifier`,
@@ -893,7 +875,6 @@ export const ROUTES = [
     label: 'Hardware Wallet Repair',
     trackInAnalytics: false,
   },
-  ...MUSD_ROUTE_DEFINITIONS,
 ] as const satisfies AppRoute[];
 
 export type AppRoutes = (typeof ROUTES)[number];
