@@ -1,4 +1,10 @@
 .recovery-keys {
+  // Keys, the contract address and the transaction hash are long unbroken hex
+  // strings; without this they push past the onboarding card.
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+
   &__key {
     font-family: var(--font-family-monospace, monospace);
     word-break: break-all;

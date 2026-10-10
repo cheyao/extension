@@ -9287,7 +9287,7 @@
     "description": "Secondary action to postpone replacing a legacy passkey."
   },
   "remoteControlAccessActive": {
-    "message": "$1 has control of this wallet until $2. If this is not you, block it now.",
+    "message": "$1 has control of this wallet until $2. If this is not you, block it now. ",
     "description": "Home screen warning while a recovery controller has active access. $1 is the controller address, $2 is when access ends."
   },
   "remoteControlAccessBlock": {

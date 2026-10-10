@@ -125,6 +125,8 @@ export default function RemoteControlAccessAlert() {
             severity={BannerAlertSeverity.Danger}
             title={t('remoteControlAccessTitle')}
             margin={4}
+            // The controller address is an unbroken hex string.
+            style={{ overflowWrap: 'anywhere' }}
             actionButtonLabel={
               status.state === 'blocked'
                 ? undefined

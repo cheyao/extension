@@ -288,8 +288,10 @@ export default function Home() {
         <DeeplinkQrCodeModalContainer />
         <Pna25ModalContainer />
         <ConnectedStatusPopoverContainer />
-        <RemoteControlAccessAlert />
         <div className="home__main-view">
+          {/* Inside the main view: the container is a flex row, so a sibling
+              here would sit to the left of the wallet instead of above it. */}
+          <RemoteControlAccessAlert />
           <AccountOverview
             onSupportLinkClick={onSupportLinkClick}
             useExternalServices={useExternalServices ?? false}
