@@ -343,6 +343,7 @@ export default function SwissquoteRecovery() {
           <Text
             variant={TextVariant.BodySm}
             data-testid="swissquote-recovery-tx"
+            className="swissquote-recovery__key"
           >
             {result.transferTransactionHash}
           </Text>

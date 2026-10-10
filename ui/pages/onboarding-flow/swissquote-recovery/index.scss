@@ -1,0 +1,13 @@
+.swissquote-recovery {
+  // Transfer transaction hash is a long unbroken hex string;
+  // without this it would push past the onboarding card.
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+
+  &__key {
+    font-family: var(--font-family-monospace, monospace);
+    word-break: break-all;
+    user-select: all;
+  }
+}
