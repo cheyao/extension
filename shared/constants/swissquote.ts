@@ -1,14 +1,5 @@
 import type { Hex } from '@metamask/utils';
 
-/**
- * MetaMask's own gas sponsorship relay ("paid by MetaMask") stays off in
- * Swissquote Wallet: it rejects our transactions (`FAILED_SPONSORSHIP_RULE`).
- * While this is `false`, transactions on networks without a Swissquote gas
- * station are always sent normally with the user paying the network fee, and
- * the fee is never switched automatically to a token paid through that relay.
- */
-export const METAMASK_RELAY_SPONSORSHIP_ENABLED = false;
-
 export type SwissquoteGasStation = {
   /** Display name of the sponsor. */
   name: string;

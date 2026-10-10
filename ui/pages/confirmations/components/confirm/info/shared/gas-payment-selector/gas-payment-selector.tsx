@@ -1,5 +1,8 @@
 import React from 'react';
-import type { TransactionMeta } from '@metamask/transaction-controller';
+import {
+  TransactionType,
+  type TransactionMeta,
+} from '@metamask/transaction-controller';
 import {
   Box,
   BoxAlignItems,
@@ -15,6 +18,7 @@ import { ConfirmInfoRow } from '../../../../../../../components/app/confirm/info
 import { useI18nContext } from '../../../../../../../hooks/useI18nContext';
 import { useConfirmContext } from '../../../../../context/confirm';
 import { useGasSponsorshipPreference } from '../../../../../hooks/gas/useGasSponsorshipPreference';
+import { useIsGaslessSupported } from '../../../../../hooks/gas/useIsGaslessSupported';
 
 type OptionProps = {
   label: string;
@@ -66,9 +70,10 @@ function GasPaymentOption({
 
 /**
  * Lets the user choose, per network, whether to pay the network fee
- * themselves or send the transaction gasless, with the gas paid by the
- * network's Swissquote gas station. Gasless is only offered on networks that
- * have one (see `SWISSQUOTE_GAS_STATIONS`).
+ * themselves or send the transaction gasless. Gasless is offered when either
+ * - MetaMask's relay sponsors the transaction (e.g. on Monad), as in base
+ * MetaMask; or
+ * - the network has a Swissquote gas station (see `SWISSQUOTE_GAS_STATIONS`).
  */
 export function GasPaymentSelector() {
   const t = useI18nContext();
@@ -77,10 +82,26 @@ export function GasPaymentSelector() {
   const { isSponsorshipOptedOut, setSponsorshipOptedOut } =
     useGasSponsorshipPreference(transactionMeta?.chainId);
 
-  const isGaslessSelected = !isSponsorshipOptedOut;
+  const { isSupported: isGaslessSupported } = useIsGaslessSupported();
+
   const hasGasStation = Boolean(
     getSwissquoteGasStation(transactionMeta?.chainId),
   );
+  // Same eligibility rule MetaMask uses for its "Paid by MetaMask" fee row.
+  const isMetaMaskSponsored = Boolean(
+    isGaslessSupported &&
+    transactionMeta?.isGasFeeSponsored &&
+    transactionMeta?.type !== TransactionType.revokeDelegation,
+  );
+  const isGaslessAvailable = hasGasStation || isMetaMaskSponsored;
+  const isGaslessSelected = isGaslessAvailable && !isSponsorshipOptedOut;
+
+  let gaslessHint = t('swissquoteGasGaslessUnavailable');
+  if (hasGasStation) {
+    gaslessHint = t('swissquoteGasGaslessFree');
+  } else if (isMetaMaskSponsored) {
+    gaslessHint = t('paidByMetaMask');
+  }
 
   return (
     <ConfirmInfoRow
@@ -100,13 +121,9 @@ export function GasPaymentSelector() {
         />
         <GasPaymentOption
           label={t('swissquoteGasGasless')}
-          hint={
-            hasGasStation
-              ? t('swissquoteGasGaslessFree')
-              : t('swissquoteGasGaslessUnavailable')
-          }
+          hint={gaslessHint}
           isSelected={isGaslessSelected}
-          isDisabled={!hasGasStation}
+          isDisabled={!isGaslessAvailable}
           onClick={() => setSponsorshipOptedOut(false)}
           testId="gas-payment-option-gasless"
         />

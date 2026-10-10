@@ -22,18 +22,21 @@ export function useGasSponsorshipPreference(chainId: Hex | undefined) {
   const dispatch = useDispatch();
   const { gasSponsorshipOptOutByChainId } = useSelector(getPreferences);
 
-  // Swissquote Wallet: gasless is only available on networks with a
-  // Swissquote gas station, and is opt-in there (stored as `false`). Everywhere
-  // else the user pays the network fee, so nothing reaches MetaMask's relay.
+  // Swissquote Wallet: on networks with a Swissquote gas station, gasless is
+  // opt-in (stored as `false`). Elsewhere MetaMask's own rule applies: a
+  // transaction MetaMask sponsors (e.g. on Monad) stays sponsored unless the
+  // user opts out.
   const hasGasStation = Boolean(getSwissquoteGasStation(chainId));
-  const isSponsorshipOptedOut =
-    !hasGasStation ||
-    !chainId ||
-    gasSponsorshipOptOutByChainId?.[chainId] !== false;
+  const storedOptOut = chainId
+    ? gasSponsorshipOptOutByChainId?.[chainId]
+    : undefined;
+  const isSponsorshipOptedOut = hasGasStation
+    ? storedOptOut !== false
+    : Boolean(storedOptOut);
 
   const setSponsorshipOptedOut = useCallback(
     (optOut: boolean) => {
-      if (!chainId || !hasGasStation) {
+      if (!chainId) {
         return;
       }
 
@@ -44,7 +47,7 @@ export function useGasSponsorshipPreference(chainId: Hex | undefined) {
         }),
       );
     },
-    [chainId, dispatch, gasSponsorshipOptOutByChainId, hasGasStation],
+    [chainId, dispatch, gasSponsorshipOptOutByChainId],
   );
 
   return { isSponsorshipOptedOut, setSponsorshipOptedOut };
