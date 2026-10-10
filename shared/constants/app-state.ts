@@ -6,6 +6,7 @@ export enum AccountOverviewTabKey {
   Activity = 'activity',
   DeFi = 'defi',
   Perps = 'perps',
+  Card = 'card',
 }
 
 export type AccountOverviewTab = `${AccountOverviewTabKey}`;

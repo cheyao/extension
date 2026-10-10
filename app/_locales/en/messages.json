@@ -2667,6 +2667,27 @@
   "cancelled": {
     "message": "Cancelled"
   },
+  "card": {
+    "message": "Card"
+  },
+  "cardCreated": {
+    "message": "Card created"
+  },
+  "cardCvc": {
+    "message": "CVC"
+  },
+  "cardExpiry": {
+    "message": "Expiry"
+  },
+  "cardHideDetails": {
+    "message": "Hide details"
+  },
+  "cardShowDetails": {
+    "message": "Show details"
+  },
+  "cardTopUp": {
+    "message": "Top up"
+  },
   "carouselAllCaughtUp": {
     "message": "You're all caught up!",
     "description": "Message shown in carousel when all promotional slides have been dismissed"

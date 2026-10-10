@@ -29,8 +29,7 @@ import {
 import {
   getIsPerpsExperienceAvailable,
   getPerpsTabBadgeSeen,
-} from '../../../selectors/perps';
-import {
+} from '../../../selectors/perps'; import {
   detectNfts,
   setDefaultHomeActiveTabName,
   setPerpsTabBadgeSeen,
@@ -40,6 +39,7 @@ import AssetList from '../../app/assets/asset-list';
 import DeFiTab from '../../app/assets/defi-list/defi-tab';
 import NftsTab from '../../app/assets/nfts/nfts-tab';
 import { PerpsTab } from '../../app/perps/perps-tab';
+import { CardTab } from '../../app/card-tab';
 import { Tab, Tabs } from '../../ui/tabs';
 import { useABTest } from '../../../hooks/useABTest';
 import { useBottomNavBar } from '../../../hooks/useBottomNavBar';
@@ -60,6 +60,7 @@ export type AccountOverviewTabsProps = AccountOverviewCommonProps & {
   showNfts?: boolean;
   showDefi?: boolean;
   showActivity?: boolean;
+  showCard?: boolean;
 };
 
 export const AccountOverviewTabs = ({
@@ -68,6 +69,7 @@ export const AccountOverviewTabs = ({
   showNfts = true,
   showDefi = true,
   showActivity = true,
+  showCard = true,
 }: AccountOverviewTabsProps) => {
   const persistedTab = useSelector(getDefaultHomeActiveTabName);
   const [urlTab, setActiveTabKey] = useTabState();
@@ -125,6 +127,7 @@ export const AccountOverviewTabs = ({
     ...(showDefi && defiPositionsEnabled ? [AccountOverviewTabKey.DeFi] : []),
     ...(showNfts ? [AccountOverviewTabKey.Nfts] : []),
     ...(showActivity && !showBottomNav ? [AccountOverviewTabKey.Activity] : []),
+    ...(showCard ? [AccountOverviewTabKey.Card] : []),
   ]);
   // Perps is the effective active tab when it is explicitly selected, or when
   // the active tab isn't rendered and Tabs clamps to the first rendered tab.
@@ -302,6 +305,18 @@ export const AccountOverviewTabs = ({
           >
             <ErrorBoundary key="activity">
               <ActivityList entryPoint={tabEntryPoint} />
+            </ErrorBoundary>
+          </Tab>
+        )}
+
+        {showCard && (
+          <Tab
+            name={t('card')}
+            tabKey={AccountOverviewTabKey.Card}
+            data-testid="account-overview__card-tab"
+          >
+            <ErrorBoundary key="card">
+              <CardTab />
             </ErrorBoundary>
           </Tab>
         )}
