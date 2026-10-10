@@ -451,6 +451,8 @@ const config = {
     rules: [
       // json
       { test: /\.json$/u, type: 'json' },
+      // plain text files are imported as strings (e.g. the Swissquote verified dApps list)
+      { test: /\.txt$/u, type: 'asset/source' },
       // treats JSON and compressed JSON files loaded via `new URL('./file.json(?:\.gz)', import.meta.url)` as assets.
       {
         test: /\.json(?:\.gz)?$/u,

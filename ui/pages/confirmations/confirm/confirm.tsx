@@ -11,6 +11,7 @@ import { SmartTransactionsBannerAlert } from '../components/smart-transactions-b
 import { PluggableSection } from '../components/confirm/pluggable-section';
 import ScrollToBottom from '../components/confirm/scroll-to-bottom';
 import { Title } from '../components/confirm/title';
+import { SwissquoteCheck } from '../components/confirm/swissquote-check';
 import { ConfirmContextProvider } from '../context/confirm';
 import { ConfirmNav } from '../components/confirm/nav/nav';
 import { GasFeeTokenToast } from '../components/confirm/info/shared/gas-fee-token-toast/gas-fee-token-toast';
@@ -48,6 +49,7 @@ const Confirm = ({ confirmationId }: { confirmationId?: string }) => {
                   <Footer />
                 </Page>
                 <GasFeeModalWrapper />
+                <SwissquoteCheck />
               </>
             </ConfirmAlerts>
           </TransactionModalContextProvider>

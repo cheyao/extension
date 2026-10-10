@@ -11917,6 +11917,33 @@
   "swapsViewInActivity": {
     "message": "View in activity"
   },
+  "swissquoteCheckContract": {
+    "message": "Contract"
+  },
+  "swissquoteCheckNotRecognised": {
+    "message": "Not recognised"
+  },
+  "swissquoteCheckSite": {
+    "message": "Website"
+  },
+  "swissquoteCheckVerified": {
+    "message": "Verified"
+  },
+  "swissquoteContinueAnyway": {
+    "message": "Continue anyway"
+  },
+  "swissquoteNotRecognisedDescription": {
+    "message": "This is not on Swissquote's list of reviewed dApps. That does not mean it is malicious, but only continue if you trust it."
+  },
+  "swissquoteNotRecognisedTitle": {
+    "message": "Not recognised by Swissquote"
+  },
+  "swissquoteVerifiedDescription": {
+    "message": "Swissquote has reviewed this dApp and marked it as safe to interact with."
+  },
+  "swissquoteVerifiedTitle": {
+    "message": "Verified by Swissquote"
+  },
   "switch": {
     "message": "Switch"
   },

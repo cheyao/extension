@@ -18,6 +18,8 @@ module.exports = {
   moduleNameMapper: {
     // Stylesheets are imported as text via css-loader; Jest cannot parse them.
     '\\.css$': '<rootDir>/test/mocks/style.ts',
+    // Text files are imported as strings via webpack `asset/source`.
+    '\\.txt$': '<rootDir>/test/mocks/text-file.ts',
     // Mock lightweight-charts since it requires browser/canvas APIs not available in Jest
     '^lightweight-charts$': '<rootDir>/test/mocks/lightweight-charts.js',
     // Stub @metamask/perps-controller so every test suite can resolve it without
