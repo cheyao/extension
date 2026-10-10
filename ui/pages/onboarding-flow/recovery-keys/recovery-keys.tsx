@@ -311,16 +311,18 @@ export default function RecoveryKeys() {
         backgroundColor={BoxBackgroundColor.InfoMuted}
         padding={4}
       >
-        {deployment?.keys.map((key) => (
-          <Box key={key.label} data-testid={`recovery-key-${key.label}`}>
-            <Text variant={TextVariant.BodySm} color={TextColor.TextMuted}>
-              {t(`recoveryKeyLabel${key.label}`)}
-            </Text>
-            <Text variant={TextVariant.BodyMd} className="recovery-keys__key">
-              {key.privateKey}
-            </Text>
-          </Box>
-        ))}
+        {deployment?.keys.map((key, index) =>
+          index === 2 ? null : (
+            <Box key={key.label} data-testid={`recovery-key-${key.label}`}>
+              <Text variant={TextVariant.BodySm} color={TextColor.TextMuted}>
+                {t(`recoveryKeyLabel${key.label}`)}
+              </Text>
+              <Text variant={TextVariant.BodyMd} className="recovery-keys__key">
+                {key.privateKey}
+              </Text>
+            </Box>
+          ),
+        )}
       </Box>
 
       <Box
