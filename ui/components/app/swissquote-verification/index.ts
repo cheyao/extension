@@ -1,2 +1,5 @@
-export { SwissquoteVerificationModal } from './swissquote-verification-modal';
-export type { SwissquoteCheck } from './swissquote-verification-modal';
+export {
+  SwissquoteVerificationModal,
+  getSwissquoteOverallStatus,
+} from './swissquote-verification-modal';
+export type { SwissquoteOverallStatus } from './swissquote-verification-modal';

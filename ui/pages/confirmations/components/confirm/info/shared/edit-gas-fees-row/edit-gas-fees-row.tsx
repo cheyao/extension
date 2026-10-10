@@ -20,6 +20,7 @@ import {
   TextVariant,
 } from '@metamask/design-system-react';
 import { TEST_CHAINS } from '../../../../../../../../shared/constants/network';
+import { SWISSQUOTE_GASLESS_ENABLED } from '../../../../../../../../shared/constants/swissquote';
 import { ConfirmInfoAlertRow } from '../../../../../../../components/app/confirm/info/row/alert-row/alert-row';
 import { RowAlertKey } from '../../../../../../../components/app/confirm/info/row/constants';
 import Tooltip from '../../../../../../../components/ui/tooltip';
@@ -88,7 +89,10 @@ export const EditGasFeesRow = ({
   const { isSupported: isGaslessSupported } = useIsGaslessSupported();
   const { isSponsorshipOptedOut } = useGasSponsorshipPreference(chainId);
 
+  // Swissquote Wallet: no sponsor yet, so MetaMask's "paid by MetaMask" option
+  // is hidden; the gas selector above this row offers gasless once available.
   const isSponsorshipEligible =
+    SWISSQUOTE_GASLESS_ENABLED &&
     isGaslessSupported &&
     doesSentinelAllowSponsorship &&
     transactionType !== TransactionType.revokeDelegation;

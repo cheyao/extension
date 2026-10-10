@@ -1,0 +1,44 @@
+# Swissquote contract registry (demo database)
+#
+# Stand-in for Swissquote's server-side registry. Instead of trusting
+# addresses, Swissquote reviews the *code* that runs at a contract: the wallet
+# downloads the contract's bytecode (eth_getCode), hashes it with SHA-256 and
+# compares the hash with the verdicts below. If the code at an address ever
+# changes, its hash changes too and the previous verdict no longer applies.
+#
+# Hash definition: SHA-256 of the raw runtime bytecode bytes returned by
+# eth_getCode (hex-decoded, without the 0x prefix), written as 64 lowercase
+# hex characters. Proxies are hashed as deployed (the proxy's own code).
+#
+# Line formats (blank lines and # comments are ignored):
+#
+#   dapp <domain> <chain id> <contract address> [label]
+#       A contract the dApp at <domain> runs. Subdomains match too, so
+#       "uniswap.org" covers "app.uniswap.org". Chain id is hex (0x1) or
+#       decimal (1). These are the contracts checked when the site connects;
+#       for transactions the wallet always checks the contract being called.
+#
+#   safe <sha256>      Code Swissquote has reviewed and deems safe.
+#   unsafe <sha256>    Code Swissquote deems unsafe (blacklist).
+#
+# Any other code hash is "not recognised".
+
+# --- dApps and the contracts they run --------------------------------------
+
+# Matcha (0x)
+dapp matcha.xyz 0x1 0x0000000000001fF3684f28c67538d4D072C22734 0x AllowanceHolder
+dapp matcha.xyz 0x1 0xDef1C0ded9bec7F1a1670819833240f027b25EfF 0x Exchange Proxy
+
+# Uniswap
+dapp uniswap.org 0x1 0x66a9893cC07D91D95644AEDD05D03f95e1dBA8Af Uniswap Universal Router
+dapp uniswap.org 0x1 0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45 Uniswap V3 SwapRouter02
+dapp uniswap.org 0x1 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D Uniswap V2 Router 02
+
+# --- Code hashes (Ethereum mainnet bytecode, fetched 2026-10-10) -----------
+
+# Demo verdicts: Matcha is deemed safe, Uniswap is deemed unsafe.
+safe 19f7b3f5410204f7deb3ff7c19bd8cb97a84fecf8c4afeb412fefd84f6867877 # 0x AllowanceHolder
+safe d42864ddb13d60ff6efb2181810ed03dbe0ea65a453ec894b2a232e6abe2e981 # 0x Exchange Proxy
+unsafe 5a94552ea3e34cb8c474fc7bdd0522649a7e107899d8df6b01bc15c561278ac1 # Uniswap Universal Router
+unsafe 73fa6fcc81954e96e46dfde91f8e282cd98868c0992ed2c7875a9618fa0711e5 # Uniswap V3 SwapRouter02
+unsafe ccef50da4af021b09ada39d78db5d281fffff81a57969c7028bccc1f50d37854 # Uniswap V2 Router 02

@@ -2,6 +2,7 @@ import { useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { Hex } from '@metamask/utils';
 import { getPreferences } from '../../../../../shared/lib/selectors/preferences';
+import { SWISSQUOTE_GASLESS_ENABLED } from '../../../../../shared/constants/swissquote';
 import { setGasSponsorshipOptOut } from '../../../../store/actions';
 import { useDispatch } from '../../../../store/hooks';
 
@@ -21,13 +22,15 @@ export function useGasSponsorshipPreference(chainId: Hex | undefined) {
   const dispatch = useDispatch();
   const { gasSponsorshipOptOutByChainId } = useSelector(getPreferences);
 
-  const isSponsorshipOptedOut = Boolean(
-    chainId && gasSponsorshipOptOutByChainId?.[chainId],
-  );
+  // Swissquote Wallet: while gasless is unavailable, always pay the network
+  // fee so no transaction is sent to the sponsorship relay.
+  const isSponsorshipOptedOut =
+    !SWISSQUOTE_GASLESS_ENABLED ||
+    Boolean(chainId && gasSponsorshipOptOutByChainId?.[chainId]);
 
   const setSponsorshipOptedOut = useCallback(
     (optOut: boolean) => {
-      if (!chainId) {
+      if (!chainId || !SWISSQUOTE_GASLESS_ENABLED) {
         return;
       }
 

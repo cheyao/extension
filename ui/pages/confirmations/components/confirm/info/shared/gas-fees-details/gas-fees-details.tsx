@@ -19,6 +19,7 @@ import { useEIP1559TxFees } from '../../hooks/useEIP1559TxFees';
 import { useFeeCalculations } from '../../hooks/useFeeCalculations';
 import { useSupportsEIP1559 } from '../../hooks/useSupportsEIP1559';
 import { EditGasFeesRow } from '../edit-gas-fees-row/edit-gas-fees-row';
+import { GasPaymentSelector } from '../gas-payment-selector';
 import { GasFeesRow } from '../gas-fees-row/gas-fees-row';
 import { ConfirmInfoAlertRow } from '../../../../../../../components/app/confirm/info/row/alert-row/alert-row';
 import { RowAlertKey } from '../../../../../../../components/app/confirm/info/row/constants';
@@ -105,6 +106,7 @@ export const GasFeesDetails = (): JSX.Element | null => {
 
   return (
     <>
+      <GasPaymentSelector />
       <EditGasFeesRow
         addedProtectionFeeFiat={addedProtectionFeeFiat}
         showAddedProtectionFee={showAddedProtectionFee}

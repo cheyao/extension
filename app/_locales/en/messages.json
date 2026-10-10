@@ -11920,29 +11920,71 @@
   "swissquoteCheckContract": {
     "message": "Contract"
   },
-  "swissquoteCheckNotRecognised": {
-    "message": "Not recognised"
+  "swissquoteCheckingDescription": {
+    "message": "Hashing the code of this dApp's contracts and comparing it with Swissquote's database."
+  },
+  "swissquoteCheckingTitle": {
+    "message": "Checking with Swissquote…"
   },
   "swissquoteCheckSite": {
     "message": "Website"
   },
-  "swissquoteCheckVerified": {
-    "message": "Verified"
+  "swissquoteCodeHash": {
+    "message": "SHA-256"
+  },
+  "swissquoteComingSoon": {
+    "message": "Coming soon"
   },
   "swissquoteContinueAnyway": {
     "message": "Continue anyway"
   },
+  "swissquoteGasGasless": {
+    "message": "Gasless"
+  },
+  "swissquoteGasPayFee": {
+    "message": "Pay gas fee"
+  },
+  "swissquoteGasPayment": {
+    "message": "Gas"
+  },
+  "swissquoteNoContractsOnRecord": {
+    "message": "Swissquote has no contracts on record for this site."
+  },
   "swissquoteNotRecognisedDescription": {
-    "message": "This is not on Swissquote's list of reviewed dApps. That does not mean it is malicious, but only continue if you trust it."
+    "message": "Swissquote has not reviewed the code this dApp runs, or the code has changed since it was reviewed. Only continue if you trust it."
   },
   "swissquoteNotRecognisedTitle": {
     "message": "Not recognised by Swissquote"
   },
-  "swissquoteVerifiedDescription": {
-    "message": "Swissquote has reviewed this dApp and marked it as safe to interact with."
+  "swissquoteSafeDescription": {
+    "message": "The code of every contract checked matches a version Swissquote has reviewed and marked as safe."
   },
-  "swissquoteVerifiedTitle": {
-    "message": "Verified by Swissquote"
+  "swissquoteSafeTitle": {
+    "message": "Verified safe by Swissquote"
+  },
+  "swissquoteUnsafeDescription": {
+    "message": "This dApp runs contract code that Swissquote has marked as unsafe. Do not continue unless you are certain."
+  },
+  "swissquoteUnsafeTitle": {
+    "message": "Flagged as unsafe by Swissquote"
+  },
+  "swissquoteVerdictChecking": {
+    "message": "Checking…"
+  },
+  "swissquoteVerdictError": {
+    "message": "Could not check"
+  },
+  "swissquoteVerdictNoCode": {
+    "message": "No contract code"
+  },
+  "swissquoteVerdictSafe": {
+    "message": "Safe"
+  },
+  "swissquoteVerdictUnknown": {
+    "message": "Unknown code"
+  },
+  "swissquoteVerdictUnsafe": {
+    "message": "Unsafe"
   },
   "switch": {
     "message": "Switch"
@@ -12159,6 +12201,12 @@
   },
   "transactionFailed": {
     "message": "Transaction failed"
+  },
+  "transactionFailureReason": {
+    "message": "Reason"
+  },
+  "transactionFailureReasonUnknown": {
+    "message": "No error message was recorded for this transaction."
   },
   "transactionFee": {
     "message": "Transaction fee"

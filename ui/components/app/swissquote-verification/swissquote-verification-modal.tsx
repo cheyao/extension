@@ -18,6 +18,11 @@ import {
   TextVariant,
 } from '@metamask/design-system-react';
 import { useI18nContext } from '../../../hooks/useI18nContext';
+import type {
+  SwissquoteContractCheckResult,
+  SwissquoteContractVerdict,
+} from '../../../hooks/swissquote/useSwissquoteContractChecks';
+import { shortenAddress } from '../../../helpers/utils/util';
 import {
   Modal,
   ModalContent,
@@ -25,38 +30,134 @@ import {
   ModalOverlay,
 } from '../../component-library';
 
-export type SwissquoteCheck = {
-  /** What was checked, e.g. the site or the contract. */
-  kind: 'site' | 'contract';
-  /** The origin or address that was looked up. */
-  value: string;
-  /** Whether it is on Swissquote's verified list. */
-  isVerified: boolean;
+export type SwissquoteOverallStatus =
+  | 'checking'
+  | 'safe'
+  | 'unsafe'
+  | 'not-recognised';
+
+/**
+ * Combines per-contract verdicts: any unsafe code makes the dApp unsafe, it is
+ * safe only when every contract's code is known safe, and not recognised
+ * otherwise (unknown code, nothing on record, or the check failed).
+ *
+ * @param loading - Whether checks are still running.
+ * @param results - The per-contract results.
+ * @returns The overall status.
+ */
+export function getSwissquoteOverallStatus(
+  loading: boolean,
+  results: SwissquoteContractCheckResult[],
+): SwissquoteOverallStatus {
+  if (loading) {
+    return 'checking';
+  }
+  if (results.some((result) => result.verdict === 'unsafe')) {
+    return 'unsafe';
+  }
+  if (
+    results.length > 0 &&
+    results.every((result) => result.verdict === 'safe')
+  ) {
+    return 'safe';
+  }
+  return 'not-recognised';
+}
+
+const STATUS_DISPLAY = {
+  checking: {
+    icon: IconName.SecuritySearch,
+    iconColor: IconColor.IconAlternative,
+    title: 'swissquoteCheckingTitle',
+    description: 'swissquoteCheckingDescription',
+  },
+  safe: {
+    icon: IconName.SecurityTick,
+    iconColor: IconColor.SuccessDefault,
+    title: 'swissquoteSafeTitle',
+    description: 'swissquoteSafeDescription',
+  },
+  unsafe: {
+    icon: IconName.Danger,
+    iconColor: IconColor.ErrorDefault,
+    title: 'swissquoteUnsafeTitle',
+    description: 'swissquoteUnsafeDescription',
+  },
+  'not-recognised': {
+    icon: IconName.Warning,
+    iconColor: IconColor.WarningDefault,
+    title: 'swissquoteNotRecognisedTitle',
+    description: 'swissquoteNotRecognisedDescription',
+  },
+} as const;
+
+const VERDICT_DISPLAY: Record<
+  SwissquoteContractVerdict,
+  { label: string; icon: IconName; color: TextColor; iconColor: IconColor }
+> = {
+  safe: {
+    label: 'swissquoteVerdictSafe',
+    icon: IconName.Confirmation,
+    color: TextColor.SuccessDefault,
+    iconColor: IconColor.SuccessDefault,
+  },
+  unsafe: {
+    label: 'swissquoteVerdictUnsafe',
+    icon: IconName.Danger,
+    color: TextColor.ErrorDefault,
+    iconColor: IconColor.ErrorDefault,
+  },
+  unknown: {
+    label: 'swissquoteVerdictUnknown',
+    icon: IconName.Question,
+    color: TextColor.WarningDefault,
+    iconColor: IconColor.WarningDefault,
+  },
+  'no-code': {
+    label: 'swissquoteVerdictNoCode',
+    icon: IconName.Question,
+    color: TextColor.WarningDefault,
+    iconColor: IconColor.WarningDefault,
+  },
+  error: {
+    label: 'swissquoteVerdictError',
+    icon: IconName.Warning,
+    color: TextColor.WarningDefault,
+    iconColor: IconColor.WarningDefault,
+  },
 };
 
 type SwissquoteVerificationModalProps = Readonly<{
-  checks: SwissquoteCheck[];
+  /** The dApp origin the check is for. */
+  origin: string;
+  loading: boolean;
+  results: SwissquoteContractCheckResult[];
   onContinue: () => void;
   onCancel: () => void;
 }>;
 
 /**
- * Popup with the result of the Swissquote verified dApps check: "Verified by
- * Swissquote" when every checked item is on the list, "Not recognised by
- * Swissquote" otherwise, with one row per checked site or contract.
+ * Popup with the result of the Swissquote contract code check: each contract
+ * the dApp runs is hashed (SHA-256 of its bytecode) and compared against
+ * Swissquote's database of safe and unsafe code.
  *
  * @param props - Component props.
- * @param props.checks - The lookups to display.
+ * @param props.origin - The dApp origin the check is for.
+ * @param props.loading - Whether checks are still running.
+ * @param props.results - The per-contract results.
  * @param props.onContinue - Called when the user proceeds.
  * @param props.onCancel - Called when the user closes or cancels.
  */
 export function SwissquoteVerificationModal({
-  checks,
+  origin,
+  loading,
+  results,
   onContinue,
   onCancel,
 }: SwissquoteVerificationModalProps) {
   const t = useI18nContext();
-  const isVerified = checks.every((check) => check.isVerified);
+  const status = getSwissquoteOverallStatus(loading, results);
+  const display = STATUS_DISPLAY[status];
 
   return (
     <Modal
@@ -88,19 +189,15 @@ export function SwissquoteVerificationModal({
             gap={2}
           >
             <Icon
-              name={isVerified ? IconName.SecurityTick : IconName.Warning}
+              name={display.icon}
               size={IconSize.Lg}
-              color={
-                isVerified ? IconColor.SuccessDefault : IconColor.WarningDefault
-              }
+              color={display.iconColor}
             />
             <Text
               variant={TextVariant.HeadingMd}
               data-testid="swissquote-verification-status"
             >
-              {isVerified
-                ? t('swissquoteVerifiedTitle')
-                : t('swissquoteNotRecognisedTitle')}
+              {t(display.title)}
             </Text>
           </Box>
           <Text
@@ -108,9 +205,7 @@ export function SwissquoteVerificationModal({
             color={TextColor.TextAlternative}
             textAlign={TextAlign.Center}
           >
-            {isVerified
-              ? t('swissquoteVerifiedDescription')
-              : t('swissquoteNotRecognisedDescription')}
+            {t(display.description)}
           </Text>
         </Box>
 
@@ -121,66 +216,109 @@ export function SwissquoteVerificationModal({
           paddingRight={4}
           paddingBottom={4}
         >
-          {checks.map((check) => (
-            <Box
-              key={`${check.kind}:${check.value}`}
-              flexDirection={BoxFlexDirection.Row}
-              alignItems={BoxAlignItems.Center}
-              justifyContent={BoxJustifyContent.Between}
-              gap={3}
-              padding={3}
-              className="rounded-lg bg-section"
+          <Box
+            flexDirection={BoxFlexDirection.Column}
+            padding={3}
+            className="rounded-lg bg-section"
+          >
+            <Text
+              variant={TextVariant.BodySm}
+              color={TextColor.TextAlternative}
             >
-              <Box flexDirection={BoxFlexDirection.Column} className="min-w-0">
-                <Text
-                  variant={TextVariant.BodySm}
-                  color={TextColor.TextAlternative}
-                >
-                  {check.kind === 'site'
-                    ? t('swissquoteCheckSite')
-                    : t('swissquoteCheckContract')}
-                </Text>
-                <Text
-                  variant={TextVariant.BodyMd}
-                  fontWeight={FontWeight.Medium}
-                  className="truncate"
-                >
-                  {check.value}
-                </Text>
-              </Box>
+              {t('swissquoteCheckSite')}
+            </Text>
+            <Text
+              variant={TextVariant.BodyMd}
+              fontWeight={FontWeight.Medium}
+              className="truncate"
+            >
+              {origin}
+            </Text>
+            {results.length === 0 && (
+              <Text
+                variant={TextVariant.BodySm}
+                color={TextColor.WarningDefault}
+              >
+                {t('swissquoteNoContractsOnRecord')}
+              </Text>
+            )}
+          </Box>
+
+          {results.map((result) => {
+            const verdict = result.verdict
+              ? VERDICT_DISPLAY[result.verdict]
+              : undefined;
+            return (
               <Box
+                key={`${result.chainId ?? result.networkClientId}:${result.address}`}
                 flexDirection={BoxFlexDirection.Row}
                 alignItems={BoxAlignItems.Center}
-                gap={1}
-                className="shrink-0"
+                justifyContent={BoxJustifyContent.Between}
+                gap={3}
+                padding={3}
+                className="rounded-lg bg-section"
+                data-testid="swissquote-contract-row"
               >
-                <Icon
-                  name={
-                    check.isVerified ? IconName.Confirmation : IconName.Question
-                  }
-                  size={IconSize.Sm}
-                  color={
-                    check.isVerified
-                      ? IconColor.SuccessDefault
-                      : IconColor.WarningDefault
-                  }
-                />
-                <Text
-                  variant={TextVariant.BodySm}
-                  fontWeight={FontWeight.Medium}
-                  color={
-                    check.isVerified
-                      ? TextColor.SuccessDefault
-                      : TextColor.WarningDefault
-                  }
+                <Box
+                  flexDirection={BoxFlexDirection.Column}
+                  className="min-w-0"
                 >
-                  {check.isVerified
-                    ? t('swissquoteCheckVerified')
-                    : t('swissquoteCheckNotRecognised')}
-                </Text>
+                  <Text
+                    variant={TextVariant.BodySm}
+                    color={TextColor.TextAlternative}
+                    className="truncate"
+                  >
+                    {result.label ?? t('swissquoteCheckContract')}
+                  </Text>
+                  <Text
+                    variant={TextVariant.BodyMd}
+                    fontWeight={FontWeight.Medium}
+                  >
+                    {shortenAddress(result.address)}
+                  </Text>
+                  {result.codeHash && (
+                    <Text
+                      variant={TextVariant.BodyXs}
+                      color={TextColor.TextAlternative}
+                      className="truncate font-mono"
+                    >
+                      {t('swissquoteCodeHash')} {result.codeHash.slice(0, 10)}…
+                      {result.codeHash.slice(-6)}
+                    </Text>
+                  )}
+                </Box>
+                {verdict ? (
+                  <Box
+                    flexDirection={BoxFlexDirection.Row}
+                    alignItems={BoxAlignItems.Center}
+                    gap={1}
+                    className="shrink-0"
+                  >
+                    <Icon
+                      name={verdict.icon}
+                      size={IconSize.Sm}
+                      color={verdict.iconColor}
+                    />
+                    <Text
+                      variant={TextVariant.BodySm}
+                      fontWeight={FontWeight.Medium}
+                      color={verdict.color}
+                    >
+                      {t(verdict.label)}
+                    </Text>
+                  </Box>
+                ) : (
+                  <Text
+                    variant={TextVariant.BodySm}
+                    color={TextColor.TextAlternative}
+                    className="shrink-0"
+                  >
+                    {t('swissquoteVerdictChecking')}
+                  </Text>
+                )}
               </Box>
-            </Box>
-          ))}
+            );
+          })}
         </Box>
 
         <Box
@@ -195,11 +333,12 @@ export function SwissquoteVerificationModal({
             size={ButtonSize.Lg}
             className="w-full"
             onClick={onContinue}
+            isDanger={status === 'unsafe'}
             data-testid="swissquote-verification-continue"
           >
-            {isVerified ? t('continue') : t('swissquoteContinueAnyway')}
+            {status === 'safe' ? t('continue') : t('swissquoteContinueAnyway')}
           </Button>
-          {!isVerified && (
+          {status !== 'safe' && (
             <Button
               variant={ButtonVariant.Secondary}
               size={ButtonSize.Lg}

@@ -10,6 +10,7 @@ import {
 import ErrorBoundary from '../../components/app/error-boundary/error-boundary';
 import { useApiTransaction } from '../../hooks/activity/useApiTransaction';
 import { Header } from './components/header';
+import { FailureReason } from './components/failure-reason';
 import { TemplateLoader } from './templates/template-loader';
 import { useRampsDetailsItem } from './templates/ramps/hooks';
 
@@ -103,6 +104,7 @@ export function TransactionDetails({ chainId, txIdentifier, onBack }: Props) {
       </div>
 
       <div className="flex flex-col flex-1 overflow-y-auto px-4 pb-4">
+        <FailureReason txIdentifier={txIdentifier} />
         <ErrorBoundary>
           <TemplateLoader item={transaction} />
         </ErrorBoundary>
