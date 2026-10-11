@@ -6,13 +6,31 @@ rebranded and extended with gasless transactions, a second layer of dApp
 security, an on-chain wallet recovery system, a Swissquote deposit currency
 (sUSD) and a payment card.
 
-> **Status: prototype.** Some features run on real networks with real funds,
-> others are demos. See [What is real and what is simulated](#what-is-real-and-what-is-simulated).
-> Nothing has been security-reviewed.
-
 - **Code architecture:** [ARCHITECTURE.md](./ARCHITECTURE.md)
 - **Build, test and tooling guide:** [docs/development-guide.md](./docs/development-guide.md)
 - **Instructions for AI coding agents:** [AGENTS.md](./AGENTS.md)
+
+---
+
+## Core new features
+
+- Verified and Malicious DeFi popups by SwissQuote
+- Integrated Prepaid Credit Card Top-up and Usage
+- Smart 2-out-of-3 Funds Recovery in Case of Lost of Private Key
+- Multi-chain support - EVM and Bitcoin
+- Gasless transactions via Pimlico
+- Transaction simulation to find malicious countracts
+- Full dApp support
+
+## Special Swissquote services
+
+- Perps trading
+- Prepaid credit card
+- Swap
+- On-ramp
+- sUSD liquid staking
+
+*Swissquote shall be charging a small fee when these features are used*
 
 ---
 
