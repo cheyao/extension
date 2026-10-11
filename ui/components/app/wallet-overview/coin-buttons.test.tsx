@@ -47,12 +47,6 @@ jest.mock('../../../pages/asset/hooks/useBalanceAwareSwapDefaults', () => ({
   })),
 }));
 
-jest.mock('../../../hooks/batch-sell/useBatchSell', () => ({
-  useBatchSell: jest.fn(() => ({
-    openBatchSellExperience: jest.fn(),
-  })),
-}));
-
 jest.mock('../../../hooks/useMultichainSelector', () => ({
   useMultichainSelector: jest.fn((selector) => {
     if (selector.name === 'getMultichainNetwork') {
@@ -66,10 +60,6 @@ jest.mock('../../../hooks/useMultichainSelector', () => ({
 jest.mock('../../../selectors/multichain', () => ({
   getMultichainNativeCurrency: jest.fn(),
   getMultichainNetwork: jest.fn(),
-}));
-
-jest.mock('../../../selectors/batch-sell/feature-flags', () => ({
-  getIsBatchSellEnabled: jest.fn(() => true),
 }));
 
 jest.mock('../perps/perps-trade-buttons', () => ({
@@ -247,8 +237,13 @@ describe('CoinButtons – asset page swap token', () => {
     renderAssetPageCoinButtons('0x1', { hasBalance: false });
 
     expect(screen.getByTestId('coin-overview-send')).toBeInTheDocument();
-    expect(
-      screen.queryByTestId('coin-overview-receive'),
-    ).not.toBeInTheDocument();
+    expect(screen.getAllByTestId('coin-overview-receive')).toHaveLength(1);
+  });
+
+  it('renders Receive instead of More on the standard row', () => {
+    renderAssetPageCoinButtons('0x1');
+
+    expect(screen.getByTestId('coin-overview-receive')).toBeInTheDocument();
+    expect(screen.queryByTestId('coin-overview-more')).not.toBeInTheDocument();
   });
 });

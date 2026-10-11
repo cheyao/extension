@@ -57,7 +57,6 @@ import {
   MetaMetricsSwapsEventSource,
 } from '../../../../shared/constants/metametrics';
 import {
-  BackgroundColor,
   BlockSize,
   IconColor as IconColorLegacy,
 } from '../../../helpers/constants/design-system';
@@ -85,8 +84,6 @@ import { ALL_ALLOWED_BRIDGE_CHAIN_IDS } from '../../../../shared/constants/bridg
 import { trace, TraceName } from '../../../../shared/lib/trace';
 import { navigateToSendRoute } from '../../../pages/confirmations/utils/send';
 import { useOnClickOutside } from '../../../hooks/useClickOutside';
-import { useBatchSell } from '../../../hooks/batch-sell/useBatchSell';
-import { getIsBatchSellEnabled } from '../../../selectors/batch-sell/feature-flags';
 import { PerpsTradeButtons } from '../perps/perps-trade-buttons';
 import { useBalanceAwareSwapDefaults } from '../../../pages/asset/hooks/useBalanceAwareSwapDefaults';
 import {
@@ -295,7 +292,6 @@ const CoinButtons = ({
   const nativeToken = isEvmNetwork ? 'ETH' : multichainNativeToken;
 
   const isExternalServicesEnabled = useSelector(getUseExternalServices);
-  const batchSellEnabled = useSelector(getIsBatchSellEnabled);
   const normalizedChainId = isCaipChainId(chainId) ? chainId : toHex(chainId);
   const isEvmAsset = isEvmChainId(normalizedChainId);
 
@@ -393,8 +389,6 @@ const CoinButtons = ({
   const { sourceToken, destTokenAssetId } = useBalanceAwareSwapDefaults({
     currentToken: assetPageSwapToken,
   });
-
-  const { openBatchSellExperience } = useBatchSell();
 
   const handleMoreOptionsButtonClick = useCallback(() => {
     setIsMoreOptionsDropdownOpen((prev) => !prev);
@@ -547,24 +541,6 @@ const CoinButtons = ({
     }
   }, [selectedAccountGroup, navigate, trackEvent, trackingLocation, chainId]);
 
-  const handleBatchSellOnClick = useCallback(() => {
-    trace({ name: TraceName.BatchSellModal });
-    trackEvent(
-      createEventBuilder(MetaMetricsEventName.NavBatchSellButtonClicked)
-        .addCategory(MetaMetricsEventCategory.Navigation)
-        .addProperties({
-          text: 'Batch Sell',
-          location: trackingLocation,
-          // TODO: Fix in https://github.com/MetaMask/metamask-extension/issues/31860
-          // eslint-disable-next-line @typescript-eslint/naming-convention
-          chain_id: chainId,
-        })
-        .build(),
-    );
-
-    transitionForward(() => openBatchSellExperience());
-  }, [trackEvent, trackingLocation, chainId, openBatchSellExperience]);
-
   useOnClickOutside({
     containerRef,
     onClickOutside: () => setIsMoreOptionsDropdownOpen(false),
@@ -672,56 +648,58 @@ const CoinButtons = ({
         />
       )}
 
-      <MoreButtonsGroup
-        onClick={handleMoreOptionsButtonClick}
-        modalIsOpen={isMoreOptionsDropdownOpen}
-        classPrefix={classPrefix}
-        actions={[
-          // Buy and Swap move into the More menu when the Perps row replaces
-          // them with Long / Short.
-          {
-            label: t('buy'),
-            onClick: handleBuyAndSellOnClick,
-            testId: `${classPrefix}-overview-more-buy`,
-            iconName: IconName.AttachMoney,
-            enabled: Boolean(perpsMarketSymbol),
-          },
-          {
-            label: t('swap'),
-            onClick: handleSwapOnClick,
-            testId: `${classPrefix}-overview-more-swap`,
-            iconName: IconName.SwapVertical,
-            enabled:
-              Boolean(perpsMarketSymbol) &&
-              isSigningEnabled &&
-              isExternalServicesEnabled,
-          },
-          {
-            label: t('batchSell'),
-            onClick: handleBatchSellOnClick,
-            testId: `${classPrefix}-overview-batchSell`,
-            iconName: IconName.Merge,
-            iconClassName: 'rotate-180',
-            tagProps: {
-              label: t('perpsFilterNew'),
-              labelProps: {
-                color: IconColorLegacy.primaryDefault,
-              },
-              backgroundColor: BackgroundColor.primaryMuted,
+      {perpsMarketSymbol ? (
+        <MoreButtonsGroup
+          onClick={handleMoreOptionsButtonClick}
+          modalIsOpen={isMoreOptionsDropdownOpen}
+          classPrefix={classPrefix}
+          actions={[
+            // Buy and Swap move into the More menu when the Perps row replaces
+            // them with Long / Short.
+            {
+              label: t('buy'),
+              onClick: handleBuyAndSellOnClick,
+              testId: `${classPrefix}-overview-more-buy`,
+              iconName: IconName.AttachMoney,
+              enabled: Boolean(perpsMarketSymbol),
             },
-            enabled: batchSellEnabled,
-          },
-          {
-            label: t('receive'),
-            onClick: handleReceiveOnClick,
-            testId: perpsMarketSymbol
-              ? `${classPrefix}-overview-more-receive`
-              : `${classPrefix}-overview-receive`,
-            iconName: IconName.Received,
-            enabled: !showReceiveOnActionRow,
-          },
-        ]}
-      />
+            {
+              label: t('swap'),
+              onClick: handleSwapOnClick,
+              testId: `${classPrefix}-overview-more-swap`,
+              iconName: IconName.SwapVertical,
+              enabled:
+                Boolean(perpsMarketSymbol) &&
+                isSigningEnabled &&
+                isExternalServicesEnabled,
+            },
+            {
+              label: t('receive'),
+              onClick: handleReceiveOnClick,
+              testId: perpsMarketSymbol
+                ? `${classPrefix}-overview-more-receive`
+                : `${classPrefix}-overview-receive`,
+              iconName: IconName.Received,
+              enabled: !showReceiveOnActionRow,
+            },
+          ]}
+        />
+      ) : (
+        <IconButton
+          className={`${classPrefix}-overview__button`}
+          data-testid={`${classPrefix}-overview-receive`}
+          Icon={
+            <Icon
+              name={IconName.Received}
+              color={IconColor.IconAlternative}
+              size={IconSize.Md}
+            />
+          }
+          label={t('receive')}
+          onClick={handleReceiveOnClick}
+          width={BlockSize.Full}
+        />
+      )}
     </Box>
   );
 };

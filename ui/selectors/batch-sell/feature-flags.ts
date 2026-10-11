@@ -1,8 +1,3 @@
-import { createSelector } from 'reselect';
-
-import { getRemoteFeatureFlags } from '../../../shared/lib/selectors/remote-feature-flags';
-import { isHardwareWallet } from '../../../shared/lib/selectors/keyring';
-
 /**
  * Shape of the `batchSell` remote feature flag after it has been resolved by
  * `RemoteFeatureFlagController`. The controller processes the raw
@@ -15,17 +10,10 @@ export type BatchSellFeatureFlag = {
 };
 
 /**
- * Returns whether the Batch Sell feature should be shown in the UI.
+ * Batch Sell has been removed, so it is always disabled regardless of the
+ * `batchSell` remote feature flag.
  *
- * Enabled only when the resolved `batchSell` remote feature flag has
- * `enabled: true` and the currently selected account is not a hardware wallet.
- *
- * @param state - The MetaMask Redux state.
- * @returns `true` if Batch Sell is available for this account and feature flag.
+ * @param _state - The MetaMask Redux state.
+ * @returns Always `false`.
  */
-export const getIsBatchSellEnabled = createSelector(
-  getRemoteFeatureFlags,
-  (state) => isHardwareWallet(state as never),
-  (remoteFeatureFlags, hardwareWalletSelected) =>
-    Boolean(remoteFeatureFlags.batchSell?.enabled) && !hardwareWalletSelected,
-);
+export const getIsBatchSellEnabled = (_state?: unknown) => false;
