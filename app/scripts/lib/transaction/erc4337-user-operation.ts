@@ -27,45 +27,18 @@ import {
 const log = createProjectLogger('erc4337-user-operation');
 
 /**
- * Who sponsors a user operation. Either:
- * - an ERC-4337 bundler + ERC-7677 paymaster service served from one URL
- * (`rpcUrl`); or
- * - a `SwissquoteGasStation` paymaster contract (`paymasterContract`) that
- * pays for allowlisted accounts out of its deposit, sent through a separate
- * public bundler (`bundlerUrl`).
- *
- * Either way the paymaster pays the gas, so the sending account needs no
- * native token.
+ * Who sponsors a user operation: an ERC-4337 bundler + ERC-7677 paymaster
+ * service served from one URL (`rpcUrl`). The paymaster pays the gas, so the
+ * sending account needs no native token.
  */
 export type GasStation = {
   /** Display name of the sponsor. */
   name: string;
-  /** Bundler + paymaster service endpoint (when no paymaster contract). */
+  /** Bundler + paymaster service endpoint. */
   rpcUrl: string;
   /** The paymaster contract that pays the gas. */
   paymasterAddress: Hex;
-  /**
-   * Set when `paymasterAddress` is a `SwissquoteGasStation` contract rather
-   * than a paymaster service: operations go to `bundlerUrl` with the
-   * contract as paymaster.
-   */
-  paymasterContract?: boolean;
-  /** ERC-4337 bundler endpoint, used with `paymasterContract`. */
-  bundlerUrl?: string;
 };
-
-/** Validation gas for the `SwissquoteGasStation` paymaster (no postOp). */
-const GAS_STATION_VERIFICATION_GAS_LIMIT = BigInt(60_000);
-
-const GAS_STATION_ABI = [
-  {
-    type: 'function',
-    name: 'isSponsored',
-    stateMutability: 'view',
-    inputs: [{ name: 'account', type: 'address' }],
-    outputs: [{ name: '', type: 'bool' }],
-  },
-] as const;
 
 /**
  * The minimum messenger surface needed to publish a sponsored user operation.
@@ -384,44 +357,8 @@ export async function publishSponsoredUserOperation({
     };
   }
 
-  let bundlerTransport;
-  let paymaster;
-  if (gasStation.paymasterContract) {
-    if (!gasStation.bundlerUrl) {
-      throw new Error(`${gasStation.name} has no bundler configured`);
-    }
-    bundlerTransport = http(gasStation.bundlerUrl);
-    // The gas station only sponsors allowlisted accounts: say so clearly
-    // instead of surfacing a bundler "AA34" validation error.
-    const isSponsored = await runStep(
-      `Could not reach ${gasStation.name}`,
-      () =>
-        client.readContract({
-          address: gasStation.paymasterAddress,
-          abi: GAS_STATION_ABI,
-          functionName: 'isSponsored',
-          args: [from],
-        }),
-    );
-    if (!isSponsored) {
-      throw new Error(
-        `This account (${from}) is not on the ${gasStation.name} allowlist. Ask the gas station manager to add it.`,
-      );
-    }
-    const paymasterFields = {
-      paymaster: gasStation.paymasterAddress,
-      paymasterData: '0x' as Hex,
-      paymasterVerificationGasLimit: GAS_STATION_VERIFICATION_GAS_LIMIT,
-      paymasterPostOpGasLimit: BigInt(0),
-    };
-    paymaster = {
-      getPaymasterStubData: async () => paymasterFields,
-      getPaymasterData: async () => paymasterFields,
-    };
-  } else {
-    bundlerTransport = http(gasStation.rpcUrl);
-    paymaster = createPaymasterClient({ transport: http(gasStation.rpcUrl) });
-  }
+  const bundlerTransport = http(gasStation.rpcUrl);
+  const paymaster = createPaymasterClient({ transport: bundlerTransport });
 
   const bundler = createBundlerClient({
     account,

@@ -68,6 +68,18 @@
   }
 }
 
+@keyframes sqReadyPop {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 @keyframes sqReadyDraw {
   to {
     stroke-dashoffset: 0;
@@ -106,12 +118,12 @@
   }
 
   &__mark {
-    animation: sqReadyIn 0.6s ease-out both;
+    animation: sqReadyIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 
   &__check {
     opacity: 0;
-    animation: sqReadyIn 0.4s ease-out 1.2s forwards;
+    animation: sqReadyPop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) 1.15s forwards;
 
     circle {
       fill: var(--color-background-default);
@@ -127,7 +139,7 @@
       stroke-linejoin: round;
       stroke-dasharray: 24;
       stroke-dashoffset: 24;
-      animation: sqReadyDraw 0.35s ease-out 1.4s forwards;
+      animation: sqReadyDraw 0.4s cubic-bezier(0.65, 0, 0.35, 1) 1.35s forwards;
     }
   }
 }

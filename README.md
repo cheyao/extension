@@ -4,8 +4,9 @@ A self-custodial crypto wallet browser extension designed as a companion to a
 Swissquote account. It is a fork of the [MetaMask extension](https://github.com/MetaMask/metamask-extension),
 rebranded and extended with gasless transactions, a second layer of dApp
 security, an on-chain wallet recovery system, a Swissquote deposit currency
-(sUSD) and a payment card.
+(sUSD), a payment card, and a custom account recovery solution.
 
+- **Business case:** [docs/business-case.md](./docs/business-case.md)
 - **Code architecture:** [ARCHITECTURE.md](./ARCHITECTURE.md)
 - **Build, test and tooling guide:** [docs/development-guide.md](./docs/development-guide.md)
 - **Instructions for AI coding agents:** [AGENTS.md](./AGENTS.md)
@@ -255,7 +256,7 @@ ui/             React + Redux user interface
 shared/         Code used by both background and UI (constants, libraries)
 contract/       RemoteControlDelegate.sol (recovery contract)
 recovery-kit/   Command-line tools for the recovery system
-development/    Build system (webpack), dev tools, gas-station setup page
+development/    Build system (webpack) and dev tools
 lavamoat/       LavaMoat security policies for dependencies
 test/           End-to-end, integration tests and mocks
 docs/           Developer documentation
@@ -281,4 +282,13 @@ Details: [ARCHITECTURE.md](./ARCHITECTURE.md).
 
 ## Licence
 
-Based on the MetaMask extension; see [LICENSE](./LICENSE).
+Swissquote Wallet is based on the MetaMask browser extension. MetaMask is
+copyright ConsenSys Software Inc., and its code is used under the MetaMask
+licence for **non-commercial use only** (see [LICENSE](./LICENSE)). That
+includes forks with no more than 10,000 monthly active users. A commercial
+launch needs a separate licence from ConsenSys. Swissquote Wallet is not
+affiliated with or endorsed by ConsenSys or MetaMask.
+
+The same notice is shown in the app under Settings → About. The Swissquote
+contract check carries an in-app disclaimer: a "Verified safe" result is
+information, not a guarantee or recommendation.

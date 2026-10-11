@@ -262,13 +262,10 @@ sequenceDiagram
 | Insufficient-funds alert exemption | `ui/pages/confirmations/hooks/alerts/transactions/useInsufficientBalanceAlerts.ts` |
 | Failure reason in Activity | `ui/pages/details/components/failure-reason.tsx` |
 
-**Gas station types** (`erc4337-user-operation.ts`):
-- *Service*: an ERC-7677 paymaster served from the same URL as the bundler
-  (Candide, Pimlico with API key).
-- *Contract*: a `SwissquoteGasStation` paymaster contract
-  (`paymasterContract: true`) sent through a separate public bundler, with an
-  allowlist check before sending. The contract and setup page live in
-  `development/swissquote/gas-station/`; not active by default.
+**Gas stations** (`GasStation` in `erc4337-user-operation.ts`) are ERC-7677
+paymaster services served from the same URL as the bundler (Pimlico with API
+key on Monad, Candide on Sepolia). Adding a network means adding one entry to
+`SWISSQUOTE_GAS_STATIONS`.
 
 **Key decisions:**
 - MetaMask's own relay ("Paid by MetaMask") is never used: it rejects these
@@ -481,7 +478,6 @@ Files added by the fork (tests excluded):
 | `app/scripts/messenger-client-init/remote-control/*`, `…/messengers/remote-control-controller-messenger.ts` | Recovery |
 | `app/scripts/messenger-client-init/monad-contract-monitor/*` | Recovery (not registered) |
 | `contract/RemoteControlDelegate.sol` | Recovery |
-| `development/swissquote/gas-station/*` | Optional own gas station |
 | `recovery-kit/*` | Recovery (CLI) |
 | `shared/constants/swissquote.ts` | Gasless |
 | `shared/constants/remote-control.ts`, `remote-control-contract.ts` | Recovery, gasless |

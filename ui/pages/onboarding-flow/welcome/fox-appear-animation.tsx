@@ -12,7 +12,8 @@ const DIAMOND_SIZES = [420, 300, 180];
 
 /**
  * Swissquote brand visual shown at the bottom of the welcome and unlock pages
- * (concentric diamonds rising in), or as a pulsing logo while logging in.
+ * (concentric diamonds rising in), or as a loader (the logo inside a rotating
+ * arc) while logging in.
  *
  * Keeps the name and props of the MetaMask fox animation it replaces.
  *
@@ -30,16 +31,19 @@ export default function FoxAppearAnimation({
         <img
           className="sq-loader__mark"
           src="./images/logo/swissquote-logo.svg"
-          width="88"
-          height="88"
+          width="64"
+          height="64"
           alt=""
         />
-        <img
+        <svg
           data-testid="loading-indicator"
-          className="riv-animation__spinner"
-          src="./images/spinner.gif"
-          alt=""
-        />
+          className="sq-loader__arc"
+          viewBox="0 0 120 120"
+          aria-hidden="true"
+        >
+          <circle className="sq-loader__arc-track" cx="60" cy="60" r="58" />
+          <circle className="sq-loader__arc-head" cx="60" cy="60" r="58" />
+        </svg>
       </Box>
     );
   }

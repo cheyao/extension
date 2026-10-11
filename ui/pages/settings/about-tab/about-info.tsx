@@ -161,7 +161,7 @@ export default function AboutInfo(): React.ReactElement {
       <Box>
         <img
           src="./images/logo/metamask-fox.svg"
-          alt="MetaMask Logo"
+          alt="Swissquote Wallet logo"
           className="info-tab__logo w-24 h-24"
         />
       </Box>
@@ -175,6 +175,15 @@ export default function AboutInfo(): React.ReactElement {
         </Text>
       </Box>
       {renderInfoLinks()}
+      {/* Swissquote Wallet: notice required by the MetaMask licence (LICENSE). */}
+      <Text
+        variant={TextVariant.BodyXs}
+        color={TextColor.TextAlternative}
+        className="w-full"
+        data-testid="info-tab-metamask-notice"
+      >
+        {t('swissquoteMetamaskNotice')}
+      </Text>
       {isVisitSupportDataConsentModalOpen && (
         <VisitSupportDataConsentModal
           isOpen={isVisitSupportDataConsentModalOpen}

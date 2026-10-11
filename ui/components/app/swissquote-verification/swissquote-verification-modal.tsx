@@ -328,6 +328,14 @@ export function SwissquoteVerificationModal({
           paddingRight={4}
           paddingBottom={4}
         >
+          <Text
+            variant={TextVariant.BodyXs}
+            color={TextColor.TextAlternative}
+            textAlign={TextAlign.Center}
+            data-testid="swissquote-verification-disclaimer"
+          >
+            {t('swissquoteVerificationDisclaimer')}
+          </Text>
           <Button
             variant={ButtonVariant.Primary}
             size={ButtonSize.Lg}

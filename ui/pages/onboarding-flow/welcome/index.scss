@@ -225,22 +225,28 @@
 
 // Swissquote Wallet intro (replaces the MetaMask wordmark animation).
 // Total length must match INTRO_DURATION_MS in metamask-wordmark-animation.tsx.
+// Only opacity and transform are animated, and infinite animations run on a
+// single HTML element so the browser composites them on the GPU instead of
+// repainting SVG every frame (the wallet is busy loading at the same time).
+$sq-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+$sq-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
 @keyframes sqTileIn {
   from {
     opacity: 0;
-    transform: scale(0.6) rotate(-12deg);
+    transform: scale(0.82);
   }
 
   to {
     opacity: 1;
-    transform: scale(1) rotate(0);
+    transform: scale(1);
   }
 }
 
 @keyframes sqDiamondIn {
   from {
     opacity: 0;
-    transform: scale(0) rotate(-90deg);
+    transform: scale(0.4) rotate(-45deg);
   }
 
   to {
@@ -250,15 +256,11 @@
 }
 
 @keyframes sqCorePop {
-  0% {
+  from {
     transform: scale(0);
   }
 
-  70% {
-    transform: scale(1.25);
-  }
-
-  100% {
+  to {
     transform: scale(1);
   }
 }
@@ -266,7 +268,7 @@
 @keyframes sqTextUp {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(10px);
   }
 
   to {
@@ -278,36 +280,40 @@
 @keyframes sqRise {
   from {
     opacity: 0;
-    transform: translateY(80px);
+    transform: translateY(48px) scale(0.96);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
 @keyframes sqFloat {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 
   50% {
-    transform: translateY(-10px);
+    transform: translate3d(0, -6px, 0);
   }
 }
 
-@keyframes sqPulse {
+@keyframes sqSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sqBreathe {
   0%,
   100% {
     transform: scale(1);
-    opacity: 1;
   }
 
   50% {
-    transform: scale(0.92);
-    opacity: 0.75;
+    transform: scale(0.96);
   }
 }
 
@@ -328,15 +334,15 @@
   }
 
   &__tile {
-    animation: sqTileIn 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+    animation: sqTileIn 0.7s $sq-ease-out both;
   }
 
   &__diamond {
-    animation: sqDiamondIn 0.5s cubic-bezier(0.2, 0.9, 0.3, 1) 0.3s both;
+    animation: sqDiamondIn 0.7s $sq-ease-out 0.2s both;
   }
 
   &__core {
-    animation: sqCorePop 0.4s ease-out 0.65s both;
+    animation: sqCorePop 0.5s $sq-ease-spring 0.55s both;
   }
 
   &__name,
@@ -351,14 +357,14 @@
     font-weight: 700;
     letter-spacing: -0.03em;
     color: var(--color-text-default);
-    animation: sqTextUp 0.45s ease-out 0.85s both;
+    animation: sqTextUp 0.6s $sq-ease-out 0.8s both;
   }
 
   &__product {
     font-size: 20px;
     font-weight: 500;
     color: var(--color-primary-default);
-    animation: sqTextUp 0.45s ease-out 1.05s both;
+    animation: sqTextUp 0.6s $sq-ease-out 0.95s both;
   }
 
   &--static * {
@@ -371,50 +377,88 @@
   &__art {
     width: 100%;
     height: 100%;
+    // One composited layer floats; the diamonds inside only animate once.
+    will-change: transform;
+    animation: sqFloat 8s ease-in-out 1.4s infinite;
   }
 
   &__diamond {
     fill: none;
     stroke: var(--color-primary-default);
-    stroke-width: 2;
+    stroke-width: 1.5;
+    stroke-linejoin: round;
     transform-box: fill-box;
-    transform-origin: center;
-    animation:
-      sqRise 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both,
-      sqFloat 6s ease-in-out 1.2s infinite;
+    transform-origin: center bottom;
+    animation: sqRise 1.1s $sq-ease-out both;
 
     &--0 {
-      stroke-opacity: 0.25;
+      stroke-opacity: 0.2;
     }
 
     &--1 {
-      stroke-opacity: 0.45;
-      animation-delay: 0.12s, 1.6s;
+      stroke-opacity: 0.4;
+      animation-delay: 0.1s;
     }
 
     &--2 {
       fill: var(--color-primary-default);
-      fill-opacity: 0.12;
+      fill-opacity: 0.1;
       stroke-opacity: 0.8;
-      animation-delay: 0.24s, 2s;
+      animation-delay: 0.2s;
     }
   }
 
   &--static &__diamond {
-    animation: sqFloat 6s ease-in-out infinite;
+    animation: none;
   }
 }
 
+// Login loader: the mark breathes inside a rotating arc. Both animations are
+// on HTML-level elements (composited), replacing the old spinner GIF.
 .sq-loader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+
   &__mark {
-    animation: sqPulse 1.4s ease-in-out infinite;
+    animation: sqBreathe 2s ease-in-out infinite;
+  }
+
+  &__arc {
+    position: absolute;
+    inset: 0;
+    will-change: transform;
+    animation: sqSpin 1.1s linear infinite;
+
+    circle {
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+    }
+  }
+
+  &__arc-track {
+    stroke: var(--color-border-muted);
+  }
+
+  &__arc-head {
+    stroke: var(--color-primary-default);
+    stroke-dasharray: 90 400;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .sq-intro *,
+  .sq-backdrop__art,
   .sq-backdrop__diamond,
   .sq-loader__mark {
     animation: none !important;
+  }
+
+  .sq-loader__arc {
+    animation-duration: 2.5s;
   }
 }

@@ -12170,6 +12170,12 @@
   "swissquoteUnsafeTitle": {
     "message": "Flagged as unsafe by Swissquote"
   },
+  "swissquoteMetamaskNotice": {
+    "message": "Swissquote Wallet is based on the MetaMask browser extension. MetaMask is copyright ConsenSys Software Inc., and its code is used under the MetaMask licence for non-commercial use. Swissquote Wallet is not affiliated with or endorsed by ConsenSys or MetaMask."
+  },
+  "swissquoteVerificationDisclaimer": {
+    "message": "Verification is information, not a guarantee. You remain responsible for your transactions."
+  },
   "swissquoteVerdictChecking": {
     "message": "Checking…"
   },

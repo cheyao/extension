@@ -29,6 +29,31 @@
 dapp matcha.xyz 0x1 0x0000000000001fF3684f28c67538d4D072C22734 0x AllowanceHolder
 dapp matcha.xyz 0x1 0xDef1C0ded9bec7F1a1670819833240f027b25EfF 0x Exchange Proxy
 
+# Aave
+dapp aave.com 0x1 0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2 Aave V3 Pool
+
+# Lido
+dapp lido.fi 0x1 0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84 Lido stETH
+
+# Curve
+dapp curve.fi 0x1 0xbEbc44782C7dB0a1A60Cb6fe97d0b483032FF1C7 Curve 3pool
+dapp curve.finance 0x1 0xbEbc44782C7dB0a1A60Cb6fe97d0b483032FF1C7 Curve 3pool
+
+# 1inch
+dapp 1inch.io 0x1 0x111111125421cA6dc452d289314280a0f8842A65 1inch Aggregation Router V6
+
+# Compound
+dapp compound.finance 0x1 0xc3d688B66703497DAA19211EEdff47f25384cdc3 Compound V3 USDC
+
+# CoW Swap
+dapp cow.fi 0x1 0x9008D19f58AAbD9eD0D60971565AA8510560ab41 CoW Protocol Settlement
+
+# Balancer
+dapp balancer.fi 0x1 0xBA12222222228d8Ba445958a75a0704d566BF2C8 Balancer V2 Vault
+
+# OpenSea
+dapp opensea.io 0x1 0x0000000000000068F116a894984e2DB1123eB395 Seaport 1.6
+
 # Uniswap
 dapp uniswap.org 0x1 0x66a9893cC07D91D95644AEDD05D03f95e1dBA8Af Uniswap Universal Router
 dapp uniswap.org 0x1 0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45 Uniswap V3 SwapRouter02
@@ -36,9 +61,18 @@ dapp uniswap.org 0x1 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D Uniswap V2 Route
 
 # --- Code hashes (Ethereum mainnet bytecode, fetched 2026-10-10) -----------
 
-# Demo verdicts: Matcha is deemed safe, Uniswap is deemed unsafe.
+# Demo verdicts: the major dApps are deemed safe; Uniswap is deemed unsafe
+# on purpose, to demonstrate the red warning.
 safe 19f7b3f5410204f7deb3ff7c19bd8cb97a84fecf8c4afeb412fefd84f6867877 # 0x AllowanceHolder
 safe d42864ddb13d60ff6efb2181810ed03dbe0ea65a453ec894b2a232e6abe2e981 # 0x Exchange Proxy
+safe bf8a408a1f5440c167d91fa2d972deb23bb4d809e8dd089009885ec88a826f88 # Aave V3 Pool (proxy)
+safe a0c39c8f8658ba7d2f91e20e81ca0ecf754ded062ee08b4f24c82902d98c2865 # Lido stETH (proxy)
+safe eb09f8e03f107e5355ad85ec428609a1d8cb47bc30509c80455a2c8a108cac0d # Curve 3pool
+safe 25ed432292a03b29a9833444092ed36fca80cf3b9d7a04bd05db9351f5b2bbcf # 1inch Aggregation Router V6
+safe 882d25cd6d729bac78ed7e63b0f05e2a476394850343864e2dab53a7ecc9812a # Compound V3 USDC (proxy)
+safe d6e844f4caf510d3de5c5413bb368b6d13697291cd048f04d325b53ad7465d05 # CoW Protocol Settlement
+safe 8b81438580d3b34c1d68a498ef9de9ee6869391280ae3b47c352cf1b363d1c11 # Balancer V2 Vault
+safe ddb298880d43346e28e2d6668b23f4e76112e68922d2df9e17cd02315908fb71 # Seaport 1.6
 unsafe 5a94552ea3e34cb8c474fc7bdd0522649a7e107899d8df6b01bc15c561278ac1 # Uniswap Universal Router
 unsafe 73fa6fcc81954e96e46dfde91f8e282cd98868c0992ed2c7875a9618fa0711e5 # Uniswap V3 SwapRouter02
 unsafe ccef50da4af021b09ada39d78db5d281fffff81a57969c7028bccc1f50d37854 # Uniswap V2 Router 02
