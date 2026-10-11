@@ -12081,7 +12081,7 @@
     "description": "$1 is the Monad reserve balance, e.g. 10"
   },
   "swissquoteGasPaidByStation": {
-    "message": "Paid by gas station"
+    "message": "Paid by Swissquote"
   },
   "swissquoteGasPayFee": {
     "message": "Pay gas fee"
