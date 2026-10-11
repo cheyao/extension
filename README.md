@@ -276,19 +276,9 @@ Details: [ARCHITECTURE.md](./ARCHITECTURE.md).
 - **sUSD on-chain:** block explorers show the underlying token as mUSD.
 - **Production builds** need `yarn lavamoat:auto` after dependency changes; only
   development builds have been used.
+- **Shown to dApps as MetaMask:** the wallet announces itself to dApps with
+  MetaMask's name and ID (EIP-6963), with the Swissquote icon. It speaks the
+  same wallet protocol, so every MetaMask-compatible dApp works. A custom name
+  made wallet libraries such as Privy (used by Matcha) show the MetaMask fox.
 - **Not audited:** no security review of contracts or wallet changes.
 
----
-
-## Licence
-
-Swissquote Wallet is based on the MetaMask browser extension. MetaMask is
-copyright ConsenSys Software Inc., and its code is used under the MetaMask
-licence for **non-commercial use only** (see [LICENSE](./LICENSE)). That
-includes forks with no more than 10,000 monthly active users. A commercial
-launch needs a separate licence from ConsenSys. Swissquote Wallet is not
-affiliated with or endorsed by ConsenSys or MetaMask.
-
-The same notice is shown in the app under Settings → About. The Swissquote
-contract check carries an in-app disclaimer: a "Verified safe" result is
-information, not a guarantee or recommendation.

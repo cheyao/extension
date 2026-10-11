@@ -436,6 +436,7 @@ Switched off in code but not removed (see each file for the switch):
 | Explore DeFi button | `ui/components/app/assets/defi-list/cells/defi-empty-state.tsx` |
 | Analytics opt-in onboarding step | `ui/pages/onboarding-flow/metametrics/metametrics-redirect.tsx` |
 | MetaMask sponsorship relay in confirmations | see §6.1 |
+| "Welcome to Arc" partner notice | `ui/components/app/arc-usage-notice-toast/selectors.ts` |
 
 Perps (MetaMask's Hyperliquid perpetuals) was restored and is enabled.
 

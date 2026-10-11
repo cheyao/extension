@@ -15,7 +15,9 @@ const hasNonZeroBalance = (balance?: string) =>
 export function selectShowArcUsageNoticeToast(
   state: MetaMaskReduxState,
 ): boolean {
-  if (state.metamask.arcUsageNoticeShown) {
+  // Swissquote Wallet: MetaMask's Arc partner notice is disabled.
+  const isArcUsageNoticeEnabled = false;
+  if (!isArcUsageNoticeEnabled || state.metamask.arcUsageNoticeShown) {
     return false;
   }
 
