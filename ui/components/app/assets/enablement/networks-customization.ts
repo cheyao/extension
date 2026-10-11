@@ -48,6 +48,16 @@ const EXCLUDED_ASSET_IDS = new Set(
   ),
 );
 
+// Tron support has been removed, so Tron assets are hidden everywhere the
+// exclusion helpers below are applied (asset list, balances, send picker).
+const TRON_NAMESPACE_PREFIX = 'tron:';
+
+function isTronChainOrAssetId(id: string | number | undefined): boolean {
+  return (
+    typeof id === 'string' && id.toLowerCase().startsWith(TRON_NAMESPACE_PREFIX)
+  );
+}
+
 export function isExcludedAsset(
   chainId: string,
   address: string | undefined,
@@ -77,6 +87,11 @@ export function filterExcludedAssets(
   assets: AccountGroupAssets,
 ): AccountGroupAssets {
   return Object.entries(assets).reduce((acc, [chainId, chainAssets]) => {
+    if (isTronChainOrAssetId(chainId)) {
+      return Object.fromEntries(
+        Object.entries(acc).filter(([id]) => id !== chainId),
+      );
+    }
     if (!chainAssets || !getExcludedAddress(chainId)) {
       return acc;
     }
@@ -146,6 +161,9 @@ export function filterExcludedAssetList<AssetGeneric extends AssetLike>(
         : undefined;
 
     const rawChainId = asset.chainId ?? parsed?.chainId;
+    if (isTronChainOrAssetId(rawChainId)) {
+      return false;
+    }
     if (rawChainId === undefined) {
       return true;
     }
@@ -187,7 +205,9 @@ export function augmentAssetControllersState(
           accountId,
           Object.fromEntries(
             Object.entries(assets).filter(
-              ([assetId]) => !EXCLUDED_ASSET_IDS.has(assetId.toLowerCase()),
+              ([assetId]) =>
+                !EXCLUDED_ASSET_IDS.has(assetId.toLowerCase()) &&
+                !isTronChainOrAssetId(assetId),
             ),
           ),
         ],

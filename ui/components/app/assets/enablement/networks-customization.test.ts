@@ -46,6 +46,17 @@ describe('networks-customization', () => {
       ]);
     });
 
+    it('removes all Tron assets', () => {
+      const assets = {
+        'tron:728126428': [{ assetId: 'tron:728126428/slip44:195' }],
+        '0x1': [{ address: OTHER_TOKEN }],
+      } as unknown as AccountGroupAssets;
+
+      const result = filterExcludedAssets(assets);
+
+      expect(result).toStrictEqual({ '0x1': [{ address: OTHER_TOKEN }] });
+    });
+
     it('is case-insensitive on address and chain id', () => {
       const assets = {
         [ARC.toUpperCase()]: [

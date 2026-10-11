@@ -274,13 +274,6 @@ export const getFromChains = createDeepEqualSelector(
       Boolean(
         getInternalAccountBySelectedAccountGroupAndCaip(
           state,
-          MultichainNetworks.TRON,
-        ),
-      ),
-    (state: BridgeAppState) =>
-      Boolean(
-        getInternalAccountBySelectedAccountGroupAndCaip(
-          state,
           MultichainNetworks.STELLAR,
         ),
       ),
@@ -290,7 +283,6 @@ export const getFromChains = createDeepEqualSelector(
     chainRanking,
     hasSolanaAccount,
     hasBitcoinAccount,
-    hasTronAccount,
     hasStellarAccount,
   ) => {
     const allChains: Record<CaipChainId, BridgeNetwork> = {
@@ -323,7 +315,8 @@ export const getFromChains = createDeepEqualSelector(
       const shouldAddBitcoin = isBitcoinChainId(chainId)
         ? hasBitcoinAccount
         : true;
-      const shouldAddTron = isTronChainId(chainId) ? hasTronAccount : true;
+      // Tron support has been removed
+      const shouldAddTron = !isTronChainId(chainId);
       const shouldAddStellar = isStellarChainId(chainId)
         ? hasStellarAccount
         : true;

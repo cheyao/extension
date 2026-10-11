@@ -43,19 +43,13 @@ export const getIsSolanaSupportEnabled = createSelector(
 );
 
 /**
- * Get the state of the `tronSupportEnabled` remote feature flag.
+ * Tron support has been removed, so this is always disabled regardless of the
+ * `tronAccounts` remote feature flag.
  *
  * @param _state - The MetaMask state object
- * @returns The state of the `tronSupportEnabled` remote feature flag.
+ * @returns Always false.
  */
-export const getIsTronSupportEnabled = createSelector(
-  getRemoteFeatureFlags,
-  ({ tronAccounts }) => {
-    let enabled = false;
-    enabled = isMultichainFeatureEnabled(tronAccounts);
-    return enabled;
-  },
-);
+export const getIsTronSupportEnabled = (_state?: unknown) => false;
 
 /**
  * Get the state of the `stellarAccounts` remote feature flag.
@@ -95,15 +89,12 @@ export const getIsBitcoinTestnetSupportEnabled = createSelector(
 );
 
 /**
- * Get the state of the `tronTestnetsEnabled` remote feature flag.
+ * Tron support has been removed, so Tron testnets are always disabled.
  *
  * @param _state - The MetaMask state object
- * @returns The state of the `tronTestnetsEnabled` remote feature flag.
+ * @returns Always false.
  */
-export const getIsTronTestnetSupportEnabled = createSelector(
-  getRemoteFeatureFlags,
-  ({ tronTestnetsEnabled }) => Boolean(tronTestnetsEnabled),
-);
+export const getIsTronTestnetSupportEnabled = (_state?: unknown) => false;
 
 export const getIsTransactionLabelsEnabled = createSelector(
   getRemoteFeatureFlags,

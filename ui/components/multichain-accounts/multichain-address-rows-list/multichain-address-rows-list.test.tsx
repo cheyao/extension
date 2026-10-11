@@ -411,6 +411,17 @@ describe('MultichainAddressRowsList', () => {
     expect(firstCallArgs[3]).toBe('./images/eth_logo.svg'); // Image source
   });
 
+  it('does not display Tron addresses', () => {
+    renderComponent();
+
+    const networkNamesText = screen
+      .getAllByTestId('multichain-address-row-network-name')
+      .map((el) => el.textContent);
+
+    expect(networkNamesText.length).toBeGreaterThan(0);
+    expect(networkNamesText.some((name) => name?.includes('Tron'))).toBe(false);
+  });
+
   describe('Priority network sorting', () => {
     it('displays priority networks first in the correct order', () => {
       renderComponent();

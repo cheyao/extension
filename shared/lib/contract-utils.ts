@@ -19,7 +19,6 @@ export const readAddressAsContract = async (
     });
     contractCode = addHexPrefix(padToEven(result.slice(2)));
   } catch (err) {
-    // TODO(@dbrans): Dangerous to swallow errors here.
     contractCode = null;
   }
   const isContractAddress = contractCode

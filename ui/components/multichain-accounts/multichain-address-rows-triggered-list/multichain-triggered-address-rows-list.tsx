@@ -42,7 +42,6 @@ const PRIORITY_CHAIN_IDS = new Map<CaipChainId, number>([
   ['eip155:1' as CaipChainId, 0], // Ethereum mainnet
   ['bip122:000000000019d6689c085ae165831e93' as CaipChainId, 1], // Bitcoin mainnet
   ['solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp' as CaipChainId, 2], // Solana mainnet
-  ['tron:0x2b6653dc' as CaipChainId, 3], // Tron mainnet
 ]);
 
 const MAX_NETWORK_AVATARS = 4;

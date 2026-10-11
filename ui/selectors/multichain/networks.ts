@@ -134,7 +134,8 @@ const getIsNonEvmNetworksEnabled = createSelector(
 
     let bitcoinEnabled = isBitcoinEnabled;
     let solanaEnabled = isSolanaEnabled;
-    let tronEnabled = isTronEnabled;
+    // Tron support has been removed, so existing Tron accounts don't enable it.
+    const tronEnabled = isTronEnabled;
     let stellarEnabled = isStellarEnabled;
 
     // The scopes have been set to optional because the first time
@@ -150,9 +151,6 @@ const getIsNonEvmNetworksEnabled = createSelector(
       }
       if (scopes?.includes(SolScope.Mainnet)) {
         solanaEnabled = true;
-      }
-      if (scopes?.includes(TrxScope.Mainnet)) {
-        tronEnabled = true;
       }
       if (scopes?.includes(XlmScope.Pubnet)) {
         stellarEnabled = true;

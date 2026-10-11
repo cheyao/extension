@@ -9487,7 +9487,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@metamask/multichain-account-service@npm:^14.1.0":
+"@metamask/multichain-account-service@npm:14.1.0":
   version: 14.1.0
   resolution: "@metamask/multichain-account-service@npm:14.1.0"
   dependencies:
@@ -9515,6 +9515,37 @@ __metadata:
     "@metamask/providers": ^22.0.0
     webextension-polyfill: ^0.10.0 || ^0.11.0 || ^0.12.0
   checksum: 10/7e79b1b357f3fc8685743bd286360f3500dbcd740be4c4993acd59c4a026b32c9ac589fa164f9b81328fd21fb348c98286496c75b114bac2298d3609a31eb9a6
+  languageName: node
+  linkType: hard
+
+"@metamask/multichain-account-service@patch:@metamask/multichain-account-service@npm%3A14.1.0#~/.yarn/patches/@metamask-multichain-account-service-npm-14.1.0-4d05d783cb.patch":
+  version: 14.1.0
+  resolution: "@metamask/multichain-account-service@patch:@metamask/multichain-account-service@npm%3A14.1.0#~/.yarn/patches/@metamask-multichain-account-service-npm-14.1.0-4d05d783cb.patch::version=14.1.0&hash=65ec87"
+  dependencies:
+    "@ethereumjs/util": "npm:^9.1.0"
+    "@metamask/account-api": "npm:^2.1.0"
+    "@metamask/accounts-controller": "npm:^40.0.0"
+    "@metamask/base-controller": "npm:^10.0.0"
+    "@metamask/eth-snap-keyring": "npm:^24.0.0"
+    "@metamask/key-tree": "npm:^10.1.1"
+    "@metamask/keyring-api": "npm:^24.0.0"
+    "@metamask/keyring-controller": "npm:^28.1.0"
+    "@metamask/keyring-internal-api": "npm:^12.0.0"
+    "@metamask/keyring-snap-client": "npm:^10.0.0"
+    "@metamask/keyring-utils": "npm:^5.0.0"
+    "@metamask/messenger": "npm:^3.0.0"
+    "@metamask/snap-account-service": "npm:^4.0.0"
+    "@metamask/snaps-controllers": "npm:^19.0.0"
+    "@metamask/snaps-sdk": "npm:^11.0.0"
+    "@metamask/snaps-utils": "npm:^12.1.2"
+    "@metamask/superstruct": "npm:^3.4.1"
+    "@metamask/utils": "npm:^12.0.0"
+    async-mutex: "npm:^0.5.0"
+    lodash-es: "npm:^4.17.21"
+  peerDependencies:
+    "@metamask/providers": ^22.0.0
+    webextension-polyfill: ^0.10.0 || ^0.11.0 || ^0.12.0
+  checksum: 10/9a066fcf393ae4412f149913b3a582c47ebb7023759e472dd5f12bc2b32fca87ce2763ba00598503e6a93c73fd18db710a5ffa788a9ef5d4b74fd5893820418d
   languageName: node
   linkType: hard
 
@@ -36159,7 +36190,7 @@ __metadata:
     "@metamask/money-account-controller": "npm:^0.3.3"
     "@metamask/money-account-upgrade-controller": "npm:^4.0.0"
     "@metamask/money-account-utils": "npm:^1.2.0"
-    "@metamask/multichain-account-service": "npm:^14.1.0"
+    "@metamask/multichain-account-service": "patch:@metamask/multichain-account-service@npm%3A14.1.0#~/.yarn/patches/@metamask-multichain-account-service-npm-14.1.0-4d05d783cb.patch"
     "@metamask/multichain-api-client": "npm:^0.10.1"
     "@metamask/multichain-api-middleware": "npm:^3.1.4"
     "@metamask/multichain-network-controller": "npm:^3.2.3"

@@ -23,7 +23,6 @@ const PRIORITY_CHAIN_IDS: CaipChainId[] = [
   'eip155:1' as CaipChainId, // Ethereum mainnet
   'bip122:000000000019d6689c085ae165831e93' as CaipChainId, // Bitcoin mainnet
   'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp' as CaipChainId, // Solana mainnet
-  'tron:0x2b6653dc' as CaipChainId, // Tron mainnet
   'eip155:59144' as CaipChainId, // Linea mainnet
 ];
 

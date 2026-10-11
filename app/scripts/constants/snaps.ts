@@ -9,10 +9,6 @@ export const PREINSTALLED_SNAPS_URLS = [
     import.meta.url,
   ),
   new URL(
-    '@metamask/tron-wallet-snap/dist/preinstalled-snap.json',
-    import.meta.url,
-  ),
-  new URL(
     '@metamask/stellar-wallet-snap/dist/preinstalled-snap.json',
     import.meta.url,
   ),

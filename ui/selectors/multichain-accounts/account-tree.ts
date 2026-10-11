@@ -733,9 +733,12 @@ export const getInternalAccountListSpreadByScopesByGroupId =
             ? [...evmNetworkIds]
             : account.scopes || [];
 
-        // Iterate over scopes and filter out test networks
+        // Iterate over scopes and filter out test networks and Tron
         scopes.forEach((scope) => {
-          if (!isTestNetwork(scope)) {
+          if (
+            !isTestNetwork(scope) &&
+            !scope.startsWith(`${KnownCaipNamespace.Tron}:`)
+          ) {
             result.push({
               account,
               scope,

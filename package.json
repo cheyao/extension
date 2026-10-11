@@ -362,7 +362,8 @@
     "@opentelemetry/instrumentation-pg@npm:0.63.0": "0.73.0",
     "@opentelemetry/instrumentation-tedious@npm:0.30.0": "0.40.0",
     "@opentelemetry/instrumentation@npm:^0.221.0": "0.222.0",
-    "ses": "2.2.0"
+    "ses": "2.2.0",
+    "@metamask/multichain-account-service@npm:^14.1.0": "patch:@metamask/multichain-account-service@npm%3A14.1.0#~/.yarn/patches/@metamask-multichain-account-service-npm-14.1.0-4d05d783cb.patch"
   },
   "dependencies": {
     "@babel/runtime": "patch:@babel/runtime@npm%3A7.29.2#~/.yarn/patches/@babel-runtime-npm-7.29.2-b49cad1c67.patch",
@@ -470,7 +471,7 @@
     "@metamask/money-account-controller": "^0.3.3",
     "@metamask/money-account-upgrade-controller": "^4.0.0",
     "@metamask/money-account-utils": "^1.2.0",
-    "@metamask/multichain-account-service": "^14.1.0",
+    "@metamask/multichain-account-service": "patch:@metamask/multichain-account-service@npm%3A14.1.0#~/.yarn/patches/@metamask-multichain-account-service-npm-14.1.0-4d05d783cb.patch",
     "@metamask/multichain-api-client": "^0.10.1",
     "@metamask/multichain-api-middleware": "^3.1.4",
     "@metamask/multichain-network-controller": "^3.2.3",

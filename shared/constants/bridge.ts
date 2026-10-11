@@ -21,7 +21,6 @@ import { ENVIRONMENT } from './build';
 export const ALLOWED_MULTICHAIN_BRIDGE_CHAIN_IDS = [
   MultichainNetworks.SOLANA,
   MultichainNetworks.BITCOIN,
-  MultichainNetworks.TRON,
   MultichainNetworks.STELLAR,
 ];
 
@@ -50,7 +49,6 @@ export const ALLOWED_BRIDGE_CHAIN_IDS = [
   CHAIN_IDS.BASE,
   MultichainNetworks.SOLANA,
   MultichainNetworks.BITCOIN,
-  MultichainNetworks.TRON,
 ] as const;
 
 export const ALLOWED_BRIDGE_CHAIN_IDS_IN_CAIP =
