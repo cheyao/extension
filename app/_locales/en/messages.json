@@ -2688,6 +2688,9 @@
   "cardTopUp": {
     "message": "Top up"
   },
+  "cardTopUpSelectCrypto": {
+    "message": "Select crypto"
+  },
   "carouselAllCaughtUp": {
     "message": "You're all caught up!",
     "description": "Message shown in carousel when all promotional slides have been dismissed"

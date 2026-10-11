@@ -17,6 +17,7 @@ import {
   TextVariant,
 } from '@metamask/design-system-react';
 import { useI18nContext } from '../../../hooks/useI18nContext';
+import { CardTopUpModal } from './card-top-up-modal';
 
 // Mock card details — there is no card backend yet.
 const MOCK_CARD = {
@@ -38,6 +39,7 @@ const maskCardNumber = (cardNumber: string) =>
 export const CardTab = () => {
   const t = useI18nContext();
   const [showDetails, setShowDetails] = useState(false);
+  const [isTopUpOpen, setIsTopUpOpen] = useState(false);
 
   const toggleDetails = useCallback(() => {
     setShowDetails((current) => !current);
@@ -119,6 +121,7 @@ export const CardTab = () => {
           size={ButtonSize.Lg}
           className="flex-1"
           startIconName={IconName.Add}
+          onClick={() => setIsTopUpOpen(true)}
           data-testid="card-tab-top-up"
         >
           {t('cardTopUp')}
@@ -174,6 +177,7 @@ export const CardTab = () => {
           </Box>
         </Box>
       </Box>
+      {isTopUpOpen && <CardTopUpModal onClose={() => setIsTopUpOpen(false)} />}
     </Box>
   );
 };
