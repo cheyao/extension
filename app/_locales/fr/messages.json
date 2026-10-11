@@ -4185,13 +4185,6 @@
   "forgotPasswordModalButtonLink": {
     "message": "Je ne connais pas ma phrase"
   },
-  "forgotPasswordModalContactSupport": {
-    "message": "$1 si vous avez besoin d’aide.",
-    "description": "$1 is the support link"
-  },
-  "forgotPasswordModalContactSupportLink": {
-    "message": "Contacter le service d’assistance"
-  },
   "forgotPasswordModalDescription1": {
     "message": "Nous ne pouvons pas récupérer votre mot de passe pour vous."
   },
@@ -4200,10 +4193,6 @@
   },
   "forgotPasswordModalTitle": {
     "message": "Mot de passe oublié ?"
-  },
-  "forgotPasswordSocialDescription": {
-    "message": "Nous ne pouvons pas récupérer votre mot de passe, mais il existe des moyens de rétablir l’accès à votre portefeuille. $1 si vous avez besoin d’aide.",
-    "description": "$1 is the support link"
   },
   "forgotPasswordSocialStep1": {
     "message": "$1 Si vous vous êtes connecté à votre compte sur un appareil en utilisant Touch ID ou Face ID et que vous avez toujours accès à ce compte, vous pouvez réinitialiser votre mot de passe à partir de cet appareil.",

@@ -4185,13 +4185,6 @@
   "forgotPasswordModalButtonLink": {
     "message": "Ich kenne meine Phrase nicht"
   },
-  "forgotPasswordModalContactSupport": {
-    "message": "$1, wenn Sie Hilfe benötigen.",
-    "description": "$1 is the support link"
-  },
-  "forgotPasswordModalContactSupportLink": {
-    "message": "Support kontaktieren"
-  },
   "forgotPasswordModalDescription1": {
     "message": "Wir können Ihr Passwort für Sie nicht wiederherstellen."
   },
@@ -4200,10 +4193,6 @@
   },
   "forgotPasswordModalTitle": {
     "message": "Passwort vergessen?"
-  },
-  "forgotPasswordSocialDescription": {
-    "message": "Wir können Ihr Passwort nicht wiederherstellen, aber es gibt Möglichkeiten, wie Sie wieder Zugriff auf Ihre Wallet erhalten können. $1, wenn Sie Hilfe benötigen.",
-    "description": "$1 is the support link"
   },
   "forgotPasswordSocialStep1": {
     "message": "$1 Wenn Sie auf einem Gerät mit Touch ID oder Face ID angemeldet sind, setzen Sie Ihr Passwort dort zurück.",

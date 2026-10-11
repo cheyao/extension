@@ -4185,13 +4185,6 @@
   "forgotPasswordModalButtonLink": {
     "message": "İfademi bilmiyorum"
   },
-  "forgotPasswordModalContactSupport": {
-    "message": "$1 yardıma ihtiyacınız olursa.",
-    "description": "$1 is the support link"
-  },
-  "forgotPasswordModalContactSupportLink": {
-    "message": "Destek ile iletişime geçin"
-  },
   "forgotPasswordModalDescription1": {
     "message": "Sizin adınıza şifrenizi kurtaramayız."
   },
@@ -4200,10 +4193,6 @@
   },
   "forgotPasswordModalTitle": {
     "message": "Şifrenizi mi unuttunuz?"
-  },
-  "forgotPasswordSocialDescription": {
-    "message": "Şifrenizi kurtaramayız ancak cüzdanınıza tekrar erişim kazanabilmenizin yolları vardır. $1 yardıma ihtiyacınız olursa.",
-    "description": "$1 is the support link"
   },
   "forgotPasswordSocialStep1": {
     "message": "$1 Bir cihazda Touch veya Face ID ile oturum açtıysanız şifrenizi orada sıfırlayın.",

@@ -4,13 +4,11 @@ import thunk from 'redux-thunk';
 import { fireEvent, screen, waitFor } from '@testing-library/react';
 import { renderWithProvider } from '../../../test/lib/render-helpers-navigate';
 import { enLocale as messages } from '../../../test/lib/i18n-helpers';
-import { SUPPORT_LINK } from '../../helpers/constants/common';
 import {
   DEFAULT_ROUTE,
   RESTORE_VAULT_ROUTE,
 } from '../../helpers/constants/routes';
 import {
-  MetaMetricsContextProp,
   MetaMetricsEventCategory,
   MetaMetricsEventName,
 } from '../../../shared/constants/metametrics';
@@ -278,24 +276,10 @@ describe('ResetPasswordModal', () => {
   });
 
   describe('support link', () => {
-    it('tracks the support link click', () => {
+    it('does not render a contact support link', () => {
       renderModal();
 
-      fireEvent.click(
-        screen.getByText(
-          messages.forgotPasswordModalContactSupportLink.message,
-        ),
-      );
-
-      expect(mockTrackEvent).toHaveBeenCalledWith({
-        name: MetaMetricsEventName.SupportLinkClicked,
-        properties: {
-          category: MetaMetricsEventCategory.Navigation,
-          url: SUPPORT_LINK,
-          [MetaMetricsContextProp.PageTitle]: 'Unlock',
-        },
-        sensitiveProperties: {},
-      });
+      expect(screen.queryByText('Contact support')).not.toBeInTheDocument();
     });
   });
 

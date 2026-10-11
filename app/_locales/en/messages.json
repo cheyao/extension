@@ -4290,13 +4290,6 @@
   "forgotPasswordModalButtonLink": {
     "message": "I don’t know my Phrase"
   },
-  "forgotPasswordModalContactSupport": {
-    "message": "$1 if you need help.",
-    "description": "$1 is the support link"
-  },
-  "forgotPasswordModalContactSupportLink": {
-    "message": "Contact support"
-  },
   "forgotPasswordModalDescription1": {
     "message": "We can’t recover your password for you."
   },
@@ -4307,8 +4300,7 @@
     "message": "Forgot your password?"
   },
   "forgotPasswordSocialDescription": {
-    "message": "We can’t recover your password, but there are ways you can regain access to your wallet. $1 if you need help.",
-    "description": "$1 is the support link"
+    "message": "We can’t recover your password, but there are ways you can regain access to your wallet."
   },
   "forgotPasswordSocialStep1": {
     "message": "$1 If you’re logged in on a device with Touch or Face ID, reset your password there.",

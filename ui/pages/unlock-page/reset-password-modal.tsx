@@ -16,10 +16,8 @@ import {
   BoxFlexDirection,
   FontWeight,
   IconColor,
-  TextButton,
 } from '@metamask/design-system-react';
 import { useAnalytics } from '../../hooks/useAnalytics';
-import { useSegmentContext } from '../../hooks/useSegmentContext';
 import { useI18nContext } from '../../hooks/useI18nContext';
 import {
   Modal,
@@ -37,11 +35,9 @@ import {
   RESTORE_VAULT_ROUTE,
 } from '../../helpers/constants/routes';
 import {
-  MetaMetricsContextProp,
   MetaMetricsEventCategory,
   MetaMetricsEventName,
 } from '../../../shared/constants/metametrics';
-import { SUPPORT_LINK } from '../../helpers/constants/common';
 import { useBoolean } from '../../hooks/useBoolean';
 import { isPopupOrSidePanelEnvironment } from '../../../shared/lib/environment-type';
 import { useDispatch } from '../../store/hooks';
@@ -53,7 +49,6 @@ export default function ResetPasswordModal({
 }) {
   const t = useI18nContext();
   const { trackEvent, createEventBuilder } = useAnalytics();
-  const segmentContext = useSegmentContext();
   const isSocialLoginFlow = useSelector(getIsSocialLoginFlow);
   const { value: resetWallet, toggle: handleResetWallet } = useBoolean();
   const navigate = useNavigate();
@@ -94,18 +89,6 @@ export default function ResetPasswordModal({
     }
   };
 
-  const handleContactSupportTrackEvent = () => {
-    trackEvent(
-      createEventBuilder(MetaMetricsEventName.SupportLinkClicked)
-        .addCategory(MetaMetricsEventCategory.Navigation)
-        .addProperties({
-          url: SUPPORT_LINK,
-          [MetaMetricsContextProp.PageTitle]: segmentContext.page?.title,
-        })
-        .build(),
-    );
-  };
-
   const socialLoginContent = () => {
     return (
       <Box paddingHorizontal={4}>
@@ -114,22 +97,7 @@ export default function ResetPasswordModal({
           color={TextColor.TextAlternative}
           className="mb-4"
         >
-          {t('forgotPasswordSocialDescription', [
-            <TextButton
-              key="need-help-link"
-              onClick={handleContactSupportTrackEvent}
-              asChild
-            >
-              <a
-                href={SUPPORT_LINK}
-                type="button"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {t('forgotPasswordModalContactSupportLink')}
-              </a>
-            </TextButton>,
-          ])}
+          {t('forgotPasswordSocialDescription')}
         </Text>
         <Box
           flexDirection={BoxFlexDirection.Column}
@@ -226,32 +194,10 @@ export default function ResetPasswordModal({
         </Text>
         <Text
           variant={TextVariant.BodyMd}
-          className="mb-4"
-          color={TextColor.TextAlternative}
-        >
-          {t('forgotPasswordModalDescription2')}
-        </Text>
-        <Text
-          variant={TextVariant.BodyMd}
           className="mb-6"
           color={TextColor.TextAlternative}
         >
-          {t('forgotPasswordModalContactSupport', [
-            <TextButton
-              key="need-help-link"
-              onClick={handleContactSupportTrackEvent}
-              asChild
-            >
-              <a
-                href={SUPPORT_LINK}
-                type="button"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {t('forgotPasswordModalContactSupportLink')}
-              </a>
-            </TextButton>,
-          ])}
+          {t('forgotPasswordModalDescription2')}
         </Text>
         <Box flexDirection={BoxFlexDirection.Column} gap={3}>
           <Button

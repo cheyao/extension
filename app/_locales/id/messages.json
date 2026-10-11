@@ -4185,13 +4185,6 @@
   "forgotPasswordModalButtonLink": {
     "message": "Saya tidak tahu Frasa saya"
   },
-  "forgotPasswordModalContactSupport": {
-    "message": "$1 jika Anda memerlukan bantuan.",
-    "description": "$1 is the support link"
-  },
-  "forgotPasswordModalContactSupportLink": {
-    "message": "Hubungi dukungan"
-  },
   "forgotPasswordModalDescription1": {
     "message": "Kami tidak dapat memulihkan kata sandi Anda."
   },
@@ -4200,10 +4193,6 @@
   },
   "forgotPasswordModalTitle": {
     "message": "Lupa kata sandi Anda?"
-  },
-  "forgotPasswordSocialDescription": {
-    "message": "Kami tidak dapat memulihkan kata sandi Anda, tetapi ada cara agar dompet Anda dapat kembali diakses. $1 jika Anda memerlukan bantuan.",
-    "description": "$1 is the support link"
   },
   "forgotPasswordSocialStep1": {
     "message": "$1 Jika Anda masuk ke akun Anda di perangkat yang menggunakan ID Sentuh atau ID Wajah, reset kata sandi di sana.",

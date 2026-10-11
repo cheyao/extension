@@ -4185,13 +4185,6 @@
   "forgotPasswordModalButtonLink": {
     "message": "Tôi không biết Cụm từ khôi phục bí mật"
   },
-  "forgotPasswordModalContactSupport": {
-    "message": "$1 nếu bạn cần trợ giúp.",
-    "description": "$1 is the support link"
-  },
-  "forgotPasswordModalContactSupportLink": {
-    "message": "Liên hệ bộ phận hỗ trợ"
-  },
   "forgotPasswordModalDescription1": {
     "message": "Chúng tôi không thể khôi phục mật khẩu cho bạn."
   },
@@ -4200,10 +4193,6 @@
   },
   "forgotPasswordModalTitle": {
     "message": "Quên mật khẩu?"
-  },
-  "forgotPasswordSocialDescription": {
-    "message": "Chúng tôi không thể khôi phục mật khẩu của bạn, nhưng vẫn có cách để bạn lấy lại quyền truy cập ví. $1 nếu bạn cần trợ giúp.",
-    "description": "$1 is the support link"
   },
   "forgotPasswordSocialStep1": {
     "message": "$1 Nếu bạn đang đăng nhập trên thiết bị có Touch hoặc Face ID, hãy đặt lại mật khẩu trên thiết bị đó.",

@@ -4185,13 +4185,6 @@
   "forgotPasswordModalButtonLink": {
     "message": "Hindi ko alam ang Parirala ko"
   },
-  "forgotPasswordModalContactSupport": {
-    "message": "$1 kung kailangan mo ng tulong.",
-    "description": "$1 is the support link"
-  },
-  "forgotPasswordModalContactSupportLink": {
-    "message": "Kontakin ang suporta"
-  },
   "forgotPasswordModalDescription1": {
     "message": "Hindi namin mababawi ang password mo para sa iyo."
   },
@@ -4200,10 +4193,6 @@
   },
   "forgotPasswordModalTitle": {
     "message": "Nakalimutan ang iyong password?"
-  },
-  "forgotPasswordSocialDescription": {
-    "message": "Hindi namin mababawi ang password mo, pero may mga paraan para magkaroon ka ulit ng access sa wallet mo. $1 kung kailangan mo ng tulong.",
-    "description": "$1 is the support link"
   },
   "forgotPasswordSocialStep1": {
     "message": "$1 Kung naka-log in ka sa device na may Touch o Face ID, i-reset ang iyong password doon.",

@@ -4185,13 +4185,6 @@
   "forgotPasswordModalButtonLink": {
     "message": "Δεν γνωρίζω τη Φράση μου"
   },
-  "forgotPasswordModalContactSupport": {
-    "message": "$1 αν χρειάζεστε βοήθεια.",
-    "description": "$1 is the support link"
-  },
-  "forgotPasswordModalContactSupportLink": {
-    "message": "Επικοινωνήστε με την υποστήριξη"
-  },
   "forgotPasswordModalDescription1": {
     "message": "Δεν μπορούμε να ανακτήσουμε τον κωδικό σας."
   },
@@ -4200,10 +4193,6 @@
   },
   "forgotPasswordModalTitle": {
     "message": "Ξεχάσατε τον κωδικό πρόσβασης;"
-  },
-  "forgotPasswordSocialDescription": {
-    "message": "Δεν μπορούμε να ανακτήσουμε τον κωδικό σας, αλλά υπάρχουν τρόποι να αποκτήσετε ξανά πρόσβαση στο πορτοφόλι σας. $1 αν χρειάζεστε βοήθεια.",
-    "description": "$1 is the support link"
   },
   "forgotPasswordSocialStep1": {
     "message": "$1 Αν είστε συνδεδεμένοι σε συσκευή με Touch ή Face ID, επαναφέρετε εκεί τον κωδικό σας.",

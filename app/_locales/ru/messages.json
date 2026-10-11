@@ -4185,13 +4185,6 @@
   "forgotPasswordModalButtonLink": {
     "message": "Я не знаю свою фразу"
   },
-  "forgotPasswordModalContactSupport": {
-    "message": "$1, если вам нужна помощь.",
-    "description": "$1 is the support link"
-  },
-  "forgotPasswordModalContactSupportLink": {
-    "message": "Связаться с поддержкой"
-  },
   "forgotPasswordModalDescription1": {
     "message": "Мы не смогли восстановить ваш пароль для вас."
   },
@@ -4200,10 +4193,6 @@
   },
   "forgotPasswordModalTitle": {
     "message": "Забыли пароль?"
-  },
-  "forgotPasswordSocialDescription": {
-    "message": "Мы не можем восстановить ваш пароль, но есть способы вернуть доступ к вашему кошельку. $1, если вам нужна помощь.",
-    "description": "$1 is the support link"
   },
   "forgotPasswordSocialStep1": {
     "message": "$1 Если вы вошли в систему на устройстве с помощью Touch ID или Face ID, сбросьте пароль там.",

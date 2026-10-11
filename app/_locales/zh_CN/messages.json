@@ -4185,13 +4185,6 @@
   "forgotPasswordModalButtonLink": {
     "message": "我忘记了助记词"
   },
-  "forgotPasswordModalContactSupport": {
-    "message": "如需帮助，请 $1。",
-    "description": "$1 is the support link"
-  },
-  "forgotPasswordModalContactSupportLink": {
-    "message": "联系支持团队"
-  },
   "forgotPasswordModalDescription1": {
     "message": "我们无法为您找回密码。"
   },
@@ -4200,10 +4193,6 @@
   },
   "forgotPasswordModalTitle": {
     "message": "忘记密码了？"
-  },
-  "forgotPasswordSocialDescription": {
-    "message": "我们无法为您找回密码，但您可以通过其他方式重新获得钱包访问权限。如需帮助，请 $1。",
-    "description": "$1 is the support link"
   },
   "forgotPasswordSocialStep1": {
     "message": "$1：如果您已在支持指纹 (Touch ID) 或面容 (Face ID) 的设备上登录，请在相应设备上重置密码。",

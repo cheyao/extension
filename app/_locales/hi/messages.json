@@ -4185,13 +4185,6 @@
   "forgotPasswordModalButtonLink": {
     "message": "मुझे अपना फ्रेज़ नहीं पता"
   },
-  "forgotPasswordModalContactSupport": {
-    "message": "$1 अगर आपको मदद चाहिए।",
-    "description": "$1 is the support link"
-  },
-  "forgotPasswordModalContactSupportLink": {
-    "message": "सपोर्ट टीम से कॉन्टेक्ट करें"
-  },
   "forgotPasswordModalDescription1": {
     "message": "हम आपके लिए आपका पासवर्ड रिकवर नहीं कर सकते।"
   },
@@ -4200,10 +4193,6 @@
   },
   "forgotPasswordModalTitle": {
     "message": "अपना पासवर्ड भूल गए?"
-  },
-  "forgotPasswordSocialDescription": {
-    "message": "हम आपका पासवर्ड रिकवर नहीं कर सकते, लेकिन ऐसे तरीके हैं जिनसे आप अपने वॉलेट का एक्सेस वापस पा सकते हैं। अगर आपको मदद चाहिए तो $1।",
-    "description": "$1 is the support link"
   },
   "forgotPasswordSocialStep1": {
     "message": "$1 अगर आप टच या फेस ID वाले डिवाइस पर लॉग इन हैं, तो वहां अपना पासवर्ड रीसेट करें।",

@@ -4185,13 +4185,6 @@
   "forgotPasswordModalButtonLink": {
     "message": "No sé mi Frase"
   },
-  "forgotPasswordModalContactSupport": {
-    "message": "$1 si necesitas ayuda.",
-    "description": "$1 is the support link"
-  },
-  "forgotPasswordModalContactSupportLink": {
-    "message": "Contactar a soporte"
-  },
   "forgotPasswordModalDescription1": {
     "message": "No podemos recuperar tu contraseña por ti."
   },
@@ -4200,10 +4193,6 @@
   },
   "forgotPasswordModalTitle": {
     "message": "¿Olvidaste tu contraseña?"
-  },
-  "forgotPasswordSocialDescription": {
-    "message": "No podemos recuperar tu contraseña, pero hay formas de recuperar el acceso a tu billetera. $1 si necesitas ayuda.",
-    "description": "$1 is the support link"
   },
   "forgotPasswordSocialStep1": {
     "message": "$1 Si has iniciado sesión en un dispositivo con Touch o Face ID, restablece tu contraseña allí.",
