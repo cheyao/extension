@@ -14,9 +14,6 @@ import type { Hex } from '@metamask/utils';
 import { InternalAccount } from '@metamask/keyring-internal-api';
 import { Box, Skeleton } from '@metamask/design-system-react';
 import { useCoordinatedTrace } from '#ui/hooks/useTraceCoordinator';
-import { ButtonLink, IconName } from '../../component-library';
-import { TextVariant } from '../../../helpers/constants/design-system';
-import { getPortfolioUrl } from '../../../helpers/utils/portfolio';
 import { useAnalytics } from '../../../hooks/useAnalytics';
 import { isEvmChainId } from '../../../../shared/lib/asset-utils';
 import {
@@ -35,10 +32,6 @@ import {
   getIsTestnet,
   getIsTokenNetworkFilterEqualCurrentNetwork,
   getChainIdsToPoll,
-  getDataCollectionForMarketing,
-  getAnalyticsId,
-  getConsentDecisionMade,
-  getOptedIn,
   getEnabledNetworksByNamespace,
   selectAnyEnabledNetworksAreAvailable,
 } from '../../../selectors';
@@ -211,15 +204,6 @@ export const CoinOverview = ({
 
   const { trackEvent, createEventBuilder } = useAnalytics();
 
-  const analyticsId = useSelector(getAnalyticsId);
-  const consentDecisionMade = useSelector(getConsentDecisionMade);
-  const isOptedIn = useSelector(getOptedIn);
-  const isMetaMetricsEnabled = useMemo(
-    () => consentDecisionMade && isOptedIn,
-    [consentDecisionMade, isOptedIn],
-  );
-  const isMarketingEnabled = useSelector(getDataCollectionForMarketing);
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -362,32 +346,6 @@ export const CoinOverview = ({
     dispatch(setPrivacyMode(!privacyMode));
   }, [dispatch, privacyMode]);
 
-  const handlePortfolioOnClick = useCallback(() => {
-    const url = getPortfolioUrl(
-      'explore/tokens',
-      'ext_portfolio_button',
-      analyticsId,
-      isMetaMetricsEnabled === true,
-      isMarketingEnabled === true,
-    );
-    global.platform.openTab({ url });
-    trackEvent(
-      createEventBuilder(MetaMetricsEventName.PortfolioLinkClicked)
-        .addCategory(MetaMetricsEventCategory.Navigation)
-        .addProperties({
-          location: 'Home',
-          text: 'Portfolio',
-        })
-        .build(),
-    );
-  }, [
-    isMarketingEnabled,
-    isMetaMetricsEnabled,
-    analyticsId,
-    trackEvent,
-    createEventBuilder,
-  ]);
-
   const handleReceiveOnClick = useCallback(() => {
     trace({ name: TraceName.ReceiveModal });
     trackEvent(
@@ -412,26 +370,9 @@ export const CoinOverview = ({
   }, [selectedAccountGroup, navigate, trackEvent, chainId, createEventBuilder]);
 
   const renderPercentageAndAmountChange = () => {
-    const renderPercentageAndAmountChangeTrail = () => {
-      return (
-        <ButtonLink
-          endIconName={IconName.Export}
-          onClick={handlePortfolioOnClick}
-          as="a"
-          data-testid="portfolio-link"
-          textProps={{ variant: TextVariant.bodyMdMedium }}
-        >
-          {t('discover')}
-        </ButtonLink>
-      );
-    };
-
     return (
       <Box className="wallet-overview__currency-wrapper">
-        <AccountGroupBalanceChange
-          period={period}
-          trailingChild={renderPercentageAndAmountChangeTrail}
-        />
+        <AccountGroupBalanceChange period={period} trailingChild={() => null} />
       </Box>
     );
   };
