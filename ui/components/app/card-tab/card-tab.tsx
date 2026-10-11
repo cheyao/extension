@@ -30,6 +30,15 @@ const MOCK_CARD = {
 // Hardcoded until the wallet creation date is exposed to the UI.
 const MOCK_CARD_CREATED_AT = new Date('2026-10-10T12:00:00Z');
 
+// Swissquote look: black card with an orange glow from the top corner and a
+// thin light edge, matching the Swissquote mark.
+const SWISSQUOTE_CARD_STYLE: React.CSSProperties = {
+  background:
+    'radial-gradient(120% 90% at 100% 0%, rgba(239, 108, 26, 0.38), transparent 55%), linear-gradient(135deg, #1a1a1a, #050505)',
+  boxShadow:
+    'inset 0 0 0 1px rgba(255, 255, 255, 0.08), 0 14px 30px -18px rgba(239, 108, 26, 0.5)',
+};
+
 const maskCardNumber = (cardNumber: string) =>
   `•••• •••• •••• ${cardNumber.slice(-4)}`;
 
@@ -56,7 +65,8 @@ export const CardTab = () => {
         flexDirection={BoxFlexDirection.Column}
         justifyContent={BoxJustifyContent.Between}
         padding={5}
-        className="aspect-[1.586] w-full max-w-[360px] self-center rounded-2xl bg-gradient-to-br from-[#1f2937] via-[#111827] to-[#000000] text-white shadow-lg"
+        className="aspect-[1.586] w-full max-w-[360px] self-center rounded-2xl text-white"
+        style={SWISSQUOTE_CARD_STYLE}
         data-testid="card-tab-card"
       >
         <Box
@@ -64,18 +74,32 @@ export const CardTab = () => {
           justifyContent={BoxJustifyContent.Between}
           alignItems={BoxAlignItems.Center}
         >
+          <Box
+            flexDirection={BoxFlexDirection.Row}
+            alignItems={BoxAlignItems.Center}
+            gap={2}
+          >
+            <img
+              src="./images/logo/swissquote-logo.svg"
+              width={28}
+              height={28}
+              alt=""
+            />
+            <Text
+              variant={TextVariant.BodyMd}
+              fontWeight={FontWeight.Bold}
+              className="text-white"
+            >
+              Swissquote
+            </Text>
+          </Box>
           <Text
-            variant={TextVariant.BodyMd}
+            variant={TextVariant.BodyXs}
             fontWeight={FontWeight.Medium}
-            className="text-white"
+            className="text-white/70"
           >
             {MOCK_CARD.holder}
           </Text>
-          <Icon
-            name={IconName.Card}
-            size={IconSize.Lg}
-            className="text-white"
-          />
         </Box>
 
         <Text
@@ -150,9 +174,10 @@ export const CardTab = () => {
           data-testid="card-tab-transaction-card-created"
         >
           <Box
+            flexDirection={BoxFlexDirection.Row}
             alignItems={BoxAlignItems.Center}
             justifyContent={BoxJustifyContent.Center}
-            className="h-10 w-10 rounded-full bg-muted"
+            className="h-10 w-10 shrink-0 rounded-full bg-muted"
           >
             <Icon
               name={IconName.Card}
