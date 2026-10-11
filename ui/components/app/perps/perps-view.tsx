@@ -7,8 +7,7 @@ import {
   TextColor,
 } from '@metamask/design-system-react';
 import type { Order, Position } from '@metamask/perps-controller';
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useCallback, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { usePerpsEntryTrace } from '../../../hooks/perps/usePerpsEntryTrace';
 import {
@@ -21,14 +20,7 @@ import { PERPS_RECENT_ACTIVITY_MAX_TRANSACTIONS } from '../../../../shared/const
 import { useI18nContext } from '../../../hooks/useI18nContext';
 import { submitRequestToBackground } from '../../../store/background-connection';
 import { getPerpsStreamManager } from '../../../providers/perps';
-import {
-  selectPerpsIsFirstTimeUser,
-  selectPerpsIsTestnet,
-} from '../../../selectors/perps-controller';
-import {
-  selectTutorialCompleted,
-  setTutorialModalOpen,
-} from '../../../ducks/perps';
+import { setTutorialModalOpen } from '../../../ducks/perps';
 
 import { usePerpsEligibility } from '../../../hooks/perps';
 import { getTradeableBalance } from '../../../hooks/perps/getTradeableBalance';
@@ -85,9 +77,6 @@ export const PerpsView = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const bottomNavSource = usePerpsBottomNavSource();
-  const isFirstTimeUser = useSelector(selectPerpsIsFirstTimeUser);
-  const isTestnet = useSelector(selectPerpsIsTestnet);
-  const tutorialCompleted = useSelector(selectTutorialCompleted);
   const { isEligible } = usePerpsEligibility();
   const { gate } = useSelectedAccountComplianceGate();
   const { trigger: triggerDeposit } = usePerpsDepositConfirmation();
@@ -421,22 +410,6 @@ export const PerpsView = () => {
       [PERPS_EVENT_PROPERTY.HAS_PERP_BALANCE]: hasPerpBalance,
     },
   });
-
-  // Auto-open tutorial modal the first time a user enters the perps domain.
-  // Guards on both the backend isFirstTimeUser flag (stable once propagated) and
-  // the local tutorialCompleted flag so that a skip/complete before the backend
-  // state propagates doesn't reopen the modal on the next effect run.
-  // Explicitly skips when isFirstTimeUser is undefined so that unhydrated
-  // controller state is never treated as "first-time user = true".
-  useEffect(() => {
-    if (isLoading || tutorialCompleted || isFirstTimeUser === undefined) {
-      return;
-    }
-    const networkKey = isTestnet ? 'testnet' : 'mainnet';
-    if (isFirstTimeUser[networkKey]) {
-      dispatch(setTutorialModalOpen(true));
-    }
-  }, [dispatch, isFirstTimeUser, isLoading, isTestnet, tutorialCompleted]);
 
   // The "Perps" heading is owned by PerpsView (single source of truth) so it
   // renders identically from both wrappers (bottom-nav home page and the
