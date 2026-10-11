@@ -182,38 +182,7 @@ describe('PerpsMarketBalanceActions', () => {
   });
 
   describe('Learn more', () => {
-    it('renders the Learn more button at $0 balance when onLearnMore is provided', () => {
-      mockUsePerpsLiveAccount.mockReturnValue({
-        account: {
-          ...mockAccountState,
-          totalBalance: '0',
-          unrealizedPnl: '0',
-        },
-        isInitialLoading: false,
-      });
-
-      renderWithProvider(
-        <PerpsMarketBalanceActions showActionButtons onLearnMore={jest.fn()} />,
-        mockStore,
-      );
-
-      expect(
-        screen.getByTestId('perps-balance-actions-learn-more'),
-      ).toBeInTheDocument();
-    });
-
-    it('hides the Learn more button once the account is funded even if onLearnMore is provided', () => {
-      renderWithProvider(
-        <PerpsMarketBalanceActions showActionButtons onLearnMore={jest.fn()} />,
-        mockStore,
-      );
-
-      expect(
-        screen.queryByTestId('perps-balance-actions-learn-more'),
-      ).not.toBeInTheDocument();
-    });
-
-    it('hides the Learn more button at $0 balance when no onLearnMore handler is wired', () => {
+    it('does not render a Learn more button at $0 balance', () => {
       mockUsePerpsLiveAccount.mockReturnValue({
         account: {
           ...mockAccountState,
@@ -231,41 +200,6 @@ describe('PerpsMarketBalanceActions', () => {
       expect(
         screen.queryByTestId('perps-balance-actions-learn-more'),
       ).not.toBeInTheDocument();
-    });
-
-    it('calls onLearnMore and tracks a TUTORIAL button click at PERPS_HOME when pressed', () => {
-      mockUsePerpsLiveAccount.mockReturnValue({
-        account: {
-          ...mockAccountState,
-          totalBalance: '0',
-          unrealizedPnl: '0',
-        },
-        isInitialLoading: false,
-      });
-      const onLearnMore = jest.fn();
-
-      renderWithProvider(
-        <PerpsMarketBalanceActions
-          showActionButtons
-          onLearnMore={onLearnMore}
-        />,
-        mockStore,
-      );
-
-      fireEvent.click(screen.getByTestId('perps-balance-actions-learn-more'));
-
-      expect(onLearnMore).toHaveBeenCalledTimes(1);
-      expect(mockTrack).toHaveBeenCalledWith(
-        MetaMetricsEventName.PerpsUiInteraction,
-        expect.objectContaining({
-          [PERPS_EVENT_PROPERTY.INTERACTION_TYPE]:
-            PERPS_EVENT_VALUE.INTERACTION_TYPE.BUTTON_CLICKED,
-          [PERPS_EVENT_PROPERTY.BUTTON_CLICKED]:
-            PERPS_EVENT_VALUE.BUTTON_CLICKED.TUTORIAL,
-          [PERPS_EVENT_PROPERTY.BUTTON_LOCATION]:
-            PERPS_EVENT_VALUE.BUTTON_LOCATION.PERPS_HOME,
-        }),
-      );
     });
   });
 

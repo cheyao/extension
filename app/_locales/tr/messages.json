@@ -7639,9 +7639,6 @@
   "perpsConnectionTimeout": {
     "message": "Bağlantı zaman aşımına uğradı. Lütfen tekrar deneyin."
   },
-  "perpsContactSupport": {
-    "message": "Destek ile iletişime geç"
-  },
   "perpsCrossMarginNotSupportedDescription": {
     "message": "MetaMask Sürekli Vadeli İşlem Sözleşmeleri, yalnızca izole marj ile işlem yapılmasını destekler. MetaMask’te işlem yapabilmek için önce çapraz marj pozisyonunuzu kapatmanız gerekir."
   },
@@ -7812,9 +7809,6 @@
   "perpsGeoBlockedTitle": {
     "message": "Sürekli vadeli bölgenizde kullanılamıyor"
   },
-  "perpsGiveFeedback": {
-    "message": "Bize geri bildirim gönder"
-  },
   "perpsIncludesPnl": {
     "message": "K&Z dahil $1"
   },
@@ -7826,9 +7820,6 @@
   },
   "perpsLearnBasics": {
     "message": "Sürekli vadeli işlem sözleşmeleri hakkındaki temel bilgileri öğrenin"
-  },
-  "perpsLearnMore": {
-    "message": "Daha fazla bilgi edin"
   },
   "perpsLeverage": {
     "message": "Kaldıraç"

@@ -7629,9 +7629,6 @@
   "perpsConnectionTimeout": {
     "message": "Zeitüberschreitung der Verbindung. Bitte versuchen Sie es erneut."
   },
-  "perpsContactSupport": {
-    "message": "Support kontaktieren"
-  },
   "perpsCrossMarginNotSupportedDescription": {
     "message": "MetaMask-Perps unterstützen nur den Handel mit isolierter Margin. Um auf MetaMask handeln zu können, müssen Sie zunächst Ihre Cross-Margin-Position schließen."
   },
@@ -7802,9 +7799,6 @@
   "perpsGeoBlockedTitle": {
     "message": "Perps ist in Ihrer Region nicht verfügbar"
   },
-  "perpsGiveFeedback": {
-    "message": "Geben Sie uns Feedback"
-  },
   "perpsIncludesPnl": {
     "message": "beinhaltet GuV $1"
   },
@@ -7816,9 +7810,6 @@
   },
   "perpsLearnBasics": {
     "message": "Lernen Sie die Grundlagen von Perps"
-  },
-  "perpsLearnMore": {
-    "message": "Mehr erfahren"
   },
   "perpsLeverage": {
     "message": "Hebel"

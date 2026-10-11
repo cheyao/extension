@@ -57,11 +57,6 @@ type PerpsMarketBalanceActionsProps = {
   onAddFunds?: PerpsBalanceActionHandler;
   /** Callback when Withdraw button is pressed */
   onWithdraw?: PerpsBalanceActionHandler;
-  /**
-   * Callback when the (empty-balance-only) Learn more button is pressed. When
-   * omitted the Learn more button is hidden even at $0 balance.
-   */
-  onLearnMore?: () => void;
 };
 
 const PerpsMarketBalanceActions = ({
@@ -69,7 +64,6 @@ const PerpsMarketBalanceActions = ({
   isAddFundsLoading = false,
   onAddFunds,
   onWithdraw,
-  onLearnMore,
 }: PerpsMarketBalanceActionsProps) => {
   const t = useI18nContext();
   const { track } = usePerpsEventTracking();
@@ -119,18 +113,6 @@ const PerpsMarketBalanceActions = ({
     });
     invokePerpsBalanceAction(onWithdraw);
   }, [onWithdraw, track]);
-
-  const handleLearnMore = useCallback(() => {
-    track(MetaMetricsEventName.PerpsUiInteraction, {
-      [PERPS_EVENT_PROPERTY.INTERACTION_TYPE]:
-        PERPS_EVENT_VALUE.INTERACTION_TYPE.BUTTON_CLICKED,
-      [PERPS_EVENT_PROPERTY.BUTTON_CLICKED]:
-        PERPS_EVENT_VALUE.BUTTON_CLICKED.TUTORIAL,
-      [PERPS_EVENT_PROPERTY.BUTTON_LOCATION]:
-        PERPS_EVENT_VALUE.BUTTON_LOCATION.PERPS_HOME,
-    });
-    onLearnMore?.();
-  }, [onLearnMore, track]);
 
   const geoBlockModal = (
     <PerpsGeoBlockModal
@@ -230,23 +212,6 @@ const PerpsMarketBalanceActions = ({
               {t('perpsAddFunds')}
             </Button>
           </Box>
-
-          {/*
-            Learn more is only shown to accounts that haven't been funded yet;
-            it's an educational entry point into the tutorial modal and would
-            be redundant clutter once the user has a balance.
-          */}
-          {accountValue === 0 && onLearnMore && (
-            <Button
-              variant={ButtonVariant.Secondary}
-              size={ButtonSize.Lg}
-              onClick={handleLearnMore}
-              style={{ width: '100%' }}
-              data-testid="perps-balance-actions-learn-more"
-            >
-              {t('perpsLearnMore')}
-            </Button>
-          )}
         </Box>
       )}
       {geoBlockModal}

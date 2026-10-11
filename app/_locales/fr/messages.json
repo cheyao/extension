@@ -7629,9 +7629,6 @@
   "perpsConnectionTimeout": {
     "message": "Le délai de connexion a expiré. Veuillez réessayer."
   },
-  "perpsContactSupport": {
-    "message": "Contacter le service d’assistance"
-  },
   "perpsCrossMarginNotSupportedDescription": {
     "message": "MetaMask Perps ne prend en charge que le trading à marge isolée. Vous devez d’abord clôturer votre position à marge croisée avant de pouvoir trader sur MetaMask."
   },
@@ -7802,9 +7799,6 @@
   "perpsGeoBlockedTitle": {
     "message": "Contrats à terme perpétuels (perps) non disponibles dans votre région"
   },
-  "perpsGiveFeedback": {
-    "message": "Donnez-nous votre avis"
-  },
   "perpsIncludesPnl": {
     "message": "comprend les profits et pertes $1"
   },
@@ -7816,9 +7810,6 @@
   },
   "perpsLearnBasics": {
     "message": "Apprenez les bases des contrats perpétuels"
-  },
-  "perpsLearnMore": {
-    "message": "En savoir plus."
   },
   "perpsLeverage": {
     "message": "Effet de levier"

@@ -7633,9 +7633,6 @@
   "perpsConnectionTimeout": {
     "message": "연결 시간이 초과되었습니다. 다시 시도하세요."
   },
-  "perpsContactSupport": {
-    "message": "지원팀에 문의"
-  },
   "perpsCrossMarginNotSupportedDescription": {
     "message": "MetaMask 무기한 거래는 격리 마진 거래만 지원합니다. MetaMask에서 거래하려면 먼저 교차 마진 포지션을 청산해야 합니다."
   },
@@ -7806,9 +7803,6 @@
   "perpsGeoBlockedTitle": {
     "message": "회원님의 지역에서는 무기한 선물 거래를 이용할 수 없습니다"
   },
-  "perpsGiveFeedback": {
-    "message": "피드백 보내기"
-  },
   "perpsIncludesPnl": {
     "message": "손익 $1 포함"
   },
@@ -7820,9 +7814,6 @@
   },
   "perpsLearnBasics": {
     "message": "무기한 선물 기초 배우기"
-  },
-  "perpsLearnMore": {
-    "message": "자세히 알아보세요."
   },
   "perpsLeverage": {
     "message": "레버리지"

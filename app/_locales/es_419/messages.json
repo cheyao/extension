@@ -7639,9 +7639,6 @@
   "perpsConnectionTimeout": {
     "message": "Se agotó el tiempo de espera de la conexión. Inténtalo de nuevo."
   },
-  "perpsContactSupport": {
-    "message": "Contactar a soporte"
-  },
   "perpsCrossMarginNotSupportedDescription": {
     "message": "MetaMask Perps solo permite operar con margen aislado. Primero debes cerrar tu posición de margen cruzado antes de poder operar en MetaMask."
   },
@@ -7812,9 +7809,6 @@
   "perpsGeoBlockedTitle": {
     "message": "Los contratos perpetuos no están disponibles en tu región"
   },
-  "perpsGiveFeedback": {
-    "message": "Envíanos tus comentarios"
-  },
   "perpsIncludesPnl": {
     "message": "incluye P&L $1"
   },
@@ -7826,9 +7820,6 @@
   },
   "perpsLearnBasics": {
     "message": "Aprende los conceptos básicos de los contratos perpetuos"
-  },
-  "perpsLearnMore": {
-    "message": "Conozca más"
   },
   "perpsLeverage": {
     "message": "Apalancamiento"

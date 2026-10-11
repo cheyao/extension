@@ -496,10 +496,18 @@ describe('PerpsView', () => {
       ).toBeInTheDocument();
     });
 
-    it('shows Support & Learn section with Learn basics', () => {
+    it('does not show the Support & Learn links', () => {
       renderWithProvider(<PerpsView />, mockStore);
 
-      expect(screen.getByTestId('perps-learn-basics')).toBeInTheDocument();
+      expect(
+        screen.queryByTestId('perps-contact-support'),
+      ).not.toBeInTheDocument();
+      expect(
+        screen.queryByTestId('perps-give-feedback'),
+      ).not.toBeInTheDocument();
+      expect(
+        screen.queryByTestId('perps-learn-basics'),
+      ).not.toBeInTheDocument();
     });
 
     it('shows Recent Activity section', () => {

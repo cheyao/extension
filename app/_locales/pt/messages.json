@@ -7629,9 +7629,6 @@
   "perpsConnectionTimeout": {
     "message": "Conexão expirou. Tente novamente."
   },
-  "perpsContactSupport": {
-    "message": "Falar com o suporte"
-  },
   "perpsCrossMarginNotSupportedDescription": {
     "message": "Os perps da MetaMask oferecem suporte apenas para negociações com margem isolada. Você precisa primeiro fechar sua posição em margem cruzada antes de poder negociar na MetaMask."
   },
@@ -7802,9 +7799,6 @@
   "perpsGeoBlockedTitle": {
     "message": "Perps indisponíveis em sua região"
   },
-  "perpsGiveFeedback": {
-    "message": "Deixe seus comentários"
-  },
   "perpsIncludesPnl": {
     "message": "inclui P&L $1"
   },
@@ -7816,9 +7810,6 @@
   },
   "perpsLearnBasics": {
     "message": "Aprenda o básico sobre perps"
-  },
-  "perpsLearnMore": {
-    "message": "Saiba mais."
   },
   "perpsLeverage": {
     "message": "Alavancagem"

@@ -7629,9 +7629,6 @@
   "perpsConnectionTimeout": {
     "message": "Η σύνδεση έληξε. Προσπαθήστε ξανά."
   },
-  "perpsContactSupport": {
-    "message": "Επικοινωνήστε με την υποστήριξη"
-  },
   "perpsCrossMarginNotSupportedDescription": {
     "message": "Τα MetaMask Perps υποστηρίζουν μόνο συναλλαγές με απομονωμένο περιθώριο (isolated margin). Πρέπει πρώτα να κλείσετε τη θέση σας με συγκεντρωτικό περιθώριο (cross margin) πριν μπορέσετε να κάνετε συναλλαγές στο MetaMask."
   },
@@ -7802,9 +7799,6 @@
   "perpsGeoBlockedTitle": {
     "message": "Τα συμβόλαια αορίστου διάρκειας δεν είναι διαθέσιμα στην περιοχή σας"
   },
-  "perpsGiveFeedback": {
-    "message": "Πείτε μας τη γνώμη σας"
-  },
   "perpsIncludesPnl": {
     "message": "περιλαμβάνει Κ&Ζ $1"
   },
@@ -7816,9 +7810,6 @@
   },
   "perpsLearnBasics": {
     "message": "Μάθετε τα βασικά για τα συμβόλαια αορίστου διάρκειας"
-  },
-  "perpsLearnMore": {
-    "message": "Μάθε περισσότερα"
   },
   "perpsLeverage": {
     "message": "Μόχλευση"

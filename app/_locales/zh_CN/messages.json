@@ -7635,9 +7635,6 @@
   "perpsConnectionTimeout": {
     "message": "连接超时。请重试."
   },
-  "perpsContactSupport": {
-    "message": "联系支持团队"
-  },
   "perpsCrossMarginNotSupportedDescription": {
     "message": "MetaMask 永续合约仅支持逐仓保证金交易。您需要先平掉全仓保证金仓位，才能在 MetaMask 进行交易。"
   },
@@ -7808,9 +7805,6 @@
   "perpsGeoBlockedTitle": {
     "message": "永续合约在您所在地区暂不可用"
   },
-  "perpsGiveFeedback": {
-    "message": "向我们提供反馈"
-  },
   "perpsIncludesPnl": {
     "message": "含盈亏 $1"
   },
@@ -7822,9 +7816,6 @@
   },
   "perpsLearnBasics": {
     "message": "了解永续合约的基础知识"
-  },
-  "perpsLearnMore": {
-    "message": "了解更多。"
   },
   "perpsLeverage": {
     "message": "杠杆"

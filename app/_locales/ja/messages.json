@@ -7633,9 +7633,6 @@
   "perpsConnectionTimeout": {
     "message": "接続がタイムアウトしました。もう一度お試しください。"
   },
-  "perpsContactSupport": {
-    "message": "サポートへのお問い合わせ"
-  },
   "perpsCrossMarginNotSupportedDescription": {
     "message": "MetaMaskパーペチュアル取引では、分離マージンでの取引にのみ対応しています。MetaMaskで取引を行うには、最初にクロスマージンのポジションをクローズする必要があります。"
   },
@@ -7806,9 +7803,6 @@
   "perpsGeoBlockedTitle": {
     "message": "お客様の地域ではパーペチュアルが利用できません"
   },
-  "perpsGiveFeedback": {
-    "message": "ご意見をお聞かせください"
-  },
   "perpsIncludesPnl": {
     "message": "損益込み $1"
   },
@@ -7820,9 +7814,6 @@
   },
   "perpsLearnBasics": {
     "message": "パーペチュアルの基本"
-  },
-  "perpsLearnMore": {
-    "message": "詳細。"
   },
   "perpsLeverage": {
     "message": "レバレッジ"

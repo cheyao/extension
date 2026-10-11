@@ -15,7 +15,6 @@ export { PerpsPositionsOrders } from './perps-positions-orders';
 export type { PerpsPositionsOrdersProps } from './perps-positions-orders';
 export { PerpsExploreMarkets } from './perps-explore-markets';
 export type { PerpsExploreMarketsProps } from './perps-explore-markets';
-export { PerpsSupportLearn } from './perps-support-learn';
 export {
   getPositionDirection,
   formatOrderType,

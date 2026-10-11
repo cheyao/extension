@@ -7633,9 +7633,6 @@
   "perpsConnectionTimeout": {
     "message": "Waktu koneksi telah habis. Coba lagi."
   },
-  "perpsContactSupport": {
-    "message": "Hubungi dukungan"
-  },
   "perpsCrossMarginNotSupportedDescription": {
     "message": "MetaMask Perp hanya mendukung perdagangan dengan margin terisolasi. Anda harus menutup posisi margin silang terlebih dahulu sebelum dapat berdagang di MetaMask."
   },
@@ -7806,9 +7803,6 @@
   "perpsGeoBlockedTitle": {
     "message": "Perp tidak tersedia di wilayah Anda"
   },
-  "perpsGiveFeedback": {
-    "message": "Berikan masukan kepada kami"
-  },
   "perpsIncludesPnl": {
     "message": "termasuk P&L $1"
   },
@@ -7820,9 +7814,6 @@
   },
   "perpsLearnBasics": {
     "message": "Pelajari dasar-dasar perp"
-  },
-  "perpsLearnMore": {
-    "message": "Selengkapnya"
   },
   "perpsLeverage": {
     "message": "Leverage"

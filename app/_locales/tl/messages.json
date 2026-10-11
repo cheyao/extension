@@ -7629,9 +7629,6 @@
   "perpsConnectionTimeout": {
     "message": "Nag-time out ang koneksyon. Subukan ulit."
   },
-  "perpsContactSupport": {
-    "message": "Kontakin ang suporta"
-  },
   "perpsCrossMarginNotSupportedDescription": {
     "message": "Sinusuportahan lang ng MetaMask Perps ang pag-trade gamit ang isolated margin. Kailangan mo munang isara ang iyong posisyon na cross margin para makapag-trade sa MetaMask."
   },
@@ -7802,9 +7799,6 @@
   "perpsGeoBlockedTitle": {
     "message": "Hindi available ang perps sa iyong rehiyon"
   },
-  "perpsGiveFeedback": {
-    "message": "Bigyan kami ng feedback"
-  },
   "perpsIncludesPnl": {
     "message": "kasama ang P&L $1"
   },
@@ -7816,9 +7810,6 @@
   },
   "perpsLearnBasics": {
     "message": "Matutunan ang mga pangunahing kaalaman tungkol sa perps"
-  },
-  "perpsLearnMore": {
-    "message": "Matuto pa."
   },
   "perpsLeverage": {
     "message": "Leverage"

@@ -7770,9 +7770,6 @@
   "perpsConnectionTimeout": {
     "message": "Connection timed out. Please try again."
   },
-  "perpsContactSupport": {
-    "message": "Contact support"
-  },
   "perpsCrossMarginNotSupportedDescription": {
     "message": "Swissquote Wallet Perps only support trading with isolated margin. You need to first close your cross margin position before you can trade on Swissquote Wallet."
   },
@@ -7943,9 +7940,6 @@
   "perpsGeoBlockedTitle": {
     "message": "Perps unavailable in your region"
   },
-  "perpsGiveFeedback": {
-    "message": "Give us feedback"
-  },
   "perpsIncludesPnl": {
     "message": "includes P&L $1"
   },
@@ -7957,9 +7951,6 @@
   },
   "perpsLearnBasics": {
     "message": "Learn the basics of perps"
-  },
-  "perpsLearnMore": {
-    "message": "Learn more"
   },
   "perpsLeverage": {
     "message": "Leverage"

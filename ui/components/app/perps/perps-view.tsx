@@ -20,7 +20,6 @@ import { PERPS_RECENT_ACTIVITY_MAX_TRANSACTIONS } from '../../../../shared/const
 import { useI18nContext } from '../../../hooks/useI18nContext';
 import { submitRequestToBackground } from '../../../store/background-connection';
 import { getPerpsStreamManager } from '../../../providers/perps';
-import { setTutorialModalOpen } from '../../../ducks/perps';
 
 import { usePerpsEligibility } from '../../../hooks/perps';
 import { getTradeableBalance } from '../../../hooks/perps/getTradeableBalance';
@@ -35,7 +34,6 @@ import {
 } from '../../../../shared/constants/perps-events';
 import { useSelectedAccountComplianceGate } from '../compliance';
 import { PERPS_ACTIVITY_ROUTE } from '../../../helpers/constants/routes';
-import { useDispatch } from '../../../store/hooks';
 import type { PerpsTransaction } from './types';
 import { getPerpsTransactionDestination } from './utils/getPerpsTransactionDestination';
 import { trackPerpsErrorScreenViewed } from './utils/track-perps-error-screen';
@@ -53,8 +51,6 @@ import {
   PerpsBalanceActionsSkeleton,
   PerpsSectionSkeleton,
 } from './perps-skeletons';
-import { PerpsSupportLearn } from './perps-support-learn';
-import { PerpsTutorialModal } from './perps-tutorial-modal';
 import { PerpsTopMovers } from './perps-top-movers';
 import { PerpsWatchlist } from './perps-watchlist';
 import { usePerpsTabExploreData } from './hooks/usePerpsTabExploreData';
@@ -75,7 +71,6 @@ type BatchCloseResult = {
 export const PerpsView = () => {
   const t = useI18nContext();
   const navigate = useNavigate();
-  const dispatch = useDispatch();
   const bottomNavSource = usePerpsBottomNavSource();
   const { isEligible } = usePerpsEligibility();
   const { gate } = useSelectedAccountComplianceGate();
@@ -471,7 +466,6 @@ export const PerpsView = () => {
         <PerpsMarketBalanceActions
           onAddFunds={triggerDeposit}
           onWithdraw={triggerWithdraw}
-          onLearnMore={() => dispatch(setTutorialModalOpen(true))}
         />
       </Box>
 
@@ -516,10 +510,6 @@ export const PerpsView = () => {
         error={recentActivityError}
       />
 
-      {/* Support & Learn */}
-      <PerpsSupportLearn />
-      {/* Tutorial Modal */}
-      <PerpsTutorialModal />
       {isCloseAllModalOpen && (
         <CloseAllPositionsModal
           isOpen={isCloseAllModalOpen}

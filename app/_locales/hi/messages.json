@@ -7629,9 +7629,6 @@
   "perpsConnectionTimeout": {
     "message": "कनेक्शन टाइम आउट हो गया। कृपया फिर से कोशिश करें।"
   },
-  "perpsContactSupport": {
-    "message": "सपोर्ट टीम से कॉन्टेक्ट करें"
-  },
   "perpsCrossMarginNotSupportedDescription": {
     "message": "MetaMask पर्प्स केवल आइसोलेटेड मार्जिन के साथ ट्रेडिंग का सपोर्ट करते हैं। MetaMask पर ट्रेड करने से पहले आपको अपनी क्रॉस मार्जिन पोज़िशन बंद करनी होगी।"
   },
@@ -7802,9 +7799,6 @@
   "perpsGeoBlockedTitle": {
     "message": "आपके क्षेत्र में पर्प्स उपलब्ध नहीं है"
   },
-  "perpsGiveFeedback": {
-    "message": "हमें फीडबैक दें"
-  },
   "perpsIncludesPnl": {
     "message": "इसमें P&L $1 शामिल है"
   },
@@ -7816,9 +7810,6 @@
   },
   "perpsLearnBasics": {
     "message": "पर्प्स की मूल बातें सीखें"
-  },
-  "perpsLearnMore": {
-    "message": "ज़्यादा जानें"
   },
   "perpsLeverage": {
     "message": "लीवरेज"

@@ -7629,9 +7629,6 @@
   "perpsConnectionTimeout": {
     "message": "Время ожидания подключения истекло. Повторите попытку."
   },
-  "perpsContactSupport": {
-    "message": "Связаться с поддержкой"
-  },
   "perpsCrossMarginNotSupportedDescription": {
     "message": "Перпы MetaMask поддерживают только торговлю с изолированной маржой. Для торговли на MetaMask необходимо закрыть позицию кросс-маржи."
   },
@@ -7802,9 +7799,6 @@
   "perpsGeoBlockedTitle": {
     "message": "Бессрочные фьючерсы недоступны в вашем регионе"
   },
-  "perpsGiveFeedback": {
-    "message": "Оставьте нам отзыв"
-  },
   "perpsIncludesPnl": {
     "message": "включая П/У $1"
   },
@@ -7816,9 +7810,6 @@
   },
   "perpsLearnBasics": {
     "message": "Изучите основы перпов"
-  },
-  "perpsLearnMore": {
-    "message": "Узнайте подробнее."
   },
   "perpsLeverage": {
     "message": "Кредитное плечо"

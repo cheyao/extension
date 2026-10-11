@@ -7639,9 +7639,6 @@
   "perpsConnectionTimeout": {
     "message": "Hết thời gian kết nối. Vui lòng thử lại."
   },
-  "perpsContactSupport": {
-    "message": "Liên hệ bộ phận hỗ trợ"
-  },
   "perpsCrossMarginNotSupportedDescription": {
     "message": "MetaMask Hợp đồng vĩnh cửu chỉ hỗ trợ giao dịch với ký quỹ riêng biệt. Bạn cần đóng vị thế ký quỹ chéo trước khi có thể giao dịch trên MetaMask."
   },
@@ -7812,9 +7809,6 @@
   "perpsGeoBlockedTitle": {
     "message": "Hợp đồng vĩnh cửu không khả dụng tại khu vực của bạn"
   },
-  "perpsGiveFeedback": {
-    "message": "Gửi phản hồi cho chúng tôi"
-  },
   "perpsIncludesPnl": {
     "message": "bao gồm Lãi/Lỗ $1"
   },
@@ -7826,9 +7820,6 @@
   },
   "perpsLearnBasics": {
     "message": "Tìm hiểu những kiến thức cơ bản về hợp đồng vĩnh cửu"
-  },
-  "perpsLearnMore": {
-    "message": "Tìm hiểu thêm"
   },
   "perpsLeverage": {
     "message": "Đòn bẩy"
